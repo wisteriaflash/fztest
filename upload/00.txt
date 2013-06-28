@@ -1,1 +1,2 @@
+doc:https://github.com/blueimp/jQuery-File-Upload/wiki/
 API:https://github.com/blueimp/jQuery-File-Upload/wiki/Options
