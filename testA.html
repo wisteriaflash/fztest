@@ -7,10 +7,53 @@
   </style>
 </head>
 <body>
-  <input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple />
+  <p>上传文件</p>
+  <input id="fileupload" type="file" name="files" />
 
 
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/vendor/jquery.ui.widget.js"></script>
+<script src="js/jquery.iframe-transport.js"></script>
+<script src="js/jquery.fileupload.js"></script>
+<script>
+$(function () {
+/*
+上传插件基本使用：
+1.如果需要自动上传，则不要加add方法
+2.添加fail、done方法
+  ·当上传路径404时，高级浏览器会触发fail方法，而ie则会触发done方法，通过判断done的data返回值，来判断是否上传成功。
+3.进度条：高级浏览器支持，IE10即以下不支持，会直接从0-100。
+ps:https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support
+4.其他
+*/
 
-  <script src="testA.js"></script>
+    $('#fileupload').fileupload({
+        dataType: 'json',
+        // url: 'server/php/',
+        url: 'a.php',
+        progressInterval: 10,
+        // add: function(e, data){
+        //   console.log('add',e,data);
+        // },
+        progress: function(e, data){
+          // console.log(data);
+          var progress = parseInt(data.loaded / data.total * 100, 10);
+          console.log(progress);
+        },
+        fail: function(e, data){
+          console.log('fail',e,data);
+        },
+        done: function (e, data) {
+            // console.log('done',e,data);
+            console.log('done',data);
+
+            // $.each(data.result.files, function (index, file) {
+            //     $('<p/>').text(file.name).appendTo(document.body);
+            // });
+        }
+
+    });
+});
+</script>
 </body>
 </html>
