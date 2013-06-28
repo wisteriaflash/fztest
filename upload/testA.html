@@ -24,7 +24,10 @@ $(function () {
   ·当上传路径404时，高级浏览器会触发fail方法，而ie则会触发done方法，通过判断done的data返回值，来判断是否上传成功。
 3.进度条：高级浏览器支持，IE10即以下不支持，会直接从0-100。
 ps:https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support
-4.其他
+4.格式判断：通过文件名的后缀来进行一次判断。
+5.其他
+
+PS：IE并非会用ajax上传，而是使用iframe模拟实现的。
 */
 
     $('#fileupload').fileupload({
