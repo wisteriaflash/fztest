@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>imgCut test</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../assets/jquery-ui-1.10.3.custom.css">
+  <style>
+  .wrapper{width: 1000px; margin: 100px auto;}
+  .img-con{position: relative; width: auto; height: auto;}
+  .img-con .img{position: absolute; z-index: 10; background-color: #000; width: 500px; height: 370px;}
+  .img-con .img img{opacity: 0.6; filter:alpha(opacity=60);}
+  .img-con .img-area{position: absolute; width: 200px; height: 200px; overflow: hidden; border: 1px solid red; z-index: 99;}
+  .img-con .img-area img{position: relative;}
+  </style>
+</head>
+<body>
+  
+<div class="wrapper">
+  <div class="img-con">
+    <div class="img"><img src="pool.jpg" /></div>
+    <div class="img-area"><img id="draggable" src="pool.jpg" /></div>
+  </div>
+</div>
+
+<script src="../assets/jquery-1.9.1.min.js"></script>
+<script src="../assets/jquery-ui-1.10.3.custom.min.js"></script>
+<script>
+$(function () {
+  //init
+  var conf = {x:150, y:85};
+  var container = {w: 202, h:202};
+  $('.img-area').css({
+    'left': conf.x,
+    'top': conf.y
+  });
+  $('.img-area img').css({
+    'left': -conf.x,
+    'top': -conf.y
+  });
+
+
+var draggeCom = {
+  box: {sw:202, sh:202},
+  dragItem: null,
+  init: function(){
+    var me = this;
+    dragItem = $("#draggable").draggable({
+      containment: me.setImgLimit(500,370),
+      scroll: false,
+      start: function() {
+          
+      },
+      drag: function(event, ui) {
+        var top = ui.position.top,
+            left = ui.position.left;
+        me.setImgMask(left, top);
+      },
+      stop: function(event, ui) {
+        return;
+        // var top = ui.position.top,
+        //     left = ui.position.left;
+        // //check
+        // var topMin = -370 + container.w;
+        // var leftMin = -500 + container.h;
+        // // debugger;
+        // top = top > 0 ? 0 : (top<topMin ? topMin : top);
+        // left = left > 0 ? 0 : (left<leftMin ? leftMin : left);
+        // //
+        // $(this).css({
+        //   'top': top,
+        //   'left': left
+        // });
+        // me.setImgMask(left, top);
+      }
+    });
+  },
+  setImgLimit: function(sw,sh){
+    var imgOffset = $('.img-con').offset()
+    var swfix = conf.x+1, shfix = conf.y+1;
+    //
+    var x2 = imgOffset.left + swfix;
+    var y2 = imgOffset.top + shfix;
+    var x1 = x2 - (sw - container.w);
+    var y1 = y2 - (sh - container.h);
+    // var arr = [163,-66,461,101];
+    var arr = [x1,y1,x2,y2];
+    return arr;
+  },
+  setImgMask: function(left,top){
+    left += conf.x;
+    top += conf.y;
+    // debugger;
+    $('.img').css({
+      'left': left,
+      'top': top
+    });
+  }
+};
+
+
+//com
+ draggeCom.init();
+//draggeCustom.init();
+
+});
+</script>
+</body>
+</html>
