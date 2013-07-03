@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>imgCut test</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../assets/jquery-ui-1.10.3.custom.css">
+  <style>
+  .wrapper{width: 1000px; margin: 100px auto;}
+  .img-con{position: relative; border-top: 5px solid yellow;}
+  .img-con .img{position: absolute; z-index: 10; background-color: #000; width: 500px; height: 370px;}
+  .img-con .img img{opacity: 0.6; filter:alpha(opacity=60);}
+  .img-con .img-area{position: absolute; width: 200px; height: 200px; overflow: hidden; border: 1px solid red; z-index: 99;}
+  .img-con .img-area img{position: relative;}
+  </style>
+</head>
+<body>
+  
+<div class="wrapper">
+  <div class="img-con">
+    <div class="img"><img src="pool.jpg" /></div>
+    <div class="img-area"><img id="draggable" src="pool.jpg" /></div>
+  </div>
+</div>
+<div class="img"><img src="pool.jpg" /></div>
+<script src="../assets/jquery-1.9.1.min.js"></script>
+<script src="../assets/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="clipimg.js"></script>
+<script>
+//init
+function init(){
+  var conf = {x:150, y:85};
+  var container = {w: 202, h:202};
+  $('.img-area').css({
+    'left': conf.x,
+    'top': conf.y
+  });
+  $('.img-area img').css({
+    'left': -conf.x,
+    'top': -conf.y
+  });  
+}
+init();
+
+//plugin
+// function test(){
+  // var dragImgItem = $('#draggable').dragImg('aaaa');
+  // dragImgItem.setItem('ccc');
+  // // console.log(dragImgItem);
+
+var dragImgItem2 = $('.img').clipimg();
+    // dragImgItem2.setItem('bbb');
+  // console.log(dragImgItem2);
+// }
+// test();
+
+
+</script>
+</body>
+</html>
