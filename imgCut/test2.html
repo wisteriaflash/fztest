@@ -5,12 +5,25 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" href="../assets/jquery-ui-1.10.3.custom.css">
   <style>
+  img{vertical-align: top;}
   .wrapper{width: 1000px; margin: 100px auto;}
-  .img-con{position: relative; border-top: 5px solid yellow;}
-  .img-con .img{position: absolute; z-index: 10; background-color: #000; width: 500px; height: 370px;}
+  .img-con{position: relative; height: 370px; display: none;}
+  .img-con .img{position: absolute; z-index: 10; background-color: #000;}
   .img-con .img img{opacity: 0.6; filter:alpha(opacity=60);}
   .img-con .img-area{position: absolute; width: 200px; height: 200px; overflow: hidden; border: 1px solid red; z-index: 99;}
   .img-con .img-area img{position: relative;}
+
+
+
+
+  /*.clipimg-item{float: left; float: none}*/
+
+  /*plugin*/
+  .clipimg{position: relative;}
+  .clipimg .clipimg-mask{position: absolute; z-index: 10; background-color: #000;}
+  .clipimg .clipimg-mask img{opacity: 0.6; filter:alpha(opacity=60);}
+  .clipimg .clipimg-clipbox{position: absolute; overflow: hidden; z-index: 99; border:1px solid red;}
+  .clipimg .clipimg-clipbox img{position: relative;}
   </style>
 </head>
 <body>
@@ -20,8 +33,14 @@
     <div class="img"><img src="pool.jpg" /></div>
     <div class="img-area"><img id="draggable" src="pool.jpg" /></div>
   </div>
+  <div id="J_clipimg" class="clipimg-item"></div>
+  <div id="J_clipimg2" class="clipimg-item" style="clear:both; float:none;"></div>
 </div>
-<div class="img"><img src="pool.jpg" /></div>
+
+
+
+
+
 <script src="../assets/jquery-1.9.1.min.js"></script>
 <script src="../assets/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="clipimg.js"></script>
@@ -41,17 +60,22 @@ function init(){
 }
 init();
 
+var config = {
+  image: {
+    source: 'pool.jpg',
+    width: 500,
+    height: 370
+  },
+  clipbox: {
+    x: 150,
+    y: 75,
+    width: 200,
+    height: 200
+  }
+}
 //plugin
-// function test(){
-  // var dragImgItem = $('#draggable').dragImg('aaaa');
-  // dragImgItem.setItem('ccc');
-  // // console.log(dragImgItem);
-
-var dragImgItem2 = $('.img').clipimg();
-    // dragImgItem2.setItem('bbb');
-  // console.log(dragImgItem2);
-// }
-// test();
+var dragImgItem2 = $('#J_clipimg').clipimg(config);
+// $('#J_clipimg2').clipimg(config);
 
 
 </script>
