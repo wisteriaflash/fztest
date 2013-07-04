@@ -1,69 +1,11 @@
 /*
  *拖动图片组件:
- * 1.
+ * 1.拖动图片，以形成剪切图片。**
+ * 2.图片缩放功能。
  *  
  */
 (function($){
 
-// var conf = {x:150, y:85};
-// var container = {w: 202, h:202};
-
-
-// var dragImgaa = {
-//     box: {sw:202, sh:202},
-//     dragItem: null,
-//     init: function(){
-//     var me = this;
-//     dragItem = $("#draggable").draggable({
-//         containment: me.setImgLimit(500,370),
-//         scroll: false,
-//         start: function() {
-          
-//         },
-//         drag: function(event, ui) {
-//         var top = ui.position.top,
-//             left = ui.position.left;
-//         me.setImgMask(left, top);
-//         },
-//         stop: function(event, ui) {
-
-//         }
-//         });
-//     },
-//     setImgLimit: function(sw,sh){
-//     var imgOffset = $('.img-con').offset();
-//     var offsetLeft = imgOffset.left + parseInt($('.img-con').css('border-left-width'));
-//     var offsetTop = imgOffset.top + parseInt($('.img-con').css('border-top-width'));
-//     var swfix = conf.x+1, shfix = conf.y+1;
-//     // console.log(imgOffset)
-//     //
-//     var x2 = offsetLeft + swfix;
-//     var y2 = offsetTop + shfix;
-//     var x1 = x2 - (sw - container.w);
-//     var y1 = y2 - (sh - container.h);
-//     // var arr = [163,-66,461,101];
-//     var arr = [x1,y1,x2,y2];
-//     return arr;
-//     },
-//     setImgMask: function(left,top){
-//         left += conf.x;
-//         top += conf.y;
-//         // debugger;
-//         $('.img').css({
-//           'left': left,
-//           'top': top
-//         });
-//     }
-// }
-// dragImgaa.init()
-
-
-
-
-
-
-
-//plugin start============
 //private fun
 var _getSettings = function(){
     var $this = $(this);
@@ -74,7 +16,7 @@ var _setSettings = function(options){
     $this.data('clipimg', options);
 }
 var _renderHtml = function(){
-    var $this = $(this);
+    var $this = this;
     var settings = _getSettings.call($this);
     var image = settings.image;
     var clipbox = settings.clipbox;
@@ -107,14 +49,14 @@ var _renderHtml = function(){
     })
 };
 var _bindHandler = function(){
-    var $this = $(this);
+    var $this = this;
     var item = $this.find('.clipimg-clipbox img');
     item.draggable({
         containment: _setImgLimit.call($this),
         // scroll: false,
         // cursor: "crosshair",
         start: function() {
-
+            $this.addClass('clipimg-draging');
         },
         drag: function(event, ui) {
             var settings = _getSettings.call($this);
@@ -129,7 +71,7 @@ var _bindHandler = function(){
             });
         },
         stop: function(event, ui) {
-            
+            $this.removeClass('clipimg-draging');
         }
     });
     //refresh opthion
@@ -138,7 +80,7 @@ var _bindHandler = function(){
     });
 };
 var _setImgLimit = function(){
-    var $this = $(this);
+    var $this = this;
     var settings = _getSettings.call($this);
     var image = settings.image;
     var clipbox = settings.clipbox;

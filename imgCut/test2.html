@@ -20,14 +20,16 @@
 
   /*plugin*/
   .clipimg{position: relative;}
-  .clipimg .clipimg-mask{position: absolute; z-index: 10; background-color: #000;}
+  .clipimg .clipimg-mask{position: absolute; z-index: 10; background-color: #000; display: none;}
   .clipimg .clipimg-mask img{opacity: 0.6; filter:alpha(opacity=60);}
-  .clipimg .clipimg-clipbox{position: absolute; overflow: hidden; z-index: 99; border:1px solid red;}
+  .clipimg .clipimg-clipbox{position: absolute; overflow: hidden; z-index: 99; border:1px solid #FFF;}
   .clipimg .clipimg-clipbox img{position: relative;}
+  .clipimg.clipimg-draging .clipimg-mask{display: block;}
+  .clipimg.clipimg-draging .clipimg-clipbox{border-color: red;}
   </style>
 </head>
 <body>
-  
+  <h3>图片剪切测试demo</h3>
 <div class="wrapper">
   <div class="img-con">
     <div class="img"><img src="pool.jpg" /></div>
