@@ -5,6 +5,8 @@
  *  
  */
 (function($){
+//private vars
+var _stepScale = 0.1;
 
 //private fun
 var _getSettings = function(){
@@ -26,6 +28,10 @@ var _renderHtml = function(){
             '</div>'+
             '<div class="clipimg-clipbox">'+
                 '<img src="'+image.source+'" width="'+image.width+'" height="'+image.height+'" />'+
+            '</div>'+
+            '<div class="clipimg-scale-btn">'+
+                '<span class="scale-big">+</span>'+
+                '<span class="scale-small">-</span>'+
             '</div>';
     //main
     $this.css({
@@ -40,17 +46,20 @@ var _renderHtml = function(){
     clipboxBorder = parseInt(clipboxBorder);
     $this.find('.clipimg-clipbox').css({
         width: clipbox.width-2*clipboxBorder,
-        height: clipbox.height-2*clipboxBorder,
-        left: clipbox.x,
-        top: clipbox.y
+        height: clipbox.height-2*clipboxBorder
     }).find('img').css({
-        left: -clipbox.x,
-        top: -clipbox.y
-    })
+        left: -image.x,
+        top: -image.y
+    });
+    $this.find('.clipimg-mask').css({
+        left: -image.x,
+        top: -image.y
+    });
 };
 var _bindHandler = function(){
     var $this = this;
     var item = $this.find('.clipimg-clipbox img');
+    
     item.draggable({
         containment: _setImgLimit.call($this),
         // scroll: false,
@@ -78,6 +87,23 @@ var _bindHandler = function(){
     item.mousedown(function(){
         item.draggable("option", "containment", _setImgLimit.call($this));
     });
+    //btns
+    $this.find('.scale-big').click(function(e){
+        var image = _getSettings.call($this).image;
+        var scale = image.scale;
+        if(scale>=3){
+            return;
+        }
+        _scaleImg.call($this,'big',scale+_stepScale);
+    });
+    $this.find('.scale-small').click(function(e){
+        var image = _getSettings.call($this).image;
+        var scale = image.scale;
+        if(scale<=1){
+            return;
+        }
+        _scaleImg.call($this,'samll',scale-_stepScale);
+    });
 };
 var _setImgLimit = function(){
     var $this = this;
@@ -96,7 +122,58 @@ var _setImgLimit = function(){
     var y1 = y2 - (image.height - clipbox.height);
     var arr = [x1,y1,x2,y2];
     return arr;
-}
+};
+var _scaleImg = function(type,scale){
+    var $this = this;
+    var settings = _getSettings.call($this);
+    var image = settings.image;
+    image.scale = scale;
+    if(typeof(image.orginalWidh) == 'undefined'){
+        image.orginalWidh = image.width;
+        image.orginalHeight = image.height;
+    }
+    var originW = image.orginalWidh,
+        originH = image.orginalHeight;
+    //
+    var mask = $this.find('.clipimg-mask');
+    var maskImg = mask.find('img');
+    var clipboxImg = $this.find('.clipimg-clipbox img');
+    var left = parseInt(mask.css('left'));
+    var top = parseInt(mask.css('top'));
+    scale -= 1;
+    var sw = Math.round(originW*scale),
+        sh = Math.round(originH*scale),
+        sx = Math.round(originW*_stepScale*0.5),
+        sy = Math.round(originH*_stepScale*0.5);
+    if(type == 'big'){
+        left -= sx;
+        top -= sy;
+    }else if(type == 'samll'){
+        left += sx;
+        top += sy;
+    }
+    // left = -image.x - sx;
+    // top = -image.y - sy;
+    image.width = image.orginalWidh + sw;
+    image.height = image.orginalHeight + sh;
+    //set
+    mask.css({
+        left: left,
+        top: top
+    });
+    maskImg.css({
+        width: image.width,
+        height: image.height
+    });
+    clipboxImg.css({
+        left: left,
+        top: top,
+        width: image.width,
+        height: image.height
+    });
+    //data
+    _setSettings.call($this, settings);
+};
 
 
 
@@ -162,7 +239,10 @@ $.fn.clipimg.defaults = {
     image: {
         source: '',
         width: 0,
-        height: 0
+        height: 0,
+        x: 0,
+        y: 0,
+        scale: 1
     }
 }
 

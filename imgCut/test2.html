@@ -20,10 +20,12 @@
 
   /*plugin*/
   .clipimg{position: relative;}
-  .clipimg .clipimg-mask{position: absolute; z-index: 10; background-color: #000; display: none;}
+  .clipimg .clipimg-mask{position: absolute; z-index: 10; background-color: #000; display: block;}
   .clipimg .clipimg-mask img{opacity: 0.6; filter:alpha(opacity=60);}
   .clipimg .clipimg-clipbox{position: absolute; overflow: hidden; z-index: 99; border:1px solid #FFF;}
   .clipimg .clipimg-clipbox img{position: relative;}
+  .clipimg .clipimg-scale-btn{position: absolute; z-index: 100; right: 0; top:0;}
+  .clipimg .clipimg-scale-btn span{display: block; width: 50px; height: 30px; line-height: 30px; text-align: center; cursor: pointer; background-color: yellow; margin-bottom: 10px;}
   .clipimg.clipimg-draging .clipimg-mask{display: block;}
   .clipimg.clipimg-draging .clipimg-clipbox{border-color: red;}
   </style>
@@ -47,30 +49,16 @@
 <script src="../assets/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="clipimg.js"></script>
 <script>
-//init
-function init(){
-  var conf = {x:150, y:85};
-  var container = {w: 202, h:202};
-  $('.img-area').css({
-    'left': conf.x,
-    'top': conf.y
-  });
-  $('.img-area img').css({
-    'left': -conf.x,
-    'top': -conf.y
-  });  
-}
-init();
 
 var config = {
   image: {
     source: 'pool.jpg',
     width: 500,
-    height: 370
+    height: 370,
+    x: 150,
+    y: 75
   },
   clipbox: {
-    x: 150,
-    y: 75,
     width: 200,
     height: 200
   }
