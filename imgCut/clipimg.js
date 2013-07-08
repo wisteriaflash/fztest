@@ -27,6 +27,7 @@ var _renderHtml = function(){
                 '<img src="'+image.source+'" width="'+image.width+'" height="'+image.height+'" />'+
             '</div>'+
             '<div class="clipimg-clipbox">'+
+                '<span></span>'+
                 '<img src="'+image.source+'" width="'+image.width+'" height="'+image.height+'" />'+
             '</div>'+
             '<div class="clipimg-scale-btn">'+
@@ -42,7 +43,8 @@ var _renderHtml = function(){
     $this.addClass('clipimg');
     $this.html(str);
     //init css set
-    var clipboxBorder = $this.find('.clipimg-clipbox').css('border-width');
+    var clipboxBorder = $this.find('.clipimg-clipbox').css('border-left-width');
+    // debugger;
     clipboxBorder = parseInt(clipboxBorder);
     $this.find('.clipimg-clipbox').css({
         width: clipbox.width-2*clipboxBorder,
@@ -62,7 +64,7 @@ var _bindHandler = function(){
     
     item.draggable({
         containment: _setImgLimit.call($this),
-        // scroll: false,
+        scroll: false,
         // cursor: "crosshair",
         start: function() {
             $this.addClass('clipimg-draging');
@@ -112,8 +114,12 @@ var _setImgLimit = function(){
     var clipbox = settings.clipbox;
     //
     var imgOffset = $this.offset();
-    var offsetLeft = imgOffset.left + parseInt($this.css('border-left-width'));
-    var offsetTop = imgOffset.top + parseInt($this.css('border-top-width'));
+    var borderLeft = parseInt($this.css('border-left-width'));
+    borderLeft = borderLeft ? borderLeft : 0;
+    var borderTop = parseInt($this.css('border-top-width'));
+    borderTop = borderTop ? borderTop : 0;
+    var offsetLeft = imgOffset.left + borderLeft;
+    var offsetTop = imgOffset.top + borderTop;
     var swfix = clipbox.x+1, shfix = clipbox.y+1;
     //
     var x2 = offsetLeft + swfix;
@@ -127,6 +133,7 @@ var _scaleImg = function(type,scale){
     var $this = this;
     var settings = _getSettings.call($this);
     var image = settings.image;
+    var oldScale = image.scale;
     image.scale = scale;
     if(typeof(image.orginalWidh) == 'undefined'){
         image.orginalWidh = image.width;
@@ -143,8 +150,16 @@ var _scaleImg = function(type,scale){
     scale -= 1;
     var sw = Math.round(originW*scale),
         sh = Math.round(originH*scale),
-        sx = Math.round(originW*_stepScale*0.5),
+        sx = Math.round(originW*_stepScale*0.5), //以图片中心点来缩放
         sy = Math.round(originH*_stepScale*0.5);
+    //以选取框的中心点来缩放
+    var clipbox = settings.clipbox;
+    var centerX = Math.abs(left)+clipbox.width/2,
+        centerY = Math.abs(top)+clipbox.height/2;
+    centerX = Math.round(centerX/(oldScale));
+    centerY = Math.round(centerY/(oldScale));
+    sx = centerX*_stepScale;
+    sy = centerY*_stepScale;
     if(type == 'big'){
         left -= sx;
         top -= sy;
@@ -152,8 +167,6 @@ var _scaleImg = function(type,scale){
         left += sx;
         top += sy;
     }
-    // left = -image.x - sx;
-    // top = -image.y - sy;
     image.width = image.orginalWidh + sw;
     image.height = image.orginalHeight + sh;
     //set
@@ -185,10 +198,13 @@ var methods = {
             var settings = $this.data('clipimg');
 
             if(typeof(settings) == 'undefined') {
-                settings = $.extend(true, $.fn.clipimg.defaults, options);
+                settings = $.extend({}, $.fn.clipimg.defaults, options);
             } else {
-                settings = $.extend(true, settings, options);
+                settings = $.extend({}, settings, options);
             }
+            //set default data
+            settings.image = $.extend({}, $.fn.clipimg.defaults.image, options.image);
+            settings.clipbox = $.extend({}, $.fn.clipimg.defaults.clipbox, options.clipbox);
             //
             _setSettings.call($this, settings);
             _renderHtml.call($this);
@@ -208,7 +224,7 @@ var methods = {
         return someValue;
     }
 };
-
+//construct
 $.fn.clipimg = function() {
     var method = arguments[0];
 
