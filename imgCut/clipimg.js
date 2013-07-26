@@ -67,7 +67,7 @@ var _bindHandler = function(){
         scroll: false,
         // cursor: "crosshair",
         start: function() {
-            $this.addClass('clipimg-draging');
+            // $this.addClass('clipimg-draging');
         },
         drag: function(event, ui) {
             var settings = _getSettings.call($this);
@@ -87,7 +87,11 @@ var _bindHandler = function(){
     });
     //refresh opthion
     item.mousedown(function(){
+        $this.addClass('clipimg-draging');
         item.draggable("option", "containment", _setImgLimit.call($this));
+    });
+    item.mouseup(function(){
+        $this.removeClass('clipimg-draging');
     });
     //btns
     $this.find('.scale-big').click(function(e){
@@ -222,6 +226,10 @@ var methods = {
         var someValue = this.eq(0).html();
 
         return someValue;
+    },
+    getData: function(){
+        var data = {};
+        return data;
     }
 };
 //construct
