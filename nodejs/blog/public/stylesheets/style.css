@@ -25,3 +25,48 @@ article a:hover{color:#333333;text-decoration:underline;}
 .tag:hover{text-decoration:none;background-color:#ffffff;color:#000000;-webkit-transition:color .2s linear;}
 /*search*/
 .search{border:0;width:6em;text-align:center;font-size:1em;margin:0.5em 0;}
+
+.l_head{float:left;margin-left:-4em;box-shadow:0px 1px 4px #888;}
+.r_head{float:right;margin-top:-2.5em;box-shadow:0px 1px 4px #888;}
+
+
+/*markdown*/
+.markdown h1,.markdown h2,.markdown h3,.markdown h4,.markdown h5,.markdown h6{border:0!important;}
+.markdown h1{font-size:170%!important;border-top:4px solid #aaa!important;padding-top:.5em!important;margin-top:1.5em!important;}
+.markdown h1:first-child{margin-top:0!important;padding-top:.25em!important;border-top:none!important;}
+.markdown h2{font-size:150%!important;margin-top:1.5em!important;border-top:4px solid #e0e0e0!important;padding-top:.5em!important;}
+.markdown h3{margin-top:1em!important;}
+.markdown p{margin:1em 0!important;line-height:1.5em!important;}
+.markdown a.absent{color:#a00;}
+.markdown ul,#wiki-form .content-body ul{margin:1em 0 1em 2em!important;}
+.markdown ol,#wiki-form .content-body ol{margin:1em 0 1em 2em!important;}
+.markdown ul li,#wiki-form .content-body ul li,.markdown ol li,#wiki-form .content-body ol li{margin-top:.5em;margin-bottom:.5em;}
+.markdown ul ul,.markdown ul ol,.markdown ol ol,.markdown ol ul,#wiki-form .content-body ul ul,#wiki-form .content-body ul ol,#wiki-form .content-body ol ol,#wiki-form .content-body ol ul{margin-top:0!important;margin-bottom:0!important;}
+.markdown blockquote{margin:1em 0!important;border-left:5px solid #ddd!important;padding-left:.6em!important;color:#555!important;}
+.markdown dt{font-weight:bold!important;margin-left:1em!important;}
+.markdown dd{margin-left:2em!important;margin-bottom:1em!important;}
+.markdown table{margin:1em 0!important;}
+.markdown table th{border-bottom:1px solid #bbb!important;padding:.2em 1em!important;}
+.markdown table td{border-bottom:1px solid #ddd!important;padding:.2em 1em!important;}
+.markdown pre{margin:1em 0;font-size:12px;background-color:#eee;border:1px solid #ddd;padding:5px;line-height:1.5em;color:#444;overflow:auto;-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.markdown pre::-webkit-scrollbar{height:8px;width:8px;}
+.markdown pre::-webkit-scrollbar-track-piece{margin-bottom:10px;background-color:#e5e5e5;border-bottom-left-radius:4px 4px;border-bottom-right-radius:4px 4px;border-top-left-radius:4px 4px;border-top-right-radius:4px 4px;}
+.markdown pre::-webkit-scrollbar-thumb:vertical{height:25px;background-color:#ccc;-webkit-border-radius:4px;-webkit-box-shadow:0 1px 1px rgba(255,255,255,1);}
+.markdown pre::-webkit-scrollbar-thumb:horizontal{width:25px;background-color:#ccc;-webkit-border-radius:4px;}
+.markdown pre code{padding:0!important;font-size:12px!important;background-color:#eee!important;border:none!important;}
+.markdown code{font-size:14px!important;background-color:#f8f8ff!important;color:#444!important;padding:0 .2em!important;border:1px solid #dedede!important;}
+.markdown a code,.markdown a:link code,.markdown a:visited code{color:#4183c4!important;}
+.markdown img{max-width:100%;}
+.markdown pre.console{margin:1em 0!important;font-size:12px!important;background-color:black!important;padding:.5em!important;line-height:1.5em!important;color:white!important;}
+.markdown pre.console code{padding:0!important;font-size:12px!important;background-color:black!important;border:none!important;color:white!important;}
+.markdown pre.console span{color:#888!important;}
+.markdown pre.console span.command{color:yellow!important;}
+.markdown .frame{margin:0;display:inline-block;}
+.markdown .frame img{display:block;}
+.markdown .frame>span{display:block;border:1px solid #aaa;padding:4px;}
+.markdown .frame span span{display:block;font-size:10pt;margin:0;padding:4px 0 2px 0;text-align:center;line-height:10pt;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;}
+.markdown .float-left{float:left;padding:.5em 1em .25em 0;}
+.markdown .float-right{float:right;padding:.5em 0 .25em 1em;}
+.markdown .align-left{display:block;text-align:left;}
+.markdown .align-center{display:block;text-align:center;}
+.markdown .align-right{display:block;text-align:right;}
