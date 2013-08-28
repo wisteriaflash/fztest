@@ -1,0 +1,12 @@
+{
+  "family": "examples",
+  "name": "aa",
+  "version": "1.0.0",
+
+  "spm": {
+    "alias": {
+      "jquery": "jquery"
+    },
+    "output": ["main1.js"]
+  }
+}

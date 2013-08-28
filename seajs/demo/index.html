@@ -2,14 +2,26 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>aaa</title>
+<title>test seajs</title>
 </head>
 <body>
 <p id="testp">asdfsdf</p>
+
+<div>aaa &gt;</div>
+
 <script src="lib/sea.js"></script>
 <script src="config.js"></script>
 <script>
-  seajs.use("../demo/main1");
+// For development
+if (location.href.indexOf("?dev") > 0) {
+  seajs.use("../demo/static/src/main1");
+}
+// For production
+else {
+  // seajs.use("examples/aa/1.0.0/main1-debug");
+  seajs.use("examples/aa/1.0.0/main1");
+}
+
 </script>
 
 </body>

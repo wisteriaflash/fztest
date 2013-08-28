@@ -14,3 +14,18 @@
     "markdown": "*"
   }
 }
+
+/*
+name: 模块名
+description: 模块描述
+author: 模块作者信息
+contributors: 贡献者人员信息
+dependencies: 依赖的模块，NPM就是通过这个属性来解决
+devDependencies: 同上，不过这里的依赖模块要多些
+keyworkds: 模块关键字，方便你使用npm search查找到它的源码
+
+main: index ==>表示Node.js在调用某个模块的时候，将寻找main指向的路径作为模块的接口，在这里Node将寻找同目录下的index文件，并尝试从它那加载模块；如果没有main，Node还是会尝试寻找index.js或者index.node作为包的接口。
+
+bin: 模块的可执行文件路径
+dist: 模块的指纹，可用来验证模块的完全性
+*/

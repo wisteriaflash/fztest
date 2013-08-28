@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>imgCut test</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../assets/jquery-ui-1.10.3.custom.css">
+  <link rel="stylesheet" href="a.css">
+</head>
+<body>
+  
+<div class="wrapper">
+  <input id="combobox1" type="text" name="fruit" />
+</div>
+
+<script src="../assets/jquery-1.9.1.min.js"></script>
+<script src="jquery.combobox.js"></script>
+<script>
+$(function () {
+  var s = $('#combobox1').combobox([
+        'Apples',
+        'Oranges',
+        'Bananas'
+    ]);
+  console.log(s)
+
+});
+</script>
+</body>
+</html>

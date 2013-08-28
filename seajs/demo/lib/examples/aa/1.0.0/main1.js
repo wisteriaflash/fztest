@@ -1,0 +1,1 @@
+define("examples/aa/1.0.0/main1",["jquery","./a1"],function(a,b,c){var d=a("jquery"),e=d("#testp").text();d("#testp").html("bbbb &gt;"),console.log(e),c.exports={a:1},a("./a1")}),define("examples/aa/1.0.0/a1",["jquery"],function(a){var b=a("jquery"),c='<div style="color:red;">I am module A</div>';b("body").append(c)});
