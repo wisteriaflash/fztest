@@ -1,0 +1,74 @@
+/*
+==========多行文本编辑=======
+下面是一些我所了解的多行编辑方法：
+鼠标选中多行，按下 Ctrl+Shift+L (Command+Shift+L) 即可同时编辑这些行；
+鼠标选中文本，反复按 CTRL+D (Command+D) 即可继续向下同时选中下一个相同的文本进行同时编辑；
+*/
+
+
+.c1{
+  width: 1000px; 
+  height: 400px;
+  padding: 10px;
+  margin: 20px auto;
+  border: 2px solid green;
+  
+  /*-webkit-box-shadow: -10px 0px 10px yellow;
+  -moz-box-shadow: -10px 0px 10px yellow;
+  box-shadow: -10px 0px 10px yellow;*/
+
+  
+
+
+  -webkit-border-radius: 5px 5px 10px 5px;
+  -moz-border-radius: 5px 5px 10px 5px;
+  border-radius: 5px 5px 10px 5px;
+  /*pos:top-left top-right bottom-right bottom-left*/
+
+}
+
+.c1 img{
+  border: 1px solid red;
+  /*-webkit-box-shadow: 3px 3px 5px 0px blue;
+  -moz-box-shadow: 3px 3px 5px 0px blue;*/
+  box-shadow:3px 3px 5px 0px blue;
+}
+
+.trans, .trans_effect {
+    display:block;
+    line-height:100px;
+    width:100px;
+    background:#beceeb;
+    margin:30px auto;
+    text-align:center;
+    
+    -webkit-transition:all 0.6s ease-in-out;
+    -moz-transition:all 0.6s ease-in-out;
+    -o-transition:all 0.6s ease-in-out;
+    -ms-transition:all 0.6s ease-in-out;    
+    transition:all 0.6s ease-in-out;
+}
+.trans_effect {
+    -webkit-transform: scale(0.2,0);
+    -moz-transform: scale(0.2,0);
+    -o-transform: scale(0.2,0);
+    -ms-transform: scale(0.2,0);
+    transform: scale(0.2,0);
+    display: none9;  /*for ie*/
+}
+.trans_effect:hover {
+  -webkit-transform: scale(0.3,0.1);
+  -moz-transform: scale(0.3,0.1);
+  -o-transform: scale(0.3,0.1);
+  -ms-transform: scale(0.3,0.1);
+  transform: scale(0.3,0.1);
+}
+
+/*css emmet相关语法*/
+.test{
+  /*trf*/
+  /*-wm-trf*/
+  /*lg(left, #FFF,50%, #000)*/
+  background: url(http://www.baidu.com/img/bdlogo.gif);
+}
+/*@f+*/

@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>a.test</title>
+<link rel="stylesheet" href="a1-style.css" />
+</head>
+
+<body>
+  <div class="c1">
+    <p>双方都士大夫士大夫诗圣杜甫</p>
+    <img id="J_img" src="http://www.google.com.hk/images/srpr/logo4w.png" width="260" />
+    <a id="J_trans" href="/" class="trans">摸我！</a>
+  </div>
+  <script type="text/javascript">
+    function $(id){
+      return document.getElementById(id);
+    }
+    var img = $('J_img');
+    var trans = $('J_trans');
+    img.onclick = function(){
+      var cls = trans.className;
+      if(cls == 'trans'){
+        cls = 'trans_effect';
+      }else{
+        cls = 'trans';
+      }
+      trans.className = cls;
+    }
+  </script>
+</body>
+</html>
