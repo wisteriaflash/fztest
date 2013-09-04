@@ -8,6 +8,7 @@
   ul,li{list-style: none;}
   .wrapper{width: 600px; margin: 20px auto;}
   .wrapper h2{margin-bottom: 40px;}
+  .wrapper p{font-size: 12px; margin-bottom: 20px; color: red;}
   .wrapper ul li{margin-bottom: 10px;}
   .wrapper ul li span{width: 160px; display: inline-block; text-align: right;}
   .wrapper .scale-title{float: left;}
@@ -21,6 +22,7 @@
 <body>
   <div class="wrapper">
     <h2>css按比例缩放--正则转换字符串</h2>
+    <p>tip：根据比例，替换css中出现px单位属性(background-position除外)，替换值为整数值，在生成的css上添加预定义的class名，方便页面查看对比效果。</p>
     <ul>
       <li><span>缩放值：</span><input id="J_trnsScale" type="text" value="1.12977" /></li>
       <li><span>添加前置class名：</span><input id="J_clsPre" type="text" value="scale-pdf" /></li>
