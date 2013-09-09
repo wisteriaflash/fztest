@@ -38,8 +38,8 @@ function $(id){
   return document.getElementById(id);
 }
 var transData = {
-  scale: $('J_trnsScale').value,
-  clsPre: $('J_clsPre').value,
+  scale: 1,
+  clsPre: '',
   transAble: true,
   matchUnit: 'px',
   init: function(){
@@ -47,13 +47,13 @@ var transData = {
     //testData
     $('J_transStr').value = ".pages .first-page{position:absolute; top:200px; right:48px; width:145px}\n.pages .first-page .avatar{ width:54px; height:54px; position:relative;  margin-right:10px;}\n.pages .first-page .avatar i{background-position:-140px 0; width:15px; height:11px; position:absolute; left:10px; bottom:-11px; display:block;}\n.pages .first-page .avatar img{width:54px;}.pages .first-page .info{float:left; font-size:14px;}\n.pages .first-page .info .author-name{ font-size:16px; line-height:20px; margin-top:5px;}\n.pages .first-page .info .weibo-data{font-size:11px; margin-left:-5px; margin-top:6px;}\n.pages .first-page .info .weibo-data li{ padding:0 5px;}";
     //
-    me.checkData();
     me.bindHandler();
   },
   checkData: function(){
     var me = this;
-    me.clsPre = '.'+me.clsPre+' ';
+    me.clsPre = '.'+$('J_clsPre').value+' ';
     //check data
+    me.scale = $('J_trnsScale').value;
     var scale = me.scale;
     if(scale.length == 0){
       me.transAble = false;
@@ -75,6 +75,7 @@ var transData = {
       if(!me.transAble){
         return;
       }
+      me.checkData();
       var targetStr = $('J_transStr').value;
       var resultStr = me.transScale(targetStr);
       $('J_result').value = resultStr;
