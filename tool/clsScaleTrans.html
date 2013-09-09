@@ -52,7 +52,7 @@ var transData = {
   },
   checkData: function(){
     var me = this;
-    me.clsPre = '.'+me.clsPre+' ';
+    me.clsPre = '.'+$('J_clsPre').value+' ';
     //check data
     var scale = me.scale;
     if(scale.length == 0){
@@ -75,6 +75,7 @@ var transData = {
       if(!me.transAble){
         return;
       }
+      me.checkData();
       var targetStr = $('J_transStr').value;
       var resultStr = me.transScale(targetStr);
       $('J_result').value = resultStr;
