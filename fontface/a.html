@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>这是测试</title>
+	<meta charset="utf-8" />
+	<script src="jquery-1.9.1.min.js"></script>
+	<script src="jquery.fontface.js"></script>
+	<style id="ttt1">
+	body{font-size: 18px; font-family: 'Arial';}
+	.page{width: 960px; margin: 0 auto;}
+	.img{float: left; clear: left; margin-right: 15px;}
+	.page .bd p{text-indent: 25px; line-height: 20px;}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<div class="img">
+		<img src="http://ww2.sinaimg.cn/bmiddle/685379ecgw1e5lc7q2mqfj205k07swf0.jpg" width="100" />
+		</div>
+		<div class="bd">
+			<p>我一直在想 大学为什么要把课安排的这么松散然后耗上四年，而不是像中学一样朝七晚五学上两年就毕业—它就是要这样，用四年的时间，打磨你锐气，消耗你的梦想，拆散坚定过的爱情，然后才能放心地把一个足够圆滑和现实的你，送到社会，婚姻，现实里。大学，多可怕，多必要的存在。我一直在想 大学为什么要把课安排的这么松散然后耗上四年，而不是像中学一样朝七晚五学上两年就毕业—它就是要这样，用四年的时间，打磨你锐气，消耗你的梦想，拆散坚定过的爱情，然后才能放心地把一个足够圆滑和现实的你，送到社会，婚姻，现实里。大学，多可怕，多必要的存在。我一直在想 大学为什么要把课安排的这么松散然后耗上四年，而不是像中学一样朝七晚五学上两年就毕业—它就是要这样，用四年的时间，打磨你锐气，消耗你的梦想，拆散坚定过的爱情，然后才能放心地把一个足够圆滑和现实的你，送到社会，婚姻，现实里。大学，多可怕，多必要的存在。我一直在想 大学为什么要把课安排的这么松散然后耗上四年，而不是像中学一样朝七晚五学上两年就毕业—它就是要这样，用四年的时间，打磨你锐气，消耗你的梦想，拆散坚定过的爱情，然后才能放心地把一个足够圆滑和现实的你，送到社会，婚姻，现实里。大学，多可怕，多必要的存在。我一直在想 大学为什么要把课安排的这么松散然后耗上四年，而不是像中学一样朝七晚五学上两年就毕业—它就是要这样，用四年的时间，打磨你锐气，消耗你的梦想，拆散坚定过的爱情，然后才能放心地把一个足够圆滑和现实的你，送到社会，婚姻，现实里。大学，多可怕，多必要的存在。我一直在想 大学为什么要把课安排的这么松散然后耗上存在。</p>
+		</div>
+	</div>
+	<div style="float:none; width:400px; margin: 0 auto; border: 1px solid red; padding: 10px;">
+  <div style="float:left;height:106px;width:1px;">
+  </div>
+  <div style="float:left;height:250px;width:250px;
+  clear:left;background:#F00;margin:10px;">
+  </div>
+  <p class="f1">字库是现代电子技术和计算机技术发展的产物，各种计算机和电子设备赖以显示、打印或以其他形式输出文字的基本工具，它是按照一定的编码规范排列并采用一定的数字化技术和指令集来描绘文字字形、符号样式和图形的电子文字字体集合体。字库是字体的数字化形式，它不仅是传播文字信息的工具，还以独特的字体风格韵味承载着历史、文化、时代气息和人们的情感。多可怕，多必要的存在。我一直在想 大学为什么要把课安排的这么松散然后耗上四年，而不是像中学一样朝七晚五学上两年就毕业—它就是要这样，用四年的时间，打磨你锐气，消耗你的梦想，拆散坚定过的爱情，然后才能放心地把一个足够圆滑和现实的你，送到社会，婚姻，现实里。大学，多可怕，多必要的存在。我一直在想 大学为什么要把课安排的这么松散然后耗上四年，而不是像中学一样朝七晚五学上两年就毕业—它就是要这样</p>
+  <p class="f2">气息和人们的情感。多可怕，多必要的存在。我一直在想 大学为什么要把课安排的这么松散然后耗上四年，而不是像中学一样朝七晚五学上两年就毕业—它就是要这样，用四年的时间，打磨你锐气，消耗你的梦想，拆散坚定过的爱情</p>
+</div>
+<div class="page">
+	<div><button style="width:100px;" id="J_fontHeiti">变字体</button></div>
+</div>
+
+
+<script>
+//火狐不支持跨域字体
+var btn = $('#J_fontHeiti');
+btn.click(function(e){
+	//$('body').css('font-family','黑体');
+$('.f1').fontface({
+  fontName : "FZYBKSJWs",
+  fontFamily : ["FZYBKSJWs", "Helvetica, Arial, sans-serif"],
+  // filePath : "http://a.test.com:8085/01/font/",
+  filePath : "font/",
+  fileName : "FZYBKSJWs"
+});
+// $('.f2').fontface({
+//   fontName : "FZZBHJWs",
+//   fontFamily : ["FZZBHJWs", "Helvetica, Arial, sans-serif"],
+//   filePath : "http://localhost:8085/01/font/",
+//   // filePath : "font/",
+//   fileName : "FZZBHJWs"
+// });
+$('body').css('font-size','18px');
+
+//test
+return;
+var styleStr = 'body{background-color:yellow}';
+var style1 = $('#styleTest');
+try {
+   style1.text(styleStr);
+ } 
+catch (e) {
+	style1.get(0).styleSheet.cssText = styleStr;
+     // style.styleSheet.cssText = "body{background-color:red}";
+ }
+
+});
+
+
+
+
+</script>
+</body>
+</html>
