@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>UploadiFive Test</title>
 <script src="http://localhost:8086/js/plugin/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
-<!-- <script src="swfobject.js" type="text/javascript"></script> -->
+<script src="swfobject.js" type="text/javascript"></script>
 <script src="jquery.uploadify.v2.1.0.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="uploadify.css">
 <style type="text/css">

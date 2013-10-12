@@ -80,15 +80,15 @@
 					].join("\n");
 					$("#jQueryFontFace").data(fontfamilyStyleWeight, true);
 				}
-
-				if (!$("#jQueryFontFace").data(selector)) {
-					rule = [
-						selector + " {",
-							"\tfont-family: " + FF.quote(options.fontFamily) + " !important;",
-						"}"
-					].join("\n");
-					$("#jQueryFontFace").data(selector, selector);
-				}
+				$(obj).css('font-family',FF.quote(options.fontFamily));
+				// if (!$("#jQueryFontFace").data(selector)) {
+				// 	rule = [
+				// 		selector + " {",
+				// 			"\tfont-family: " + FF.quote(options.fontFamily) + " !important;",
+				// 		"}"
+				// 	].join("\n");
+				// 	$("#jQueryFontFace").data(selector, selector);
+				// }
 
 				return (fontFace.length || rule.length) ? fontFace + "\n" + rule + "\n" : "";
 			},
