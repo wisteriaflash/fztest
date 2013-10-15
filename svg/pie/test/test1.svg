@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+
+<svg width="100%" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="init(evt)" >
+
+<title>测试 test</title>
+
+
+<!-- <script type="text/javascript"><![CDATA[]]></script> -->
+<script xlink:href="testjs.js" language="javascript"></script>
+
+
+
+
+<defs>
+  <clipPath id="clipcharts-1">
+      <rect rx="0" ry="0" fill="none" x="0" y="0" width="184" height="251" stroke-width="0.000001">
+      </rect>
+  </clipPath>
+</defs>
+<g id="group" clip-path="url(#clipcharts-1)">
+  <circle id="e1" cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" onclick="remove(evt)">
+    <set attributeName="fill" to="orange" begin="click" />
+  </circle>
+</g>
+
+
+<!-- test-anim1 -->
+<g id="J_dragElement" transform="translate(50,400)">
+  <text id="mtext" x="20" y="50" style="font-size:25px;fill:orange;">这是一个拖动文字的测试</text>
+  <path id="rectBox" d="M 0 0" opacity=".2" />
+  <path id="rectBox1" d="M 20 88 l 275 0 0 26-275 0z" opacity=".5"  stroke="red" stroke-width="2" />
+</g>
+
+
+
+
+
+
+
+</svg>

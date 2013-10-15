@@ -1,0 +1,480 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1116" height="400">
+    <defs>
+        <clipPath id="highcharts-1">
+            <rect rx="0" ry="0" fill="none" x="0" y="0" width="927" height="321" stroke-width="0" />
+        </clipPath>
+        <linearGradient id="highcharts-2" x1="0" y1="0" x2="0" y2="20" gradientUnits="userSpaceOnUse">
+            <stop offset="0.4" stop-color="#F7F7F7" stop-opacity="1" />
+            <stop offset="0.6" stop-color="#E3E3E3" stop-opacity="1" />
+        </linearGradient>
+    </defs>
+    <rect rx="5" ry="5" fill="#FFFFFF" x="0" y="0" width="1116" height="400"
+    stroke-width="0" stroke="#4572A7" />
+    <path d="M 59 329.5 L 986 329.5" fill="none" stroke="#808080" stroke-width="1"
+    />
+    <g class="highcharts-grid" zIndex="1" />
+    <g class="highcharts-grid" zIndex="1">
+        <path d="M 59 329.5 L 986 329.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 284.5 L 986 284.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 238.5 L 986 238.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 192.5 L 986 192.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 146.5 L 986 146.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 101.5 L 986 101.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 55.5 L 986 55.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 375.5 L 986 375.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+    </g>
+    <g class="highcharts-series-group" zIndex="3">
+        <g class="highcharts-series" visibility="visible" transform="translate(59,55)"
+        clip-path="url(http://www.highcharts.com/demo/#highcharts-1)">
+            <path d="M 38.6 210.3 L 115.9 211.2 L 193.1 187.4 L 270.4 141.7 L 347.6 107.9 L 424.9 77.7 L 502.1 43.9 L 579.4 32 L 656.6 61.3 L 733.9 107 L 811.1 147.2 L 888.4 186.5"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="5" isShadow="true" stroke-opacity="0.05"
+            transform="translate(1,1)" />
+            <path d="M 38.6 210.3 L 115.9 211.2 L 193.1 187.4 L 270.4 141.7 L 347.6 107.9 L 424.9 77.7 L 502.1 43.9 L 579.4 32 L 656.6 61.3 L 733.9 107 L 811.1 147.2 L 888.4 186.5"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="3" isShadow="true" stroke-opacity="0.1"
+            transform="translate(1,1)" />
+            <path d="M 38.6 210.3 L 115.9 211.2 L 193.1 187.4 L 270.4 141.7 L 347.6 107.9 L 424.9 77.7 L 502.1 43.9 L 579.4 32 L 656.6 61.3 L 733.9 107 L 811.1 147.2 L 888.4 186.5"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" isShadow="true" stroke-opacity="0.15000000000000002"
+            transform="translate(1,1)" />
+            <path d="M 38.6 210.3 L 115.9 211.2 L 193.1 187.4 L 270.4 141.7 L 347.6 107.9 L 424.9 77.7 L 502.1 43.9 L 579.4 32 L 656.6 61.3 L 733.9 107 L 811.1 147.2 L 888.4 186.5"
+            fill="none" stroke="#4572A7" stroke-width="2" />
+            <path d="M 888.4 182.5 C 893.728 182.5 893.728 190.5 888.4 190.5 C 883.072 190.5 883.072 182.5 888.4 182.5 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 811.1 143.2 C 816.428 143.2 816.428 151.2 811.1 151.2 C 805.772 151.2 805.772 143.2 811.1 143.2 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 733.9 103 C 739.228 103 739.228 111 733.9 111 C 728.572 111 728.572 103 733.9 103 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 656.6 57.3 C 661.928 57.3 661.928 65.3 656.6 65.3 C 651.272 65.3 651.272 57.3 656.6 57.3 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 579.4 28 C 584.728 28 584.728 36 579.4 36 C 574.072 36 574.072 28 579.4 28 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 502.1 39.9 C 507.428 39.9 507.428 47.9 502.1 47.9 C 496.77200000000005 47.9 496.77200000000005 39.9 502.1 39.9 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 424.9 73.7 C 430.22799999999995 73.7 430.22799999999995 81.7 424.9 81.7 C 419.572 81.7 419.572 73.7 424.9 73.7 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 347.6 103.9 C 352.928 103.9 352.928 111.9 347.6 111.9 C 342.27200000000005 111.9 342.27200000000005 103.9 347.6 103.9 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 270.4 137.7 C 275.72799999999995 137.7 275.72799999999995 145.7 270.4 145.7 C 265.072 145.7 265.072 137.7 270.4 137.7 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 193.1 183.4 C 198.428 183.4 198.428 191.4 193.1 191.4 C 187.772 191.4 187.772 183.4 193.1 183.4 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 115.9 207.2 C 121.22800000000001 207.2 121.22800000000001 215.2 115.9 215.2 C 110.572 215.2 110.572 207.2 115.9 207.2 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 38.6 206.3 C 43.928000000000004 206.3 43.928000000000004 214.3 38.6 214.3 C 33.272 214.3 33.272 206.3 38.6 206.3 Z"
+            fill="#4572A7" stroke="#FFFFFF" stroke-width="0" />
+        </g>
+        <g class="highcharts-series" visibility="visible" transform="translate(59,55)"
+        clip-path="url(http://www.highcharts.com/demo/#highcharts-1)">
+            <path d="M 38.6 276.1 L 115.9 267 L 193.1 222.2 L 270.4 171 L 347.6 118.9 L 424.9 73.1 L 502.1 47.5 L 579.4 53.9 L 656.6 90.5 L 733.9 145.4 L 811.1 195.7 L 888.4 251.4"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="5" isShadow="true" stroke-opacity="0.05"
+            transform="translate(1,1)" />
+            <path d="M 38.6 276.1 L 115.9 267 L 193.1 222.2 L 270.4 171 L 347.6 118.9 L 424.9 73.1 L 502.1 47.5 L 579.4 53.9 L 656.6 90.5 L 733.9 145.4 L 811.1 195.7 L 888.4 251.4"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="3" isShadow="true" stroke-opacity="0.1"
+            transform="translate(1,1)" />
+            <path d="M 38.6 276.1 L 115.9 267 L 193.1 222.2 L 270.4 171 L 347.6 118.9 L 424.9 73.1 L 502.1 47.5 L 579.4 53.9 L 656.6 90.5 L 733.9 145.4 L 811.1 195.7 L 888.4 251.4"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" isShadow="true" stroke-opacity="0.15000000000000002"
+            transform="translate(1,1)" />
+            <path d="M 38.6 276.1 L 115.9 267 L 193.1 222.2 L 270.4 171 L 347.6 118.9 L 424.9 73.1 L 502.1 47.5 L 579.4 53.9 L 656.6 90.5 L 733.9 145.4 L 811.1 195.7 L 888.4 251.4"
+            fill="none" stroke="#AA4643" stroke-width="2" />
+            <path d="M 888.4 247.4 L 892.4 251.4 888.4 255.4 884.4 251.4 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 811.1 191.7 L 815.1 195.7 811.1 199.7 807.1 195.7 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 733.9 141.4 L 737.9 145.4 733.9 149.4 729.9 145.4 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 656.6 86.5 L 660.6 90.5 656.6 94.5 652.6 90.5 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 579.4 49.9 L 583.4 53.9 579.4 57.9 575.4 53.9 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 502.1 43.5 L 506.1 47.5 502.1 51.5 498.1 47.5 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 424.9 69.1 L 428.9 73.1 424.9 77.1 420.9 73.1 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 347.6 114.9 L 351.6 118.9 347.6 122.9 343.6 118.9 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 270.4 167 L 274.4 171 270.4 175 266.4 171 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 193.1 218.2 L 197.1 222.2 193.1 226.2 189.1 222.2 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 115.9 263 L 119.9 267 115.9 271 111.9 267 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 38.6 272.1 L 42.6 276.1 38.6 280.1 34.6 276.1 Z" fill="#AA4643"
+            stroke="#FFFFFF" stroke-width="0" />
+        </g>
+        <g class="highcharts-series" visibility="visible" transform="translate(59,55)"
+        clip-path="url(http://www.highcharts.com/demo/#highcharts-1)">
+            <path d="M 38.6 282.5 L 115.9 268.8 L 193.1 242.3 L 270.4 197.5 L 347.6 150.9 L 424.9 118.9 L 502.1 104.2 L 579.4 110.6 L 656.6 143.5 L 733.9 192 L 811.1 238.6 L 888.4 265.1"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="5" isShadow="true" stroke-opacity="0.05"
+            transform="translate(1,1)" />
+            <path d="M 38.6 282.5 L 115.9 268.8 L 193.1 242.3 L 270.4 197.5 L 347.6 150.9 L 424.9 118.9 L 502.1 104.2 L 579.4 110.6 L 656.6 143.5 L 733.9 192 L 811.1 238.6 L 888.4 265.1"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="3" isShadow="true" stroke-opacity="0.1"
+            transform="translate(1,1)" />
+            <path d="M 38.6 282.5 L 115.9 268.8 L 193.1 242.3 L 270.4 197.5 L 347.6 150.9 L 424.9 118.9 L 502.1 104.2 L 579.4 110.6 L 656.6 143.5 L 733.9 192 L 811.1 238.6 L 888.4 265.1"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" isShadow="true" stroke-opacity="0.15000000000000002"
+            transform="translate(1,1)" />
+            <path d="M 38.6 282.5 L 115.9 268.8 L 193.1 242.3 L 270.4 197.5 L 347.6 150.9 L 424.9 118.9 L 502.1 104.2 L 579.4 110.6 L 656.6 143.5 L 733.9 192 L 811.1 238.6 L 888.4 265.1"
+            fill="none" stroke="#89A54E" stroke-width="2" />
+            <path d="M 884.4 261.1 L 892.4 261.1 892.4 269.1 884.4 269.1 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 807.1 234.6 L 815.1 234.6 815.1 242.6 807.1 242.6 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 729.9 188 L 737.9 188 737.9 196 729.9 196 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 652.6 139.5 L 660.6 139.5 660.6 147.5 652.6 147.5 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 575.4 106.6 L 583.4 106.6 583.4 114.6 575.4 114.6 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 498.1 100.2 L 506.1 100.2 506.1 108.2 498.1 108.2 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 420.9 114.9 L 428.9 114.9 428.9 122.9 420.9 122.9 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 343.6 146.9 L 351.6 146.9 351.6 154.9 343.6 154.9 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 266.4 193.5 L 274.4 193.5 274.4 201.5 266.4 201.5 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 189.1 238.3 L 197.1 238.3 197.1 246.3 189.1 246.3 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 111.9 264.8 L 119.9 264.8 119.9 272.8 111.9 272.8 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+            <path d="M 34.6 278.5 L 42.6 278.5 42.6 286.5 34.6 286.5 Z" fill="#89A54E"
+            stroke="#FFFFFF" stroke-width="0" />
+        </g>
+        <g class="highcharts-series" visibility="visible" transform="translate(59,55)"
+        clip-path="url(http://www.highcharts.com/demo/#highcharts-1)">
+            <path d="M 38.6 238.6 L 115.9 235.9 L 193.1 222.2 L 270.4 196.6 L 347.6 165.5 L 424.9 135.3 L 502.1 118.9 L 579.4 122.5 L 656.6 144.5 L 733.9 180.1 L 811.1 213.9 L 888.4 230.4"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="5" isShadow="true" stroke-opacity="0.05"
+            transform="translate(1,1)" />
+            <path d="M 38.6 238.6 L 115.9 235.9 L 193.1 222.2 L 270.4 196.6 L 347.6 165.5 L 424.9 135.3 L 502.1 118.9 L 579.4 122.5 L 656.6 144.5 L 733.9 180.1 L 811.1 213.9 L 888.4 230.4"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="3" isShadow="true" stroke-opacity="0.1"
+            transform="translate(1,1)" />
+            <path d="M 38.6 238.6 L 115.9 235.9 L 193.1 222.2 L 270.4 196.6 L 347.6 165.5 L 424.9 135.3 L 502.1 118.9 L 579.4 122.5 L 656.6 144.5 L 733.9 180.1 L 811.1 213.9 L 888.4 230.4"
+            fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" isShadow="true" stroke-opacity="0.15000000000000002"
+            transform="translate(1,1)" />
+            <path d="M 38.6 238.6 L 115.9 235.9 L 193.1 222.2 L 270.4 196.6 L 347.6 165.5 L 424.9 135.3 L 502.1 118.9 L 579.4 122.5 L 656.6 144.5 L 733.9 180.1 L 811.1 213.9 L 888.4 230.4"
+            fill="none" stroke="#80699B" stroke-width="2" />
+            <path d="M 888.4 226.4 L 892.4 234.4 884.4 234.4 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+            <path d="M 811.1 209.9 L 815.1 217.9 807.1 217.9 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+            <path d="M 733.9 176.1 L 737.9 184.1 729.9 184.1 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+            <path d="M 656.6 140.5 L 660.6 148.5 652.6 148.5 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+            <path d="M 579.4 118.5 L 583.4 126.5 575.4 126.5 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+            <path d="M 502.1 114.9 L 506.1 122.9 498.1 122.9 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+            <path d="M 424.9 131.3 L 428.9 139.3 420.9 139.3 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+            <path d="M 347.6 161.5 L 351.6 169.5 343.6 169.5 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+            <path d="M 270.4 192.6 L 274.4 200.6 266.4 200.6 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+            <path d="M 193.1 218.2 L 197.1 226.2 189.1 226.2 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+            <path d="M 115.9 231.9 L 119.9 239.9 111.9 239.9 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+            <path d="M 38.6 234.6 L 42.6 242.6 34.6 242.6 Z" fill="#80699B" stroke="#FFFFFF"
+            stroke-width="0" />
+        </g>
+    </g>
+    <text x="538" y="25" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:16px;color:#3E576F;fill:#3E576F;"
+    text-anchor="middle" class="highcharts-title" zIndex="4">
+        <tspan x="538">
+            Monthly Average Temperature
+        </tspan>
+    </text>
+    <text x="538" y="40" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#6D869F;fill:#6D869F;"
+    text-anchor="middle" class="highcharts-subtitle" zIndex="4">
+        <tspan x="538">
+            Source: WorldClimate.com
+        </tspan>
+    </text>
+    <g class="highcharts-legend" zIndex="7" transform="translate(1013,110)">
+        <text x="30" y="18" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#3E576F;fill:#3E576F;"
+        text-anchor="start" zIndex="2">
+            <tspan x="30">
+                Tokyo
+            </tspan>
+        </text>
+        <path d="M -21 0 L -5 0" fill="none" stroke-width="2" zIndex="2" stroke="#4572A7"
+        transform="translate(30,14)" />
+        <text x="30" y="33" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#3E576F;fill:#3E576F;"
+        text-anchor="start" zIndex="2">
+            <tspan x="30">
+                New York
+            </tspan>
+        </text>
+        <path d="M -21 0 L -5 0" fill="none" stroke-width="2" zIndex="2" stroke="#AA4643"
+        transform="translate(30,29)" />
+        <text x="30" y="48" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#3E576F;fill:#3E576F;"
+        text-anchor="start" zIndex="2">
+            <tspan x="30">
+                Berlin
+            </tspan>
+        </text>
+        <path d="M -21 0 L -5 0" fill="none" stroke-width="2" zIndex="2" stroke="#89A54E"
+        transform="translate(30,44)" />
+        <text x="30" y="63" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#3E576F;fill:#3E576F;"
+        text-anchor="start" zIndex="2">
+            <tspan x="30">
+                London
+            </tspan>
+        </text>
+        <path d="M -21 0 L -5 0" fill="none" stroke-width="2" zIndex="2" stroke="#80699B"
+        transform="translate(30,59)" />
+        <path d="M 17 10 C 22.328 10 22.328 18 17 18 C 11.672 18 11.672 10 17 10 Z"
+        fill="#4572A7" zIndex="3" stroke="#4572A7" />
+        <path d="M 17 25 L 21 29 17 33 13 29 Z" fill="#AA4643" zIndex="3" stroke="#AA4643"
+        />
+        <path d="M 13 40 L 21 40 21 48 13 48 Z" fill="#89A54E" zIndex="3" stroke="#89A54E"
+        />
+        <path d="M 17 55 L 21 63 13 63 Z" fill="#80699B" zIndex="3" stroke="#80699B"
+        />
+    </g>
+    <g class="highcharts-axis" zIndex="7">
+        <text x="97.625" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="97.625">
+                Jan
+            </tspan>
+        </text>
+        <text x="174.875" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="174.875">
+                Feb
+            </tspan>
+        </text>
+        <text x="252.125" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="252.125">
+                Mar
+            </tspan>
+        </text>
+        <text x="329.375" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="329.375">
+                Apr
+            </tspan>
+        </text>
+        <text x="406.625" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="406.625">
+                May
+            </tspan>
+        </text>
+        <text x="483.875" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="483.875">
+                Jun
+            </tspan>
+        </text>
+        <text x="561.125" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="561.125">
+                Jul
+            </tspan>
+        </text>
+        <text x="638.375" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="638.375">
+                Aug
+            </tspan>
+        </text>
+        <text x="715.625" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="715.625">
+                Sep
+            </tspan>
+        </text>
+        <text x="792.875" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="792.875">
+                Oct
+            </tspan>
+        </text>
+        <text x="870.125" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="870.125">
+                Nov
+            </tspan>
+        </text>
+        <text x="947.375" y="389" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:57px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="middle" visibility="visible">
+            <tspan x="947.375">
+                Dec
+            </tspan>
+        </text>
+        <path d="M 214.5 375 L 214.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+        <path d="M 291.5 375 L 291.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+        <path d="M 368.5 375 L 368.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+        <path d="M 445.5 375 L 445.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+        <path d="M 523.5 375 L 523.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+        <path d="M 600.5 375 L 600.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+        <path d="M 677.5 375 L 677.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+        <path d="M 754.5 375 L 754.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+        <path d="M 832.5 375 L 832.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+        <path d="M 909.5 375 L 909.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+        <path d="M 986.5 375 L 986.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+        <path d="M 136.5 375 L 136.5 380" fill="none" stroke="#C0D0E0" stroke-width="1"
+        />
+    </g>
+    <g class="highcharts-axis" zIndex="7">
+        <text x="51" y="380.6" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:444px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="end" visibility="visible">
+            <tspan x="51">
+                -5
+            </tspan>
+        </text>
+        <text x="51" y="334.8857142857143" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:444px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="end" visibility="visible">
+            <tspan x="51">
+                0
+            </tspan>
+        </text>
+        <text x="51" y="289.1714285714286" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:444px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="end" visibility="visible">
+            <tspan x="51">
+                5
+            </tspan>
+        </text>
+        <text x="51" y="243.45714285714288" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:444px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="end" visibility="visible">
+            <tspan x="51">
+                10
+            </tspan>
+        </text>
+        <text x="51" y="197.74285714285716" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:444px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="end" visibility="visible">
+            <tspan x="51">
+                15
+            </tspan>
+        </text>
+        <text x="51" y="152.02857142857144" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:444px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="end" visibility="visible">
+            <tspan x="51">
+                20
+            </tspan>
+        </text>
+        <text x="51" y="106.31428571428572" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:444px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="end" visibility="visible">
+            <tspan x="51">
+                25
+            </tspan>
+        </text>
+        <text x="51" y="60.6" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:444px;color:#666;line-height:14px;fill:#666;"
+        text-anchor="end" visibility="visible">
+            <tspan x="51">
+                30
+            </tspan>
+        </text>
+    </g>
+    <text x="25.09375" y="215" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#6D869F;font-weight:bold;fill:#6D869F;"
+    zIndex="7" transform="rotate(270 25.09375 215)" text-anchor="middle" visibility="visible">
+        <tspan x="25.09375">
+            Temperature (°C)
+        </tspan>
+    </text>
+    <path d="M 59 375.5 L 986 375.5" fill="none" stroke="#C0D0E0" stroke-width="1"
+    zIndex="7" visibility="visible" />
+    <g class="highcharts-tooltip" zIndex="8" style="padding:0;white-space:nowrap;"
+    visibility="hidden" transform="translate(8,306)">
+        <rect rx="5" ry="5" fill="none" x="0" y="0" width="77" height="40" stroke-width="5"
+        fill-opacity="0.85" anchorX="0" anchorY="0" isShadow="true" stroke="rgb(0, 0, 0)"
+        stroke-opacity="0.05" transform="translate(1,1)" />
+        <rect rx="5" ry="5" fill="none" x="0" y="0" width="77" height="40" stroke-width="3"
+        fill-opacity="0.85" anchorX="0" anchorY="0" isShadow="true" stroke="rgb(0, 0, 0)"
+        stroke-opacity="0.1" transform="translate(1,1)" />
+        <rect rx="5" ry="5" fill="none" x="0" y="0" width="77" height="40" stroke-width="1"
+        fill-opacity="0.85" anchorX="0" anchorY="0" isShadow="true" stroke="rgb(0, 0, 0)"
+        stroke-opacity="0.15000000000000002" transform="translate(1,1)" />
+        <rect rx="5" ry="5" fill="rgb(255,255,255)" x="0" y="0" width="77" height="40"
+        stroke-width="2" fill-opacity="0.85" anchorX="0" anchorY="0" stroke="#AA4643"
+        />
+        <text x="5" y="18" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#333333;fill:#333333;"
+        zIndex="1">
+            <tspan style="font-weight:bold" x="5">
+                New York
+            </tspan>
+            <tspan dy="15" x="5">
+                Jan: -0.2°C
+            </tspan>
+        </text>
+    </g>
+    <text x="1106" y="395" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:10px;cursor:pointer;color:#909090;fill:#909090;"
+    text-anchor="end" zIndex="8">
+        <tspan x="1106">
+            Highcharts.com
+        </tspan>
+    </text>
+    <g class="highcharts-tracker" zIndex="9">
+        <g zIndex="1" transform="translate(59,55)" clip-path="url(http://www.highcharts.com/demo/#highcharts-1)">
+            <path d="M 28.6 210.3 L 38.6 210.3 L 115.9 211.2 L 193.1 187.4 L 270.4 141.7 L 347.6 107.9 L 424.9 77.7 L 502.1 43.9 L 579.4 32 L 656.6 61.3 L 733.9 107 L 811.1 147.2 L 888.4 186.5 L 898.4 186.5"
+            fill="none" isTracker="true" stroke-opacity="0.000001" stroke="rgb(192,192,192)"
+            stroke-linejoin="bevel" stroke-width="22" visibility="visible" style=""
+            />
+        </g>
+        <g zIndex="1" transform="translate(59,55)" clip-path="url(http://www.highcharts.com/demo/#highcharts-1)">
+            <path d="M 28.6 276.1 L 38.6 276.1 L 115.9 267 L 193.1 222.2 L 270.4 171 L 347.6 118.9 L 424.9 73.1 L 502.1 47.5 L 579.4 53.9 L 656.6 90.5 L 733.9 145.4 L 811.1 195.7 L 888.4 251.4 L 898.4 251.4"
+            fill="none" isTracker="true" stroke-opacity="0.000001" stroke="rgb(192,192,192)"
+            stroke-linejoin="bevel" stroke-width="22" visibility="visible" style=""
+            />
+        </g>
+        <g zIndex="1" transform="translate(59,55)" clip-path="url(http://www.highcharts.com/demo/#highcharts-1)">
+            <path d="M 28.6 282.5 L 38.6 282.5 L 115.9 268.8 L 193.1 242.3 L 270.4 197.5 L 347.6 150.9 L 424.9 118.9 L 502.1 104.2 L 579.4 110.6 L 656.6 143.5 L 733.9 192 L 811.1 238.6 L 888.4 265.1 L 898.4 265.1"
+            fill="none" isTracker="true" stroke-opacity="0.000001" stroke="rgb(192,192,192)"
+            stroke-linejoin="bevel" stroke-width="22" visibility="visible" style=""
+            />
+        </g>
+        <g zIndex="1" transform="translate(59,55)" clip-path="url(http://www.highcharts.com/demo/#highcharts-1)">
+            <path d="M 28.6 238.6 L 38.6 238.6 L 115.9 235.9 L 193.1 222.2 L 270.4 196.6 L 347.6 165.5 L 424.9 135.3 L 502.1 118.9 L 579.4 122.5 L 656.6 144.5 L 733.9 180.1 L 811.1 213.9 L 888.4 230.4 L 898.4 230.4"
+            fill="none" isTracker="true" stroke-opacity="0.000001" stroke="rgb(192,192,192)"
+            stroke-linejoin="bevel" stroke-width="22" visibility="visible" style=""
+            />
+        </g>
+    </g>
+    <rect rx="3" ry="3" fill="url(#highcharts-2)"
+    x="0.5" y="0.5" width="23" height="19" stroke-width="1" transform="translate(1082,10)"
+    zIndex="19" stroke="#B0B0B0" />
+    <rect rx="3" ry="3" fill="url(#highcharts-2)"
+    x="0.5" y="0.5" width="23" height="19" stroke-width="1" transform="translate(1056,10)"
+    zIndex="19" stroke="#B0B0B0" />
+    <path d="M 5.5 16.5 L 17.5 16.5 17.5 14.5 5.5 14.5 Z M 11.5 14.5 L 15.5 9.5 10.5 9.5 10.5 4.5 12.5 4.5 12.5 9.5 7.5 9.5 Z"
+    fill="#A8BF77" transform="translate(1082,10)" stroke="#A0A0A0" stroke-width="1"
+    zIndex="20" />
+    <path d="M 5.5 12.5 L 17.5 12.5 17.5 9.5 5.5 9.5 Z M 7.5 9.5 L 7.5 4.5 15.5 4.5 15.5 9.5 Z M 7.5 12.5 L 5.5 16.5 17.5 16.5 15.5 12.5 Z"
+    fill="#B5C9DF" transform="translate(1056,10)" stroke="#A0A0A0" stroke-width="1"
+    zIndex="20" />
+    <rect rx="0" ry="0" fill="rgb(255,255,255)" x="1082" y="10" width="24"
+    height="20" stroke-width="0" id="exportButton" fill-opacity="0.001" title="Export to raster or vector image"
+    zIndex="21" style="cursor:pointer;">
+        <title>
+            Export to raster or vector image
+        </title>
+    </rect>
+    <rect rx="0" ry="0" fill="rgb(255,255,255)" x="1056" y="10" width="24"
+    height="20" stroke-width="0" id="printButton" fill-opacity="0.001" title="Print the chart"
+    zIndex="21" style="cursor:pointer;">
+        <title>
+            Print the chart
+        </title>
+    </rect>
+</svg>

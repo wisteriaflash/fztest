@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+
+<svg width="100%" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="highcharts-grid" zIndex="1">
+        <path d="M 59 329.5 L 986 329.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 284.5 L 986 284.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 238.5 L 986 238.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 192.5 L 986 192.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 146.5 L 986 146.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 101.5 L 986 101.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 55.5 L 986 55.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+        <path d="M 59 375.5 L 986 375.5" fill="none" stroke="#C0C0C0" stroke-width="1"
+        zIndex="1" />
+    </g>
+
+
+    <g class="svg-grid" id="J_gridGroup"><path fill="none" stroke="#0C0C0C" stroke-width="1" z-index="1" d="M 40 0.5 L 1100 0.5"></path><path fill="none" stroke="#0C0C0C" stroke-width="1" z-index="1" d="M 40 45.5 L 1100 45.5"></path><path fill="none" stroke="#0C0C0C" stroke-width="1" z-index="1" d="M 40 90.5 L 1100 90.5"></path><path fill="none" stroke="#0C0C0C" stroke-width="1" z-index="1" d="M 40 135.5 L 1100 135.5"></path><path fill="none" stroke="#0C0C0C" stroke-width="1" z-index="1" d="M 40 180.5 L 1100 180.5"></path><path fill="none" stroke="#0C0C0C" stroke-width="1" z-index="1" d="M 40 225.5 L 1100 225.5"></path><path fill="none" stroke="#0C0C0C" stroke-width="1" z-index="1" d="M 40 270.5 L 1100 270.5"></path></g>
+
+
+
+
+</svg>
