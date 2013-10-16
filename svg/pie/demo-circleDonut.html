@@ -5,10 +5,12 @@
   <title>svg-pie donut</title>
   <style>
   body{padding:0; margin: 0;}
+  h3{text-align: center;}
   #J_wrapper{text-align: center;}
   </style>
 </head>
 <body>
+  <h3>svg-pie donut</h3>
   <div id="J_wrapper"></div>
 <script>
 //=================================== svgCharts Begin ===================================
@@ -68,7 +70,7 @@ svgCharts.prototype = {
     //svg element
     var wrapper = $('J_wrapper');
     svg = new SVGElement("svg");
-    svg.attr({"version":"1.1", "width":800, "height":600, "xmlns":svgNS});
+    svg.attr({"version":"1.1", "width":800, "height":500, "xmlns":svgNS});
     wrapper.appendChild(svg.element);
     me.svg = svg;
     //group-series
@@ -183,7 +185,7 @@ svgCharts.prototype = {
   drawLableLine: function(opts){
     var me = this;
     var opts = opts || me.radiusConf;
-    var defaultRadians = Math.PI/20;
+    var defaultRadians = Math.PI/18;
     var defaultWidth = 15;
     //
     var x = opts.centerX,
@@ -263,7 +265,7 @@ window.onload = function(){
     type: 'pie',
     outerRadius: 144,
     innerRadius: 44,
-    center: [400, 300],
+    center: [400, 225],
     series: [
       {label: '全部', data: '100%'},
       {label: '>0', data: '80.00%'},
