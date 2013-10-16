@@ -3,17 +3,221 @@
 <head>
   <meta charset="UTF-8"/>
   <title>svg test</title>
-  <style>
-    <!-- http://www.itk.ilstu.edu/faculty/javila/SVG/SVG_drawing1/elliptical_curve.htm -->
-  </style>
 </head>
-<body>
-
-<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
-  <path fill="#2f7ed8" d="M 568.5000147263847 271.3223039858121 A 177.5 177.5 0 0 1 718.0358392327065 95.96664165534435 L 732.8056424548686 188.5458802176625 A 83.75 83.75 0 0 0 662.2500069483647 271.28411526091134 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path>
-
+<body style="border: 1px solid blue;">
+<svg id="J_svg" width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" onload="init(evt)">
+<!--   <g id="group" transform="translate(80,56) scale(1 1)">
+  <path d="M400,443 A143,143,0,1,1,400.1429999761668,442.9999285000059 L400.04399999266667,343.9999780000018 A44,44,0,1,0,400,344 z" style="fill:#FFD05E"></path><path d="M400,429 A129,129,0,1,1,522.7260924445652,339.7404860726193 L441.86006253923154,313.5548944743818 A44,44,0,1,0,400,344 z" style="fill:#FEF8A2"></path><path d="M400,414 A114,114,0,1,1,454.8199924427632,200.04616851478184 L421.1585935743998,261.4213281986877 A44,44,0,1,0,400,344 z" style="fill:#C3E189"></path><path d="M400,400 A100,100,0,0,1,304.8634942290193,269.19342164913223 L358.13993746076846,286.4451055256182 A44,44,0,0,0,400,344 z" style="fill:#73CFA8"></path><path d="M400,386 A86,86,0,0,1,316.7232771187418,321.4706177404873 L357.3933045723795,310.98496721606324 A44,44,0,0,0,400,344 z" style="fill:#23ADAF"></path><path d="M400,372 A72,72,0,0,1,365.3768468782548,363.12873567487463 L378.84140642560016,338.5786718013123 A44,44,0,0,0,400,344 z" style="fill:#2F7E8D"></path></g> -->
+<!--   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/> -->
+  <!-- <path fill="#2f7ed8" d="M 568.5000147263847 271.3223039858121 A 177.5 177.5 0 0 1 718.0358392327065 95.96664165534435 L 732.8056424548686 188.5458802176625 A 83.75 83.75 0 0 0 662.2500069483647 271.28411526091134 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path> -->
+  <g id="group2">
+  </g>
 </svg>
+
+<script>
+var svgNS = "http://www.w3.org/2000/svg";
+function drawArc(x, y, w, h, options){
+    var start = options.start,
+      radius = options.r || w || h,
+      end = options.end - 0.001, // to prevent cos and sin of start and end from becoming equal on 360 arcs (related: #1561)
+      innerRadius = options.innerR,
+      open = options.open,
+      cosStart = mathCos(start),
+      sinStart = mathSin(start),
+      cosEnd = mathCos(end),
+      sinEnd = mathSin(end),
+      longArc = options.end - start < mathPI ? 0 : 1;
+
+    return [
+      M,
+      x + radius * cosStart,
+      y + radius * sinStart,
+      'A', // arcTo
+      radius, // x radius
+      radius, // y radius
+      0, // slanting
+      longArc, // long or short arc
+      1, // clockwise
+      x + radius * cosEnd,
+      y + radius * sinEnd,
+      open ? M : L,
+      x + innerRadius * cosEnd,
+      y + innerRadius * sinEnd,
+      'A', // arcTo
+      innerRadius, // x radius
+      innerRadius, // y radius
+      0, // slanting
+      longArc, // long or short arc
+      0, // clockwise
+      x + innerRadius * cosStart,
+      y + innerRadius * sinStart,
+
+      open ? '' : 'Z' // close
+    ];
+}
+
+
+function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+  var angleInRadians = (angleInDegrees-90) * Math.PI / 180.0;
+
+  return {
+    x: centerX + (radius * Math.cos(angleInRadians)),
+    y: centerY + (radius * Math.sin(angleInRadians))
+  };
+}
+
+function describeArc(x, y, radius, startAngle, endAngle){
+
+    var start = polarToCartesian(x, y, radius, endAngle);
+    var end = polarToCartesian(x, y, radius, startAngle);
+
+    var arcSweep = endAngle - startAngle <= 180 ? "0" : "1";
+
+    var d = [
+        "M", start.x, start.y, 
+        "A", radius, radius, 0, arcSweep, 0, end.x, end.y
+    ].join(" ");
+
+    return d;       
+}
+
+// Options:
+// - centerX, centerY: coordinates for the center of the circle    
+// - startDegrees, endDegrees: fill between these angles, clockwise
+// - innerRadius, outerRadius: distance from the center
+// - thickness: distance between innerRadius and outerRadius
+//   You should only specify two out of three of the radii and thickness
+function annularSector(path,options){
+  var opts = optionsWithDefaults(options);
+  opts.closeRadians -= 0.001;//fix full circle
+  var p = [ // points
+    [opts.cx + opts.r2*Math.cos(opts.startRadians),//外圈
+     opts.cy + opts.r2*Math.sin(opts.startRadians)],
+    [opts.cx + opts.r2*Math.cos(opts.closeRadians),
+     opts.cy + opts.r2*Math.sin(opts.closeRadians)],
+    [opts.cx + opts.r1*Math.cos(opts.closeRadians),//内圈
+     opts.cy + opts.r1*Math.sin(opts.closeRadians)],
+    [opts.cx + opts.r1*Math.cos(opts.startRadians),
+     opts.cy + opts.r1*Math.sin(opts.startRadians)],
+  ];
+  console.log(opts.r2)
+
+  var angleDiff = opts.closeRadians - opts.startRadians;
+  var largeArc = (angleDiff % (Math.PI*2)) > Math.PI ? 1 : 0;
+  var cmds = [];
+  cmds.push("M"+p[0].join());                                // Move to P0
+  cmds.push("A"+[opts.r2,opts.r2,0,largeArc,1,p[1]].join()); // Arc to  P1
+  cmds.push("L"+p[2].join());                                // Line to P2
+  cmds.push("A"+[opts.r1,opts.r1,0,largeArc,0,p[3]].join()); // Arc to  P3
+  cmds.push("z");                                // Close path (Line to P0)
+  path.setAttribute('d',cmds.join(' '));
+
+  function optionsWithDefaults(o){
+    // Create a new object so that we don't mutate the original
+    var o2 = {
+      cx           : o.centerX || 0,
+      cy           : o.centerY || 0,
+      startRadians : (o.startDegrees+90 || 0) * Math.PI/180,
+      closeRadians : (o.endDegrees+90   || 0) * Math.PI/180,
+    };
+
+    var t = o.thickness!==undefined ? o.thickness : 100;
+    if (o.innerRadius!==undefined)      o2.r1 = o.innerRadius;
+    else if (o.outerRadius!==undefined) o2.r1 = o.outerRadius - t;
+    else                                o2.r1 = 200           - t;
+    if (o.outerRadius!==undefined)      o2.r2 = o.outerRadius;
+    else                                o2.r2 = o2.r1         + t;
+
+    if (o2.r1<0) o2.r1 = 0;
+    if (o2.r2<0) o2.r2 = 0;
+
+    return o2;
+  }
+}
+
+
+
+
+
+
+function init(evt){
+  svgdoc = evt.target.ownerDocument;
+  rootdoc = svgdoc.rootElement;
+
+  //pie test
+  node = svgdoc.createElementNS(svgNS,"rect");
+  node.setAttribute("x","100");
+  node.setAttribute("y","50");
+  node.setAttribute("width","100");
+  node.setAttribute("height","250");
+  node.setAttribute("style","fill:red");
+  //g
+  group = svgdoc.getElementById("group2");
+  // group.appendChild(node);
+
+  var path1 = svgdoc.createElementNS(svgNS,'path');
+  // path1.setAttribute("d", describeArc(200, 400, 100, 0, 180));
+  
+
+  annularSector(path1, {
+    centerX:400, centerY:300,
+    startDegrees:0, endDegrees:360,
+    innerRadius:44, outerRadius:143
+  });
+  path1.setAttribute("style","fill:#FFD05E");
+  group.appendChild(path1);
+
+  var path2 = svgdoc.createElementNS(svgNS,'path');
+  annularSector( path2, {
+    centerX:400, centerY:300,
+    startDegrees:0, endDegrees:360*0.8,
+    innerRadius:44, outerRadius:Math.round(143*0.9)
+  });
+  path2.setAttribute("style","fill:#FEF8A2");
+  group.appendChild(path2);
+  
+  var path3 = svgdoc.createElementNS(svgNS,'path');
+  annularSector( path3, {
+    centerX:400, centerY:300,
+    startDegrees:0, endDegrees:360*0.58,
+    innerRadius:44, outerRadius:Math.round(143*0.8)
+  });
+  path3.setAttribute("style","fill:#C3E189");
+  group.appendChild(path3);
+
+  var path4 = svgdoc.createElementNS(svgNS,'path');
+  annularSector( path4, {
+    centerX:400, centerY:300,
+    startDegrees:0, endDegrees:360*0.3,
+    innerRadius:44, outerRadius:Math.round(143*0.7)
+  });
+  path4.setAttribute("style","fill:#73CFA8");
+  group.appendChild(path4);
+
+
+  var path5 = svgdoc.createElementNS(svgNS,'path');
+  annularSector( path5, {
+    centerX:400, centerY:300,
+    startDegrees:0, endDegrees:360*0.21,
+    innerRadius:44, outerRadius:Math.round(143*0.6)
+  });
+  path5.setAttribute("style","fill:#23ADAF");
+  group.appendChild(path5);
+
+  var path6 = svgdoc.createElementNS(svgNS,'path');
+  annularSector( path6, {
+    centerX:400, centerY:300,
+    startDegrees:0, endDegrees:360*0.08,
+    innerRadius:44, outerRadius:Math.round(143*0.5)
+  });
+  path6.setAttribute("style","fill:#2F7E8D");
+  group.appendChild(path6);
+}
+
+
+
+
+</script>
 
 </body>
 </html>
