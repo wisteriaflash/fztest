@@ -340,7 +340,6 @@ SVGElement.prototype = {
   },
   createElement: function(tag){
     var me = this;
-    var svgNS = "http://www.w3.org/2000/svg";
     me.element = document.createElementNS(svgNS,tag);
   },
   appendChild: function(child){
