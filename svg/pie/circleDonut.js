@@ -58,7 +58,7 @@ svgCharts.prototype = {
     if(config.anim){
       config.animId = setInterval(function(){
         me.animFun(me);
-      }, 50);
+      }, 40);
     }
     me.animFun(me);
   },
