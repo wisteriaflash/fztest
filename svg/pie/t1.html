@@ -100,7 +100,6 @@ function annularSector(path,options){
     [opts.cx + opts.r1*Math.cos(opts.startRadians),
      opts.cy + opts.r1*Math.sin(opts.startRadians)],
   ];
-  console.log(opts.r2)
 
   var angleDiff = opts.closeRadians - opts.startRadians;
   var largeArc = (angleDiff % (Math.PI*2)) > Math.PI ? 1 : 0;
@@ -120,6 +119,7 @@ function annularSector(path,options){
       startRadians : (o.startDegrees+90 || 0) * Math.PI/180,
       closeRadians : (o.endDegrees+90   || 0) * Math.PI/180,
     };
+    console.log('aaaaa',o2)
 
     var t = o.thickness!==undefined ? o.thickness : 100;
     if (o.innerRadius!==undefined)      o2.r1 = o.innerRadius;
@@ -161,7 +161,7 @@ function init(evt){
 
   annularSector(path1, {
     centerX:400, centerY:300,
-    startDegrees:0, endDegrees:360,
+    startDegrees:0, endDegrees:360*0.1,
     innerRadius:44, outerRadius:143
   });
   path1.setAttribute("style","fill:#FFD05E");
@@ -170,7 +170,7 @@ function init(evt){
   var path2 = svgdoc.createElementNS(svgNS,'path');
   annularSector( path2, {
     centerX:400, centerY:300,
-    startDegrees:0, endDegrees:360*0.8,
+    startDegrees:0, endDegrees:360*0.8*0.1,
     innerRadius:44, outerRadius:Math.round(143*0.9)
   });
   path2.setAttribute("style","fill:#FEF8A2");
@@ -179,7 +179,7 @@ function init(evt){
   var path3 = svgdoc.createElementNS(svgNS,'path');
   annularSector( path3, {
     centerX:400, centerY:300,
-    startDegrees:0, endDegrees:360*0.58,
+    startDegrees:0, endDegrees:360*0.58*0.1,
     innerRadius:44, outerRadius:Math.round(143*0.8)
   });
   path3.setAttribute("style","fill:#C3E189");
@@ -188,7 +188,7 @@ function init(evt){
   var path4 = svgdoc.createElementNS(svgNS,'path');
   annularSector( path4, {
     centerX:400, centerY:300,
-    startDegrees:0, endDegrees:360*0.3,
+    startDegrees:0, endDegrees:360*0.3*0.1,
     innerRadius:44, outerRadius:Math.round(143*0.7)
   });
   path4.setAttribute("style","fill:#73CFA8");
@@ -198,7 +198,7 @@ function init(evt){
   var path5 = svgdoc.createElementNS(svgNS,'path');
   annularSector( path5, {
     centerX:400, centerY:300,
-    startDegrees:0, endDegrees:360*0.21,
+    startDegrees:0, endDegrees:360*0.21*0.1,
     innerRadius:44, outerRadius:Math.round(143*0.6)
   });
   path5.setAttribute("style","fill:#23ADAF");
@@ -207,7 +207,7 @@ function init(evt){
   var path6 = svgdoc.createElementNS(svgNS,'path');
   annularSector( path6, {
     centerX:400, centerY:300,
-    startDegrees:0, endDegrees:360*0.08,
+    startDegrees:0, endDegrees:360*0.08*0.1,
     innerRadius:44, outerRadius:Math.round(143*0.5)
   });
   path6.setAttribute("style","fill:#2F7E8D");
