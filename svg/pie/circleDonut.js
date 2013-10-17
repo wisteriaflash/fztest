@@ -300,7 +300,6 @@ svgCharts.prototype = {
       x: left ? point.x - offsetPoint.x : point.x + offsetPoint.x,
       y: top ? point.y - offsetPoint.y : point.y + offsetPoint.y
     }
-    toPoint.y += 0.5;   //fixed dash line
     var cmds = [
       'M',
       point.x,
