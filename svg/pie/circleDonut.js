@@ -6,8 +6,6 @@ window.$ = function(id){
 }
 
 
-
-
 //
 var svgCharts = function(config){
   var me = this;
