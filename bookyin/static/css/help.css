@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+body{ font-family:"微软雅黑"; font-size:14px; line-height:28px}
+h1{ font-size:38px; color:#7da408; margin:30px 0; text-align:center;}
+.top{ background:url(../img/help/top-bg.png) no-repeat; width:990px; height:433px; margin:30px 0; }
+.top .right{ float:right; width:470px; margin-top:50px;}
+.top .right p{ margin:20px 0;text-indent: 2em;}
+.landing{background: url(../img/bg-pay.png) repeat; width:990px; height:300px; margin-bottom:30px;}
+.landing .bg1{ background:url(../img/help/landing-bg.png) no-repeat left; width:500px; height:300px; display:block; float:right;}
+.landing .bg2{ background:url(../img/help/friend-bg.png) no-repeat left; width:500px; height:300px; display:block; float:right;}
+.landing .bg3{ background:url(../img/help/con-bg.png) no-repeat left; width:500px; height:300px; display:block; float:right;}
+.landing .bg4{ background:url(../img/help/book-bg.png) no-repeat left; width:500px; height:300px; display:block; float:right;}
+.landing .bg5{ background:url(../img/help/finish-bg.png) no-repeat left; width:500px; height:300px; display:block; float:right;}
+.landing .bg6{ background:url(../img/help/price-bg.png) no-repeat left; width:500px; height:300px; display:block; float:right;}
+.landing .bg7{ background:url(../img/help/code.jpg) no-repeat center; width:500px; height:300px; display:block; float:right;}
+.left{ width:410px; margin:35px; float:left}
+.landing .left h1{ font-size:38px; color:#7da408; margin:30px 0; text-align:left; width:410px; line-height:45px;}

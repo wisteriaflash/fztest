@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css缩放-正则转换</title>
+  <style>
+  *{padding: 0; margin: 0;}
+  ul,li{list-style: none;}
+  .wrapper{width: 800px; margin: 20px auto;}
+  .wrapper h2{margin-bottom: 40px;}
+  .wrapper p{font-size: 14px; margin-bottom: 20px; color: red; line-height: 20px;}
+  .wrapper ul li{margin-bottom: 10px;}
+  .wrapper ul li span{width: 160px; display: inline-block; text-align: right;}
+  .wrapper .scale-title{float: left;}
+  .wrapper ul .btn{text-align: center;}
+  .wrapper ul .btn button{width: 80px; height: 30px;}
+  .wrapper textarea{width: 600px; height: 200px;}
+  .wrapper .result span{text-align: center; display: inline-block; float: left; font-weight: bold; width: 160px;}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>css按比例缩放--正则转换字符串</h2>
+    <p>tip：根据比例，替换css中出现px单位属性(background-position除外)，替换值为整数值，在生成的css上添加预定义的class名，方便页面查看对比效果。</p>
+    <ul>
+      <li><span>缩放值：</span><input id="J_trnsScale" type="text" value="1.12977" /></li>
+      <li><span>添加前置class名：</span><input id="J_clsPre" type="text" value="scale-pdf" /></li>
+      <li><span class="scale-title">缩放css字符串：</span><textarea id="J_transStr" cols="30" rows="10"></textarea></li>
+      <li class="btn"><button id="J_transBtn">转换</button></li>
+    </ul>
+    <div class="result">
+      <span>转换结果：</span>
+      <textarea id="J_result" cols="30" rows="10"></textarea>
+    </div>
+  </div>
+<script>
+function $(id){
+  return document.getElementById(id);
+}
+var transData = {
+  scale: 1,
+  clsPre: '',
+  transAble: true,
+  matchUnit: 'px',
+  init: function(){
+    var me = this;
+    //testData
+    $('J_transStr').value = ".pages .first-page{position:absolute; top:200px; right:48px; width:145px}\n.pages .first-page .avatar{ width:54px; height:54px; position:relative;  margin-right:10px;}\n.pages .first-page .avatar i{background-position:-140px 0; width:15px; height:11px; position:absolute; left:10px; bottom:-11px; display:block;}\n.pages .first-page .avatar img{width:54px;}.pages .first-page .info{float:left; font-size:14px;}\n.pages .first-page .info .author-name{ font-size:16px; line-height:20px; margin-top:5px;}\n.pages .first-page .info .weibo-data{font-size:11px; margin-left:-5px; margin-top:6px;}\n.pages .first-page .info .weibo-data li{ padding:0 5px;}";
+    //
+    me.bindHandler();
+  },
+  checkData: function(){
+    var me = this;
+    me.clsPre = '.'+$('J_clsPre').value+' ';
+    //check data
+    me.scale = $('J_trnsScale').value;
+    var scale = me.scale;
+    if(scale.length == 0){
+      me.transAble = false;
+      alert('缩放值不能为空');
+      return;
+    }
+    scale = Number(scale);
+    if(scale<=0){
+      me.transAble = false;
+      alert('缩放值不能为0或负值');
+      return;
+    }
+    me.transAble = true;
+  },
+  bindHandler: function(){
+    var me = this;
+    var btn = $('J_transBtn');
+    btn.onclick = function(){
+      if(!me.transAble){
+        return;
+      }
+      me.checkData();
+      var targetStr = $('J_transStr').value;
+      var resultStr = me.transScale(targetStr);
+      $('J_result').value = resultStr;
+    }
+  },
+  transScale: function(tstr){
+    var me = this;
+    //
+    var rstr = '';
+    tstr = tstr.replace(/\/\*.*\*\//mg,''); //去除注释
+    var clsArr = tstr.match(/[\.\#]?\w+[^{]+\{[^}]*\}/mg);
+    var clsItem, clsName, clsProArr, temp;
+    var clsProItem, clsProStr, clsProUnit, tempClsPro;
+    if(tstr.length == 0){
+      return rstr;
+    }
+    for(var i=0, ilen=clsArr.length; i<ilen; i++){
+      clsItem = clsArr[i];
+      if(!clsItem.match(me.matchUnit)){
+        continue;
+      }
+      temp = clsItem.split('{');
+      clsName = temp[0];
+      clsProArr = temp[1].replace('}','').split(';');
+      clsProStr = '';
+      for(var j=0, jlen=clsProArr.length; j<jlen; j++){
+        clsProItem = clsProArr[j];
+        if(!clsProItem.match(me.matchUnit) || clsProItem.match('background')){
+          continue;
+        }
+        tempClsPro = clsProItem.split(':');
+        //unit
+        clsProUnit = tempClsPro[1].split(' ');
+        var proItemStr = '', splitChart = ' ';
+        for(var item in clsProUnit){
+          if(item == clsProUnit.length-1){
+            splitChart = '';
+          }
+          item = clsProUnit[item];
+          if(item.length==0){
+            continue;
+          }
+          if(item.match(me.matchUnit)){
+            item = Number(item.replace('px',''));
+            item = parseInt(item*me.scale)+'px';
+          }
+          proItemStr += item+splitChart;
+        }
+        tempClsPro[1] = proItemStr;
+        clsProStr += tempClsPro.join(':')+';';
+      }
+      clsProStr = '{'+clsProStr+'}';
+      rstr += me.clsPre+clsName+clsProStr+'\n';
+    }
+    return rstr;
+  }
+};
+//init
+transData.init();
+</script>
+</body>
+</html>

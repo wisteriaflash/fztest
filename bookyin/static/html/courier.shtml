@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧 - 书架</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../css/courier.css" type="text/css" />
+</head>
+<body>
+<!-- header -->
+<!--#include virtual="module/header-logined.html" -->
+<div class="pagewrap bookdetails">
+<div class="courier_title">您的书籍已经在向您预定的方向狂奔而去~</div>
+<div class="courier">
+  <div class="courier_left">
+  <div class="title">物流公司：中通快递</div>
+  <div class="info"><span>配送时间：皆可</span><br>
+<span>运单号码：2568926360</span><img src="../img/courier_icon.png" width="207" height="76"></div>
+  </div>
+  <div class="courier_right">
+  <div class="title">订单编号：  401354320409898        支付时间： 2013-08-15 17:18<span id="J_contact">联系我们</span></div>
+  <div class="table">
+  <table width="556px">
+  <tbody>
+  <tr>
+    <td>时间</td>
+    <td>地点和跟踪进度</td>
+  </tr>
+  <tr>
+    <td width="150px">2013-08-13 10:21:21</td>
+    <td> 卖家已发货</td>
+  </tr>
+  <tr>
+    <td>2013-08-13 17:52:56</td>
+    <td>奉贤的奉贤南桥十部已收件</td>
+  </tr>
+  <tr>
+    <td>2013-08-13 19:45:16 </td>
+    <td>快件到达奉贤,正在分捡中，上一站是奉贤南桥十部快件到达奉贤,正在分捡中，上一站是奉贤南桥十部。快件到达奉贤,正在分捡中，</td>
+  </tr>
+  <tr>
+    <td>2013-08-13 19:46:14 </td>
+    <td>快件离开奉贤,已发往上海</td>
+  </tr>
+  <tr>
+    <td>2013-08-13 19:47:05 </td>
+    <td>快件离开奉贤,已发往上海</td>
+  </tr>
+  <tr>
+    <td>2013-08-13 23:06:04 </td>
+    <td>快件到达上海,正在分捡中,上一站是上海</td>
+  </tr>
+  <tr>
+    <td>2013-08-13 23:26:18</td>
+    <td>快件离开上海,已发往浦东张江高科</td>
+  </tr>
+  <tr>
+    <td>2013-08-14 08:05:16 </td>
+    <td>快件到达浦东张江高科,正在分捡中,上一站是</td>
+  </tr>
+  <tr>
+    <td>2013-08-14 08:28:50</td>
+    <td>浦东张江高科,的汪苏杭正在派件</td>
+  </tr>
+  <tr>
+    <td>2013-08-14 13:09:46 </td>
+    <td>浦东张江高科派件已签收</td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+  <div class="note">* 以上信息来自于<a>快递100</a>，您也可以到物流公司官网通过运单号查询。</div>
+  </div>
+  <div class="clear"></div>
+ </div> 
+</div>
+<!-- footer -->
+<!--#include virtual="module/footer.html" -->
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script>
+$('#J_contact').click(function(){	
+	$('#J_bottomBar').find('.weixin').click();
+	})
+$('.table table tr:first').css('display','none');
+$('.table table tr:last').addClass('current_add');
+$('.table table td:first').css('width',150);
+</script>
+</body>
+</html>

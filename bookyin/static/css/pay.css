@@ -1,0 +1,59 @@
+.pay{ width:950px; margin:0 auto; padding:10px 20px; font-size:14px; font-family:"微软雅黑"; background:url(../img/bg-pay.png)}
+.pay_m{ font-size:18px; color:#e95925;  padding-left:20px; line-height:85px;}
+.pay_m span{ font-size:24px; padding-left:35px; font-family:Arial, Helvetica, sans-serif}
+.pay_m span strong{font-size:36px; font-weight:100}
+.pay-fs {padding-left:20px; height:90px;}
+.pay-fs span{font-size:18px; color:#e95925; line-height:55px;}
+.pay-fs .pay-type{display: block;}
+.pay-fs label{ padding-right:80px}
+.pay-k {padding-left:20px; line-height:45px;}
+.pay-k .zfb-item{margin-left: -3px;}
+.pay-zt{ padding-left:20px;padding-top: 16px;}
+.pay-zt ul li label input{margin-right: 5px;}
+.form-input{ margin-right:4px;}
+.form-input2{ margin-right:4px;}
+.pay-zf{ background:#ea5520; width:158px; height:42px; line-height:42px; text-align:center; margin:30px auto; }
+.pay-zf a{font-size:24px; color:#fff; text-decoration:none}
+.hr{ border-bottom: 1px dashed #BDB8B5; height:20px;}
+
+.pay-sb{ line-height:90px; background:url(../img/pay/x.jpg) left no-repeat; padding-left:40px; font-size:18px}
+.pay-cg{ line-height:90px; background:url(../img/pay/xv.png) left no-repeat; padding-left:40px; font-size:18px; color:#e95925}
+.pay-cg span{ font-size:24px; padding-left:20px;}
+.pay-add{ padding-left:20px; line-height:25px; margin:10px 0px}
+.pay-sc{ padding-left:20px;}
+.pay-sc a { color:#fff; text-decoration:none; }
+.pay-sa{ padding:5px 20px; float:left; text-align:center; line-height:28px; background:#e95925; margin:20px 0px;}
+.pay-sc div{ line-height:25px;}
+.pay-sc div span{ color:#e95925; margin:10px 0px; display:block}
+.submit-order{ width:990px; margin:0 auto}
+.submit-order .row-title {padding:0 0 20px;}
+.submit-order .row-title span {float:left; color:#ea5621; font-size:18px; font-family:"微软雅黑"; padding-top:10px}
+.order-step2 {background:transparent url(../img/bg-order-step.png) no-repeat 0px -150px;width:360px; height:50px; overflow:hidden; }
+.order-step1 {background:transparent url(../img/bg-order-step.png) no-repeat 0px -50px;width:360px; height:50px; overflow:hidden; }
+.order-step {background:transparent url(../img/bg-order-step.png) no-repeat 0px -100px;width:360px; height:50px; overflow:hidden; }
+.step2{background-position:0 -50px;}
+.step3{background-position:0 -100px;}
+.submit-order .row {padding:20px 0; border-top:2px dashed #bcbcb7;}
+.submit-order .first {border:0 none; padding: 0;}
+.submit-order .row .rtitle h2 {float:left;}
+.submit-order .row .rtitle .eye{color:#666; font-size:14px;}
+.submit-order .row-title h1 {float:left; color:#ea5621; font-weight:normal; line-height:25px; padding-top:10px }
+.submit-order .row-title h1 i {float:left; background:transparent url(../img/icon.png) no-repeat -77px 0px; width:50px; height:38px; margin:0 20px 0 10px;}
+/*dialog*/
+.ui-dialog ,{ border:0px; background:#CCC}
+.ui-dialog, .ui-widget, .ui-widget-content, .ui-corner-all, .ui-front{}
+.ui-corner-all,.ui-corner-top,.ui-corner-left,.ui-corner-tl {border-top-left-radius: 0px;}
+.ui-corner-all,.ui-corner-top,.ui-corner-right,.ui-corner-tr {	border-top-right-radius: 0px;}
+.ui-corner-all,.ui-corner-bottom,.ui-corner-left,.ui-corner-bl {border-bottom-left-radius: 0px;}
+.ui-corner-all,.ui-corner-bottom,.ui-corner-right,.ui-corner-br {border-bottom-right-radius: 0px;}
+.ui-dialog-titlebar, .ui-widget-header, .ui-corner-all, .ui-helper-clearfix{ background: url(../img/alpha_bg.png) repeat scroll 0 0 transparent; border:0px; top:155px;}
+.ui-widget-header{ background:none}
+.ui-dialog-title{ display:none}
+.ui-dialog-content, .i-widget-content p{ color:#fff; margin:10px; }	
+#dialog_con{ height:100px;}
+#dialog_con span{ font-weight:bold; font-size:16px}
+.btns a{ color:#fff; background:#F00; padding:5px 10px; margin-right:20px; text-decoration:none}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{ background:#333; border:0px; width:33px; height:33px}
+.ui-button-icon-primary .ui-icon .ui-icon-closethick{background:url(../img/sprite.png) -95px 0; }
+.ui-dialog .ui-dialog-titlebar-close{ margin:-175px -15px 0}	
+.ui-state-default .ui-icon{background:url(../img/sprite.png) -95px 0;cursor: pointer;  height: 18px; left: 0; margin: 7px; top: 0;width: 18px;}

@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta  charset="UTF-8"/>
+		<title>权限管理</title>
+		<link type="text/css" rel="stylesheet" href="../css/base.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/common.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/op_comm.css"/>
+		<link type="text/css" rel="stylesheet" href="../jquery/jquery-ui-1.8.14.custom.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/op_preferential.css"/>
+		<link href="../jquery/jquery.alerts.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		<!--#include virtual="common/op_header.html" -->
+		<!-- 页头结束 -->
+
+		<!-- 主体开始 -->
+		<div id="op_con">
+			<ul class="nav_sub clearfix">
+				<li class="current">
+					<a href="#" title="权限管理">权限管理</a>
+				</li>
+			</ul>
+			<div class="op_main">
+				<div class="main_con">
+					<div class="search">
+						<h2>账号搜索
+						<input class="searchBt" type="button" value="创建新账号"/>
+						</h2>
+						<table>
+							<tr>
+								<td class="right"><label title="">输入账号:</label></td>
+								<td>
+								<input type="text" value="订单编号" />
+								</td>
+								<td><input class="btn4" type="button" value="搜索"/></td>
+							</tr>
+						</table>
+
+					</div>
+					<div id="ad">
+					<div class="tb-left-wrap clearfix">
+						<h2>查询结果</h2>
+						<table summary="表格" class="tb-left" width="100%">
+							<tr>
+								<th>账号</th>
+								<th>创建时间</th>
+								<th>权限等级</th>
+								<th>操作</th>
+							</tr>
+							<tr>
+								<td>邹利剑</td>
+								<td>2013-3-24</td>
+								<td>管理员</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>梁志刚</td>
+								<td>2013-3-24</td>
+								<td>普通帐号</td>
+								<td class="blue">
+									<a class="change blue" title="修改 " href="javascript:void(0)">修改</a>&nbsp;|&nbsp;
+									<a class="delete blue" href="javascript:void(0)" title="删除">删除</a>&nbsp;|&nbsp;									
+									<a class="bulid blue" title="初始密码 " href="javascript:void(0)">初始密码</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="decoration clearfix related">
+						<div class="page">
+							<span>共10页100条记录</span>
+							<span class="pageCenter"> <a href="javascript:;" class="pageUp">上一页</a> <a href="javascript:;">1</a> <a href="javascript:;" class="pageChecked">2</a> <span class="pageMore">…</span> <a href="javascript:;">8</a> <a href="javascript:;">9</a> <a href="javascript:;">10</a> <a href="javascript:;" class="pageDown">下一页</a> </span>
+							<span> 跳转到
+								<input type="text" class="pageText"/>
+								页<a href="javascript:;" class="pageButton">GO</a> </span>
+						</div>
+					</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- 主体结束 -->
+
+		<!-- 页尾开始 -->
+		<!--#include virtual="common/op_footer.html" -->
+		<!-- 页尾结束 -->
+		
+		<!-- 创建账号-->
+		<div id="bulid">
+			<div class="bleft">
+				<p class="margT20"><label title="">输入账号：</label><input type="text" value="" /></p>
+				<p class="margT20"><label title="">真实姓名：</label><input type="text" value="" /></p>
+			</div>
+			<div class="bright">
+					<span class="margT20">设定权限：</span>
+					<form id="form1" name="form1" method="post" action="" class="fLeft margT10" style="width: 260px;">
+						<label><input type="checkbox" name="Competence" value="复选框" id="Competence_0" class="margR5" />订单管理</label>
+						<label><input type="checkbox" name="Competence" value="复选框" id="Competence_1" class="margR5" />物流管理</label>
+						<label><input type="checkbox" name="Competence" value="复选框" id="Competence_2" class="margR5" />会员管理</label>
+                    </form>
+			</div>
+		</div>
+		
+		<!--修改-->
+		<div id="change">
+			<div class="bleft">
+				<p class="margT20"><label title="">输入账号：</label><input type="text" value="" /></p>
+				<p class="margT20"><label title="">真实姓名：</label><input type="text" value="" /></p>
+			</div>
+			<div class="bright">
+					<span class="margT20">设定权限：</span>
+					<form id="form1" name="form1" method="post" action="" class="fLeft margT10"  style="width: 260px;">
+						<label><input type="checkbox" name="Competence" value="复选框" id="Competence_0" class="margR5" />订单管理</label>
+						<label><input type="checkbox" name="Competence" value="复选框" id="Competence_1" class="margR5" />物流管理</label>
+						<label><input type="checkbox" name="Competence" value="复选框" id="Competence_2" class="margR5" />会员管理</label>
+                    </form>
+			</div>
+		</div>
+		<script type="text/javascript" src="../jquery/js/jquery-1.6.min.js"></script>
+		<script type="text/javascript" src="../js/op_common.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../jquery/js/jquery-ui-1.8.14.custom.min.js"></script>
+		<script type="text/javascript" src="../jquery/js/jquery.alerts.js"></script>
+		<script type="text/javascript">
+			/*调用到的函数统一入口*/
+			$(function() {
+				//创建账户
+				$("#bulid").dialog({
+					title : "创建账号",
+					autoOpen : false,
+					width : 650,
+					modal : true,
+					buttons : {
+						"保存" : function() {
+							$(this).dialog("close");
+						},
+						"取消" : function() {
+							$(this).dialog("close");
+						}
+					}
+				});
+				$(".searchBt").click(function() {
+					$("#bulid").dialog("open");
+				});	
+				//修改账户
+				$("#change").dialog({
+					title : "修改账号",
+					autoOpen : false,
+					width : 650,
+					modal : true,
+					buttons : {
+						"保存" : function() {
+							$(this).dialog("close");
+						},
+						"取消" : function() {
+							$(this).dialog("close");
+						}
+					}
+				});
+				$(".change").click(function() {
+					$("#change").dialog("open");
+				});				
+
+				$(".tb-left").table({
+					hasClick : false
+				});
+				$(".table").table({
+					hasCheckbox:false
+				});
+				//删除账号
+				$('.delete').click(function() {
+					var _$this = $(this);
+					jConfirm('确定删除此原件吗？', '删除原件', function(r) {
+						if (r) {
+							_$this.parent().parent().remove();
+						} else {
+							return;
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧 - 产品详情</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" />
+    <link rel="stylesheet" href="../css/jquery-ui-1.10.3.custom.css" type="text/css" />
+    <link rel="stylesheet" href="../css/order.css" type="text/css" />
+</head>
+<body>
+<!-- header -->
+<!--#include virtual="module/header-logined.html" -->
+<div class="pagewrap bookdetails">
+	<div class="ming"><img src="../img/demo/book-pd1.png" alt=""></div>
+	<dl class="minfo">
+		<dt>洋洋洋洋洋洋洋洋的<em>博客书</em></dt>
+		<dd class="pstyle">A5时尚款</dd>
+		<dd class="price">&yen; 50.00元</dd>
+    <dd class="addinfo">(其中包含：扉页&yen;1.00,字体&yen;1.00)</dd>
+		<dd class="standard">规格：148mmx210mm</dd>
+		<dd class="pages">页数：120-150页</dd>
+	</dl>
+	<div class="action"><button type="submit" class="pdsubmit">立刻下单</button></div>
+	<div class="pimglist">
+		<!--<a href="#" class="pprev"></a>
+		<a href="#" class="pnext"></a>-->
+		<div class="pslwrap">
+			<ul class="plist">
+				<li><img src="../img/demo/book-pd1-1.png" alt=""></li>
+				<li><img src="../img/demo/book-pd1-2.png" alt=""></li>
+				<li><img src="../img/demo/book-pd1-3.png" alt=""></li>
+				<li><img src="../img/demo/book-pd1-1.png" alt=""></li>
+				<li><img src="../img/demo/book-pd1-2.png" alt=""></li>
+				<li><img src="../img/demo/book-pd1-3.png" alt=""></li>
+				<li><img src="../img/demo/book-pd1-1.png" alt=""></li>
+			</ul>
+		</div>
+	</div>
+	<div class="realimgs">
+		<div class="row">
+        <img src="../img/pd-img1.jpg" alt="">
+        <img src="../img/pd-img2.jpg" alt="">
+        <div class="row-n"><img src="../img/pd-img3.png" alt=""></div>
+        <img src="../img/pd-img4.jpg" alt="">
+        <img src="../img/pd-img5.jpg" alt="">
+        <img src="../img/pd-img6.jpg" alt="">
+        <img src="../img/pd-img7.jpg" alt="">
+        <div class="row-n"><img src="../img/pd-img8.png" alt=""></div>
+        <img src="../img/pd-img9.jpg" alt="">
+        <div class="row-n"><img src="../img/pd-img10.png" alt=""></div>
+        <img src="../img/pd-img11.jpg" alt="">
+        <div class="row-n"><img src="../img/pd-img12.png" alt=""></div>
+        <img src="../img/pd-img12.jpg" alt="">
+        <div class="row-n"><img src="../img/pd-img13.png" alt=""></div>
+        <img src="../img/pd-img14.jpg" alt="">
+        <div class="row-n"><img src="../img/pd-img15.png" alt=""></div>
+        <div class="row-n"><img src="../img/pd-img16.png" alt=""></div>
+        <img src="../img/pd-img19.jpg" alt=""> 
+        <div class="row-n"><img src="../img/pd-img20.png" alt=""></div>       
+        </div>		
+	</div>
+</div>
+<!-- footer -->
+<!--#include virtual="module/footer.html" -->
+</body>
+</html>

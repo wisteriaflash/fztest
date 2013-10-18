@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>出书吧--选择数据</title>
+    <link rel="stylesheet" href="../../css/jquery-ui-1.10.3.custom.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/select-data.css" type="text/css" />
+</head>
+<body class="select-data">
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">logo</div>
+            <div class="user-info">
+                <ul>
+                    <li class="avatar "><a href="#"><img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/0" title="紫藤" /></a></li>
+                    <li><a href="#">紫藤</a></li>
+                    <li><a href="">我的订单</a></li>
+                    <li><a href="">退出</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="J_content" class="content clearfix">
+            <div id="J_typeList" class="type-list">
+                <ul>
+                    <li class="weibo" title="微博书">
+                        <i></i>
+                        <div class="title">
+                            <span class="cn">微博书</span>
+                            <span class="en">microblog book</span>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="self" title="自助出书">
+                        <i></i>
+                        <div class="title">
+                            <span class="cn">自助出书</span>
+                            <span class="en">upload files make book</span>
+                            <i></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>   
+            <div id="J_stepList" class="step-list step-weibo">
+                <div id="J_stepNum" class="step-num">
+                    <div class="step step1">
+                        <ul style="height:130px;">
+                            <li class="weibo-step selected">
+                                <span class="num">01</span>
+                                <span class="tip">选择微博</span>
+                                <span class="select-txt">紫藤</span>
+                            </li>
+                            <li class="self-step selected">
+                                <span class="num">01</span>
+                                <span class="tip">上传文件</span>
+                                <span class="select-txt">测试.pdf</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="step step2">
+                        <ul>
+                            <li class="weibo-step">
+                                <span class="num">02</span>
+                                <span class="tip">选择模板</span>
+                                <span class="select-txt">瀑布流</span>
+                            </li>
+                            <li class="self-step">
+                                <span class="num">02</span>
+                                <span class="tip">作品名称</span>
+                                <span class="select-txt">这是一本自助书</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="step step3">
+                        <ul>
+                            <li class="weibo-step">
+                                <span class="num">03</span>
+                                <span class="tip">筛选内容</span>
+                                <span class="select-txt">2010.1-2013.5</span>
+                            </li>
+                            <li class="self-step">
+                                <span class="num">03</span>
+                                <span class="tip">作者名</span>
+                                <span class="select-txt">紫藤</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="step step4">
+                        <ul>
+                            <li class="weibo-step">
+                                <span class="num">04</span>
+                                <span class="tip">作品名称</span>
+                                <span class="select-txt">这是一本微博书</span>
+                            </li>
+                            <li class="self-step step-btn">
+                                <div id="J_selfPreview">一键预览</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="step step5">
+                        <ul>
+                            <li class="weibo-step step-btn">
+                                <div id="J_weiboPreview">一键预览</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-bd">
+                    <div id="J_weiboBd" class="weibo-bd">
+                        <form id="J_weiboForm" action="a.php" method="post">
+                            <ul>
+                                <li class="step-info step1 select-user selected">
+                                    <ul>
+                                        <li class="myself selected" title="选择我的微博"><img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/0" /><span>紫藤</span></li>
+                                        <li class="myfriend" title="选择好友的微博"><i></i><span>选择好友的微博</span></li>
+                                    </ul>
+                                    <div class="input-data">
+                                        <input type="hidden" id="J_weiboUser" name="weiboUser" value="123456" />
+                                    </div>
+                                </li>
+                                <li class="step-info step2 select-type">
+                                    <ul>
+                                        <li class="selected">
+                                            <img src="../../img/weibo_pubu.jpg" alt="" />
+                                            <div class="info">
+                                                <h4>瀑布流</h4>
+                                                <p>包含所有微博，尤其适合长图片显示</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="input-data">
+                                        <input type="hidden" id="J_weiboTpl" name="weiboTpl" value="pubu" />
+                                    </div>
+                                </li>
+                                <li class="step-info step3 filter-time">
+                                    <div class="time-range">
+                                        <label for="J_timeYear">导入时间段：</label>
+                                        <input type="text" id="J_startDate" year="2008" month="1" valto="J_sDateValue" readonly />
+                                        <span>至</span>
+                                        <input type="text" id="J_endDate" valto="J_eDateValue" readonly />
+                                        <input type="hidden" name="byTime" id="byTime" value="true" />
+                                        <input type="hidden" name="from" id="J_sDateValue" value="" />
+                                        <input type="hidden" name="to" id="J_eDateValue" value="" />
+                                    </div>
+                                    <div class="has-forward">
+                                        <input type="checkbox" id="J_hasForward" name="hasForward" value="1" />
+                                        <label for="J_hasForward">包含转发</label>
+                                    </div>
+                                </li>
+                                <li class="step-info step4 book-name">
+                                    <input type="text" id="J_bookName" name="bookName" value="这是一本微博书" />
+                                    <span class="tip">最多输入15个汉字/英文字母</span>
+                                </li>
+                            </ul>
+                            <div class="input-data">
+                                <input type="hidden"id="J_dataSourceID" name="dataSourceID" value="123456" />
+                                <input type="hidden"id="J_dataSourceType" name="dataSourceType" value="sina" />
+                            </div>
+                        </form>
+                    </div>
+                    <div id="J_selfBd" class="self-bd">
+                        <form id="J_selfForm" action="a.php" method="post">
+                            <ul>
+                                <li class="step-info step1 upload-file selected">
+                                    <div class="upload-select">
+                                        <input id="J_fileSelect" class="fileupload" type="file" name="files[]" />
+                                            <!-- <ul>
+                                                <li title="上传本地文件">
+                                                    
+                                                    <i></i>
+                                                </li>
+                                            </ul> -->
+                                            <div class="info">
+                                                <h4>上传本地文件</h4>
+                                                <span>目前只支持PDF格式</span>
+                                            </div>
+                                    </div>
+                                </li>
+                                <li class="step-info step2 book-name">
+                                    <input type="text" id="J_selfBookName" name="bookName" />
+                                    <span class="tip">最多输入15个汉字/英文字母</span>
+                                </li>
+                                <li class="step-info step3 book-name author-name">
+                                    <input type="text" id="J_bookAuthor" name="bookAuthor" />
+                                    <span class="tip">最多输入10个汉字/英文字母</span>
+                                </li>
+                            </ul>
+                            <div class="input-data">
+                                <input type="hidden" id="J_dataSourceType2" name="dataSourceType2" value="self" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="myfriend-list" style="display:none;">
+            	<div class="search">
+                <input type="text" id="J_search" /><span><input name="" type="button" id="J_checkbtn"  ></span>
+                </div>
+                <div class="emptyInfo" style="display:none">输入微博账号才能进行检索</div>
+                <div class="tip">
+                    <p class="title">点击头像将自动获取好友微博数据</p>
+                    <label class="agree"><input id="J_agree" type="checkbox" checked="checked" />我已阅读并同意<a href="#">网站服务协议</a></label>
+                </div>
+                <div class="tab">
+                    <ul id="J_myFriendTab" class="tab-hd clearfix">
+                        <li class="recentChoose"><i class="arrow"></i>最近选择的</li>
+                        <li class="myfollow selected"><i class="arrow"></i>我的关注</li>
+                        <li class="eachfollow"><i class="arrow"></i>相互关注</li>
+                        <li class="myfans"><i class="arrow"></i>我的粉丝</li>
+                    </ul>
+                    <div class="tab-bd" id="J_myFriendBd">
+                        <div class="item-bd search-bd ">
+                       		 <div class="list-con clearfix" >
+                              <!-- <div class="loading-search"><img src="../../img/index-loading.gif" width="128" height="128"></div>-->
+                                <div class="user-list">
+                                	<div id="J_getImg"><img  src="../../img/sorry.jpg" style="display:none" id="J_img"  width="82" height="35"></div>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="item-bd cookie-bd ">
+                            <div class="list-con clearfix">
+                                <div class="user-list">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-bd myfollow-bd selected">
+                            <div class="page-btn">
+                                <span class="prev" title="上一页"><i></i></span>
+                                <span class="next" title="下一页"><i></i></span>
+                            </div>
+                            <div class="list-con clearfix">
+                                <div class="user-list">
+                                    <ul>
+                                        <li><div class="list_img">
+                                        	<img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤紫藤紫藤紫藤藤</span></div>
+                                        </li>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-bd eachfollow-bd">
+                            <div class="page-btn">
+                                <span class="prev" title="上一页"><i></i></span>
+                                <span class="next" title="下一页"><i></i></span>
+                            </div>
+                            <div class="list-con clearfix">
+                                <div class="user-list">
+                                    <ul>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                        <li><div class="list_img">
+                                            <img src="http://tp2.sinaimg.cn/1727848997/180/40020954801/1" title="aaa" />
+                                            <span>aaa</span></div>
+                                        </li>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                         <li><div class="list_img">
+                                            <img src="http://tp4.sinaimg.cn/1737078171/180/1272801215/" title="紫藤" id="img"/>
+                                            <span>紫藤</span></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-bd myfans-bd">
+                            myfans bd
+                        </div>
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+
+            
+        </div>
+        <div class="footer"></div>
+    </div>
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.cookie.js"></script>
+ 
+</body>
+</html>

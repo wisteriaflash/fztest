@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family:"微软雅黑"; font-size:14px;}
+.cw{ margin:0 auto; width:990px;}
+.cw img{ margin-left:50px;}
+.f{ margin:0 auto; width:750px; padding-left:260px}
+.fh{  font-size:24px; background:#81a608; line-height:35px; margin:20px; float:left; padding:5px 15px}
+.fh a{ color:#fff; font-family:"微软雅黑"; text-decoration:none}
+.cw strong{ font-size:24px; margin:15px 0px; }
+.cw strong span{ color:#F00}
+.cw p{font-size:16px;  margin:0 auto; width:750px; padding-right:100px}
+.wh{ width:900px; margin:0 auto; padding-top:100px}
+.wh-top{ background:url(http://static.chushuba.com/img/wh-top.jpg) no-repeat; height:36px; width:900px}
+.wh-bottom{ background:url(http://static.chushuba.com/img/wh-bottom.jpg) repeat-x; height:28px; width:900px}
+.wh-con{ font-family:"黑体"; height:100px; widows:900px; text-align:center; background:url(http://static.chushuba.com/img/wh-con.jpg) center bottom no-repeat; margin:70px 0 60px }
+.wh-con span{ line-height:25px}
+
+/*agrennment*/
+.wrapper{width: 990px; margin: 0 auto;}
+.agreement .info{ background-color: #F4EFEB; padding: 30px 50px; color: #75716E;}
+.agreement .info h1{color: #A39C94; font-weight: normal; font-size: 22px; margin-bottom: 30px;}
+.agreement .info p{line-height: 24px;}
+.agreement .info p em{margin: 0 6px;}
+.agreement .info dt{color: #9E9785; font-size: 18px; margin: 20px 0; position: relative;}
+.agreement .info dt .line{border-top: 1px solid #D0CBC5; width: 800px; position: absolute; top: 10px; right: 0;}
+.agreement .info dd p{margin-bottom: 20px;}
+.agreement .info dd ul{margin-top: -20px; line-height: 24px;}
+.agreement .info dd ul li em{float: left;}
+.agreement .info dd ul li span{display: inline-block;  width: 840px;}

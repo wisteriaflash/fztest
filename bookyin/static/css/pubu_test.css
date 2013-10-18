@@ -1,0 +1,17 @@
+/* reset for test */
+body {font-family:SimSun; padding:0;}
+.pages .item p {font-family:SimSun;}
+.book-wrapper {background: transparent none; -webkit-box-shadow: 0 0 0 transparent; width:490px;}
+
+/* chushuba pubu style 1 by lt */
+.col {float:left;  width:185px;  margin-right:15px;}
+.col .img {display:block;  width:185px; max-height:185px;  overflow:hidden;  margin:5px 0 0;   position:relative;}
+.col .img img {width:185px;}
+.col .img .cut {position:absolute; bottom:0; left:0; width:100%; height:6px; background:url(../img/cut.png) repeat-x;}
+.col .img .del {position:absolute; top:0; right:0;}
+.col .item {padding:10px 0 10px;  border-top:1px dashed #ccc;  }
+.col .item p:first-letter {color:#69c; float:left; height:30px; line-height:30px; font-size:30px; margin-right:2px;}
+.retui {background-color:#cff; padding:2px;}
+.col .retui .img img {width:181px;}
+.col .item .retui p {color:#666;}
+.col .item .retui p:first-letter {color:#666; float:none; height:auto; line-height:1.5em; font-size:12px; margin-right:auto;}

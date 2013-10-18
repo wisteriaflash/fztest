@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta  charset="UTF-8"/>
+        <title>出书吧运营管理平台</title>
+        <link type="text/css" rel="stylesheet" href="../css/base.css"/>
+        <link type="text/css" rel="stylesheet" href="../css/common.css"/>
+        <link type="text/css" rel="stylesheet" href="../css/op_login.css"/>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <!-- 主体开始 -->
+        <div id="container" class="clearfix">
+            <div class="login_box">
+                <div class="login_title">
+                    <span class="span1 font26 white">出书吧运行管理平台</span><span class="font18 white">v2.0</span>
+                </div>
+                <div class="login_body">
+                    <img src="../images/op/work.png" alt="" />
+                    <label for="username" class="font18">用户名</label>：
+                    <input class="text narrow gray" id="username" type="text" value="" />
+                    <br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="code" class="font18">密码</label>：
+                    <input class="text narrow gray" id="code" type="password" value="" />
+                    <a class="searchButton font18 white"><b>登&nbsp;&nbsp;录</b></a>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <!-- 主体结束 -->
+
+        <script src="../jquery/js/jquery-1.6.min.js" type="text/javascript"></script>
+        <script src="../js/common.js" type="text/javascript"></script>
+        <script type="text/javascript">
+			/*调用到的函数统一入口*/
+			$(function() {
+				$('#username').textController();
+				$('#code').textController();
+			});
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧</title>
+<link type="text/css" rel="stylesheet" href="../css/base.css"/>
+<link type="text/css" rel="stylesheet" href="../css/common.css"/>
+</head>
+<body>
+
+<!-- mian body -->
+<div class="warpper">
+	<div class="bookwrap">
+		<div class="bookbox cf">
+			<div class="pages podd">
+
+				<ul>
+					<li class="chapter year2011">
+						<span class="year year2011">2011</span>
+						<span class="y">年</span>
+						<span class="month month04">04</span>
+						<span class="m">月</span>
+					</li>
+					<li id="_wb8999547901" class="img li0" style="padding-bottom: 61px; max-height: 335px;">
+						<a class="delBtn" title="在列表中删除这条微博" data="8999547901">删除</a>
+						<div class="date">
+							<span class="year">2011</span>
+							<span class="y">年</span>
+							<span class="month">04</span>
+							<span class="m">月</span>
+							<span class="day">11</span>
+							<span class="d">日</span>
+							<span class="time">22:41</span>
+							<span>发布</span>
+							<b class="arrow"></b>
+						</div>
+						<span class="imgBox"><img onerror="imageError(this)" onload="imageShow(this)" src="../img/demo/wb1.jpg" style="display: block;" vertical="0"></span>
+						<p>湿地公园</p>
+					</li>
+					<li id="_wb8999607649" class="img li1" style="padding-bottom: 61px; max-height: 335px;">
+						<a class="delBtn" title="在列表中删除这条微博" data="8999607649">删除</a>
+						<div class="date">
+							<span class="year">2011</span>
+							<span class="y">年</span>
+							<span class="month">04</span>
+							<span class="m">月</span>
+							<span class="day">11</span>
+							<span class="d">日</span>
+							<span class="time">22:42</span>
+							<span>发布</span>
+							<b class="arrow"></b>
+						</div>
+						<span class="imgBox"><img onerror="imageError(this)" onload="imageShow(this)" src="../img/demo/wb2.jpg" style="display: block;" vertical="0"></span>
+						<p>南大街</p>
+					</li>
+				</ul>
+				<div class="footerbar"><span>24</span></div>
+			</div>
+			<div class="pages peven"></div>
+		</div>
+		<div class="page-ctrl">
+			<div class="cat"><a href="#">目录</a></div>
+			<div class="next"><a href="#">下一页</a></div>
+			<div class="prev"><a href="#">上一页</a></div>
+			<div class="count">共99页</div>
+		</div>
+	</div>
+</div>
+
+<!-- footer 已包含jquery -->
+<!--#include virtual="module/footer-lite.html" -->
+
+<script type="text/javascript">
+$(function(){
+	//js
+});
+</script>
+</body>
+</html>

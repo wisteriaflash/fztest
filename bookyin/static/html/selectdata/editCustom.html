@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>出书吧--自定义编辑</title>
+    <link rel="stylesheet" href="../../css/jquery-ui-1.10.3.custom.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/edit-custom.css" type="text/css" />
+</head>
+<body>
+    <div class="header-con">
+        <div class="header">
+            <div class="logo">
+                <a href="#" title="出书吧"></a>
+            </div>
+            <div id="J_customTitle" class="custom-title" data-id="123456">
+                <span class="title">您正在编辑<em>封面</em></span>
+                <div class="btns">
+                    <a class="save" href="#">保存</a>
+                    <a class="close" href="#">关闭</a>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="wrapper cf">
+        <div id="J_leftBar" class="left-bar">
+            <div class="tab-hd">
+                <ul>
+                    <li class="layer" title="选择页面"><span class="tip">选择页面<i></i></span><i></i></li>
+                    <li class="template" title="选择模板"><i></i></li>
+                </ul>
+            </div>
+            <div class="tab-bd">
+                <div id="J_layerBd" class="item-bd layer-bd">
+                    <span class="arrow"></span>
+                    <ul class="cover">
+                        <li class="front selected">
+                            <img src="../../img/default/front_t1.jpg" alt="">
+                            <span>封面</span>
+                        </li>
+                        <li class="back">
+                            <img src="../../img/default/back_t1.jpg" alt="">
+                            <span>封底</span>
+                        </li>
+                        <li class="line"></li>
+                    </ul>
+                    <div class="first-con">
+                        <ul class="first">
+                            <li class="first-1">
+                                <span class="del" title="删除"></span>
+                                <img src="../../img/default/first_imgText.jpg" alt="">
+                                <span class="title">扉页1</span>
+                            </li>
+                            <li class="first-add" title="新增扉页">
+                                <i></i><span>新增扉页</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="J_templateBd" class="item-bd template-bd">
+                    <span class="arrow"></span>
+                    <ul class="front selected">
+                        <li class="selected"><div class="imgbox"><img src="../../img/default/front_t1.jpg" title=""></div></li>
+                    </ul>
+                    <ul class="back">
+                        <li class="selected"><div class="imgbox"><img src="../../img/default/back_t1.jpg" title=""></div></li>
+                    </ul>
+                    <ul class="first">
+                        <li class="selected" data="imgText"><div class="imgbox"><img src="../../img/default/first_imgText.jpg" title=""></div></li>
+                        <li data="textImg"><div class="imgbox"><img src="../../img/default/first_textImg.jpg" title=""></div></li>
+                        <li data="img"><div class="imgbox"><img src="../../img/default/first_img.jpg" title=""></div></li>
+                        <li data="text"><div class="imgbox"><img src="../../img/default/first_text.jpg" title=""></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div id="J_layerItem" class="item-page front-page">
+                <span class="bg"></span>
+                <div id="J_layerInfo" class="info">
+
+                </div>
+            </div>
+        </div>
+        <div id="J_rightBar" class="right-bar">
+            <div class="item-bd photo-bd">
+                <ul id="J_photoList">
+                    <li class="photo-add" title="添加图片"><i></i><span>添加图片</span></li>
+                    <li><span class="del" title="删除"></span>
+                        <div class="imgbox"><img src="../../img/default/test.jpg" data-width="200" data-height="370" width="144" height="101" /></div>
+                    </li>
+                    <li><span class="del" title="删除"></span>
+                        <div class="imgbox"><img src="../../img/default/thumb_default.jpg" width="107" height="120" /></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="item-bd font-bd">
+                 <div class="font-size">
+                     <span>文字大小：</span>
+                     <select id="J_fontSize">
+                         <option value="12px">12px</option>
+                         <option value="14px">14px</option>
+                         <option value="16px">16px</option>
+                         <option value="18px">18px</option>
+                         <option value="20px">20px</option>
+                         <option value="22px">22px</option>
+                         <option value="24px">24px</option>
+                     </select>
+                 </div>
+                 <div class="font-line">
+                     <span>行间距：</span>
+                     <select id="J_fontLine">
+                         <option value="12px">12px</option>
+                         <option value="14px">14px</option>
+                         <option value="16px">16px</option>
+                         <option value="18px">18px</option>
+                         <option value="20px">20px</option>
+                         <option value="22px">22px</option>
+                         <option value="24px">24px</option>
+                         <option value="26px">26px</option>
+                         <option value="28px">28px</option>
+                         <option value="30px">30px</option>
+                     </select>
+                 </div>
+                 <div class="font-align">
+                     <span>对齐方式：</span>
+                     <select id="J_fontAlign">
+                         <option value="left">左对齐</option>
+                         <option value="center">居中</option>
+                         <option value="right">右对齐</option>
+                     </select>
+                 </div>
+                 <div id="J_fontColor" class="font-color">
+                     <ul class="cf">
+                         <li class="c1_1 selected" data="#E60013"><em></em></li>
+                         <li class="c1_2" data="#EB6101"><em></em></li>
+                         <li class="c1_3" data="#F39800"><em></em></li>
+                         <li class="c1_4" data="#FFF100"><em></em></li>
+                         <li class="c1_5" data="#8FC41F"><em></em></li>
+                         <li class="c1_6" data="#24AC39"><em></em></li>
+                         <li class="c1_7" data="#009944"><em></em></li>
+                         <li class="c1_8" data="#009E97"><em></em></li>
+                         <li class="c2_1" data="#E50050"><em></em></li>
+                         <li class="c2_2" data="#E4007F"><em></em></li>
+                         <li class="c2_3" data="#930883"><em></em></li>
+                         <li class="c2_4" data="#601986"><em></em></li>
+                         <li class="c2_5" data="#1E2188"><em></em></li>
+                         <li class="c2_6" data="#00479D"><em></em></li>
+                         <li class="c2_7" data="#0069B7"><em></em></li>
+                         <li class="c2_8" data="#00A1E9"><em></em></li>
+                         <li class="c3_1" data="#000000"><em></em></li>
+                         <li class="c3_2" data="#434343"><em></em></li>
+                         <li class="c3_3" data="#757575"><em></em></li>
+                         <li class="c3_4" data="#959595"><em></em></li>
+                         <li class="c3_5" data="#B5B5B5"><em></em></li>
+                         <li class="c3_6" data="#A6937C"><em></em></li>
+                         <li class="c3_7" data="#6A3A07"><em></em></li>
+                         <li class="c3_8" data="#5A493F"><em></em></li>
+                     </ul>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../../js/plugin/json/json2.js"></script>
+    <script type="text/javascript" src="../../js/plugin/customedit/textedit.js"></script>
+    <script type="text/javascript" src="../../js/plugin/customedit/clipimg.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../../js/perfect-scrollbar.js"></script>
+    <script type="text/javascript" src="../../js/YS.js"></script>
+    <script type="text/javascript" src="../../js/editCustom.js"></script>
+</body>
+</html>

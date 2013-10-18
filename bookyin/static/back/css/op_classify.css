@@ -1,0 +1,9 @@
+/*
+* 产品分类管理
+*/
+
+.treeCreate{border:solid 1px #CFCFCF;background:white;height:58px;line-height:58px;margin-left:20px;margin-right:20px;margin-top:20px;font-size:18px;padding:0px 20px;}
+.unfold,.fold{display:inline-block;width:56px;height:29px;line-height: 29px;background: url(../images/op/classify_redirect.png) no-repeat;padding-left:22px;color:#EA5520;}
+.fold{background-position:0px -40px;}
+.saveReset{float:right;margin-right:30px;margin-top:2px;}
+#proType,.proType{margin:0px 30px;}

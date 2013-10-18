@@ -1,0 +1,101 @@
+
+
+.tdtishi{ width: 350px; padding: 10px; margin-left:10px;  border: 1px solid #e4e4e4; float: left;}
+.tdtishi p{ padding-bottom: 20px;}
+.tdtishitext01{ color: #a1a1a1;}
+.con{float: left;}
+.con td{ padding:5px;}
+
+.search table tr{ height:40px; line-height:40px;}
+.search table tr td{ padding:0 10px;}
+.tb-left-wrap h2 span{ margin-left:20px; font-size:12px;}
+.tb-left-wrap{ margin-top:20px;}
+.tb-right-wrap{ width:353px;}
+.tb-right h3{ font-size:12px; font-weight:bold; line-height:35px;}
+
+.searchBt{ font-size:12px; margin-left:20px;}
+#bulid table tr,#change table tr{ height:40px; line-height:40px;}
+#bulid table tr td,#change table tr td{ padding:0 10px 0 0;}
+#btn4 table tr td.right{ margin:10px; height:40px;}
+.detailMain{width:800px;}
+.detailLeft,.detailRight{width:400px; float:left;}
+.detailLeft p,.detailRight p{line-height:40px;}
+.detailBot{text-align:right; float:left; padding-bottom: 20px; margin-top:20px;}
+.table{ width:100%; text-align:center;}
+
+.youhuima{ margin-bottom:15px;}
+.youhuima tr{height:35px; line-height:35px; }
+.youhuima tr td{ padding-right:10px;}
+.top{ height:40px; padding:10px 0 0 0; width:100%; text-align:right;}
+#bulid h2{	
+    color: #666666;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    margin-bottom: 14px;
+    font-weight:bold;
+    padding-top:10px;
+}
+.yhm{ height:35px; line-height:35px; margin:10px 0;}
+.yhm span{ margin-right:50px; height:22px; line-height:22px;}
+#user tr td{height:35px; line-height:35px; }
+#list p span{ margin-right:10px;}
+
+.overFlow{height:100px; overflow:auto; margin:0 0 10px 0; border:1px solid #ccc;}
+.order tr{ height:35px; line-height:35px;}
+.order tr td{ padding:0 10px;}
+.message{ margin-top:20px;}
+.message li{height:35px; line-height:35px; border-top:1px dotted #ccc;}
+.message li span{ margin-right:50px;}
+a.table_title{color:#448AC9;}
+
+.list{ cursor: pointer;}
+
+.bleft{ width:250px; float:left;}
+.bright{width:350px; float:left; padding-bottom:20px;}
+.bright label{ width:130px; float:left; margin-top:10px;}
+.bright span{ float: left; width:70px;}
+/*初始登录修改密码*/
+.po_password{width:670px; margin:0 auto; margin-top:100px; border: 2px solid #CCC; background:#f6f6f6;}
+.po_password h2{ background:#E2E2E2; height:60px; line-height:60px; border-bottom: 1px solid #D0D0D0; font-size:22px; color:#666; padding:0 30px;
+font-family: "Microsoft YaHei","SimSum";}
+.po_password p{ padding:20px 20px 0 20px;}
+.po_password p label{ width:100px; display:inline-block; text-align:right; margin-right:10px;}
+.po_password .btn4{margin:10px 0 20px 90px; }
+.aa,.aaAdd{ position:relative;}
+.aa_con,.aaAdd_con{ border:1px solid #ccc; padding: 10px; overflow: hidden; display:none; position:absolute;z-index: 10000; background:#fff; max-width:500px;}
+.aa_con span,.aaAdd_con span{ padding:0 5px; margin:5px; background:#EED6B7; height:25px; line-height:25px; cursor: pointer; display: block; float:left;}
+/*会员管理-用户反馈*/
+#check .check_table td{height: 30px;}
+#check .check_table textarea{resize: none;}
+#check .check_table .repeat{color: #669900;border-top: 1px solid #d9d9d9;}
+
+/*物流管理-服务商管理*/
+#modify p{padding-top:10px;}
+#modify p span{ width:280px; display:block; float:left;}
+.add{ margin-top:10px;}
+.add h3{ font-size:14px; font-weight:bold; padding:10px 0; border-bottom:1px solid #E0E0E0;}
+.add h3 span{font-size:12px; font-weight:normal;}
+.add ul{ margin-top:10px; float:left;}
+.add ul li{ float:left; margin:0 10px 10px 0; width:100px; text-align:right;}
+
+.listtable{ height:350px; overflow: auto;overflow-x: hidden;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

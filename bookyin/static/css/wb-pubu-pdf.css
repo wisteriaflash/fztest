@@ -1,0 +1,87 @@
+/*main*/
+body {background:#fff none no-repeat 0 0;}
+/*scale for pdf*/
+.scale-pdf{}
+.scale-pdf .pages{width: 485px; height: 736px; font-size: 12px;}
+.scale-pdf .col{width: 214px; max-height: 780px; margin-right:28px;}
+.scale-pdf .col .item{margin-bottom: 23px; padding: 6px;}
+
+.scale-pdf .chapter {margin:33px 0 67px; font-size:20px;}
+.scale-pdf .chapter .y {left: 88px; top: 31px;}
+.scale-pdf .chapter .m{font-size: 45px; width: 65px; height: 65px; line-height: 65px;}
+.scale-pdf .chapter .mEN{top:10px; left: 62px; font-size: 12px; padding: 5px 0 0 5px;}
+.scale-pdf .chapter .mt{top: 24px; left: 62px; padding: 5px 0 0 5px;}
+
+.scale-pdf .col .item .post-time .bg{width: 42px; height: 18px;}
+.scale-pdf .col .item .post-time .bg i{top: 18px; left: 16px;}
+.scale-pdf .col .item p{line-height: 21px; max-width: 220px; letter-spacing: 0px;}
+.scale-pdf .col .item .con-item p .span-first{height: 40px; line-height: 40px; font-size: 33px;}
+.scale-pdf .col .img{width: 203px;}
+.scale-pdf .col .img img{width: 203px;}
+.scale-pdf .col .img .cut{width: 214px; background-repeat: repeat-x;}
+.scale-pdf .col .retui{padding: 6px; margin-top: 11px;}
+.scale-pdf .col .retui .img{width: 192px;}
+.scale-pdf .col .retui .img .cut{width: 192px;}
+.scale-pdf .pages-even{padding: 54px 56px 0 17px;}
+.scale-pdf .pages-odd {padding: 54px 16px 0 56px;}
+.scale-pdf .pages-even .col{margin-left: 28px; margin-right: 0;}
+/*only*/
+.scale-pdf .col .retui.txt-only{margin-top: 0;}
+.scale-pdf .col .retui .img.img-only img{margin-top: 0;}
+/*cover-con*/
+.cover-con{position: relative; width: 1004px; height: 700px;}
+.cover-con .cover{width: 495px; height: 700px; position: absolute; top:0;}
+.cover-con .saying{display: none;}
+.cover-con .back-cover{float: left; float: none; left: 0;}
+.cover-con .back-cover h1{text-align: right;}
+.cover-con .first-cover{float: right; float: none; right: 0;}
+/*cover-scale*/
+.scale-pdf.cover-con{width: 1134px; height: 790px;}
+.scale-pdf .cover{width: 559px; height: 790px; position: absolute; top:0;}
+.scale-pdf .frontCover, .scale-pdf .backCover{padding: 0;}
+.scale-pdf .frontCover{width:559px; height:790px;}
+.scale-pdf .frontCover .fence{left: 90px; bottom: 61px; font-size: 10px;}
+.scale-pdf .frontCover .info{padding: 180px 0 0 90px;}
+.scale-pdf .frontCover .info .com-edit-text{width: 282px; height: 18px; font-size: 13px; line-height: 18px;}
+.scale-pdf .frontCover .info .time-range{width: 112px;}
+.scale-pdf .frontCover .info .title{height: 33px; font-size: 27px; line-height: 33px; width: 429px;}
+.scale-pdf .frontCover .info .author{margin-top: 3px; width: 141px;}
+.scale-pdf .frontCover .info .com-clipimg{margin-top: 11px;}
+.scale-pdf .backCover{width: 555px; height:779px;}
+.scale-pdf .backCover .info{padding: 37px 0 0 64px;}
+.scale-pdf .backCover .info .barcode{margin-bottom: 63px; height: 50px;}
+.scale-pdf .backCover .info .barcode img{width: 141px;}
+.backCover .saying{right: -3px; bottom: 49px; width: 559px; height: 180px;}
+/*first-page*/
+.scale-pdf .pages .first-page{ top:225px; right:54px; width:163px;}
+.scale-pdf .pages .first-page .avatar{ width:61px; height:61px;  margin-right:11px;}
+.scale-pdf .pages .first-page .avatar i{background-position:-158px 0px; width:16px; height:12px; left:11px; bottom:-12px;}
+.scale-pdf .pages .first-page .avatar img{width:61px;}
+.scale-pdf .pages .first-page .info{ font-size:15px;}
+.scale-pdf .pages .first-page .info .author-name{ font-size:18px; line-height:22px; margin-top:5px;}
+.scale-pdf .pages .first-page .info .weibo-data{font-size:12px; margin-left:-5px; margin-top:6px;}
+.scale-pdf .pages .first-page .info .weibo-data li{ padding:0px 5px;}
+
+/*custom*/
+.scale-pdf .first-pages .info{padding: 7px 21px 62px 41px;}
+.scale-pdf .first-pages .imgText{padding-top: 92px;}
+.scale-pdf .first-pages .imgText .com-clipimg{margin-bottom: 22px;}
+.scale-pdf .first-pages .textImg{padding-top:109px;}
+.scale-pdf .first-pages .textImg .com-edit-text{margin-bottom: 22px;}
+/*copy*/
+.scale-pdf .copy-page{padding-left: 22px;}
+.scale-pdf .copy-page .title{width: 239px; height: 77px; margin: 248px auto 0;}
+.scale-pdf .copy-page .title img{width: 239px; height: 77px;}
+.scale-pdf .copy-page .info{margin-top: 214px;}
+.scale-pdf .copy-page .info .detail{width: 282px;}
+.scale-pdf .copy-page .info .detail .logo{width: 186px; height: 42px;}
+.scale-pdf .copy-page .info .detail .logo img{width: 141px;}
+.scale-pdf .copy-page .info .detail dt{width: 62px; margin-left: 5px; line-height: 19px;}
+.scale-pdf .copy-page .info .detail dd{width: 203px; line-height: 19px;}
+.scale-pdf .copy-page .info .detail dt em{margin-left: 24px;}
+.scale-pdf .copy-page .info .detail .email em{margin: 0 5px 0 5px;}
+.scale-pdf .copy-page .info .barcode{width: 141px; height: 50px;right: 39px;}
+.scale-pdf .copy-page .info .barcode img{width: 141px;}
+.scale-pdf .copy-page .info .fence{right: -11px;}
+.scale-pdf .fence{padding-left: 6px; height: 15px;}
+.scale-pdf .fence span{padding-right: 6px; height: 15px; line-height: 15px;}

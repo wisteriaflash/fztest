@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>出书吧--自助出书上传文件</title>
+    <link rel="stylesheet" href="../../css/jquery/jquery-ui-1.10.3.custom.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/album-upload.css" type="text/css" />
+</head>
+<body>
+<div class="header">
+   <div class="logo">
+        <a href="#" title="出书吧"></a>
+    </div>
+</div>
+<div class="content">
+    <div class="opt-btns cf">
+        <ul>
+            <li class="add-pic">
+                <i></i><span class="title">添加照片</span><span class="tip err-tip">出错文案提示区</span>
+                <input type="file" name="file_upload" id="J_addPic" />
+            </li>
+            <li class="upload-zip">
+                <i></i><span class="title">上传压缩包</span><span class="tip err-tip">出错文案提示区</span>
+                <input type="file" name="file_upload" id="J_addZip" />
+            </li>
+            <li class="preview"><span class="title">一键预览</span><span class="tip">点击预览看看效果吧！</span></li>
+        </ul>
+    </div>
+    <div id="J_mainview" class="mainview" data-id="aa11">
+        <div class="upload-item no-upload">
+            <h4>推荐上传1600PX以上的大图，相机原图更佳</h4>
+            <p>一本画册最多支持200张图片，至少需要上传20张，否则不能预览；</p>
+            <p>每张图片大小不可超过10M，图片格式支持JPG、PNG，300DPI的更佳；</p>
+            <p>ZIP格式文件最大不可超过200M，非支持的图片格式会在上传后被系统自动过滤掉。</p>
+        </div>
+        <div id="J_uploading" class="upload-item uploading">
+            <div class="uploading-item uploadify-pic selected">
+                <div id="J_picUploadQueue" class="uploadify-queue"></div>
+                <div class="tips">已经上传
+                    <span class="num"><em class="uploaded-num">0</em>/<em class="totle-num">0</em></span>张照片
+                    <span class="need-time">大约还需要<em class="time">XX</em>分钟</span>
+                </div>    
+            </div>
+            <div class="uploading-item uploadify-zip">
+                <div id="J_zipUploadQueue" class="uploadify-queue"></div>
+            </div>
+        </div>
+        <div id="J_uploadOk" class="upload-item upload-ok selected">
+            <div class="pics-con">
+                <div class="pics-list">
+                    <ul class="cf">
+                        <li class="hd-item hd-date1"><h4>2013.09.22</h4><span class="line"></span></li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox">
+                                <img src="../../img/demo/album2.jpg" alt="" />    
+                            </div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox">
+                                <img src="../../img/demo/album2.jpg" alt="" />    
+                            </div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox">
+                                <img src="../../img/demo/album2.jpg" alt="" />    
+                            </div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox">
+                                <img src="../../img/demo/album2.jpg" alt="" />    
+                            </div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox">
+                                <img src="../../img/demo/album2.jpg" alt="" />    
+                            </div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox">
+                                <img src="../../img/demo/album2.jpg" alt="" />    
+                            </div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox">
+                                <img src="../../img/demo/album2.jpg" alt="" />    
+                            </div>
+                        </li>
+                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
+                        </li>
+                        <li class="hd-item hd-date2"><h4>2013.09.22</h4><span class="line"></span></li>
+                        <li class="pic-item hd-date2"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
+                        </li>
+                        <li class="pic-item hd-date2"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album2.jpg" alt="" /></div>
+                        </li>
+                        <li class="pic-item hd-date2"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
+                        </li>
+                        <li class="pic-item hd-date2"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox"><img src="../../img/demo/album2.jpg" alt="" /></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="tips">TIPS:鼠标全选就可以拖拽图片到下面章节中哦！</p>
+            <div class="chapter">
+                <h4>编辑章节</h4>
+                <div class="chapter-list cf">
+                    <ul>
+                        <li class="selected"><i class="num">25</i><span class="del"><i></i></span><h5>章节一</h5><p>在我们老去的时候在我们老去的时候</p></li>
+                        <li><i class="num">0</i><span class="del"><i></i></span><h5>章节一</h5><p>在我们老去的时候</p></li>
+                        <li><i class="num">2</i><span class="del"><i></i></span><h5>章节一</h5><p>在我们老去的时候在我们老去的时候</p></li>
+                        <li class="add-chapter"><i></i>添加章节</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div style="height:500px; border: 1px solid; margin-top:15px; display:none;"></div>
+</div>
+
+
+
+    
+<script type="text/javascript" src="../../js/plugin/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/plugin/jquery/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="../../js/YS.js"></script>
+<script type="text/javascript" src="../../js/plugin/uploadify/v2.1/jquery.uploadify.v2.1.0.js"></script>
+<script type="text/javascript" src="../../js/albumUpload.js"></script>
+</body>
+</html>

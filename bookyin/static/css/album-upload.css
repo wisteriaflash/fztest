@@ -1,0 +1,104 @@
+/*header*/
+.header{background-color: #76736E; width: 98%; height: 50px; padding: 0 1%;}
+.header .logo{float: left; width: 200px;}
+.header .logo a{background: url(../img/logo.png) no-repeat 0 -47px; width: 165px; height: 47px; display: block;}
+
+/*content*/
+.opt-btns ul li i,
+.mainview .upload-ok .pics-con li:hover,
+.mainview .upload-ok .pics-con li.ui-selecting,
+.mainview .upload-ok .pics-con li.ui-selected,
+.mainview .upload-ok .chapter li .num,
+.mainview .upload-ok .chapter li .del i,
+.mainview .upload-ok .chapter .add-chapter i{background: url(../img/albumupload_sprite.png) no-repeat;}
+.mainview .upload-ok .pics-con li .choose,
+.mainview .upload-ok .pics-con li .del{background: url(../img/icon_sprite.png) no-repeat;}
+.content{width: 100%; min-width: 800px; color: #8B887F;}
+.opt-btns, .mainview{width: 98%; padding: 0 1%; overflow: hidden;}
+
+.opt-btns{margin-top: 30px; padding-bottom: 25px;}
+.opt-btns ul li{float: left; background: url(../img/alpha_bg_green.png); width: 190px; height: 57px; position: relative; margin-right: 25px; cursor: pointer;}
+.opt-btns ul li:hover{background-color: #7da408; background-image: none;}
+.opt-btns ul li i{width: 43px; height: 34px; display: block; float: left; margin: 10px 15px 10px 25px;}
+.opt-btns ul li .title{color: #FFF; font-size: 16px; float: left; margin-top: 15px;}
+.opt-btns ul li .tip{position: absolute; bottom: -18px; left: 0px; cursor: text;}
+.opt-btns ul li .err-tip{color: red; display: none;}
+.opt-btns ul .upload-zip i{background-position: -50px 0;}
+.opt-btns ul .preview{float: right; background-image: url(../img/alpha_bg_red.png); margin-right: 0;}
+.opt-btns ul .preview:hover{background-image: none; background-color: #ea5520;}
+.opt-btns ul .preview .title{display: block; text-align: center; float: none;}
+/*mainview*/
+.mainview{padding-top: 20px; min-height: 500px;}
+.mainview .upload-item{display: none;}
+.mainview .upload-item.selected{display: block;}
+.mainview .no-upload,.mainview .uploading{border-top: 1px solid #BDBDBB; padding-top: 35px;}
+.mainview .no-upload h4, .mainview .no-upload p{text-align: center; line-height: 28px; font-size: 14px;}
+.mainview .no-upload h4{font-size: 24px; font-weight: normal; margin-bottom: 8px; color: #3E3E40;}
+.mainview .no-upload p{color: #ABA7A4;}
+
+.mainview .uploading{}
+.mainview .uploading .uploading-item{display: none;}
+.mainview .uploading .uploading-item.selected{display: block;}
+.mainview .uploading .uploadify-queue{width: 570px; margin: 0 auto;}
+.mainview .uploading .tips{text-align: center; margin-top: 10px; color: #332E28;}
+.mainview .uploading .tips .num, .mainview .uploading .tips .need-time em{margin: 0 2px; /*color: #82A610;*/}
+.mainview .uploading .tips .totle-num{}
+.mainview .uploading .tips .need-time{margin-left: 6px;}
+
+.mainview .upload-ok{}
+.mainview .upload-ok .pics-con{min-height: 570px;}
+.mainview .upload-ok .pics-con .item{}
+.mainview .upload-ok .pics-con .item .hd{position: relative;}
+.mainview .upload-ok .pics-con .item .hd h4{font-weight: normal; font-size: 12px; color: #FFF; background-color: #A7A29C; border-radius: 8px; padding: 0 8px; float: left; height: 18px; line-height: 18px; z-index: 5; position: relative;}
+.mainview .upload-ok .pics-con .item .hd .line{width: 100%; border-top: 1px solid #BDBDBB; display: block; position: absolute; top: 8px; left: 0;}
+.mainview .upload-ok .pics-con ul{clear: both; padding: 0 25px; margin: 0 -25px; *zoom: 1;}
+.mainview .upload-ok .pics-con li{float: left; width: 160px; height: 160px; cursor: pointer;text-align: center; margin: 0 10px 10px 0; position: relative;}
+.mainview .upload-ok .pics-con li:hover, 
+.mainview .upload-ok .pics-con li.ui-selecting,
+.mainview .upload-ok .pics-con li.ui-selected{background-position: 0 -80px;}
+.mainview .upload-ok .pics-con li .imgbox{width: 160px; height: 160px; display: table-cell; vertical-align:middle; *display: block;
+*font-size: 139px; /*约为高度的0.873，200*0.873 约为175*/
+*font-family:Arial; /*防止非utf-8引起的hack失效问题，如gbk编码*/}
+.mainview .upload-ok .pics-con li .imgbox img{vertical-align:middle;}
+.mainview .upload-ok .pics-con li .choose{width: 18px; height: 18px; background-position: -50px -25px; position: absolute; left: 5px; top: 5px; display: none;}
+.mainview .upload-ok .pics-con li .del{width: 14px; height: 16px; background-position: -50px -75px; display: none; position: absolute; right: 7px; bottom: 7px;}
+.mainview .upload-ok .pics-con li .del:hover{background-position: -65px -75px;}
+.mainview .upload-ok .pics-con li:hover .del,
+.mainview .upload-ok .pics-con li.ui-selected .choose,
+.mainview .upload-ok .pics-con li.ui-selecting .choose
+{display: block;}
+.mainview .upload-ok .pics-con .hd-item{clear: both; width: 100%; position: relative; background: none; height: 20px; cursor: default; float: none;}
+.mainview .upload-ok .pics-con .hd-item:hover, 
+.mainview .upload-ok .pics-con .hd-item.ui-selecting,
+.mainview .upload-ok .pics-con .hd-item.ui-selected
+{background: none;}
+.mainview .upload-ok .pics-con .hd-item h4{font-weight: normal; font-size: 12px; color: #FFF; background-color: #A7A29C; border-radius: 8px; padding: 0 8px; float: left; height: 18px; line-height: 18px; z-index: 5; position: relative;}
+.mainview .upload-ok .pics-con .hd-item .line{width: 100%; border-top: 1px solid #BDBDBB; display: block; position: absolute; top: 8px; left: 0;}
+.mainview .upload-ok .tips{margin-bottom: 10px;}
+
+.mainview .upload-ok .chapter{background-color: #8D8884; color: #FFF; height: 160px; padding: 12px; margin-right: -12px;}
+.mainview .upload-ok .chapter h4{font-size: 18px; letter-spacing: 2px; font-weight: normal; padding-bottom: 12px;}
+.mainview .upload-ok .chapter-list{height: 132px; overflow-x: auto; overflow-y: hidden; padding-top: 6px;}
+.mainview .upload-ok .chapter-list li{width: 150px; height: 100px; background-color: #BCB8B5; float: left; margin-right: 12px; position: relative; text-align: center; margin-bottom: 20px;}
+.mainview .upload-ok .chapter-list li .num{background-position: 0 -40px; width: 30px; height: 30px; display: block; font-style: normal;text-align: center; line-height: 29px; font-size: 12px; position: absolute; left: 2px; top: 2px;}
+.mainview .upload-ok .chapter-list li .del{display: none; position: absolute; top: -6px; right: -6px; background-color: #E25A20; width: 24px; height: 24px; cursor: pointer;}
+.mainview .upload-ok .chapter-list li .del i{background-position: -35px -40px; width: 12px; height: 12px; display: block; margin: 6px;}
+.mainview .upload-ok .chapter-list li h5, .mainview .upload-ok .chapter-list li p{width: 115px; margin: 0 auto;}
+.mainview .upload-ok .chapter-list li h5{font-weight: normal; font-size: 18px; padding: 25px 0 5px;}
+.mainview .upload-ok .chapter-list li p{}
+.mainview .upload-ok .chapter-list li:hover .del{display: block;}
+.mainview .upload-ok .chapter-list li.selected{background-color: #ABC05F;}
+.mainview .upload-ok .chapter-list .add-chapter{cursor: pointer;}
+.mainview .upload-ok .chapter-list .add-chapter i{background-position: -100px 0; width: 32px; height: 32px; display: block; margin: 24px auto 12px;}
+
+/*plugin-uploadify-v2.1*/
+.opt-btns ul li input{display: none;}
+.opt-btns ul li object{position: absolute; top: 0; left: 0;}
+.uploadifyQueueItem { border: 1px solid #D4D2C6; background-color: #FFF; padding: 1px; width: 566px; height: 18px; position: relative; border-radius: 3px; margin-bottom: 5px; color: #74716c;}
+.uploadifyError { border: 1px solid #FBCBBC !important; background-color: #FDE5DD !important; }
+.uploadifyQueueItem .cancel {float: right; display: none;
+}
+.uploadifyQueueItem .percentage{position: absolute; z-index: 2; right: 10px; top: 1px;}
+.uploadifyQueueItem .fileName{position: relative; z-index: 2; left: 10px; top: 0px;}
+.uploadifyProgress {position: absolute; top: 1px; left: 1px; width: 566px; }
+.uploadifyProgressBar {background-color: #abd52b; width: 1px; height: 18px; border-radius: 3px; }

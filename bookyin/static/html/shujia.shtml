@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧 - 书架</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" />
+    <link rel="stylesheet" href="../css/bookshelf.css" type="text/css" />
+</head>
+<body>
+<!-- header -->
+<!--#include virtual="module/header-book.html" -->
+
+<div class="pagewrap">
+	<div class="bstitle cf">
+		<h1>我的书架</h1>
+		<div class="eye">
+			<a class="onemore" href="#"><span></span>再出一本</a>
+		</div>
+	</div>
+	<div class="floor item cf">
+		<div class="bsimg">
+			<img src="../img/demo/book.png" alt="">
+		</div>
+		<dl>
+			<dt><span>洋洋</span>的微博书</dt>
+			<dd>89页</dd>
+			<dd>我曾经制作过1本纸质书</dd>
+			<dd>最后编辑：<span class="subtime"> 2013/04/28 15:44</span></dd>
+		</dl>
+        <div class="action">
+            <a class="btn-unique" href="#">个性化定制</a>
+        </div>
+		<div class="action">
+			<div class="edit">
+				<a class="view" href="#"><span>查看</span></a>
+				<a class="del" href="#"><span>删除</span></a>
+			</div>
+			<a class="btn-normal" href="#">制作纸质书</a>
+		</div>
+	</div>
+	<div class="floor item cf">
+		<div class="bsimg">
+			<img src="../img/demo/book.png" alt="">
+		</div>
+		<dl>
+			<dt><span>洋洋</span>的微博书</dt>
+			<dd>89页</dd>
+			<dd>我曾经制作过1本纸质书</dd>
+			<dd>最后编辑：<span class="subtime"> 2013/04/28 15:44</span></dd>
+		</dl>
+		<div class="action">
+			<div class="edit">
+				<a class="view" href="#"><span>查看</span></a>
+				<a class="del" href="#"><span>删除</span></a>
+			</div>
+			<a class="btn-normal" href="#">制作纸质书</a>
+		</div>
+	</div>
+	<div class="floor item cf">
+		<div class="bsimg">
+			<img src="../img/demo/book.png" alt="">
+		</div>
+		<dl>
+			<dt><span>洋洋</span>的微博书</dt>
+			<dd>89页</dd>
+			<dd>我曾经制作过1本纸质书</dd>
+			<dd>最后编辑：<span class="subtime"> 2013/04/28 15:44</span></dd>
+		</dl>
+		<div class="action">
+			<div class="edit">
+				<a class="view" href="#"><span>查看</span></a>
+				<a class="del" href="#"><span>删除</span></a>
+			</div>
+			<a class="btn-normal" href="#">制作纸质书</a>
+		</div>
+	</div>
+	<div class="floor item cf">
+		<div class="bsimg">
+			<img src="../img/demo/book.png" alt="">
+		</div>
+		<dl>
+			<dt><span>洋洋</span>的微博书</dt>
+			<dd>89页</dd>
+			<dd>我曾经制作过1本纸质书</dd>
+			<dd>最后编辑：<span class="subtime"> 2013/04/28 15:44</span></dd>
+		</dl>
+		<div class="action">
+			<div class="edit">
+				<a class="view" href="#"><span>查看</span></a>
+				<a class="del" href="#"><span>删除</span></a>
+			</div>
+			<a class="btn-normal" href="#">制作纸质书</a>
+		</div>
+	</div>
+</div>
+
+<!-- footer -->
+<!--#include virtual="module/footer.html" -->
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta  charset="UTF-8"/>
+        <title>物流管理-服务商管理 </title>
+        <link type="text/css" rel="stylesheet" href="../css/base.css"/>
+        <link type="text/css" rel="stylesheet" href="../css/common.css"/>
+        <link type="text/css" rel="stylesheet" href="../css/op_comm.css"/>
+        <link type="text/css" rel="stylesheet" href="../jquery/jquery-ui-1.8.14.custom.css"/>
+        <link type="text/css" rel="stylesheet" href="../css/op_preferential.css"/>
+    </head>
+    <body>
+        <!-- 页头开始 -->
+        <!--#include virtual="common/op_header.html" -->
+        <!-- 页头结束 -->
+
+        <!-- 主体开始 -->
+        <div id="op_con">
+            <ul class="nav_sub clearfix">
+                <li class="current">
+                    <a href="#" title="服务商管理">服务商管理</a>
+                </li>
+                <li>
+                    <a href="#" title="运费规则设置">运费规则设置</a>
+                </li>
+                <li>
+                    <a href="#" title="发货管理">发货管理</a>
+                </li>
+            </ul>
+            <div class="op_main">
+                <div class="main_con">
+                    <h2><a class="addLog" href="#" title="新增服务商">新增服务商</a>物流列表</h2>
+                    <table summary="表格" class="table longtb">
+                        <tr>
+                            <th>服务商名称</th>
+                            <th>是否支持货到付款</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td>中通快递</td>
+                            <td>否</td>
+                            <td>启用</td>
+                            <td><a class="blue modify" href="modify.shtml" title="详情">详情</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="blue" href="#" title="详情">暂不使用</a></td>
+                        </tr>
+                        <tr>
+                            <td>中通快递</td>
+                            <td>否</td>
+                            <td>启用</td>
+                            <td><a class="blue modify" href="#" title="详情">详情</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="blue" href="#" title="详情">暂不使用</a></td>
+                        </tr>
+                        <tr>
+                            <td>中通快递</td>
+                            <td>否</td>
+                            <td>启用</td>
+                            <td><a class="blue modify" href="#" title="详情">详情</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="blue" href="#" title="详情">启用</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 主体结束 -->
+
+        <!-- 页尾开始 -->
+        <!--#include virtual="common/op_footer.html" -->
+        <!-- 页尾结束 -->
+        
+        <!-- 弹出层开始 -->
+        
+        <!-- 弹出层结束 -->
+        
+             
+        <script type="text/javascript" src="../jquery/js/jquery-1.6.min.js"></script>
+        <script type="text/javascript" src="../js/op_common.js"></script>
+        <script src="../js/common.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../jquery/js/jquery-ui-1.8.14.custom.min.js"></script>
+        <script type="text/javascript">
+			/*调用到的函数统一入口*/		
+			$(function(){
+				$(".table").table({
+                      checked:''   
+                });
+                //修改 
+				$("#modify").dialog({
+					title : "修改服务商信息",
+					autoOpen : false,
+					width : 600,
+					modal : true,
+					buttons : {
+						"保存" : function() {
+							$(this).dialog("close");
+						},
+						"取消" : function() {
+							$(this).dialog("close");
+						}
+					}
+				});
+				$(".modify").click(function() {
+					$("#modify").dialog("open");
+				});
+			});
+		</script>
+    </body>
+</html>

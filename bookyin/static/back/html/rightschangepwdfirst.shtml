@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta  charset="UTF-8"/>
+		<title>初次登陆修改密码</title>
+		<link type="text/css" rel="stylesheet" href="../css/base.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/common.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/op_comm.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/op_preferential.css"/>
+	</head>
+	<style type="text/css">
+		body{ background:#F0F0F0; background-image: none;}
+	</style>
+	<body>
+		<!-- 主体开始 -->
+		<div class="po_password">
+			<h2>初次登陆修改密码</h2>
+			<div>
+				<p><label title="">账号：</label>liangzhigang</p>
+				<p><label title="">真实姓名：</label>梁志刚</p>
+				<p><label title="">原密码：</label><input type="text" value="" /><span class="red margL10">密码错误，请联系管理员！</span></p>
+				<p>
+					<label title="">新密码：</label><input type="text" value="" id="pwd" /><br />
+					<span class="gray">新密码不可与老密码重复，至少8位以上，需要包含英文和数字，至少一个大写字母</span>
+				</p>
+				<p><label title="">再次输入新密码：</label><input type="text" value="" id="repwd" /><span id="pwd_info" class="red margL10" style="display:none">两次密码不一致！</span></p>
+                <p><input class="btn4" type="button" value="修改密码"></p>
+			</div>
+		</div>
+		<!-- 主体结束 -->
+        <script type="text/javascript" src="../jquery/js/jquery-1.6.min.js"></script>
+        <!--密码框验证-->
+		<script>
+        $('.btn4').click(function(){
+			if ($('#pwd').val()!=$('#repwd').val()){
+				$('#pwd_info').css('display','');
+				}
+			})
+        </script>
+        <!--密码框验证--
+	</body>
+</html>

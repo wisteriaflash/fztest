@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" />
+    <link rel="stylesheet" href='../css/wb-pubu.css' type="text/css" />
+</head>
+<body>
+<!-- header -->
+<!--#include virtual="module/header-book.html" -->
+
+<div class="book-wrapper book-cover cf">
+    <div class="pages-wrapper page0-rightcover">
+        <div class="pages none">
+        </div>
+        <div class="pages pages-even frontCover">
+            <div class="con">
+                <div class="saying">每个人都是生活的作者</div>
+                <div class="info">
+                <span class="time-range">
+                    <font class="time-start">2008.01</font>
+                    <font class="time-tip">-</font>
+                    <font class="time-end">2013.05</font>
+                </span>
+                    <span class="title">那一年的梦想</span>
+                    <span class="author">郭敬明</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<!--#include virtual="module/footer.html" -->
+
+</body>
+</html>

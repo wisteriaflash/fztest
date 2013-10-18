@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta  charset="UTF-8"/>
+		<title>导航管理</title>
+		<link type="text/css" rel="stylesheet" href="../css/base.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/common.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/op_comm.css"/>
+		<link type="text/css" rel="stylesheet" href="../jquery/jquery-ui-1.8.14.custom.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/op_banner.css" />
+		<link href="../jquery/jquery.alerts.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		<!--#include virtual="common/op_header.html" -->
+		<!-- 页头结束 -->
+
+		<!-- 主体开始 -->
+		<div id="op_con">
+			<ul class="nav_sub clearfix">
+				<li class="current">
+					<a href="#" title="banner管理">banner管理</a>
+				</li>
+				<li>
+					<a href="#" title="菜单管理">导航管理</a>
+				</li>
+			</ul>
+			<div class="op_main">
+				<div class="main_title">
+					<ul class="crumb clearfix">
+						<li id="liFirst">
+							<a href="#" title="">首页banner</a>
+						</li>
+					</ul>
+				</div>
+				<div class="main_con">
+					<div class="padR0 clearfix">
+						<div class="tb-left-wrap">
+							<table summary="表格" class="odTable" width="100%">
+								<tr>
+									<th>序号</th>
+									<th>文字/title</th>
+									<th>图片</th>
+									<th>链接/link</th>
+									<th>操作</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="text" /></td>
+									<td><a href="#" class="blue">a.jpg</a><input class="fRight" type="file" /></td>
+									<td><input type="text" /></td>
+									<td><a href="#" class="blue delButton">删除</a><a href="#" class="blue fRight">下移</a><a href="#" class="blue fRight">上移&nbsp;&nbsp;|&nbsp;&nbsp;</a></td>
+								</tr>
+							</table>
+							<div class="opt-banner-total">
+								<a class="button bth fRight" title="发布" href="javascript:void(0)">发布</a>
+								<a class="button btb margR10 fRight" title="新增导航" href="javascript:void(0)">新增导航</a>
+							</div>
+						</div>
+					</div>
+					<div class="decoration clearfix related">
+						<div class="page">
+							<span>共10页100条记录</span>
+							<span class="pageCenter"> <a href="javascript:;" class="pageUp">上一页</a> <a href="javascript:;">1</a> <a href="javascript:;" class="pageChecked">2</a> <span class="pageMore">…</span> <a href="javascript:;">8</a> <a href="javascript:;">9</a> <a href="javascript:;">10</a> <a href="javascript:;" class="pageDown">下一页</a> </span>
+							<span> 跳转到
+								<input type="text" class="pageText"/>
+								页<a href="javascript:;" class="pageButton">GO</a> </span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- 主体结束 -->
+
+		<!-- 页尾开始 -->
+		<!--#include virtual="common/op_footer.html" -->
+		<!-- 页尾结束 -->
+
+		<script type="text/javascript" src="../jquery/js/jquery-1.6.min.js"></script>
+		<script type="text/javascript" src="../js/op_common.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../jquery/js/jquery-ui-1.8.14.custom.min.js"></script>
+	</body>
+</html>

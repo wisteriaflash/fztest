@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href='../css/jquery-ui-1.8.14.custom.css' type="text/css" />
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    
+    <link rel="stylesheet" href="../css/common.css" type="text/css" />
+    <link rel="stylesheet" href='../css/wb-pubu.css' type="text/css" />
+
+</head>
+<body>
+<!-- header -->
+<!--#include virtual="module/header-book.html" -->
+
+<div class="book-wrapper cf">
+    <form action="/Book/Done" method="post">
+        <div class="pages-wrapper">
+            <div class="pages pages-odd color1">
+                <div class="shadow"></div>
+                <div class="col">
+                    <ul>
+                        <li class="chapter">
+                            <span class="y">2012</span>
+                            <span class="yt">年</span>
+                            <span class="m">08</span>
+                            <span class="mEN">December</span>
+                            <span class="mt">月</span>
+                        </li>
+                        <li class="item">
+                            <a class="btn del" title="在列表中删除这条微博"><i></i><span>删除</span></a>
+                            <div class="post-time">
+                                <span class="bg"><i></i></span>
+                                <span class="y">2012</span>
+                                <span class="yt">年</span>
+                                <span class="m">08.</span>
+                                <span class="mt">月</span>
+                                <span class="d">04</span>
+                                <span class="dt">日</span>
+                                <span class="t">18:56</span>
+                            </div>
+                            <p>张衡公园，台风过境 我在:http://t.cn/zOUA03X</p>
+                            <span class="img">
+                                <img src="../wy/63f0ed12jw1dvkulhswrjj.jpg" vertical="0" />
+                            </span>
+                        </li>
+                        <li class="item">
+                            <a class="btn del" title="在列表中删除这条微博"><i></i><span>删除</span></a>
+                            <div class="post-time">
+                                <span class="bg"><i></i></span>
+                                <span class="y">2012</span>
+                                <span class="yt">年</span>
+                                <span class="m">08.</span>
+                                <span class="mt">月</span>
+                                <span class="d">04</span>
+                                <span class="dt">日</span>
+                                <span class="t">19:03</span>
+                            </div>
+                            <p>散散步，蛮好</p>
+                            <span class="img">
+                                <img src="../wy/63f0ed12jw1dvkushgftsj.jpg" vertical="0" />
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li class="item">
+                            <a class="btn del" title="在列表中删除这条微博"><i></i><span>删除</span></a>
+                            <div class="post-time">
+                                <span class="bg"><i></i></span>
+                                <span class="y">2012</span>
+                                <span class="yt">年</span>
+                                <span class="m">08.</span>
+                                <span class="mt">月</span>
+                                <span class="d">04</span>
+                                <span class="dt">日</span>
+                                <span class="t">18:56</span>
+                            </div>
+                            <p>《罗马浴场》第2部电影2014年上映】由在葡萄牙定居的日本女作家山崎真理创作的人气搞笑漫画《罗马浴场》，曾在去年4月6日公开了首部真人电影，其票房达到了59亿8000万日元</p>
+                        </li>
+                        <li class="item">
+                            <a class="btn del" title="在列表中删除这条微博"><i></i><span>删除</span></a>
+                            <div class="post-time">
+                                <span class="bg"><i></i></span>
+                                <span class="y">2012</span>
+                                <span class="yt">年</span>
+                                <span class="m">08.</span>
+                                <span class="mt">月</span>
+                                <span class="d">04</span>
+                                <span class="dt">日</span>
+                                <span class="t">18:56</span>
+                            </div>
+                            <p>甘肃省通信管理局的不作为导致的是甘肃互联网人才、网站的毁灭和流失，望有关部门关注！</p>
+                        </li>
+                        <li class="item">
+                            <a class="btn del" title="在列表中删除这条微博"><i></i><span>删除</span></a>
+                            <div class="post-time">
+                                <span class="bg"><i></i></span>
+                                <span class="y">2012</span>
+                                <span class="yt">年</span>
+                                <span class="m">08.</span>
+                                <span class="mt">月</span>
+                                <span class="d">04</span>
+                                <span class="dt">日</span>
+                                <span class="t">18:56</span>
+                            </div>
+                            <p>我在万达电影网购买了《虎胆龙威5》http://t.cn/zY1OI7a（分享自@万达电影网）</p>
+                            <span class="img">
+                                <img src="../img/demo/wb3.jpg" vertical="0" />
+                                <span class="cut"></span>
+                                <!-- <a class="exp" href="#"></a> -->
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pn">
+                    <span>223</span>
+                </div>
+            </div>
+            <div class="pages pages-even color1">
+              <div class="shadow"></div>
+                <div class="col">
+                    <ul>
+                        <li class="item">
+                            <a class="btn del" title="在列表中删除这条微博"><i></i><span>删除</span></a>
+                            <div class="post-time">
+                                <span class="bg"><i></i></span>
+                                <span class="y">2012</span>
+                                <span class="yt">年</span>
+                                <span class="m">08.</span>
+                                <span class="mt">月</span>
+                                <span class="d">04</span>
+                                <span class="dt">日</span>
+                                <span class="t">19:03</span>
+                            </div>
+                            <p>昨天见识了兰州市准生证办理之艰辛：N个的证明让人头疼，很明显的初婚、未育证明（身份证、户籍、新结婚证、女方社区证明）在社区那里就成了一环套一环的没完没了的证明证明证明！证明你妹啊！工作人员理直气壮的言辞，声称每个社区有每个社区的规定……省、市、区（县）你就不能弄成统一的文档啊？</p>
+                        </li>
+                        <li class="item">
+                            <a class="btn del" title="在列表中删除这条微博"><i></i><span>删除</span></a>
+                            <div class="post-time">
+                                <span class="bg"><i></i></span>
+                                <span class="y">2012</span>
+                                <span class="yt">年</span>
+                                <span class="m">08.</span>
+                                <span class="mt">月</span>
+                                <span class="d">04</span>
+                                <span class="dt">日</span>
+                                <span class="t">18:56</span>
+                            </div>
+                            <p>我在万达电影网购买了《虎胆龙威5》http://t.cn/zY1OI7a（分享自@万达电影网）</p>
+                        </li>
+                        <li class="item">
+                            <a class="btn del" title="在列表中删除这条微博"><i></i><span>删除</span></a>
+                            <div class="post-time">
+                                <span class="bg"><i></i></span>
+                                <span class="y">2012</span>
+                                <span class="yt">年</span>
+                                <span class="m">08.</span>
+                                <span class="mt">月</span>
+                                <span class="d">04</span>
+                                <span class="dt">日</span>
+                                <span class="t">18:56</span>
+                            </div>
+                            <p>甘肃省通信管理局新一轮的备案注销开始了。自上次事件后，已经整理了部分证据和案例，本人继续征集甘肃省通信管理的行政不作为，比如无辜注销备案、备案和IDC服务垄断、关站威胁和以此诞生的高价安全员培训等等！甘肃省通信管理局的不作为导致的是甘肃互联网人才、网站的毁灭和流失，望有关部门关注！</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+
+                        <li class="item">
+                            <a class="btn del" title="在列表中删除这条微博"><i></i><span>删除</span></a>
+                            <div class="post-time">
+                                <span class="bg"><i></i></span>
+                                <span class="y">2012</span>
+                                <span class="yt">年</span>
+                                <span class="m">08.</span>
+                                <span class="mt">月</span>
+                                <span class="d">04</span>
+                                <span class="dt">日</span>
+                                <span class="t">18:56</span>
+                            </div>
+                            <p>我在万达电影网购买了《虎胆龙威5》http://t.cn/zY1OI7a（分享自@万达电影网）</p>
+                        </li>
+                        <li class="item">
+                            <a class="btn del" title="在列表中删除这条微博"><i></i><span>删除</span></a>
+                            <div class="post-time">
+                                <span class="bg"><i></i></span>
+                                <span class="y">2012</span>
+                                <span class="yt">年</span>
+                                <span class="m">08.</span>
+                                <span class="mt">月</span>
+                                <span class="d">04</span>
+                                <span class="dt">日</span>
+                                <span class="t">18:56</span>
+                            </div>
+                            <p>自上次事件后，已经整理了部分证据和案例，本人继续征集甘肃省通信管理的行政不作为，比如无辜注销备案、备案和IDC服务垄断、关站威胁和以此诞生的高价安全员培训等等！甘肃省通信管理局的不作为导致的是甘肃互联网人才、网站的毁灭和流失，望有关部门关注！</p>
+                        </li>
+                        <li class="item">
+                            <a class="btn del" title="在列表中删除这条微博"><i></i><span>删除</span></a>
+                            <div class="post-time">
+                                <span class="bg"><i></i></span>
+                                <span class="y">2012</span>
+                                <span class="yt">年</span>
+                                <span class="m">08.</span>
+                                <span class="mt">月</span>
+                                <span class="d">04</span>
+                                <span class="dt">日</span>
+                                <span class="t">18:56</span>
+                            </div>
+                            <p>关站威胁和以此诞生的高价安全员培训等等！</p>
+                            <div class="retui">
+                                <i class="arrow"></i>
+                                <p>甘肃省通信管理局的不作为导致的是甘肃互联网人才、网站的毁灭和流失，望有关部门关注！</p>
+                                <span class="img">
+                                    <img src="../wy/63f0ed12jw1dvkulhswrjj.jpg" vertical="0" />
+                                    <span class="cut"></span>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pn">
+                    <span>224</span>
+                </div>
+            </div>
+        </div>
+        <div class="book-opt">
+            <div class="setcolor">
+            <a id="J_setColor" class="btn" href="#" title="换色"><i></i><span>换色</span></a>
+            </div>
+            <div class="catalog">
+                <a id="J_catalog" class="btn" href="#" title="目录"><i></i><span>目录</span></a>
+            </div>
+            <div class="actionbar">
+                <a class="btn btn-submit" href="#" title="放入我的书架">放入我的书架</a>
+                <a class="btn" href="#" title="返回">返回</a>
+            </div>    
+        </div>
+        <div class="fliper">
+            <a class="prev" href="#" title="上一页"><i></i><span>上一页</span></a>
+            <a class="next" href="#" title="下一页"><i></i><span>下一页</span></a>
+        </div>
+        <div class="catbar">
+            <div class="catbar-tool">
+                <a class="year-prev" href="#">&lt;</a>
+                <a class="year-next" href="#">&gt;</a>
+            </div>
+            <div class="catbar-list">
+                <a href="#" class="front-cover" p="-4">封面</a>
+                <div class="year-list">
+                    <dt class="2010">2010</dt>
+                    <dd>
+                        <ul>
+                            <li><a href="#" title="2010年11月" p="1">11月</a></li>
+                            <li><a href="#" title="2010年11月" p="3">12月</a></li>
+                        </ul>
+                    </dd>
+                    <dt class="2011">2011</dt>
+                    <dd class="">
+                        <ul>
+                            <li><a href="#" title="2011年1月" p="5">1月</a></li>
+                            <li><a href="#" title="2011年2月" p="8">2月</a></li>
+                            <li><a href="#" title="2011年3月" p="12">3月</a></li>
+                            <li><a href="#" title="2011年4月" p="14">4月</a></li>
+                            <li><a href="#" title="2011年5月" p="15">5月</a></li>
+                            <li><a href="#" title="2011年6月" p="18">6月</a></li>
+                            <li><a href="#" title="2011年7月" p="20">7月</a></li>
+                            <li><a href="#" title="2011年8月" p="22">8月</a></li>
+                            <li><a href="#" title="2011年9月" p="24">9月</a></li>
+                            <li><a href="#" title="2011年10月" p="26">10月</a></li>
+                            <li><a href="#" title="2011年11月" p="28">11月</a></li>
+                            <li><a href="#" title="2011年12月" p="30">12月</a></li>
+                        </ul>
+                    </dd>
+                </div>
+                <a href="#" class="back-cover" p="50">封底</a>
+            </div>
+        </div>
+        <div class="color-list">
+            <ul>
+                <li class="color1 cur" title=""></li>
+                <li class="color2" data=""></li>
+                <li class="color3"></li>
+                <li class="color4"></li>
+                <li class="color5"></li>
+                <li class="color6"></li>
+            </ul>
+        </div>
+        <!-- hidden area -->
+        <input id="guid" name="guid" type="hidden" value="51b378eb-1ab2-442e-967c-c17b0949528e">
+        <input id="bookId" name="bookId" type="hidden" value="169763">
+    </form>
+</div>
+<script type="text/javascript" src="../js/jquery-1.6.min.js"></script>
+<!-- footer -->
+
+
+<script type="text/javascript" src="../js/jquery-ui-1.8.14.custom.min.js"></script>
+<script src="../js/edit.js"></script>
+</body>
+</html>

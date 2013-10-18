@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta  charset="UTF-8"/>
+		<title>权限管理</title>
+		<link type="text/css" rel="stylesheet" href="../css/base.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/common.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/op_comm.css"/>
+		<link type="text/css" rel="stylesheet" href="../jquery/jquery-ui-1.8.14.custom.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/op_preferential.css"/>
+		<link href="../jquery/jquery.alerts.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		<!--#include virtual="common/op_header.html" -->
+		<!-- 页头结束 -->
+
+		<!-- 主体开始 -->
+		<div id="op_con">
+         <div class="error">
+            <div class="errorTop">出错了!</div>
+            <div class="errorBottom">请点击左侧导航重新操作</div>
+            </div>
+		</div>
+		<!-- 主体结束 -->
+
+		<!-- 页尾开始 -->
+		<!--#include virtual="common/op_footer.html" -->
+		<!-- 页尾结束 -->
+		
+		
+		<script type="text/javascript" src="../jquery/js/jquery-1.6.min.js"></script>
+		<script type="text/javascript" src="../js/op_common.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../jquery/js/jquery-ui-1.8.14.custom.min.js"></script>
+		<script type="text/javascript" src="../jquery/js/jquery.alerts.js"></script>
+		
+	</body>
+</html>

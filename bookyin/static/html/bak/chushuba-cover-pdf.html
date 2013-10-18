@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧封面/封底--for pdf</title>
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../css/wb-pubu.css" type="text/css" />
+    <style>
+    body{background: none;}
+    .container{width: 1004px; height: 700px; border: 1px solid red; position: relative;}
+    .cover{width: 495px; height: 700px; border: 1px solid; position: absolute; top:0;}
+    .back-cover{float: left; float: none; left: 0;}
+    .back-cover h1{text-align: right;}
+    .first-cover{float: right; float: none; right: 0;}
+
+	/* 分页 for pdf */
+	@page a5 {
+	size:26.628cm 18.6cm;
+	margin:0;
+	marks:cross;
+	}
+	body { page:a5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cover back-cover">
+            <div class="pages pages-odd backCover color1" id="J_pageLeft">
+            <div class="saying "></div>
+            </div>
+        </div>
+        <div class="cover first-cover">
+            <div class="pages pages-even frontCover color1" id="J_pageRight"><!--shadow信息-->
+            <!--扉页信息-->
+            <div class="con">
+                <div class="saying">每个人都是生活的作者</div>
+                <div class="info">
+                    <span class="time-range">
+                        <font class="time-start">2013.01</font>
+                        <font class="time-tip">-</font>
+                        <font class="time-end">2013.06</font>
+                    </span>
+                    <span class="title">赤果果抄袭的微博书</span>
+                    <span class="author">宙宙贝</span>
+                </div>
+            </div>
+            <!--第二页-->
+            <!--尾页-->
+            </div>
+        </div>    
+    </div>
+</body>
+</html>

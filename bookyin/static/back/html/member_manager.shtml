@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta  charset="UTF-8"/>
+		<title>会员管理</title>
+		<link type="text/css" rel="stylesheet" href="../css/base.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/common.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/op_comm.css"/>
+		<link type="text/css" rel="stylesheet" href="../jquery/jquery-ui-1.8.14.custom.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/op_preferential.css"/>
+		<link href="../jquery/jquery.alerts.css" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+			.listSection {
+				width: 100%;
+				overflow: hidden;
+			}
+			.listSection .editor {
+				width: 100%;
+			}
+			.listSection .ke-container {
+				border: 0 none;
+				width: 100% !important;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		<!--#include virtual="common/op_header.html" -->
+		<!-- 页头结束 -->
+
+		<!-- 主体开始 -->
+		<div id="op_con">
+			<ul class="nav_sub clearfix">
+				<li class="current">
+					<a href="#" title="会员管理">会员管理</a>
+				</li>
+			</ul>
+			<div class="op_main">
+				<div class="main_con">
+					<div class="search">
+						<h2>用户搜索</h2>
+						<table>
+							<tr>
+								<td>用户名：</td>
+								<td>
+								<input type="text"/>
+								</td>
+								<td>注册日期：</td>
+								<td>
+								<input type="text" class="date"/>
+								&nbsp;&nbsp;-&nbsp;&nbsp;
+								<input type="text" class="date"/>
+								</td>
+								<td><input class="btn4" type="button" value="搜索"/></td>
+							</tr>
+						</table>
+					</div>
+					<div class="padR0 clearfix">
+						<div class="tb-left-wrap">
+							<h2>用户查询结果<span></h2>
+							<table summary="表格" class="tb-left" width="100%">
+								<tr>
+									<th>用户名</th>
+									<th>初次登陆时间</th>
+									<th>书架数量</th>
+								</tr>
+								<tr>
+									<td>dslkjd@hotmail.com</td>
+									<td>2013-01-05 22:45:32</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>dslkjd@hotmail.com</td>
+									<td>2013-01-05 22:45:32</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>dslkjd@hotmail.com</td>
+									<td>2013-01-05 22:45:32</td>
+									<td>3</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="decoration clearfix related">
+						<div class="page">
+							<span>共10页100条记录</span>
+							<span class="pageCenter"> <a href="javascript:;" class="pageUp">上一页</a> <a href="javascript:;">1</a> <a href="javascript:;" class="pageChecked">2</a> <span class="pageMore">…</span> <a href="javascript:;">8</a> <a href="javascript:;">9</a> <a href="javascript:;">10</a> <a href="javascript:;" class="pageDown">下一页</a> </span>
+							<span> 跳转到
+								<input type="text" class="pageText"/>
+								页<a href="javascript:;" class="pageButton">GO</a> </span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- 主体结束 -->
+
+		<!-- 页尾开始 -->
+		<!--#include virtual="common/op_footer.html" -->
+		<!-- 页尾结束 -->
+
+		<!-- 发送站内信 -->
+		<div id="mail">
+			<p class="margT15 margB15">
+				<label>标题：</label>
+				<input type="text" />
+			</p>
+			<div class="listSection">
+				<h4>内容：</h4>
+				<textarea name="content" class="editor" id="editor1"></textarea>
+			</div>
+		</div>
+		<!-- 全部发送站内信 -->
+		<div id="mailall">
+			<p class="margT15 margB15">
+				<label>标题：</label>
+				<input type="text" />s
+			</p>
+			<div class="listSection">
+				<h4>内容：</h4>
+				<textarea name="content" class="editor" id="editor2"></textarea>
+			</div>
+		</div>
+
+		<!-- 管理用户 -->
+		<div id="user">
+			<table>
+				<tr class="orange">
+					<td><label for="proName">标题：</label></td>
+					<td colspan="3">huangyaohua@gmail.com</td>
+				</tr>
+				<tr>
+					<td><label for="nickName">昵称：</label></td>
+					<td>
+					<input type="text" id="nickName" />
+					</td>
+					<td><label for="realName">真实姓名：</label></td>
+					<td>
+					<input type="text" id="realName" />
+					</td>
+				</tr>
+				<tr>
+					<td><label for="t1">地区：</label></td>
+					<td colspan="3">
+					<select id="t1">
+						<option selected="selected">上海</option>
+					</select>
+					<select id="t2">
+						<option selected="selected">上海市</option>
+					</select>
+					<select id="t3">
+						<option selected="selected">浦东新区</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><label for="proName">详细地址：</label></td>
+					<td colspan="3">
+					<input type="text" size="72" />
+					</td>
+				</tr>
+				<tr>
+					<td><label for="proName">手机：</label></td>
+					<td>
+					<input type="text" />
+					</td>
+					<td><label for="proName">座机：</label></td>
+					<td>
+					<input type="text" size="5" />
+					&nbsp;-&nbsp;
+					<input type="text" />
+					</td>
+				</tr>
+				<tr>
+					<td><label for="proName">性别：</label></td>
+					<td><label>
+						<input id="RadioGroup1_0" type="radio" value="男" name="RadioGroup1">
+						男</label><label>
+						<input id="RadioGroup1_1" type="radio" value="女" name="RadioGroup1">
+						女</label></td>
+					<td><label for="proName">生日</label></td>
+					<td>
+					<input id="dateOpen" class="hasDatepicker" type="text">
+					</td>
+				</tr>
+				<tr>
+					<td><label for="proName">婚姻状况：</label></td>
+					<td>
+					<select id="t1">
+						<option selected="selected">已婚</option>
+						<option selected="selected">未婚</option>
+					</select></td>
+					<td><label for="proName">学历：</label></td>
+					<td>
+					<select id="t1">
+						<option selected="selected">本科</option>
+						<option selected="selected">专科</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><label for="proName">学历：</label></td>
+					<td colspan="3">					<textarea rows="3" cols="70"></textarea></td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- 初始化密码-->
+		<div id="msg">
+			<p class="center margT15 margB15">
+				确定要初始化吗？
+			</p>
+		</div>
+
+		<!-- 初始化成功 -->
+		<div id="msgyes">
+			<p class="center margT15 margB15">
+				初始化成功!
+			</p>
+		</div>
+
+		<script type="text/javascript" src="../jquery/js/jquery-1.6.min.js"></script>
+		<script type="text/javascript" src="../js/op_common.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../jquery/js/jquery-ui-1.8.14.custom.min.js"></script>
+		
+		<script type="text/javascript" src="../js/kindeditor/kindeditor-min.js"></script>
+		
+		<script type="text/javascript">
+			/*调用到的函数统一入口*/
+			$(function() {
+				//发送站内信
+				$("#mail").dialog({
+					title : "发送站内信",
+					autoOpen : false,
+					width : 600,
+					modal : true,
+					buttons : {
+						"保存" : function() {
+							$(this).dialog("close");
+						},
+						"取消" : function() {
+							$(this).dialog("close");
+						}
+					}
+				});
+				$(".mailonce").click(function() {
+					$("#mail").dialog("open");
+				});
+				//发送全部站内信
+				$("#mailall").dialog({
+					title : "发送站内信(所有搜索结果)",
+					autoOpen : false,
+					width : 600,
+					modal : true,
+					buttons : {
+						"保存" : function() {
+							$(this).dialog("close");
+						},
+						"取消" : function() {
+							$(this).dialog("close");
+						}
+					}
+				});
+				$(".mailall").click(function() {
+					$("#mailall").dialog("open");
+				});
+				//管理用户
+				$("#user").dialog({
+					title : "管理用户",
+					autoOpen : false,
+					width : 600,
+					modal : true,
+					buttons : {
+						"保存" : function() {
+							$(this).dialog("close");
+						},
+						"取消" : function() {
+							$(this).dialog("close");
+						}
+					}
+				});
+				$(".user").click(function() {
+					$("#user").dialog("open");
+				});
+				//初始化密码
+				$("#msg").dialog({
+					title : "初始化密码",
+					autoOpen : false,
+					width : 300,
+					modal : true,
+					buttons : {
+						"保存" : function() {
+							$(this).dialog("close");
+							$("#msgyes").dialog("open");
+						},
+						"取消" : function() {
+							$(this).dialog("close");
+						}
+					}
+				});
+				$(".msg").click(function() {
+					$("#msg").dialog("open");
+				});
+				$("#msgyes").dialog({
+					title : "初始化密码",
+					autoOpen : false,
+					width : 300,
+					modal : true,
+					buttons : {
+						"确定" : function() {
+							$(this).dialog("close");
+						}
+					}
+				});
+
+				$(".tb-left").table({hasCheckbox:true});
+				$('.date').datepicker({
+					dateFormat : "yy-mm-dd"
+				});
+			});
+			var editor1;
+			KindEditor.ready(function(K) {
+				editor1 = K.create('#editor1', {
+					resizeType : 1,
+					allowPreviewEmoticons : false,
+					allowImageUpload : true,
+					items : ['fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline', 'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist', 'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+				});
+			});
+			var editor2;
+			KindEditor.ready(function(K) {
+				editor2 = K.create('#editor2', {
+					resizeType : 1,
+					allowPreviewEmoticons : false,
+					allowImageUpload : true,
+					items : ['fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline', 'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist', 'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+				});
+			});
+
+		</script>
+	</body>
+</html>

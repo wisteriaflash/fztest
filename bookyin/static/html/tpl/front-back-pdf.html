@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧封面/封底--for pdf</title>
+    <link rel="stylesheet" href="../../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/wb-pubu.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/wb-pubu-pdf.css" type="text/css" />
+    <script type="text/javascript">
+    var scale = 1.12977;
+    </script>
+    <style>
+    body{background: none;}
+    .cover-con{width: 1004px;}
+    .cover-con .cover{border: 1px solid;}
+    /*test*/
+    .scale-pdfh5{
+        transform:scale(1.12977);
+        transform-origin: left top;
+        -ms-transform: scale(1.12977);
+        -ms-transform-origin: left top;
+        -webkit-transform:scale(1.12977);
+        -webkit-transform-origin: left top;
+        -moz-transform: scale(1.12977);
+        -moz-transform-origin: left top;
+        margin-bottom: 100px;
+    }
+    /* 分页 for pdf */
+    @page a5 {
+    size:26.628cm 18.6cm;
+    margin:0;
+    marks:cross;
+    }
+    body { page:a5; }
+    </style>
+</head>
+<body>
+    <!-- html5缩放 BEGIN -->
+    <div class="cover-con scale-pdfh5">
+        <div class="cover back-cover">
+            <div class="pages pages-odd backCover">
+            <div class="info">
+                <div class="barcode">
+                    <img src="http://file.chushuba.com/barcode/20130719/8414cee3548148d6bb0f20cdaaea37eb.jpg" width="125" />
+                </div>
+                <div class="com-clipimg" style="width: 378px; height: 248px;">
+                    <img src="http://static.chushuba.com/img/default/img_default.jpg" class="" data-pinit="registered" style="left: 0px; top: 0px; width: 380px; height: 250px;" />
+                </div>
+            </div>
+            <div class="saying"></div>
+        </div>
+        </div>
+        <div class="cover first-cover">
+            <div class="pages pages-even frontCover">
+                <div class="con">
+                    <div class="saying">每个人都是生活的作者</div>
+                    <div class="fence"><span>第1册</span></div>
+                    <div class="info">
+                        <div class="com-edit-text time-range" style="width: 250px; height: 16px; font-size: 12px; line-height: 16px; text-align: left; color: rgb(117, 117, 117);">2008.01-2013.05</div>
+                        <div class="com-edit-text title" style="width: 250px; height: 30px; font-size: 24px; line-height: 30px; text-align: left; color: rgb(0, 0, 0);">那一年的梦想</div>
+                        <div class="com-edit-text author" style="width: 250px; height: 16px; font-size: 12px; line-height: 16px; text-align: left; color: rgb(0, 0, 0);">出书吧</div>
+                        <div class="com-clipimg" style="width: 120px; height: 92px;">
+                            <img src="http://static.chushuba.com/img/default/img_default.jpg" class="" style="left: 0px; top: 0px; width: 120px; height: 92px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <!-- html5缩放 END -->
+    <!-- css缩放 BEGIN -->
+    <div class="cover-con scale-pdf">
+        <div class="cover back-cover">
+            <div class="pages pages-odd backCover">
+            <div class="info">
+                <div class="barcode">
+                    <img src="http://file.chushuba.com/barcode/20130719/8414cee3548148d6bb0f20cdaaea37eb.jpg" width="125" />
+                </div>
+                <div class="com-clipimg" style="width: 378px; height: 248px;">
+                    <img src="http://static.chushuba.com/img/default/img_default.jpg" class="" data-pinit="registered" style="left: 0px; top: 0px; width: 380px; height: 250px;" />
+                </div>
+            </div>
+            <div class="saying"></div>
+        </div>
+        </div>
+        <div class="cover first-cover">
+            <div class="pages pages-even frontCover">
+                <div class="con">
+                    <div class="saying">每个人都是生活的作者</div>
+                    <div class="fence"><span>第1册</span></div>
+                    <div class="info">
+                        <div class="com-edit-text time-range" style="width: 250px; height: 16px; font-size: 12px; line-height: 16px; text-align: left; color: rgb(117, 117, 117);">2008.01-2013.05</div>
+                        <div class="com-edit-text title" style="width: 250px; height: 30px; font-size: 24px; line-height: 30px; text-align: left; color: rgb(0, 0, 0);">那一年的梦想</div>
+                        <div class="com-edit-text author" style="width: 250px; height: 16px; font-size: 12px; line-height: 16px; text-align: left; color: rgb(0, 0, 0);">出书吧</div>
+                        <div class="com-clipimg" style="width: 120px; height: 92px;">
+                            <img src="http://static.chushuba.com/img/default/img_default.jpg" class="" style="left: 0px; top: 0px; width: 120px; height: 92px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <!-- css缩放 END -->
+</body>
+</html>

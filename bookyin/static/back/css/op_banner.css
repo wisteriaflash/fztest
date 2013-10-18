@@ -1,0 +1,8 @@
+/*banner管理*/
+.crumb{background-image: none;border-bottom: none;margin-left: 0;padding-left: 0;margin:-5px 0 5px 0;}
+.crumb li{margin-right:8px;float: left;}
+.crumb li a{color: #5185b6;padding-left:0;}
+.opt-banner-total{height: 30px; background-color: #ddd; padding: 10px;}
+.opt-banner-total .scroll-time{position: relative; top: 5px;}
+.opt-banner-total .scroll-time input{margin-right: 5px;}
+/*nav*管理/

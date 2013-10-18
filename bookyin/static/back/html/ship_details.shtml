@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta  charset="UTF-8"/>
+        <title>订单管理-订单处理</title>
+        <link type="text/css" rel="stylesheet" href="../css/base.css"/>
+        <link type="text/css" rel="stylesheet" href="../css/common.css"/>
+        <link type="text/css" rel="stylesheet" href="../css/op_comm.css"/>
+        <link type="text/css" rel="stylesheet" href="../jquery/jquery-ui-1.8.14.custom.css"/>	        
+    </head>
+    <body>
+        <!-- 页头开始 -->
+        <!--#include virtual="common/op_header.html" -->
+        <!-- 页头结束 -->
+
+        <!-- 主体开始 -->
+        <div id="op_con">
+          <ul class="nav_sub clearfix">
+            <li class="current"><a href="#" title="服务商管理">服务商管理</a></li>
+            <li class="current"><a href="#" title="发货管理">发货管理</a></li>
+          </ul>
+          <div class="op_main">
+            <div class="main_hd">
+              <div class="hd_left"></div>
+              <div class="hd_right"></div>
+              <a class="more blue" href="#" title="返回订单列表">返回订单列表</a>
+              <ul class="nav_sub clearfix">
+                <li class="current"><a href="javascript:;" title="订单处理">订单信息</a></li>
+              </ul>
+            </div>
+            <div class="main_con">
+              <table class="proTb ptd">
+              	<tr>
+                  <td width="268"><em >订单状态：未支付</em></td>
+                  <td colspan="2">用户账号：1039651183@qq.com（新浪）</td>
+                </tr>
+                <tr>
+                  <td>订单编号：1301051059</td>
+                  <td width="91">支付方式：</td>
+                  <td width="400">门店支付</td>
+                </tr>
+                <tr>
+                  <td>订单时间：2013-01-05 22:45:32</td>
+                  <td>&nbsp;</td>
+                  <td>（安徽三孝口书店）</td>
+                </tr>
+                <tr>
+                  <td>支付状态：<em>已支付</em></td>
+                  <td colspan="2">发送多人：是</td>
+                </tr>
+                <tr>
+                  <td>支付时间：<em>2013-01-05 22:45:32</em></td>
+                  <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td colspan="3">备注信息：无</td>
+                </tr>
+                <tr>
+                  <td colspan="3">优惠信息：门店免运费 -￥20.00 、字体免费-￥20.00 、字体免费-￥20.00 、字体免费-￥20.00 </td>
+                </tr>
+                <tr>
+                  <td colspan="3">修改价格：门店免运费 -￥20.00 、字体免费-￥20.00 、字体免费-￥20.00 、字体免费-￥20.00 </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="op_main">
+            <div class="main_hd">
+              <div class="hd_left"></div>
+              <div class="hd_right"></div>
+              <a class="more blue" href="#" title="返回订单列表">下载订单详情</a>
+              <ul class="nav_sub clearfix">
+                <li class="current"><a href="javascript:;" title="收货地址与商品信息">商品信息</a></li>
+              </ul>
+            </div>
+            <div class="main_con">
+              <table class="odTable">
+              <tr>
+                  <th colspan="9" align="left">包裹1</th>
+                </tr>
+                <tr>
+                  <td colspan="2">物流信息： 门店自提</td>
+                  <td colspan="7"> 投递时间：皆可</td>
+                </tr>
+                <tr>
+                  <td colspan="9">收货地址：北京市-北京市-丰台区-北京市丰台区角门东里52号楼</td>
+                </tr>
+                <tr>
+                  <td colspan="9"><p>收货人：魏丽颖</p></td>
+                </tr>
+                <tr>
+                  <td colspan="9">联系方式：18601044323</td>
+                </tr>
+                <tr>
+                  <td colspan="9">套数：5</td>
+                </tr>
+                </table>
+              <table class="odTable">
+                <tr>
+                  <th>商品ID</th>
+                  <th>订单商品</th>
+                  <th>定制</th>
+                  <th>字体</th>
+                  <th>POD</th>
+                  <th>优惠</th>
+                  <th>数量</th>
+                  <th>小计</th>
+                  <th>操作</th>
+                </tr>
+                <tr>
+                  <td>1000007839</td>
+                  <td>A5 - 张小晨的微博书</td>
+                  <td>￥ 5.00</td>
+                  <td>￥ 5.00</td>
+                  <td>￥ 5.00</td>
+                  <td>￥ 5.00</td>
+                  <td>1</td>
+                  <td>￥ 5.00</td>
+                  <td class="alignC"><a class="preview blue" href="javascript:;" title="预览">预览</a></td>
+                </tr>
+                <tr>
+                  <td>1000007839</td>
+                  <td>A5 - 百度百科的书</td>
+                  <td>￥ 5.00</td>
+                  <td>￥ 5.00</td>
+                  <td>￥ 5.00</td>
+                  <td>￥ 5.00</td>
+                  <td>1</td>
+                  <td>￥ 5.00</td>
+                  <td class="alignC"><a class="preview blue" href="javascript:;" title="预览">预览</a></td>
+                </tr>
+                <tr>
+                  <td>1000007839</td>
+                  <td>A5 - 科学与奇迹</td>
+                  <td>￥ 5.00</td>
+                  <td>￥ 5.00</td>
+                  <td>￥ 5.00</td>
+                  <td>￥ 5.00</td>
+                  <td>1</td>
+                  <td>￥ 5.00</td>
+                  <td class="alignC"><a class="preview blue" href="javascript:;" title="预览">预览</a></td>
+                </tr>
+              </table>
+              <div class="right">
+              <input class="returns btn2" type="button" value="发货"/>
+              <input class="returns btn2" type="button" value="查看"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 主体结束 -->
+
+        <!-- 页尾开始 -->
+        <!--#include virtual="common/op_footer.html" -->
+        <!-- 页尾结束 -->
+        <!-- 预览弹出层开始 -->
+        <div id="preview">
+          <div class="imgPop">
+            <table class="preTable">
+              <tr>
+                <td colspan="2">PAGE&nbsp;<em>1</em>/24</td>
+              </tr>
+              <tr class="ti">
+                <td>用户预览</td>
+                <td>印刷稿预览</td>
+              </tr>
+              <tr>
+                <td><img src="../lib/gray.jpg" alt="" class="img"/></td>
+                <td><img src="../lib/gray.jpg" alt="" class="img"/></td>
+              </tr>
+            </table>
+            <div class="imgMani">
+              <a class="up" href="javascript:;">上一页</a>
+              <a class="down" href="javascript:;">下一页</a>
+              第<input type="text" value="" />页
+            </div>
+          </div>
+        </div>
+        <!-- 预览弹出层结束 -->
+        <!-- 修改订单价格弹出层开始 -->
+        <div id="returns" class="txtReset">
+        <div id="tables">
+          <table class="tables">
+              <tr class="bold ">
+                <td>包裹1</td>
+                <td>订单号：212109932133</td>
+              </tr>
+              <tr>
+                <td>收件人:黄耀华</td>
+                <td>手    机：  186012312321</td>
+              </tr>
+              <tr>
+                <td class="red">物流信息:EMS</td>
+                <td class="red">投递时间：皆可</td>
+              </tr>
+              <tr>
+                <td colspan="2">地    址：上海市宝山区芭比镇51区 1407室</td>
+              </tr>
+              <tr>
+                <td>运  单 号：</td>
+                <td><input type="text" name="Waybill" id="Waybill" size="50"></td>
+              </tr>
+              <tr>
+                <td>实际运费：</td>
+                <td><input name="Fee" type="text" id="Fee" size="50"></td>
+              </tr>
+              <tr>
+                <td>修改备注说明：</td>
+                <td><textarea style=" width:310px">描述信息不可小于10个字</textarea></td>
+              </tr>
+          </table>
+          <table class="tables">
+              <tr class="bold ">
+                <td>包裹1</td>
+                <td>订单号：212109932133</td>
+              </tr>
+              <tr>
+                <td>收件人:黄耀华</td>
+                <td>手    机：  186012312321</td>
+              </tr>
+              <tr>
+                <td class="red">物流信息:EMS</td>
+                <td class="red">投递时间：皆可</td>
+              </tr>
+              <tr>
+                <td colspan="2">地    址：上海市宝山区芭比镇51区 1407室</td>
+              </tr>
+              <tr>
+                <td>运  单 号：</td>
+                <td><input type="text" name="Waybill" id="Waybill" size="50"></td>
+              </tr>
+              <tr>
+                <td>实际运费：</td>
+                <td><input name="Fee" type="text" id="Fee" size="50"></td>
+              </tr>
+              <tr>
+                <td>修改备注说明：</td>
+                <td><textarea style=" width:310px">描述信息不可小于10个字</textarea></td>
+              </tr>
+          </table>
+          </div>
+        </div>
+        <!-- 修改订单价格弹出层结束 -->
+        <!-- 取消弹出层开始 -->
+        <div id="cancel" class="txtReset">
+          
+    </div>
+        <!-- 取消弹出层结束 -->
+        <script src="../jquery/js/jquery-1.6.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../jquery/js/jquery-ui-1.8.14.custom.min.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/op_common.js"></script>
+        <script type="text/javascript">
+            /*调用到的函数统一入口*/
+            $(function() {
+              $('.table').table({
+                checked:''
+              });
+              $(".AWB").hover(function(){
+                $(".AWB_open").click(function(){
+                  $(this).addClass("AWBopen").siblings('.AWB_detail').slideDown("fast");
+                })
+              },function(){
+                $(this).find(".AWB_detail").slideUp().siblings(".AWB_open").removeClass("AWBopen");
+              });
+              //预览弹出层
+              $("#preview").dialog({
+                title:"预览作品",
+                autoOpen:false,
+                width:800,
+                modal: true
+              });
+              //预览弹出层
+              $(".preview").click(function(){
+                $("#preview").dialog("open");
+              });
+              //发货弹出层
+              $("#returns").dialog({
+                title:"发货设置",
+                autoOpen:false,
+                width:490,
+                modal:true,
+                buttons:{
+                  "确定":function(){
+                    $(this).dialog("close");
+                  },
+                  "取消":function(){
+                    $(this).dialog("close");
+                  }
+                }
+              });
+              $(".returns").click(function(){
+                $("#returns").dialog("open");
+              });
+              //查看弹出层
+              $("#cancel").dialog({
+                title:"发货设置",
+                autoOpen:false,
+                width:490,
+                modal:true,
+                buttons:{
+                  "确定":function(){
+                    $(this).dialog("close");
+                  },
+                  "取消":function(){
+                    $(this).dialog("close");
+                  }
+                }
+              });
+              $(".cancel").click(function(){
+                $("#cancel").dialog("open");
+              });
+            });
+        </script>
+    </body>
+</html>

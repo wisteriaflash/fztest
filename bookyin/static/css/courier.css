@@ -1,0 +1,15 @@
+.courier{ width:910px; margin:0 auto; background:url(../img/bg-pay.png) repeat; padding:45px; *padding-bottom:0px;}
+.courier_title{ background:url(../img/courier_tu.png) no-repeat left; padding-left:428px; line-height:122px; font-size:18px}
+.courier_left{ float:left; width:256px; height:288px; border:1px solid #d2ccc3}
+.courier_left .title, .courier_right .title{ background:#d2ccc3; line-height:44px; padding-left:40px; font-size:14px;}
+.courier_right{ float:left; width:636px; margin-left:10px;}
+.courier_right span{ color:#ea5520; padding-left:50px; cursor:pointer}
+.courier_left .info{ padding-top:38px;}
+.courier_left .info span{ font-size:14px; text-align:left; padding-left:40px;}
+.courier_left .info img{padding-left: 35px; padding-top: 40px;}
+.courier_right .table{ padding: 30px 15px;border:1px solid #d2ccc3; background-color:#FFF;}
+.courier_right table tr{ line-height:30px;}
+.courier_right table .current_add{ color:#7da408}
+.courier_right .note{padding-top: 15px; padding-left:10px;}
+.courier_right .note a{ color:#ea5520; text-decoration:underline}
+.clear{ clear:both}

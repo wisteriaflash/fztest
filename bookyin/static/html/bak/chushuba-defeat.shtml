@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧 - 书架</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" />
+    <link rel="stylesheet" href="../css/bookshelf.css" type="text/css" />
+    <link rel="stylesheet" href="../css/pay.css" type="text/css" />
+</head>
+<body>
+<!-- header -->
+<!--#include virtual="module/header-logined.html" -->
+<div class="pagewrap bookdetails">
+<div class="submit-order">
+<div class="row-title cf">
+			
+			<div class="eye">
+				<div class="order-step1 step1"></div>
+			</div>
+		</div>
+ </div>
+<div class="pay">
+<div class="pay-sb">付款失败</div>
+<div class="hr"></div>
+<div class="pay-add">寄送至：上海市浦东新区张江高科技园区盛夏路888号   黄耀华  收<br>
+联系方式：18602088888</div>
+<div class="hr"></div>
+<div class="pay-sc">
+<div class="pay-sa"><a href="">重新支付</a></div>
+<div style="clear:both"></div>
+<div>如有其他问题，请拨打客服电话：400-621-5211<br>
+感谢您使用方正出书吧提供的服务，希望您购物愉快，再次光临。 
+<span>您也可以到线下体验我们门店出书的乐趣</span></div>
+</div>
+</div>
+</div>
+<!-- footer -->
+<!--#include virtual="module/footer.html" -->
+</body>
+</html>

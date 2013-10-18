@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧 - 订单</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/jquery-ui-1.10.3.custom.css" type="text/css" />
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" />
+    
+    <link rel="stylesheet" href="../css/order.css" type="text/css" />
+
+</head>
+<body>
+<!-- header -->
+<!--#include virtual="module/header-logined.html" -->
+
+<div class="pagewrap">
+
+	<div class="submit-order">
+
+		<div class="row-title cf">
+			<h1><i></i>确认订单信息</h1>
+			<div class="eye">
+				<div class="order-step step1"></div>
+			</div>
+		</div><!-- /head -->
+
+		<div class="container">
+			<div class="row first">
+				<h2>确认纸质书</h2>
+				<div class="bookgoods cf" id="J_bookOrderList">
+					<div class="bookgoodslist">
+						<div class="abook abook123">
+							<div class="img"><img src="../img/demo/book-order.png" alt=""></div>
+							<div class="bookinfo">
+								<h3>这是一本测试的的微博书的微博书</h3>
+								<p>袖珍版 89页</p>
+								<div class="del" title="删除" data-id="123">删除</div>
+                                <div class="sprice">&yen;<em>60</em>.00</div>
+                                <div class="addinfo">(其中包含：扉页&yen;1.00)</div>
+								<div class="opt">                                	
+									<div class="book-num-con cf">
+										<a class="num-left" href="#"><span>-</span></a>
+										<input class="book-num" name="booknum123" type="text" value="1">
+										<a class="num-right" href="#"><span>+</span></a>
+									</div>										
+								</div>
+							</div>
+						</div>
+						<div class="abook abook456">
+							<div class="img"><img src="../img/demo/book-order.png" alt=""></div>
+							<div class="bookinfo">
+								<h3>洋洋的微博书</h3>
+								<p>袖珍版 89页</p>
+								<div class="del" title="删除" data-id="456">删除</div>
+								<div class="opt">
+									<div class="book-num-con cf">
+										<a class="num-left" href="#"><span>-</span></a>
+										<input class="book-num" name="booknum456" type="text" value="1">
+										<a class="num-right" href="#"><span>+</span></a>
+									</div>
+									<div class="sprice">&yen;<em>60</em>.00</div>
+								</div>
+							</div>
+						</div>
+						<div id="J_addBookBtn" class="addbook-btn">
+							<a href="#" class="img">
+								<img src="../img/demo/book-select.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="J_address" class="row cf">
+				<div class="rtitle cf">
+					<h2>确认收货地址</h2>
+					<div class="eye">
+						<a id="to1" href="#" style="display:none;">送一人</a>
+						<a id="ton" href="#">送多人</a>
+					</div>
+				</div>
+				<div id="J_addressList" class="addrbox">
+					<div class="addrbox-con">
+						<ul class="addrlist">
+							<li class="selected">
+								<input id="address1" name="address" type="radio" checked="checked" />
+								<label for="address1">上海市浦东新区张江高科技园区盛夏路608号1号楼2楼POD (霍都 收) 18614058723</label>
+								<div class="opt">
+									<a class="addr-default">默认地址</a>
+									<a class="addr-modify" href="#" title="修改本地址"></a>
+									<a class="addr-del" href="#" title="删除本地址"></a>
+								</div>
+							</li>
+							<li>
+								<input id="address2" name="address" type="radio" />
+								<label for="address2">上海市浦东盛夏路608号3号楼2楼POD (霍2都 收) 18614058723</label>
+								<div class="opt">
+									<a class="addr-setd" title="设为默认地址" data-id="address2">设为默认地址</a>
+									<a class="addr-modify" href="#" title="修改本地址"></a>
+									<a class="addr-del" href="#" title="删除本地址"></a>
+								</div>
+							</li>
+							<li>
+								<input id="address3" name="address" type="radio" />
+								<label for="address3">上海市浦东盛夏路608号3号楼2楼POD (霍2都 收) 18614058723</label>
+								<div class="opt">
+									<a class="addr-setd" title="设为默认地址" data-id="address3">设为默认地址</a>
+									<a class="addr-modify" href="#" title="修改本地址"></a>
+									<a class="addr-del" href="#" title="删除本地址"></a>
+								</div>
+							</li>
+						</ul>
+						<ul class="addrlistn">
+							<li class="selected">
+								<input id="addressN1" name="addressN" type="checkbox" checked="checked" />
+								<label for="addressN1">上海市浦东新区张江高科技园区盛夏路608号1号楼2楼POD (霍都 收) 18614058723</label>
+								<div class="opt">
+									<a class="addr-setd" href="#" title="设为默认地址" data-id="addressN1">设为默认地址</a>
+									<a class="addr-modify" href="#" title="修改本地址"></a>
+									<a class="addr-del" href="#" title="删除本地址"></a>
+									<div class="book-num-con book-series">
+										<a class="num-left" href="#"><span>-</span></a>
+										<input class="book-num" name="booknum123" type="text" value="1">
+										<a class="num-right" href="#"><span>+</span></a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<input id="addressN2" name="addressN" type="checkbox" />
+								<label for="addressN2">上海市浦东盛夏路608号3号楼2楼POD (霍2都 收) 18614058723</label>
+								<div class="opt">
+									<a class="addr-setd" href="#" title="设为默认地址" data-id="addressN2">设为默认地址</a>
+									<a class="addr-modify" href="#" title="修改本地址"></a>
+									<a class="addr-del" href="#" title="删除本地址"></a>
+									<div class="book-num-con book-series">
+										<a class="num-left" href="#"><span>-</span></a>
+										<input class="book-num" name="booknum123" type="text" value="1">
+										<a class="num-right" href="#"><span>+</span></a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<input id="addressN3" name="addressN" type="checkbox" />
+								<label for="addressN3">上海市浦东盛夏路608号3号楼2楼POD (霍2都 收) 18614058723</label>
+								<div class="opt">
+									<a class="addr-default" href="#">默认地址</a>
+									<a class="addr-modify" href="#" title="修改本地址"></a>
+									<a class="addr-del" href="#" title="删除本地址"></a>
+									<div class="book-num-con book-series">
+										<a class="num-left" href="#"><span>-</span></a>
+										<input class="book-num" name="booknum123" type="text" value="1">
+										<a class="num-right" href="#"><span>+</span></a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<a id="J_addAddr" class="onemore" href="#"><span></span>新增收货地址</a>
+
+				</div>
+			</div>
+			<div class="row cf">
+				<div class="rtitle cf">
+					<h2>选择配送方式</h2>
+				</div>
+				<div class="exchoose">
+					<select id="timeSelect" class="time-select">
+						<option selected="selected">工作日送货</option>
+						<option>周末送货</option>
+					</select>
+					<select id="transSelect" class="trans-select">
+						<option selected="selected">普通快递</option>
+						<option>EMS</option>
+					</select>
+				</div>
+			</div>
+			<div class="row cf invoice">
+				<h2>选择发票类型<span>如果您需要增值税发票，请联系我们的客服</span></h2>
+				<div class="fapiao" id="J_invoice">
+					<label><input id="nInvoice" name="invoice" type="radio" checked="checked" value="" />不需要发票</label>
+					<label class="need-invoice"><input id="needInvoice" name="invoice" type="radio" value="" />需要发票</label>
+					<input class="text narrow margL10 invoce-title" id="J_invoiceTitle" type="text" value="个人" disabled="disabled" />
+				</div>
+			</div>
+			<div class="row cf">
+				<h2>订单备注</h2>
+				<textarea class="text-long" id="tips" name="" id="" cols="30" rows="10" placeholder="如果您有特殊需求可以写在这里"></textarea>
+				<div class="exprice">
+					<a id="J_getPrice" class="btn-submit" href="#">确定</a>
+				</div>
+			</div>
+			<div class="row cf other-opt">
+				<span class="bg"></span>
+				<div class="price-detail">
+					<div class="good-price"><em>商品价格：</em>￥1234.00</div>
+					<div class="ex-price"><em>商品运费：</em>￥12.00</div>
+				</div>
+				<div id="J_totalPrice" class="count">
+					<div class="info">
+						<h2>订单总价：</h2>
+						<div class="total-price">￥960.00</div>
+					</div>
+					<div class="sbbox">
+						<a class="btn-submit" href="#" title="提交订单">提交订单</a>
+					</div>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /submit-order -->
+</div>
+
+<!-- 弹出框:地址 -->
+<div id="J_addressDialog" class="add-address">
+	<h1>填写收货人地址</h1>
+	<form id="J_addAddrForm">
+		<table width="100%">
+			<tr>
+				<th><em>*</em>所在地区:</th>
+				<td>
+				<select id="J_province" class="province" name="province">
+					<option selected="selected" value="shanghai">上海</option>
+					<option>北京</option>
+				</select>
+				<select id="J_city" class="city" name="city">
+					<option selected="selected" value="shanghai">上海</option>
+					<option>北京</option>
+				</select>
+				<select id="J_area" class="area" name="area">
+					<option selected="selected" value="pudong">浦东</option>
+					<option>黄浦</option>
+				</select></td>
+			</tr>
+			<tr class="border">
+				<th><em>*</em>详细地址:</th>
+				<td class="detail-address">
+				<input id="J_detailAddress" class="text narrow" type="text" name="detailAddr" />
+				</td>
+			</tr>
+			<tr>
+				<th><em>*</em>收货人:</th>
+				<td>
+				<input id="J_receivePerson" class="text narrow sm" type="text" name="receivePerson" />
+				</td>
+			</tr>
+			<tr class="border telphone">
+				<th><em>*</em>手机号码:</th>
+				<td>
+				<input id="J_mobileNum" class="text narrow sm" type="text" name="mobileNum" />
+				<label>固定号码：</label>
+				<input id="J_telphoneNum" class="text narrow sm telphone-num" type="text" name="telphoneNum" />
+				</td>
+			</tr>
+			<tr class="opt">
+				<td class="default-addr">
+					<label><input id="J_setDefaultAddr" name="setDefault" value="1" type="checkbox" />设为默认地址</label>
+				</td>
+				<td class="save-addr">
+					<a class="btn-addr" href="#">保存地址</a>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<!-- 弹出框:添加书订单 -->
+<div id="J_addBook" class="addbook">
+	<h1>我的书架</h1>
+	<div class="pslider">
+		<div class="pslwrap">
+			<ul class="plist">
+				<li class="selected"><a href="#">
+					<div class="detail">
+						<span class="title">杨杨在大上海吃吃随碟附送的微博</span>
+						<span class="page">89页</span>
+						<span class="last-time">最后编辑：<em>2013/03/28 15:44</em></span>
+					</div>
+					<span class="icon-selected"></span>
+					<img src="../img/demo/book.png" alt="">
+				</a></li>
+				<li><a href="#">
+					<div class="detail">
+						<span class="title">杨杨在大上海吃吃随碟附送的微博</span>
+						<span class="page">89页</span>
+						<span class="last-time">最后编辑：<em>2013/03/28 15:44</em></span>
+					</div>
+					<span class="icon-selected"></span>
+					<img src="../img/demo/book.png" alt="">
+				</a></li>
+				<li><a href="#"><img src="../img/demo/book.png" alt=""></a></li>
+				<li><a href="#"><img src="../img/demo/book.png" alt=""></a></li>
+				<li><a href="#"><img src="../img/demo/book.png" alt=""></a></li>
+				<li><a href="#"><img src="../img/demo/book.png" alt=""></a></li>
+				<li><a href="#"><img src="../img/demo/book.png" alt=""></a></li>
+				<li><a href="#"><img src="../img/demo/book.png" alt=""></a></li>
+			</ul>
+		</div>
+		<div class="opt">
+			<a class="pprev" href="#"><i></i></a>
+			<a class="pnext" href="#"><i></i></a>
+			<p class="info"><em>2</em>/3</p>
+		</div>
+		<div class="book-shelf">
+			<span class="l"></span>
+			<span class="r"></span>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<!--#include virtual="module/footer.html" -->
+<script src="../js/YS.js"></script>
+<script src="../js/order.js"></script>
+</body>
+</html>

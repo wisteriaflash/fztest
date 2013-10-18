@@ -1,0 +1,58 @@
+/**
+ * 功能：其他页面文件夹对应的样式
+ * 作者：裴玲玲
+ * 日期：2013-1-10
+ */
+
+
+/* 404页面 */
+.sorry{background:url(../images/comm_error.png) #FFFFFF no-repeat 180px 145px;padding:130px 0px 80px 330px;}
+.sorryDesc{font-size:26px;font-family: "Microsoft Yahei";margin-bottom: 10px;}
+.sorryInfo li{background:url(../images/comm_ico.png) no-repeat -96px 14px;padding-left:15px;}
+.sorryInfo li a{font-size:14px;text-decoration: underline;line-height:225%;color:#666666;}
+.sorryInfo li a.orange{color:#EA5520;}
+.sorryError{color:#999999;margin-top:50px;}
+
+
+/* 售后服务,支付方式 */
+.afterSale{border:3px solid #E7E7E7; padding:0 20px 20px; margin:10px 0; min-height: 500px; background: #FFFFFF; }
+.afterSale h2{ font:20px "Microsoft Yahei"; color:#B8593D; height:45px; line-height:45px; text-align:center; border-bottom: 1px dotted #E7E7E7; font-weight:bold;}
+.afterSaleInfo h5{font-size:14px; font-weight:bold; height:25px; line-height:25px; border-bottom:1px solid #E7E7E7; margin:20px 0 10px 0;}
+.afterSaleInfo p{line-height:200%; padding:0 20px 10px 20px; text-indent:2em;}
+.afterSaleInfo li{height:30px; line-height:30px; border-bottom:1px solid #E7E7E7; list-style: disc inside; }
+.table{ width:800px;}
+.table th{ font-weight: bold; font-size: 14px; height:30px; line-height: 30px;border: 1px solid #000000;}
+.table tr{height:30px; line-height: 30px; text-align: center;}
+.table tr td{ font-size: 12px; border: 1px solid #000000;}
+
+
+/* 网站题图 */
+.map{ padding:10px 10px 40px; background: #FFFFFF;}
+.map{ float: left;}
+.map div{ border-bottom: 1px dotted #ccc; padding: 20px;}
+.map_label{ background: url(../images/other/map_label.jpg) no-repeat; width: 120px; height:36px; line-height:36px; display: block;text-align: center; float:left;}
+.map_label a{ color:#FFFFFF; font-size: 14px; font-weight:bold;}
+.map_p{ height:36px; line-height:36px; margin-left: 120px; }
+.map_p a{ margin-left: 40px;}
+
+
+
+/* 公告样式 */
+.bgbullepag{ background:url(../images/other/bglletipag.jpg) repeat;  }
+.content{ background:url(../images/other/00.png) no-repeat; margin:150px 121px 0 ; width:588px; height:273px;  padding:80px; }
+
+.content h2,.content p{  color:#63443b; font:16px/1.5 arial,helvetica,"Microsoft Yahei","SimSun",clean,sans-serif;  text-indent:2em; line-height: 185%;}
+.content h2{ text-indent: 0; padding-bottom:10px;}
+.footer_gg{ border-top:3px solid #956134; background:#f7c86b; height:100px;position:fixed; bottom:0; width:100%;}
+.footer_gg_con{ width:990px; margin:0 auto; position:relative; }
+.footer_gg_con img{ padding-left:121px; position:absolute;  top:-125px;}
+
+
+
+
+
+
+
+
+
+

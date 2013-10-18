@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family:"微软雅黑"; font-size:14px; margin:0; padding:0; background:#f05050; font-size:14px; color:#7d7d7d;}
+a img{ border:0}
+ul li{ margin:0; padding:0;list-style-type:none}
+.top{ height:67px; width:100%; background:url(http://static.chushuba.com/img/dmw/head_bj.jpg) repeat-x}
+.logo{ width:1000px; margin:0 auto; padding-top:15px;}
+.top span{ background:url(http://static.chushuba.com/img/logo.png) no-repeat; height:45px; width:150px;}
+.head{ margin:0 auto; background:url(http://static.chushuba.com/img/dmw/banner_bj.jpg) center no-repeat; height:793px;
+margin-bottom: 45px;}
+.banner{ margin:0 auto; width:1008px; height:527px; }
+.surprise{ margin: 0 auto; position: relative; left: -1px; background:url(http://static.chushuba.com/img/dmw/jx_bj.png) center no-repeat; height:277px; z-index:1}
+.surprise ul{ margin:0 auto; padding:0px; width:1008px; padding-top:100px;}
+.surprise ul li{ float:left; width:285px; padding:0 20px; font-size:18px; margin:0}
+.surprise ul li a{ font-size:12px; color:#FFF; display:block;text-decoration:none;}
+.xz1{margin-top:79px; width:100px; margin-left:90px;}
+.xz2{margin-top:55px; width:100px; margin-left:95px;}
+.xz3{margin-top:55px; width:100px; margin-left:102px;}
+@-moz-document url-prefix() {.xz1 { margin-top:77px; }.xz3,.xz2{margin-top:51px;}}
+.rules{ background:url(http://static.chushuba.com/img/dmw/bj.png) center no-repeat; height:900px; margin:0 auto; width:990px; font-size:18px; line-height:30px;}
+.rules_title{ font-size:24px;  width:280px; float:left; padding-top:20px; padding-left:53px}
+.rules_title a{color:#fff;text-decoration:none; }
+.rules_xz{ float:right; font-size:30px; color:#5cad68; padding-top:77px; padding-right:53px; font-weight:500}
+.forwarding{ padding-top:145px; padding-left:50px; width:860px; *padding-top:55px;}
+.forwarding em{ color:#3b88e4; background:url(http://static.chushuba.com/img/dmw/1.jpg) no-repeat; display:block; height:56px; width:300px; font-size:20px;padding-left:60px; padding-top:25px; font-weight:bold; font-style:normal}
+.forwarding i{ font-size:14px; font-style:normal}
+.forwarding span{ padding:0 20px;}
+.span1{ background:url(http://static.chushuba.com/img/dmw/bj1.jpg) no-repeat; width:206px; color:#FFF}
+.span2{ background:url(http://static.chushuba.com/img/dmw/bj2.jpg) no-repeat; width:172px; color:#FFF}
+.span3{ background:url(http://static.chushuba.com/img/dmw/bj3.jpg) no-repeat; width:803px; color:#FFF;padding-left: 10px;}
+.span4{ background:url(http://static.chushuba.com/img/dmw/bj4.jpg) no-repeat; width:176px; color:#FFF;padding:0 27px;}
+.screenshots{ padding-top:70px; padding-left:15px;  *padding-top:55px;}
+.screenshots em{ color:#ffa74a; background:url(http://static.chushuba.com/img/dmw/2.png) no-repeat right; display:block; height:56px; width:200px; font-size:20px;padding-top:25px; font-weight:bold; font-style:normal; margin-left:725px;}
+.screenshots_con{ padding:0 30px;}
+.screenshots_con a{ color:#3b88e4; text-decoration:underline}
+.screenshots span{ padding:0 20px;}
+.screenshots i{ font-size:14px; font-style:normal}
+.activity{ padding-top:55px; padding-left:50px;}
+.activity em{ color:#19c6ab; background:url(http://static.chushuba.com/img/dmw/3.png) no-repeat; display:block; height:56px; width:300px; font-size:20px;padding-left:60px; padding-top:25px; font-weight:bold; font-style:normal}
+.activity i{ font-size:14px; font-style:normal}
+.star{background:#fff; margin:0 auto; padding-top:10px; width:984px; position: relative;left: 3px;}
+.star_title{ padding-top:38px; margin:0 auto; text-align:center}
+.star-bz{ display:block; padding-left:60px;}
+.star-bz span{float: left; padding-top: 10px; padding-right:10px; color:#7d7d7d;text-decoration:none; }
+.star-bz a img{border:0 }
+.star_info {width:990px;height:470px; padding-left:20px;}
+.star_info ul li{ float:left; padding:5px; position:relative}
+.star_info ul li span{ float:left; position:absolute; left:5px; top:120px; color:#FFF; background:url(http://static.chushuba.com/img/dmw/starbj.png) no-repeat center; width:135px; text-align:center}
+.order_process{ background:url(http://static.chushuba.com/img/dmw/ddbj.jpg) no-repeat center; height:95px;  width:984px; position: relative;left: 3px; margin:0 auto}
+.order_process span{ color:#fff; font-size:24px; font-weight:bold; padding-top:22px; padding-right:190px; float:right}
+.order_lc{ background:#fff;  width:984px; position: relative;left: 3px; margin:0 auto; padding-top:10px;letter-spacing:2px}
+.order_lc ul{ padding-left:60px; *padding-left:20px; padding-top:10px; padding-bottom:40px}
+.order_lc ul li{ width:425px; height:322px; float:left; margin:5px; background:url(http://static.chushuba.com/img/dmw/lcbj.jpg) repeat;}
+.order_lc ul li span{ display:block; text-align:center; font-size:14px; }
+.order_lc ul li img{ margin-bottom:10px;}
+.order_xl,.order_m{ float:left; padding:10px; margin:10px;}
+.order_xl a,.order_m a{ display:block; text-align:center}
+.order_xl span,.order_m span{ width:100px; height:100px;}
+.order_xl span img{ padding-top:20px; padding-left:20px;}
+.lc3_span{ display:block; clear:both;text-align:center;}
+.lc3 a{ color:#3b88e4}
+.lc1{margin-left: -25px;}
+.lc2{margin-top: -15px;}
+.lc3{ padding-left:70px; padding-top:38px;}
+.lc4{margin-top: -6px;}
+.clear { clear:both}
