@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>svg-pie donut</title>
+  <style>
+  body{padding:0; margin: 0;}
+  h3{text-align: center;}
+  #J_wrapper{text-align: center;}
+  </style>
+</head>
+<body>
+  <h3>svg-pie donut</h3>
+  <div id="J_wrapper"></div>
+
+<script src="circleDonut.js"></script>
+<script>
+//use chart
+window.onload = function(){
+  var pie = new svgCharts({
+    wrapper: 'J_wrapper',
+    type: 'pie',
+    anim: true,
+    outerRadius: 144,
+    innerRadius: 44,
+    center: [400, 225],
+    series: [
+      {label: '全部', data: '100%'},
+      {label: '>0', data: '80.00%'},
+      {label: '>500', data: '58.00%'},
+      {label: '>1000', data: '30%'},
+      {label: '>2000', data: '21.00%'},
+      {label: '>5000', data: '8%'}
+    ]
+  });
+}
+</script>
+
+</body>
+</html>
