@@ -274,8 +274,11 @@ if(jQuery)(
 				});
 				jQuery(this).bind("uploadifyComplete", {'action': settings.onComplete}, function(event, ID, fileObj, response, data) {
 					if (event.data.action(event, ID, fileObj, unescape(response), data) !== false) {
-						jQuery("#" + jQuery(this).attr('id') + ID + " .percentage").text('上传完成');
-						// jQuery("#" + jQuery(this).attr('id') + ID).fadeOut(250, function() { jQuery(this).remove()});
+                        if(data.fileCount>5){
+                            jQuery("#" + jQuery(this).attr('id') + ID).fadeOut(250, function() { jQuery(this).remove()});
+                        }else{
+                            jQuery("#" + jQuery(this).attr('id') + ID + " .percentage").text('上传完成');    
+                        }
 					}
 				});
 				if (typeof(settings.onAllComplete) == 'function') {

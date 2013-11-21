@@ -900,10 +900,10 @@ var chapter = {
             var limit = 15;
             var txt = $('#J_chapterName').val();
             txt = txt.replace(/\s/g,'');//filter blank
-            $('#J_chapterName').val(txt);
             var errTip = me.mainContent.find('.err');
             var sign = true;
             if(txt.length == 0 || txt.length>limit){
+                $('#J_chapterName').val(txt);
                 errTip.show();
                 sign = false;
             }else{

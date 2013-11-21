@@ -40,7 +40,7 @@
 .mainview .uploading{}
 .mainview .uploading .uploading-item{display: none;}
 .mainview .uploading .uploading-item.selected{display: block;}
-.mainview .uploading .uploadify-queue{width: 570px; margin: 0 auto;}
+.mainview .uploading .uploadify-queue{width: 570px; height: 130px; margin: 0 auto; overflow-y: hidden;}
 .mainview .uploading .tips{text-align: center; margin-top: 10px; color: #332E28;}
 .mainview .uploading .tips .num, .mainview .uploading .tips .need-time em{margin: 0 2px; /*color: #82A610;*/}
 .mainview .uploading .tips .totle-num{}

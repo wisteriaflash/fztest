@@ -227,7 +227,7 @@ var _getWebFont = function(){
 		    settings.simpFontName = fontNames;
 		    settings.webFontURL = urlObj.filePath+'/'+ urlObj.fileName;
 		}else{
-			$this.css('font-family', fontName);
+			$this.css('font-family', settings.fontNameDefault);
             settings.fontName = fontName;
 		    settings.simpFontName = fontName;
             settings.webFontURL = '';
@@ -387,7 +387,7 @@ $.fn.textedit.defaults = {
     lineHeight: '16px',
     fontAlign: 'left',
     fontColor: '#757575',
-    fontName: 'Microsoft YaHei',
+    fontName: 'FONTS_YaHei',
     fontNameDefault: 'Microsoft YaHei',
     webFontURL:'',
 	simpFontName:'',

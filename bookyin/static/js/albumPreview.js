@@ -248,11 +248,19 @@ var editPage = {
         me.curPageType = data.curPage.pageType;
         YS.hash(me.curPage);
         me.renderPage(data.curPage);
+        me.renderTitle(data.pictureName);
         if(me.curPageType == 'normal'){
             me.renderTemplateList(data.plateList,data.curPage.plateid);
         }
         me.rightBarPageSwitch();
         menuBar.selecteMenu();
+    },
+    renderTitle: function(title){
+        var me = this;
+        var node = $('#J_pageInfo .huace-page .title');
+        if(node.length>0){
+            node.text(title);
+        }
     },
     renderPage: function(data){
         var me = this;

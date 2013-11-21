@@ -237,13 +237,16 @@ var selectUI = {
 	checkNameLength: function(id, len, errTip){
 		var name = $(id);
 		var text = name.val();
+		text = text.replace(/\s/g,'');//filter blank
 		var parent = name.parent();
 		if(text.length>len || text.length == 0){
 			parent.addClass('err');
 			if(parent.has('.err-tip').length==0){
-				// var tip = this.getErrorTip('书名不能为空或超过15个字');
 				var tip = this.getErrorTip(errTip);
 				parent.append(tip);
+			}
+			if(text.length == 0){
+				name.val('');
 			}
 			return false;
 		}else{

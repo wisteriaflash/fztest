@@ -99,7 +99,7 @@
 
 
 .item-page:hover .fliper{display: block;}
-.content .fliper{position: absolute; top: 225px; left: 30px; width: 740px; display: none; z-index: 120;}
+.content .fliper{position: absolute; top: 225px; left: 30px; width: 740px; display: none; z-index: 220;}
 .content .fliper a{width: 40px; height: 40px; display: block; cursor: pointer; background-position: 0 -120px;  text-indent: -9999em; position: absolute; top: 0;}
 .content .fliper .prev{left: 0;}
 .content .fliper .next{ background-position: -45px -120px; right: 5px;}

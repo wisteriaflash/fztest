@@ -283,7 +283,7 @@ overflow: hidden;
 .step-self .self-bd .select-type li{background-image: none; width: 276px; height: 92px;}
 .step-self .self-bd .select-type li img{margin: 8px 35px 8px 12px;}
 .step-self .self-bd .select-type li .info{padding-top: 8px;}
-.step-self .self-bd .select-type li.type-vertical{width: 229px; height: 92px;}
+.step-self .self-bd .select-type li.type-vertical{width: 229px; height: 92px; visibility: hidden;}
 .step-list .self-bd .book-name.err input{border-color: #a00b0b;}
 .step-list .self-bd .book-name.err .err-tip{color: #a00b0b;}
 
