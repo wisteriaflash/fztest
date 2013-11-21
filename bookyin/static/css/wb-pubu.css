@@ -15,6 +15,7 @@ body {background:transparent url(../img/bg.png) repeat left top;}
 .col .item .del i,
 .retui .arrow,
 .fence,
+.font-default i,
 .fence span
 {background: url(../img/sprite.png) no-repeat;}
 
@@ -32,7 +33,7 @@ a.btn:hover{background-color: #E37748;}
 .pages {width:430px; height:652px; font-size: 11px;}
 .pages-odd {padding: 48px 15px 0 50px;}
 .pages-even {padding: 48px 50px 0 15px;}
-
+.col .chapter,#J_bottomBar,.book-opt .actionbar,.font-default,.con .saying, .con .info,.first-page .info,.book-opt-right .tip,.font em,.font span,.pn span,.copy-page .info .detail,.catbar,.footer{ font-family:"Microsoft YaHei",SimSun,arial,helvetica,clean,sans-serif;}
 .color-list .color1 em,
 .pages.color1 .col .item .post-time .bg
 {background-color:#EA6332;}
@@ -150,7 +151,7 @@ a.btn:hover{background-color: #E37748;}
 .chapter .y {position: absolute; left: 78px; top: 28px; *top: 59px; background-color: #FFF; z-index: 3;}
 .chapter .yt {display: none;}
 .chapter .m{border: 1px solid #918C89; font-size: 40px; width: 58px; height: 58px; display: block; line-height: 58px; text-align: center; color: #EA6332; *margin-top: -20px;}
-.chapter .mEN{position: absolute; top:9px; *top:40px; left: 55px; background: #FFF; font-size: 11px; padding: 5px 0 0 5px; z-index: 2;}
+.chapter .mEN{position: absolute; top:7px; *top:40px; left: 55px; background: #FFF; font-size: 11px; padding: 0 0 0 5px; z-index: 2;}
 .chapter .mt{position: absolute; top: 22px; *top:54px; left: 55px; background-color: #FFF; color: #EA6332; padding: 5px 0 0 5px;}
 
 .pn {position: absolute; bottom: 20px;left: 50px;}
@@ -167,17 +168,17 @@ a.btn:hover{background-color: #E37748;}
 .customedit .tip{position: absolute; right: -78px; top: 6px; cursor: default; background-color: #80A710; padding: 2px 5px; color: #FFF; width: 62px; z-index: 5; display: none;}
 .customedit .tip i{background-position: -180px 0px; width: 4px; height: 7px; position: absolute; left: -4px; top: 7px;}
 
-
+.setFont .btn-icon i{background-position: -170px -90px;}
 .setcolor .btn-icon i{background-position: -165px -65px; width:24px;}
 .catalog .btn-icon i{background-position: -140px -65px;}
 .catalog .btn-icon.disabled{opacity: 0.4; filter:alpha(opacity=40); cursor: default;}
 .catalog .btn-icon.disabled:hover{box-shadow: none; border-color: #BCB7B1;}
 .catalog .btn-icon.disabled i{cursor: default;}
 
-
-.book-opt-right-bd{position: absolute; right: 18px; top: 18px; background-color: #FFF; width: 85px; border: 1px solid #ccc; box-shadow: 0px 0px 4px rgba(0, 0, 0, .2); border-radius: 2px; display: none; z-index: 8;}
 .book-opt-right-bd .arrow{width: 7px; height: 9px; background-position: -165px 0; position: absolute; top: 50px; right: -7px; display: block;}
-.catbar {display:none; background-color:#FFF; padding: 10px 0;}
+
+.catbar,.color-list,.font{position: absolute; right: 18px; top: 18px; background-color: #FFF; border: 1px solid #ccc; box-shadow: 0px 0px 4px rgba(0, 0, 0, .2); border-radius: 2px; display: none; z-index: 8;}
+.catbar {display:none; background-color:#FFF; padding: 10px 0;width: 85px; }
 .catbar a{text-decoration:none; color:#333;}
 .catbar .catbar-tool{position:absolute; left:9px; top:57px; width:69px;}
 .catbar .catbar-tool i{width: 5px; height: 9px; background-position: -125px -90px; display: block; margin: 3px 4px;}
@@ -207,12 +208,42 @@ a.btn:hover{background-color: #E37748;}
 .catbar .catbar-list .back-cover.on,
 .catbar .catbar-list .year-list dd li a.on{background-color:#D5D5D5;}
 
-.color-list{display:none; background-color:#FFF; padding:10px 0;}
+.color-list{display:none; background-color:#FFF; padding:10px 0;width: 85px; }
 .color-list .arrow{top: 90px;}
 .color-list ul{width: 24px; margin: 0 auto;}
 .color-list li{width:20px; height:20px; margin:8px 0; cursor:pointer; border: 1px solid #FFF; padding: 1px;}
 .color-list li em{display: block; width: 20px; height: 20px;}
 .color-list li:hover,.color-list .cur{border-color: #000;}
+
+.font{display: none; background-color:#FFF; padding: 10px 0;width: 170px;  padding:5px 10px;}
+.font .arrow{top: 130px;}
+.font .font-list{ width:165px; padding-top:20px}
+.font em,.font span{ color:#999; line-height:24px;}
+.font em{ display:block}
+.font .font-default{ margin:25px 5px 15px; color:#CCC; font-size:10px;}
+.font .font-default i{ padding:0 10px; width:8px; height:8px; background-position: -151px -94px;}
+.font .font-default span{ color:#7da408; font-size:16px; padding-right:10px;}
+.font hr {border:1px #cccccc dashed; width:95%; margin:20px 0px;}
+.font .font-list ul li:hover{ background:#ebebeb;}
+
+
+.font0,.font1,.font2,.font3,.font4,.font5,.font6,.font7{ background: url(../img/setFont.png) no-repeat; height:25px; width:130px; display:block}
+.font0{ background-position:0 -143px;}
+.font1{ background-position:0 1px;}
+.font2{ background-position:0 -23px;}
+.font3{ background-position:0 -46px;}
+.font4{ background-position:0 -70px;}
+.font5{ background-position:0 -94px;}
+.font6{ background-position:0 -118px;}
+.font7{ background-position:0 -167px;}
+.font-list ul li.selected .font0{ background-position:-124px -143px;}
+.font-list ul li.selected .font1{ background-position:-124px 1px;}
+.font-list ul li.selected .font2{ background-position:-124px -23px;}
+.font-list ul li.selected .font3{ background-position:-124px -46px;}
+.font-list ul li.selected .font4{ background-position:-124px -70px;}
+.font-list ul li.selected .font5{ background-position:-124px -94px;}
+.font-list ul li.selected .font6{ background-position:-124px -118px;}
+.font-list ul li.selected .font7{ background-position:-124px -167px;}
 
 .fliper {display:block; position:absolute; top:327px; left:15px; z-index:2; width:970px;}
 .fliper i{display:block; width:26px; height:35px; background-position:0 -65px;}
@@ -248,7 +279,7 @@ a.btn:hover{background-color: #E37748;}
 .col .item-img .img {margin:0;}
 .col .item p{ line-height: 18px; letter-spacing: 0; word-break:break-all; max-width:200px; white-space:nowrap;overflow:hidden;text-overflow:clip ;}
 .col .item .con-item p.first-line{height: 36px;}
-.col .item .con-item p .span-first{ height:36px; line-height:36px; font-size:30px; margin-right:2px; display: block; float: left;}
+.col .item .con-item p .span-first{ height:36px; line-height:36px; font-size:30px; min-width: 36px; text-align:center; display: block; float: left;}
 .col .item .con-item p .span-first-con{display: block; float: left; max-width: 144px;}
 .col .item .con-item p .span-first-con span{display: block; max-width: 144px; height: 18px;}
 
@@ -268,7 +299,7 @@ a.btn:hover{background-color: #E37748;}
 
 /*.pages .col .item .retui p:first-letter,*/
 .pages .col .item .retui p span {color:#666; float:none; height:auto; line-height:1.5em; font-size:12px; margin-right:auto;}
-.col .item .post-time{padding-bottom: 12px; *margin-top: -16px; position: relative;}
+.col .item .post-time{ font-family:"Microsoft YaHei",SimSun,arial,helvetica,clean,sans-serif; padding-bottom: 12px; *margin-top: -16px; position: relative;}
 .col .item .post-time .y, .col .item .post-time .yt, .col .item .post-time .mt, .col .item .post-time .dt{display: none;}
 .col .item .post-time .bg{position: absolute; left: 0; top:0; width: 37px; height: 16px; display: block; background-color: #EA6332;}
 .col .item .post-time .bg i{display: block; width: 7px; height: 5px; position: absolute; left: 14px; top: 16px; background-position: -120px -15px;}

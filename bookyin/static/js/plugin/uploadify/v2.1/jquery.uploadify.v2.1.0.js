@@ -266,7 +266,7 @@ if(jQuery)(
                         jQuery("#" + jQuery(this).attr('id') + ID + "ProgressBar").animate({
                             width: data.percentage + '%'
                           }, 300);
-						if (event.data.toDisplay == 'percentage') displayData = ' - ' + data.percentage + '%';
+						if (event.data.toDisplay == 'percentage') displayData = '  ' + data.percentage + '%';
 						if (event.data.toDisplay == 'speed') displayData = ' - ' + data.speed + 'KB/s';
 						if (event.data.toDisplay == null) displayData = ' ';
 						jQuery("#" + jQuery(this).attr('id') + ID + " .percentage").text(displayData);

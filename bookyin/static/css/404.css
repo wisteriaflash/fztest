@@ -27,3 +27,10 @@ body{font-family:"微软雅黑"; font-size:14px;}
 .agreement .info dd ul{margin-top: -20px; line-height: 24px;}
 .agreement .info dd ul li em{float: left;}
 .agreement .info dd ul li span{display: inline-block;  width: 840px;}
+/*升级维护*/
+.upgrade{ background:url(../img/upgrade.jpg) no-repeat;}
+.upgrade-icon img,.upgrade img{  position:absolute;left:50%;top:50%;width:895px; height:475px; margin:-237px 0 0 -447px}
+.upgrade-icon .icon{ background:url(../img/upgrade-icon.jpg) no-repeat; display:block;  position:absolute;left:50%;top:50%; margin:-203px 0 0 363px; float:left; width:33px; height:33px;}
+.upgrade-icon .trailer{ font-family:'Microsoft YaHei';width: 390px; line-height: 35px;position: absolute;left: 50%;top: 50%; margin:-150px 0 0 -350px}
+.upgrade-icon .trailer span{ color:#7da408; font-size:40px;}
+.upgrade-icon .trailer p{ color:#636363; font-size:20px;}

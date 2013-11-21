@@ -47,17 +47,23 @@
             </div>
         </div>
         <div id="J_uploadOk" class="upload-item upload-ok selected">
-            <div class="pics-con">
-                <div class="pics-list">
+            <div id="J_picListCon" class="pics-con">
+                <div class="pics-list selected">
                     <ul class="cf">
                         <li class="hd-item hd-date1"><h4>2013.09.22</h4><span class="line"></span></li>
-                        <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
-                            <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
+                        <li class="pic-item hd-date1 chapter-cover"><i class="choose"></i><i class="del"></i>
+                            <div class="imgbox">
+                                <i class="icon-chapter-cover">本章封面</i>
+                                <img src="../../img/demo/album1.jpg" alt="" />
+                            </div>
+                            <span class="set-chapter-cover">设为章节封面</span>
                         </li>
                         <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
                             <div class="imgbox">
+                                <i class="icon-chapter-cover">本章封面</i>
                                 <img src="../../img/demo/album2.jpg" alt="" />    
                             </div>
+                            <span class="set-chapter-cover">设为章节封面</span>
                         </li>
                         <li class="pic-item hd-date1"><i class="choose"></i><i class="del"></i>
                             <div class="imgbox"><img src="../../img/demo/album1.jpg" alt="" /></div>
@@ -126,14 +132,13 @@
                     </ul>
                 </div>
             </div>
-            <p class="tips">TIPS:鼠标全选就可以拖拽图片到下面章节中哦！</p>
             <div class="chapter">
-                <h4>编辑章节</h4>
-                <div class="chapter-list cf">
+                <h4>编辑章节<span class="tips">(TIPS:鼠标全选就可以拖拽图片到下面章节中哦！)</span></h4>
+                <div id="J_chapterList" class="chapter-list cf">
                     <ul>
-                        <li class="selected"><i class="num">25</i><span class="del"><i></i></span><h5>章节一</h5><p>在我们老去的时候在我们老去的时候</p></li>
-                        <li><i class="num">0</i><span class="del"><i></i></span><h5>章节一</h5><p>在我们老去的时候</p></li>
-                        <li><i class="num">2</i><span class="del"><i></i></span><h5>章节一</h5><p>在我们老去的时候在我们老去的时候</p></li>
+                        <li class="selected"><i class="num">25</i><span class="del"><i></i></span><h5>章节一</h5></li>
+                        <li><i class="num">0</i><span class="del"><i></i></span><h5>章节二</h5></li>
+                        <li><i class="num">2</i><span class="del"><i></i></span><h5>章节三</h5></li>
                         <li class="add-chapter"><i></i>添加章节</li>
                     </ul>
                 </div>

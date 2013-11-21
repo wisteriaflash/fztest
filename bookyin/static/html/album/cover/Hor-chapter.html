@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧 - 横向模板</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="http://static.chushuba.com/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="http://static.chushuba.com/css/album-hor.css" type="text/css" />
+</head>
+<body>
+<!--begin-->
+<div class='huace-page Hor-chapter ${skin!}'>
+    <div class='title'>${picConfig.pictureName}</div>
+    <div class='con'>
+      <div class='chapter-title'>
+        <ul>
+          <div class='green-square'></div>
+          <li>第${picConfig.chapterNum}章</li>
+          <li><span class='chapter-textedit com-textedit' data-name="chapter_textedit" data-conf="{'customEdit': false, 'text':'${picConfig.textFont.text}','width':280,'height':28,'maxLen':16}">${picConfig.textFont.text}</span></li>
+          <li><span class='chapter-time com-textedit' data-name="chapter_time" data-conf="{'customEdit': false, 'text':'${ picConfig.dateFont.text}','width':150,'height':20,'maxLen':16}">${ picConfig.dateFont.text}</span></li>
+        </ul>
+      </div>
+      <div class='chapter-con'>        
+        <div class='chapter-Hor-info com-textedit' data-name="chapter_info" data-conf="{'type':'multi', 'customEdit': false, 'text':'${picConfig.remark}','width':280,'height':240}">
+          <p>${picConfig.remark}</p>
+        </div>
+        <div class="chapter-Hor-img com-clipimg" data-name="chapter_img" data-conf="{'width':360, 'height':240,'image':{'source':'${picConfig.picture.webpath}','width':${picConfig.picture.width?string("0") },'height':${picConfig.picture.height?string("0")},'wdpi':${picConfig.picture.widthDpi},'hdpi':${picConfig.picture.heightDpi}}}">
+          <img src="${picConfig.picture.webpath}" style="left: ${picConfig.picture.x}px; top: ${picConfig.picture.y}px; width: ${picConfig.picture.width?string("0") }px; height: ${picConfig.picture.height?string("0")}px;"/>
+        </div>
+      </div>
+    </div>
+    <div class='page'>${picConfig.pageNum}</div>  
+</div>
+<!--end-->
+<div class='huace-page Hor-chapter Hor-R'>
+    <div class='title'>玩转上海夏令营</div>
+    <div class='con'>
+      <div class='chapter-title'>
+        <ul>
+          <div class='green-square'></div>
+          <li>第1章</li>
+          <li><span>上海欢乐谷游记上海欢乐谷</span></li>
+          <li>2013.2.25</li>
+        </ul>
+      </div>
+      <div class='chapter-con'>        
+        <div class='chapter-Hor-info'>
+          <p>7月1日，小主人报新闻学校在南昌南师附小举行了一次小记者选拔活动。当天参加选拔的是来自南昌各所小学的300多位同学们。</p>
+          <p>本次活动参加工作的小记者自愿者有20多位。当天天气非常炎热，小记者们还要穿着厚厚的红马夹，虽然小记者们汗流浃背，但是依然坚守在自己的岗位上。</p>
+          <p>本次活动首先是小记者主持上台讲话；随后是小督察代表发言并带大家宣誓；然后，是小记者代表发言；还有讲解员给大家讲解。本次活动，我有幸作为小记着的一员，我感到很荣幸。</p>
+          <p>本次活动参加工作的小记者自愿者有20多位。当天天气非常炎热，小记者们还要穿着厚厚的红马夹，虽然小记者们汗流浃背，但是依然坚守在自己的岗位上。</p>
+          <p>- 本报记者  9528 讯</p>
+        </div>
+        <div class='chapter-Hor-img'><img src="../../../img/bg-big.jpg" width="360" height="240"></div>
+      </div>
+    </div>
+    <div class='page'>01</div>  
+</div>
+</body>
+</html>

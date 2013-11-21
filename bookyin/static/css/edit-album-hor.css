@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+.huace-page{ width:697px; height:498px; margin-left: 26px;position:relative; float: left; }
+.huace-page em,.huace-page i{ background:#7fa94f; padding:1px 6px; color:#FFF; font-style:normal}
+.huace-page em{margin-top: -19px;}
+.huace-page a{text-decoration: none;}
+.X-01,.X-02,.X-03, .X-04, .Y-01, .Y-02, .Y-03, .Y-04{ background:#b5b6b6}
+.font ul {width: 200px;}
+.font ul li{ width: 200px;display: block;line-height: 30px; }
+.font ul li i{ line-height: 18px;margin-top: 5px;}
+.font ul li span{ margin-right: 10px; line-height: 30px;}
+.font ul li input{ border:2px solid #6AAA22;  display: none;width: 175px;height: 24px;}
+.font ul li i{float: left; margin-right: 10px;}
+.header-huache{ width: 235px;float: right;margin-top: 11px;}
+.header-huache a:hover{background: #ea5520;}
+.header-huache a{ font-size: 14px;text-decoration: none; color: #fff; text-align: center; background:#939393;}
+.header-huache .save{width: 120px; line-height: 28px; float: left; margin-right: 25px;}
+.header-huache .close{width: 90px; line-height: 28px; float: left;}
+.con{margin: 0 auto; width: 1144px; color:#999}
+.conlist{margin: 30px auto;text-align: center;}
+.conlist ul{display: inline-block;}
+.conlist ul li{ float: left;}
+.conlist a{padding:0 10px;color:#999}
+.conlist a:hover{color: #7da408}
+.chap-list,.chap-fron,.chap-back,.chap-list dt,.chap-list dd{ font-size: 14px; float: left;}
+.chap-list dd ul li:hover,.chap-list dd ul li,.turn-icon .prev,.turn-icon .next{background: url('../img/huace/icon.png') no-repeat}
+.chap-list dd ul li{ float: left; font-size: 12px; background-position: -94px 0px;width: 7px; height: 9px;margin: 0 5px;}
+.chap-list dd ul li:hover{background-position: -106px 0px;}
+.chap-list dd ul li span{ cursor: pointer; display: none; }
+.title{ padding-left: 40px;  padding-top:15px; padding-bottom: 25px;}
+.page{ padding-left: 9px; padding-top:15px; color: #7fa94f}
+.middle{width: 810px; height: 537px; float: left; background:url('../img/huace/skin-L-bg.png') no-repeat; padding-top: 10px;}
+.turn-icon{ position: absolute; top: 50%; left: 10px; width: 97%; margin: 0 auto;}
+.turn-icon .prev,.turn-icon .next{ width: 40px; height: 40px; }
+.turn-icon .prev{float: left;background-position:0 0}
+.turn-icon .next{float: right;background-position:-48px 0}
+.huace-page img{ float: left;}
+.rightedit{float: left;; width: 210px; margin-top: 6px;margin-left: -25px;}
+.rightedit .right-bar .font-bd {margin-left: 13px;}
+.rightedit .right-bar {width: 210px;}
+.rightedit .right-bar .item-bd { display: block;}
+.rightedit .font-bd{ display:none;}
+.rightedit .right-bar .font-bd .font-color, .rightedit .webfont-bd{margin-top: 15px;}
+.rightedit .webfont-bd h2{margin: 10px 0;}
+.webfont-bd ul li i {background: url(../img/setFont.png) no-repeat;}
+.format-bd {padding-left: 15px;}
+.format-bd span{ font-size: 14px;}
+.format-bd ul li{ margin-top: 10px; width: 72px; height: 51px;}
+.format-bd ul li:hover{border: 2px solid #6AAA22}
+.left-bar{ width: 121px; float: left;}
+.switch-bar ul li,.bar1 i,.bar2 i,.bar3 i{ background: url('../img/huace/left-bar.png') no-repeat; }
+.switch-bar ul li{cursor: pointer; line-height: 35px; margin-top: 10px; background-position: 0 -44px; width: 117px; height: 39px}
+.bar1 i,.bar2 i,.bar3 i{display: block;float: left;margin: 5px 7px;}
+.bar1 i{ background-position: 0 -81px; width: 17px;height: 23px;}
+.bar2 i{ background-position: -23px -84px; width: 20px;height: 23px;}
+.bar3 i{ background-position: -56px -81px; width: 20px;height: 23px;}
+.switch-skin,.skin1,.skin2{ background: url('../img/huace/switch-skin-bg.png') no-repeat;}
+.switch-skin{ width: 111px; height: 149px;margin-top: 213px;}
+.skin1 i,.skin2 i{ display: block;}
+.switch-skin span{ font-size: 18px; width: 100px; padding: 0 5px; display: block; text-align: center; line-height: 40px; border-bottom: 1px #cccccc dashed;}
+.switch-skin ul{margin-top: 10px;}
+.switch-skin li{padding-left: 33px; font-size: 14px;margin-left: 10px; line-height: 30px;cursor: pointer;}
+.skin1 { background-position: -115px 5px;}
+.skin2 { background-position: -115px -25px;}
+
+
+
+.rightedit .right-bar{height: 500px;display: block;}
+
+
+/* 皮肤 */
+.Skin-L-default{background:url('../img/huace/Skin-L-default.png') no-repeat;}
+.Skin-R-default{background:url('../img/huace/Skin-R-default.png') no-repeat;}
+
+
+/*====================XYY-01模板====================*/
+
+/*XYY-01-Left*/
+
+.con-XYY-01{ width: 519px; height: 400px; margin: 0 auto}
+.con-XYY-01 .X-01{ width: 384px; height: 257px; margin-bottom: 15px; }
+.con-XYY-01 .Y-01{position:relative;  width: 120px; height: 180px; margin-bottom: 15px;}
+.con-XYY-01 .left{ float: left; width: 120px;}
+.con-XYY-01 .right{ float: right; width: 384px;margin-left:15px; }
+.con-XYY-01 .font ul { text-align: right; float: right;}
+.con-XYY-01 .font ul li{ float: right;}
+.con-XYY-01 .font ul li i{ float: right; margin-right: 0;}
+.con-XYY-01 .font ul li span{ float: right;}
+.con-XYY-01 .X-01 em,.con-XYY-01 .Y-01 em {float: left; }
+
+/*XYY-01-Right*/
+
+.Hor-R .title{ padding-left: 573px;}
+.Hor-R .page{ padding-left: 675px;}
+.Hor-R .con-XYY-01 .left{ float: right;}
+.Hor-R .con-XYY-01 .right{ float: left; margin-left:0}
+.Hor-R .con-XYY-01 .font ul { text-align: left; float: left;}
+.Hor-R .con-XYY-01 .font ul li{ float: left;}
+.Hor-R .con-XYY-01 .font ul li i{float: left;}
+.Hor-R .con-XYY-01 .font ul li span{float: left;  margin-left: 10px;}
+.Hor-R .con-XYY-01 .X-01 em,.Hor-R .con-XYY-01 .Y-01 em {float: right;}

@@ -139,6 +139,7 @@ var layer = {
 	maxTipTime: 3000,
 	newLayerTip: 'newLayerTip',
 	curUserID: '',
+	saveCurLayerID: -1,
 
 	init: function(){
 		var me = this;
@@ -183,6 +184,9 @@ var layer = {
 			if($(this).hasClass('selected') || $(this).hasClass('line') || target.hasClass('del')){
 				return;
 			}
+			//test
+			$('#J_dataEvent').trigger('foo');
+
 			var cls = $(this).attr('class');
 			if(cls == 'first-add'){
 				me.addFirstLayer();
@@ -217,6 +221,17 @@ var layer = {
 			layerItem.find('img').attr('src',imgurl);
 			//
 			me.saveCurLayerData();
+			// me.saveCurLayerDataHandler = function(){
+			// 	// console.log('sdfsfdfd');
+			// }
+			//test
+			// $('#J_dataEvent').unbind('dataOK',me.saveCurLayerDataHandler);
+			// $('#J_dataEvent').bind('foo',me.saveCurLayerDataHandler);
+			// setTimeout(function(){
+			// 	$('#J_dataEvent').unbind('foo',me.saveCurLayerDataHandler);
+			// },3000);
+			//
+
 			var typeData = templateDefaultData.firstLayers(type);
 			var index = parseInt(me.curLayer.replace('first-',''))-1;
 			var curLayerData = me.layersData.firsts[index];
@@ -235,6 +250,7 @@ var layer = {
 			me.layersData.firsts[index] = typeData;
 			editLayer.renderLayer(me.curLayer, typeData);
 		});
+
 		//sort
 		$('#J_fristLayer').sortable({
 			items: "li:not(.first-add)",
@@ -263,6 +279,9 @@ var layer = {
 			}
 		});
 	},
+	saveCurLayerDataHandler: function(){
+		console.log('3333');
+	},
 	changeTemplateType: function(){
 		var me = this;
 		var type = me.curLayer;
@@ -282,6 +301,7 @@ var layer = {
 		var url = '/edit!getBookInfo.htm';
 		var param = {bookId: otherOpt.bookId};
 		var successFun = function(data){
+			//
 			var mergeData = me.mergeLayersData(data);
 			me.layersData = mergeData;
 			me.renderLayersList();
@@ -331,16 +351,25 @@ var layer = {
 		if(type.match('first')){
 			var index = parseInt(type.replace('first-',''));
 			index -= 1;
-			// debugger;
+			// 
 			layerData = data.firsts[index];
 		}
 		return layerData;
 	},
 	saveCurLayerData: function(){
-		var me = this;
+		//
+		var me = layer;
 		var layerdata = me.getCurLayerData(me.curLayer, me.layersData);
 		var data = editLayer.getEditLayerData();
 		$.extend(true, layerdata, data);
+		clearTimeout(me.saveCurLayerID);
+		// 
+		if(data.sign){
+			var layerdata = me.getCurLayerData(me.curLayer, me.layersData);
+			$.extend(true, layerdata, data);
+		}else{
+			me.saveCurLayerID = setTimeout(me.saveCurLayerData, 500);
+		}
 	},
 	addFirstLayer: function(){
 		var me = this;
@@ -486,6 +515,7 @@ var editLayer = {
 	rightBarNode: $('#J_rightBar'),
 	layerData: null,
 	isUploading: false,
+	defaultFont: 'Microsoft YaHei',
 	init: function(){
 		var me = this;
 		me.bindHandler();
@@ -495,10 +525,15 @@ var editLayer = {
 		//cancel
 		$('body').click(function(e){			
 			var target = $(e.target);
+			if(target.hasClass('web-font-loading-mask')){
+				return;
+			}
 			var txt = target.parents('.com-edit-text');
 			txt = (target.hasClass('com-edit-text') || txt.length>0);
 			var img = target.parents('.com-clipimg');
 			var rightBar = target.parents('.right-bar');
+					var txt = $('#J_layerInfo').find('.com-edit-text.selected');
+					me.checkFontLine(txt);
 			if( txt || img.length>0 || rightBar.length>0){
 				return;
 			}
@@ -509,7 +544,7 @@ var editLayer = {
 		$('#J_photoList').delegate('li .imgbox','click', function(e){
 			var item = $(this);
 			if(item.hasClass('photo-add')){
-				
+				return;
 			}else{
 				var imgData = $(this).find('img')
 				var data = {
@@ -553,7 +588,7 @@ var editLayer = {
 	        },
 	        done: function (e, data) {
 	        	var data = data.result;
-	        	// debugger;
+	        	// 
 	        	// me.isUploading = false;
 	        	$('#fileupload').css('display','block');
 	        	if(data.result == 'success'){
@@ -593,9 +628,28 @@ var editLayer = {
 			if($(this).hasClass('selected')){
 				return;
 			}
+			$('#J_fontColor li').removeClass('selected');
+			$(this).addClass('selected');
+			//data
 			var color = $(this).attr('data');
 			var txt = $('#J_layerInfo').find('.com-edit-text.selected');
 			txt.textedit('setColor',color);
+		});
+		$('#J_webFont li').click(function(e){
+			if($(this).hasClass('selected')){
+				return;
+			}
+			$('#J_webFont li').removeClass('selected');
+			$(this).addClass('selected');
+			//
+			var fontName = $(this).attr('data-name');
+			if(fontName != me.defaultFont){
+				me.addWebFontLoading();
+			}
+			var top = $(e.target).position().top-15;
+			$('#J_webFontLoading').css('top',top);
+			var txt = $('#J_layerInfo').find('.com-edit-text.selected');
+			txt.textedit('setWebFont',fontName);
 		});
 	},
 	checkFontLine: function(txt){
@@ -615,7 +669,6 @@ var editLayer = {
 	},
 	renderLayer: function(type,data){
 		var me = this;
-		//bg
 		var bgCls = type, infoCls = 'info';
 		if(type.match('first')){
 			bgCls = 'first';
@@ -626,10 +679,18 @@ var editLayer = {
 		me.infoNode.attr('class', infoCls);
 		//info
 		me.infoNode.html('');
+		//
 		for(var item in data){
 			var itemConf = data[item];
 			if(item.match('text')){
 				//conf
+				var webFontConfig = {
+					url: '/changeFont.htm',
+					param: {
+						bookId: otherOpt.bookId
+					}
+				}
+				itemConf.webFontLoad = webFontConfig;
 				itemConf.onSelect = function(data){
 					me.cleanSelect();
 					me.rightBarShow('txt',data);
@@ -640,6 +701,22 @@ var editLayer = {
 				//render
 				var txt = '<div class="com-edit-text" data-name="'+item+'"></div>';
 				var textNode = $(txt);
+				var url=itemConf.webFontURL;
+				
+				if(url){
+					var urlObj=me._getWebFontPath(url);
+					textNode.fontface({
+						fontName : itemConf.simpFontName,
+						fontFamily : [itemConf.simpFontName],
+						filePath : urlObj.filePath+'/',
+						fileName : urlObj.fileName
+					});
+					
+					textNode.css({"font-size":itemConf.fontSize,"lineHeight":itemConf.lineHeight,"color":itemConf.fontColor});
+				}else{
+					textNode.css({"font-size":itemConf.fontSize,"lineHeight":itemConf.lineHeight,"color":itemConf.fontColor,"fontFamily":'Microsoft YaHei'});
+				}
+				
 				if(data.template == 'textImg'){//上文下图fix
 					me.infoNode.prepend(textNode);
 				}else{
@@ -707,6 +784,16 @@ var editLayer = {
 			});
 		}
 	},
+	_getWebFontPath : function(url){
+		var obj = {};
+		var tempArr = url.split('/');
+		var fileName = tempArr[tempArr.length-1].split('.')[0];
+		tempArr.pop();
+		var filePath = tempArr.join('/');
+		obj.filePath = filePath;
+		obj.fileName = fileName;
+		return obj;
+	},
 	rightBarHide: function(){
 		var me = this;
 		var animateTime = 300;
@@ -731,6 +818,8 @@ var editLayer = {
 			$('#J_fontAlign').find('.'+data.fontAlign).addClass('selected');
 			$('#J_fontColor li').removeClass('selected');
 			$('#J_fontColor li[data="'+data.fontColor+'"]').addClass('selected');
+			$('#J_webFont li').removeClass('selected');
+			$('#J_webFont li[data-name="'+data.fontName+'"]').addClass('selected');
 		}
 	},
 	addPhoto: function(){
@@ -795,9 +884,32 @@ var editLayer = {
 		}else{
 			list.perfectScrollbar('destroy');
 		}
+	},
+	addWebFontLoading: function(){
+		var me = this;
+		if($('#J_webFontLoading').length>0){
+			return;
+		}
+		var loadingStr = '<div id="J_webFontLoading" class="web-font-loading">'+
+					'<img src="'+YS.staticDomainbyJs+'/img/index-loading.gif" width="30" height="30" />'+
+					'<span>字体加载中，请稍后</span>'+
+				'</div>';
+		$('#J_webFont').append(loadingStr);
+		var maskStr = '<div id="J_webFontLoadingMask" class="web-font-loading-mask"></div>';
+		$('body').append(maskStr);
+		//bindHandler
+		$('#J_webFontLoading').bind('show',function(){
+			var mask = $('#J_webFontLoadingMask');
+			$(this).show();
+			mask.show();
+		});
+		$('#J_webFontLoading').bind('close',function(){
+			var mask = $('#J_webFontLoadingMask');
+			$(this).hide();
+			mask.hide();
+		});
 	}
 };
-
 
 //other
 var otherOpt = {
@@ -825,7 +937,6 @@ var otherOpt = {
 				me.saveDataTipShow('loading');
 				me.saveLayersData();
 			}else if(cls == 'close'){
-				// console.log('close');
 				me.saveDataDialog('close');
 			}
 		});
@@ -904,6 +1015,7 @@ var otherOpt = {
 				txt: {'tip-text': '确定关闭当前编辑吗？',tips:'请确认之前的操作是否保存。'},
 				onsubmit: function(){
 					window.location.href = me.previewURL;
+					//
 				}
 			}
 			YS.tipConfirmDialog.show(closeConf);

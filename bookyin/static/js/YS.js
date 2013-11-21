@@ -23,6 +23,19 @@ var YS = {
                 me.tipConfirmDialog.show(conf);
             });
         }
+        $('#J_loginOut').click(function(e){
+            e.preventDefault();
+            var logoutURL = '/user!logOutLoginAction.htm';
+            var type = $(this).attr('data-type');
+            if(type == 'sina'){
+                WB2.logout(function(){
+                    window.location.href = logoutURL;
+                });    
+            }else{
+                window.location.href = logoutURL;
+            }
+            
+        });
     },
     JQplugin: function(){
         //version
@@ -197,33 +210,34 @@ var YS = {
             var me = this;
             //cls
             var cls = config.cls ? config.cls : '';
+            var itemCls = cls ? cls : 'dialogTipShow';
             cls = "dialogStyle dialogTipShow "+cls;
             me.dialogItem.dialog( "option", "dialogClass", cls );
             var width = config.width ? config.width : 400;
             me.dialogItem.dialog( "option", "width", width );
             //btn
             if(config.btn && config.btn == 'no'){
-                $('.dialogTipShow .tipbtn').hide();
+                $('.'+itemCls+' .tipbtn').hide();
             }else{
-                $('.dialogTipShow .tipbtn').show();
+                $('.'+itemCls+' .tipbtn').show();
             }
             //tips
             var txt = config.txt;
             if(txt && txt.tips == ''){
-                $('.dialogTipShow .tips-con').hide();
+                $('.'+itemCls+' .tips-con').hide();
             }else{
-                $('.dialogTipShow .tips-con').show();
+                $('.'+itemCls+' .tips-con').show();
             }
             if(txt && txt['tip-note']){
-                if($('.dialogTipShow .tip-note').length==0){
+                if($('.'+itemCls+' .tip-note').length==0){
                     var str = '<p class="tip-note"></p>';
-                    $('.dialogTipShow .opt').append(str);
+                    $('.'+itemCls+' .opt').append(str);
                 }
-                $('.dialogTipShow .tip-note').text(txt['tip-note']);
-                $('.dialogTipShow .tip-note').show();
+                $('.'+itemCls+' .tip-note').text(txt['tip-note']);
+                $('.'+itemCls+' .tip-note').show();
             }else{
-                $('.dialogTipShow .tip-note').text('');
-                $('.dialogTipShow .tip-note').show();
+                $('.'+itemCls+' .tip-note').text('');
+                $('.'+itemCls+' .tip-note').show();
             }
         },
         close: function(){

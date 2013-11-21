@@ -1,0 +1,705 @@
+@charset "utf-8";
+/* CSS Document */
+.huace-page{ width:697px; height:498px; position:relative; color: #757575;border: 1px #ffo solid}
+
+.huace-page em,.huace-page i{ background:#7fa94f; padding:1px 6px; color:#FFF; font-style:normal}
+.huace-page em{margin-top: -19px; float:left; width: 7px; height: 17px; line-height: 19px;}
+.huace-page a{text-decoration: none;}
+.huace-page .title,.huace-page .page{font-family: "Microsoft YaHei","SimSun",arial,helvetica,clean,sans-serif;}
+.huace-page .title{ padding-left: 40px;  padding-top:15px; padding-bottom: 25px; color: #757575;}
+.huace-page .page{ margin-left: 9px; padding-top:15px; color: #7fa94f;width: 15px;
+text-align: center;}
+.huace-page img{ float: left;}
+.huace-page .green-square{width: 4px; height:45px;background:#7fa94f;display: block;float: left; }
+.huace-page a{text-decoration: none;}
+.huace-page .col-txt-item ul {float: left;}
+.huace-page .col-txt-item ul li{ width: 200px;line-height: 30px;}
+.huace-page .col-txt-item ul li i{ line-height: 18px;margin-top: 5px;float: left; margin-right: 10px; width: 8px;}
+.huace-page .col-txt-item ul li span{ margin-right: 10px;display: block; overflow: hidden;}
+
+.col-left{ float: left;margin-right: 15px;}
+.col-right{ float: right;}
+.Hor-R.huace-page .title{ padding-left:  572px;}
+.Hor-R.huace-page .page{  padding-left: 674px;}
+.Hor-R .col-left{ float: right;margin-right:0;margin-left: 15px;}
+.Hor-R .col-right{ float: left;}
+.Hor-R.huace-page em{float: right;}
+
+
+/* 章节-left */
+.Hor-chapter .con{height: 382px; }
+.Hor-chapter .chapter-title{ color: #7fa94f; padding-left: 18px; margin: 20px 41px 30px;}
+.Hor-chapter .chapter-title .chapter-textedit{font-size: 18px;}
+.Hor-chapter .chapter-title span{width: 280px; height: 28px; line-height: 28px;}
+.Hor-chapter .chapter-con{ padding-left: 42px;}
+.Hor-chapter .chapter-con,.Hor-chapter .chapter-Hor-info,.Hor-chapter .chapter-Hor-img{height: 240px;}
+.Hor-chapter .chapter-Hor{width: 655px;float: right}
+.Hor-chapter .chapter-Hor-info{float: left;width: 280px; margin-right: 15px;overflow: hidden; line-height: 20px;}
+.Hor-chapter .chapter-Hor-info p{text-indent:2em}
+.Hor-chapter .chapter-Hor-img{float: right;width: 360px;}
+.Hor-chapter .green-square {height: 60px;margin-right: 10px;}
+
+/* 章节-right */
+.Hor-R .green-square{float: right;margin-left: 10px;}
+.Hor-R .chapter-con{ padding-left:0; padding-right: 42px;}
+.Hor-R .chapter-title{ padding-left: 0px; padding-right: 18px;text-align: right;background-position: right;}
+.Hor-R .chapter-Hor{float: left;}
+.Hor-R .chapter-Hor-info{float: right; margin-right:0;margin-left:15px;}
+.Hor-R .chapter-Hor-img{float: left;}
+.Hor-R .Hor-chapter .green-square {height: 60px;margin-left: 10px; margin-right: 0;float: right}
+
+
+/* 版权页 */
+.Hor-copyright,.Hor-R.Hor-copyright{position: relative; background:none ;}
+.Hor-copyright .copyright-img,.Hor-copyright .copyright-logo,.Hor-copyright .copyright-code,.Hor-copyright .copyright{position: absolute;}
+.Hor-copyright .copyright-img{top:160px;left: 250px;}
+.Hor-copyright .copyright-logo{top:320px;left: 80px;width: 165px;overflow: hidden;height: 38px;}
+.Hor-copyright .copyright-code{top:405px;left: 500px;}
+.Hor-copyright .copyright{top:360px;left: 85px;}
+.Hor-copyright .copyright ul li{color: #757575;font: 12px "Microsoft YaHei","SimSun",arial,helvetica,clean,sans-serif;}
+.Hor-copyright .copyright span{ margin-right: 24px;}
+.Hor-copyright .copyright i{background: none;color: #757575}
+
+/*封底*/
+.Hor-back-cover{width: 704px; height: 500px;}
+.Hor-back-cover .backL{background: #e3db89;width:463px;height:500px; float: left;}
+.Hor-back-cover .backR{ float: right;width:235px; padding-left: 6px; background: url('../img/huace/back-cover-left.jpg') repeat-y;}
+.Hor-back-cover .backR-con{background: #fff;width:235px;height:500px;position: relative;}
+.Hor-back-cover .backR .cover{position: absolute; top: 7px; left: 11px; }
+.Hor-back-cover .backR .coverImg{margin-top: 7px;position: absolute; bottom: 0}
+.Hor-back-cover .back-cover{ margin-top:40px; margin-left:45px;}
+/*封面*/
+.Hor-front-cover{ background: none;}
+.Hor-front-cover ul{position: absolute; bottom: 50px;left: 83px; color: #7fa94f; z-index: 150;}
+.Hor-front-cover ul .cover-title{font-size: 18px; width: 280px; height: 28px; margin-left: 13px;overflow: hidden;}
+.Hor-front-cover ul .cover-time{width: 150px; height: 20px; line-height: 20px; margin-left: 13px;overflow: hidden;}
+
+/*目录页*/
+
+.Hor-R.Hor-directory.Skin-01,.Hor-R.Hor-directory.Skin-00{background:url('../img/huace/Hor-directory.png') no-repeat; padding-left: 50px;}
+.Hor-directory .directory{ padding-top: 104px;}
+.Hor-directory .directory span{ font-size: 20px; padding-right: 8px; }
+.Hor-directory ul{ margin-top:30px;}
+.Hor-directory li{line-height: 25px;width: 647px;float: left;}
+.Hor-directory li .chapId{padding-right: 10px; float: left;}
+.Hor-directory li .chapPage{ float: right;margin-right: 35px;}
+.Hor-directory li .chapCon{float: left;  width: 520px; background:url('../img/huace/directory.png') repeat-x 0 12px;}
+.Hor-directory li .chapCon i{ background:#FFF;}
+.directory,.chapId,.chapPage,.chapCon i{color: #757575; font-family: "Microsoft YaHei","SimSun",arial,helvetica,clean,sans-serif;}
+/*Skin-00皮肤*/
+.Skin-00{background:url('../img/huace/skin-L-default.png') no-repeat;}
+.Hor-R.Skin-00{background:url('../img/huace/skin-R-default.png') no-repeat;}
+
+/*Skin-01左侧侧皮肤*/
+.Skin-01.huace-page .page{margin-left: 13px;width: 18px;}
+.Hor-chapter.Skin-01{background:url('../img/huace/Hor-SKIN-01/skin-index-L-01.png') no-repeat;}
+.Hor-Y-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-Y-01.png') no-repeat;}
+.Hor-Y-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-Y-02.png') no-repeat;}
+.Hor-Y-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-Y-03.png') no-repeat;}
+
+.Hor-X-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-X-01.png') no-repeat;}
+.Hor-X-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-X-02.png') no-repeat;}
+
+.Hor-XY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XY-01.png') no-repeat;}
+.Hor-XY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XY-02.png') no-repeat;}
+.Hor-XY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XY-03.png') no-repeat;}
+
+.Hor-YYY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-YYY-01.png') no-repeat;}
+.Hor-YYY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-YYY-02.png') no-repeat;}
+.Hor-YYY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-YYY-03.png') no-repeat;}
+
+.Hor-XYY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XYY-01.png') no-repeat;}
+.Hor-XYY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XYY-02.png') no-repeat;}
+.Hor-XYY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XYY-03.png') no-repeat;}
+
+.Hor-XXY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXY-01.png') no-repeat;}
+.Hor-XXY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXY-02.png') no-repeat;}
+.Hor-XXY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXY-03.png') no-repeat;}
+
+.Hor-XXX-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXX-01.png') no-repeat;}
+.Hor-XXX-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXX-02.png') no-repeat;}
+.Hor-XXX-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXX-03.png') no-repeat;}
+
+.Hor-XXXX-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXXX-01.png') no-repeat;}
+.Hor-XXXX-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXXX-02.png') no-repeat;}
+.Hor-XXXX-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXXX-03.png') no-repeat;}
+.Hor-XXXX-04.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXXX-04.png') no-repeat;}
+.Hor-XXXX-05.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXXX-05.png') no-repeat;}
+
+.Hor-XYYY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XYYY-01.png') no-repeat;}
+.Hor-XYYY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XYYY-02.png') no-repeat;}
+.Hor-XYYY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XYYY-03.png') no-repeat;}
+
+.Hor-XXYY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXYY-01.png') no-repeat;}
+.Hor-XXYY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXYY-02.png') no-repeat;}
+.Hor-XXYY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXYY-03.png') no-repeat;}
+
+.Hor-XXXY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXXY-01.png') no-repeat;}
+.Hor-XXXY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXXY-02.png') no-repeat;}
+.Hor-XXXY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXXY-03.png') no-repeat;}
+.Hor-XXXY-04.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXXY-04.png') no-repeat;}
+.Hor-XXXY-05.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-XXXY-05.png') no-repeat;}
+
+.Hor-YYYY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-YYYY-01.png') no-repeat;}
+.Hor-YYYY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-YYYY-02.png') no-repeat;}
+.Hor-YYYY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-L-YYYY-03.png') no-repeat;}
+
+/*Skin-01右侧皮肤*/ 
+.Skin-01.Hor-R.huace-page .page{padding-left: 651px;}
+.Hor-R.Hor-chapter.Skin-01{background:url('../img/huace/Hor-SKIN-01/skin-index-R-01.png') no-repeat;}
+.Hor-R.Hor-Y-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-Y-01.png') no-repeat;}
+.Hor-R.Hor-Y-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-Y-02.png') no-repeat;}
+.Hor-R.Hor-Y-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-Y-03.png') no-repeat;}
+
+.Hor-R.Hor-X-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-X-01.png') no-repeat;}
+.Hor-R.Hor-X-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-X-02.png') no-repeat;}
+
+.Hor-R.Hor-XY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XY-01.png') no-repeat;}
+.Hor-R.Hor-XY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XY-02.png') no-repeat;}
+.Hor-R.Hor-XY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XY-03.png') no-repeat;}
+
+.Hor-R.Hor-YYY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-YYY-01.png') no-repeat;}
+.Hor-R.Hor-YYY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-YYY-02.png') no-repeat;}
+.Hor-R.Hor-YYY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-YYY-03.png') no-repeat;}
+
+.Hor-R.Hor-XYY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XYY-01.png') no-repeat;}
+.Hor-R.Hor-XYY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XYY-02.png') no-repeat;}
+.Hor-R.Hor-XYY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XYY-03.png') no-repeat;}
+
+.Hor-R.Hor-XXY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXY-01.png') no-repeat;}
+.Hor-R.Hor-XXY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXY-02.png') no-repeat;}
+.Hor-R.Hor-XXY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXY-03.png') no-repeat;}
+
+.Hor-R.Hor-XXX-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXX-01.png') no-repeat;}
+.Hor-R.Hor-XXX-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXX-02.png') no-repeat;}
+.Hor-R.Hor-XXX-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXX-03.png') no-repeat;}
+
+.Hor-R.Hor-XXXX-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXXX-01.png') no-repeat;}
+.Hor-R.Hor-XXXX-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXXX-02.png') no-repeat;}
+.Hor-R.Hor-XXXX-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXXX-03.png') no-repeat;}
+.Hor-R.Hor-XXXX-04.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXXX-04.png') no-repeat;}
+.Hor-R.Hor-XXXX-05.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXXX-05.png') no-repeat;}
+
+.Hor-R.Hor-XYYY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XYYY-01.png') no-repeat;}
+.Hor-R.Hor-XYYY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XYYY-02.png') no-repeat;}
+.Hor-R.Hor-XYYY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XYYY-03.png') no-repeat;}
+
+.Hor-R.Hor-XXYY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXYY-01.png') no-repeat;}
+.Hor-R.Hor-XXYY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXYY-02.png') no-repeat;}
+.Hor-R.Hor-XXYY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXYY-03.png') no-repeat;}
+
+.Hor-R.Hor-XXXY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXXY-01.png') no-repeat;}
+.Hor-R.Hor-XXXY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXXY-02.png') no-repeat;}
+.Hor-R.Hor-XXXY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXXY-03.png') no-repeat;}
+.Hor-R.Hor-XXXY-04.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXXY-04.png') no-repeat;}
+.Hor-R.Hor-XXXY-05.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-XXXY-05.png') no-repeat;}
+
+.Hor-R.Hor-YYYY-01.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-YYYY-01.png') no-repeat;}
+.Hor-R.Hor-YYYY-02.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-YYYY-02.png') no-repeat;}
+.Hor-R.Hor-YYYY-03.Skin-01 {background:url('../img/huace/Hor-SKIN-01/skin-R-YYYY-03.png') no-repeat;}
+
+
+/*====================X-01模板====================*/
+
+/*X-01-Left*/
+.Hor-X-01 .con{ width: 480px; height: 400px; margin: 0 auto;}
+.Hor-X-01 .X-01{ width: 480px; height: 320px; margin-bottom: 15px; }
+/*X-01-Right*/
+.Hor-R.Hor-X-01 .font ul {text-align: right; float: right;}
+.Hor-R.Hor-X-01 .font ul i{ float: right;margin-right: 0}
+
+/*====================X-02模板====================*/
+
+/*X-02-Left*/
+.Hor-X-02 .con{ width: 615px; height: 400px; margin: 0 auto;}
+.Hor-X-02 .X-01{ width: 365px; height: 245px; margin-bottom: 15px; float: left;}
+.Hor-X-02 .col-txt-item ul{margin-left: 15px; }
+
+/*X-02-Right*/
+.Hor-R.Hor-X-02 .X-01,.Hor-R.Hor-X-02 .col-txt-item ul  {float: right;}
+
+
+/*====================Y-01模板====================*/
+
+/*Y-01-Left*/
+.Hor-Y-01 .col-txt-item{padding-top: 295px; float: left;}
+.Hor-Y-01 .con{ width: 430px; height: 400px; margin: 0 auto;}
+.Hor-Y-01 .Y-01{ width: 215px; height: 320px; margin-bottom: 15px; float: right;}
+
+/*Y-01-Right*/
+.Hor-R.Hor-Y-01 .col-txt-item{float: right;}
+.Hor-R.Hor-Y-01 .Y-01 {float: left;}
+
+/*====================Y-02模板====================*/
+
+/*Y-02-Left*/
+.Hor-Y-02 .con{ width: 215px; height: 400px; margin: 0 auto;}
+.Hor-Y-02 .Y-01{ width: 215px; height: 320px; margin-bottom: 15px; }
+
+
+/*====================Y-03模板====================*/
+
+/*Y-03-Left*/
+.Hor-Y-03 .con{ width: 697px; height: 400px; margin-top: -20px;}
+.Hor-Y-03 .Y-01{ width: 280px; height: 425px;  float: right;}
+.Hor-Y-03 .col-txt-item ul {margin-left: 165px; float: left;padding-top: 20px;}
+
+/*Y-03-Right*/
+.Hor-R.Hor-Y-03 .Y-01 {float: left;}
+.Hor-R.Hor-Y-03 .col-txt-item ul {margin-left:15px}
+
+
+/*====================XY-01模板====================*/
+
+/*XY-01-Left*/
+.Hor-XY-01 .con{ width: 595px; height: 400px; margin: 0 auto;}
+.Hor-XY-01 .X-01{ width: 380px; height: 230px; margin-bottom: 15px;}
+.Hor-XY-01 .Y-01{ width: 200px; height: 300px;}
+
+
+/*====================XY-02模板====================*/
+
+/*XY-02-Left*/
+.Hor-XY-02 .con{ width: 580px; height: 400px; margin: 0 auto; padding-left: 117px;}
+.Hor-XY-02 .X-01{ width: 380px; height: 280px; margin-bottom: 15px;}
+.Hor-XY-02 .Y-01{ width: 185px; height: 280px; }
+
+/*XY-02-Right*/
+.Hor-R.Hor-XY-02 .con{ padding-left:0; padding-right: 117px;}
+
+/*====================XY-03模板====================*/
+
+/*XY-03-Left*/
+.Hor-XY-03 .con{ width: 697px; height: 400px; margin: 0 auto;}
+.Hor-XY-03 .col-left{ padding-left:102px;}
+.Hor-XY-03 .X-01{ width: 380px; height: 230px; margin-bottom: 15px;}
+.Hor-XY-03 .Y-01{ width: 200px; height: 300px;}
+
+/*XY-03-Right*/
+.Hor-R.Hor-XY-03 .col-left{ padding-right:102px; padding-left: 0}
+/*====================XYY-01模板====================*/
+
+/*XYY-01-Left*/
+.Hor-XYY-01 .con{ width: 520px; height: 400px; margin: 0 auto}
+.Hor-XYY-01 .X-01{ width: 385px; height: 257px; margin-bottom: 15px; }
+.Hor-XYY-01 .Y-01,.Hor-XYY-01 .Y-02{ width: 120px; height: 180px; margin-bottom: 15px;}
+
+
+/*====================XYY-02模板====================*/
+/*XYY-02-Left*/
+.Hor-XYY-02 .con {width: 697px; height: 400px; margin: 0 auto;}
+.Hor-XYY-02 .X-01{ float: right; width: 245px; height: 160px;  margin-bottom: 15px;}
+.Hor-XYY-02 .Y-01{ float: right; width: 125px; height: 190px; }
+.Hor-XYY-02 .Y-02 { width: 240px; height: 365px; }
+.Hor-XYY-02 .col-left{ width: 340px;padding-left: 102px;}
+.Hor-XYY-02 .col-txt-item ul{padding-top: 40px;}
+
+/*XYY-02-Right*/
+.Hor-R.Hor-XYY-02 .X-01,.Hor-R.Hor-XYY-02 .Y-01{ float: left; }
+.Hor-R.Hor-XYY-02 .col-left{padding-left:0;padding-right: 102px;}
+.Hor-R.Hor-XYY-02 .col-txt-item ul{margin-left: 15px; }
+/*====================XYY-03模板====================*/
+/*XYY-03-Left*/
+
+.Hor-XYY-03 .con { width: 697px; height: 400px; margin: 0 auto;}
+.Hor-XYY-03 .top{ height: 230px; margin-left: 45px;}
+.Hor-XYY-03 .X-01{ width: 325px; height: 215px; float: left; margin:0 15px;}
+.Hor-XYY-03 .Y-01,.Hor-XYY-03 .Y-02{ width: 145px; height: 215px; float: left;}
+.Hor-XYY-03 .col-txt-item{margin-left: 250px; }
+
+/*XYY-03-Right*/
+.Hor-R.Hor-XYY-03 .top{ margin-right: 45px;margin-left:0px;}
+.Hor-R.Hor-XYY-03 .col-txt-item{margin-left:250px; }
+
+
+/*====================XXY-01模板====================*/
+/*XXY-01-Left*/
+.Hor-XXY-01 .con { width: 480px; height: 400px; margin: 0 auto;}
+.Hor-XXY-01 .top{ height: 300px; }
+.Hor-XXY-01 .X-01{margin-bottom: 15px;}
+.Hor-XXY-01 .Y-01{width: 245px; height: 370px; }
+.Hor-XXY-01 .X-01,.Hor-XXY-01 .X-02{width: 220px; height: 135px; }
+
+
+/*====================XXY-02模板====================*/
+/*XXY-02-Left*/
+.Hor-XXY-02 .con { width: 425px; height: 400px; margin: 0 auto;}
+.Hor-XXY-02 .Y-01{width: 195px; height: 285px;  margin-bottom: 15px;}
+.Hor-XXY-02 .X-01,.Hor-XXY-02 .X-02{width: 215px; height: 135px; margin-bottom: 15px;}
+
+
+/*====================XXY-03模板====================*/
+/*XXY-03-Left*/
+.Hor-XXY-03 .con { width: 505px; height: 400px; margin: 0 auto;}
+.Hor-XXY-03 .X-01{ width: 290px; height: 195px;  margin-bottom: 15px;}
+.Hor-XXY-03 .X-02{ width: 210px; height: 140px; }
+.Hor-XXY-03 .Y-01{ width: 200px; height: 255px;  margin-bottom: 15px;}
+
+/*XXY-03-Right*/
+.Hor-R.Hor-XXY-03 .X-02{ float: right;}
+
+/*====================XXX-01模板====================*/
+/*XXX-01-Left*/
+.Hor-XXX-01 .con { width: 595px; height: 400px; margin: 0 auto; padding-left: 55px}
+.Hor-XXX-01 .bottom{width: 595px; float: left;}
+.Hor-XXX-01 .X-03{ width: 380px; height: 255px;}
+.Hor-XXX-01 .X-01,.Hor-XXX-01 .X-02{ width: 200px; height: 120px;  margin-bottom: 15px;}
+
+/*XXX-01-Right*/
+.Hor-R.Hor-XXX-01  .con {padding-right: 55px;padding-left:0}
+.Hor-R.Hor-XXX-01 .col-txt-item ul{float: right;}
+
+/*====================XXX-02模板====================*/
+/*XXX-02-Left*/
+.Hor-XXX-02 .con { width: 697px; height: 400px; margin: 0 auto;}
+.Hor-XXX-02 .col-left{padding-left: 132px;}
+.Hor-XXX-02 .X-01{ width: 200px; height: 135px;  margin-bottom: 15px;margin-top: 100px;}
+.Hor-XXX-02 .X-02{ width: 350px; height: 235px;  margin-bottom: 15px;}
+.Hor-XXX-02 .X-03{ width: 150px; height: 100px; }
+
+
+/*XXX-02-Right*/
+.Hor-R.Hor-XXX-02 .X-03{ float: right;}
+.Hor-R.Hor-XXX-02 .col-left{ padding-left:0; padding-right: 132px;}
+
+
+
+/*====================XXX-03模板====================*/
+/*XXX-03-Left*/
+.Hor-XXX-03 .con { width: 610px; height: 400px; margin: 0 auto;}
+.Hor-XXX-03 .X-01{ width: 345px; height: 230px; margin-bottom: 15px;}
+.Hor-XXX-03 .X-02,.Hor-XXX-03 .X-03{ width: 165px; height: 120px;  margin-right: 15px; float: left;}
+.Hor-XXX-03 .col-txt-item{padding-top: 235px; padding-left: 20px;}
+
+/*XXX-03-Right*/
+.Hor-R.Hor-XXX-03 .col-txt-item{ padding-left:0; padding-right: 20px;}
+
+
+/*====================YYY-01模板====================*/
+/*YYY-01-Left*/
+.Hor-YYY-01 .con { width: 555px; height: 400px; margin: 0 auto;}
+.Hor-YYY-01 .top{height: 265px;}
+.Hor-YYY-01 .bottom{padding-left: 186px; width: 356px;}
+.Hor-YYY-01 .Y-01,.Hor-YYY-01 .Y-02,.Hor-YYY-01 .Y-03{width: 170px; height: 250px; float: left; margin-right:15px; }
+
+/*YYY-01-right*/
+.Hor-R.Hor-YYY-01 .bottom{ padding-left: 184px;}
+
+/*====================YYY-02模板====================*/
+/*YYY-02-Left*/
+.Hor-YYY-02 .con { width: 590px; height: 400px; margin: 0 auto;}
+.Hor-YYY-02 .Y-01{width: 235px; height: 335px; }
+.Hor-YYY-02 .Y-02,.Hor-YYY-02 .Y-03{width: 155px; height: 235px; float: left; margin-right:15px;margin-bottom: 15px;}
+
+/*YYY-02-Right*/
+.Hor-R.Hor-YYY-02 .Y-02,.Hor-R.Hor-YYY-02 .Y-03{margin-right:0; margin-left: 15px;}
+.Hor-R.Hor-YYY-02 .col-txt-item ul{ margin-left: 15px;}
+/*====================YYY-03模板====================*/
+/*YYY-03-Left*/
+.Hor-YYY-03 .con { width: 615px; height: 400px; margin: 0 auto;}
+.Hor-YYY-03 .col-right .right-L,.Hor-YYY-03 .col-right .right-R{float: left;}
+.Hor-YYY-03 .Y-01,.Hor-YYY-03 .Y-02{width: 115px; height: 165px; margin-bottom:15px;margin-right: 15px;}
+.Hor-YYY-03 .Y-03{width: 235px; height: 345px; }
+.Hor-YYY-03 .col-txt-item{padding-top: 200px;}
+
+/*YYY-03-Right*/
+.Hor-R.Hor-YYY-03 .col-right .right-L,.Hor-R.Hor-YYY-03 .col-right .right-R{float: right;}
+.Hor-R.Hor-YYY-03 .Y-01,.Hor-R.Hor-YYY-03 .Y-02{margin-right:0;margin-left: 15px;}
+
+/*====================YYYY-01模板====================*/
+/*YYYY-01-Left*/
+.Hor-YYYY-01 .con { width: 475px; height: 400px; margin: 0 auto;}
+.Hor-YYYY-01 .Y-03{margin-right:15px;}
+.Hor-YYYY-01 .Y-01{width: 200px; height: 250px; margin-bottom: 15px;}
+.Hor-YYYY-01 .Y-02,.Hor-YYYY-01 .Y-03,.Hor-YYYY-01 .Y-04{width: 115px; height: 185px; float: left;}
+.Hor-YYYY-01 .top{width: 260px; height: 200px;}
+/*YYYY-01-Right*/
+.Hor-R.Hor-YYYY-01 .Y-02,.Hor-R.Hor-YYYY-01 .Y-04{margin-left:0;margin-right:15px;}
+.Hor-R.Hor-YYYY-01 .Y-02,.Hor-R.Hor-YYYY-01 .Y-03,.Hor-R.Hor-YYYY-01 .Y-04{ float: right; margin-right: 0}
+.Hor-R.Hor-YYYY-01 .Y-03{margin-right:0; margin-left: 15px;}
+
+/*====================YYYY-02模板====================*/
+/*YYYY-02-Left*/
+.Hor-YYYY-02 .con { width: 640px; height: 400px; margin: 0 auto;padding-left: 50px;}
+.Hor-YYYY-02 .Y-01,.Hor-YYYY-02 .Y-02,.Hor-YYYY-02 .Y-03,.Hor-YYYY-02 .Y-04{width: 145px; height: 215px; float: left;}
+.Hor-YYYY-02 .Y-01,.Hor-YYYY-02 .Y-03,.Hor-YYYY-02 .Y-04{ margin-right:15px; margin-bottom: 15px;}
+
+/*YYYY-02-Right*/
+.Hor-R.Hor-YYYY-02 .con { padding-right: 50px; padding-left: 0}
+.Hor-R.Hor-YYYY-02 .Y-01,.Hor-R.Hor-YYYY-02 .Y-02,.Hor-R.Hor-YYYY-02 .Y-03,.Hor-R.Hor-YYYY-02 .Y-04{float: right;}
+.Hor-R.Hor-YYYY-02 .Y-01,.Hor-R.Hor-YYYY-02 .Y-03,.Hor-R.Hor-YYYY-02 .Y-04{ margin-right:0; margin-left:15px;}
+.Hor-R.Hor-YYYY-02 .col-txt-item ul{float: right;}
+/*====================YYYY-03模板====================*/
+/*YYYY-03-Left*/
+.Hor-YYYY-03 .con { width: 585px; height: 400px; margin: 0 auto;}
+.Hor-YYYY-03 .top,.Hor-YYYY-03 .bottom{height: 195px; width: 330px;}
+.Hor-YYYY-03 .Y-01,.Hor-YYYY-03 .Y-02,.Hor-YYYY-03 .Y-03{width: 115px; height: 178px;float: right;}
+.Hor-YYYY-03 .Y-01{margin-right:15px; margin-left:0;}
+.Hor-YYYY-03 .Y-04{width: 240px; height: 372px;float: right;}
+
+/*YYYY-03-Right*/
+.Hor-R.Hor-YYYY-03 .Y-01,.Hor-R.Hor-YYYY-03 .Y-02,.Hor-R.Hor-YYYY-03 .Y-03{ float: left; }
+.Hor-R.Hor-YYYY-03 .Y-04{ float: left;}
+.Hor-R.Hor-YYYY-03 .Y-01{margin-left:15px; margin-right:0; }
+.Hor-R.Hor-YYYY-03 .col-txt-item ul{margin-left: 15px}
+
+/*====================XYYY-01模板====================*/
+/*XYYY-01-Left*/
+.Hor-XYYY-01 .con { width: 630px; height: 400px; margin: 0 auto;}
+.Hor-XYYY-01 .top{height: 195px}
+.Hor-XYYY-01 .bottom{width: 345px;}
+.Hor-XYYY-01 .X-01{ width: 270px; height: 180px; margin-bottom:15px;}
+.Hor-XYYY-01 .Y-01,.Hor-XYYY-01 .Y-02,.Hor-XYYY-01 .Y-03{width: 120px; height: 180px;}
+.Hor-XYYY-01 .Y-01,.Hor-XYYY-01 .Y-02{  float: right;}
+.Hor-XYYY-01 .col-txt-item ul{padding-left: 15px}
+/*XYYY-01-Right*/
+.Hor-R.Hor-XYYY-01 .Y-01,.Hor-R.Hor-XYYY-01 .Y-02{  float: left;}
+.Hor-R.Hor-XYYY-01 .Y-03{ float: right;}
+.Hor-R.Hor-XYYY-01 .col-txt-item ul{ margin-left: 15px;padding-left:0}
+
+/*====================XYYY-02模板====================*/
+/*XYYY-02-Left*/
+.Hor-XYYY-02 .con { width: 697px; height: 400px; margin: 0 auto;}
+.Hor-XYYY-02 .top{height: 180px}
+.Hor-XYYY-02 .col-left{padding-left: 87px;}
+.Hor-XYYY-02 .X-01{ width: 380px; height: 245px; margin-bottom:15px;}
+.Hor-XYYY-02 .Y-01,.Hor-XYYY-02 .Y-02{width: 100px; height: 165px;float: left;}
+.Hor-XYYY-02 .Y-03{width: 135px; height: 200px;}
+.Hor-XYYY-02 .Y-02{ margin-left: 15px;}
+.Hor-XYYY-02 .Y-03{ float: right;}
+
+/*XYYY-02-Right*/
+.Hor-R.Hor-XYYY-02 .col-left{padding-right: 87px;padding-left: 0;margin-left: 0}
+.Hor-R.Hor-XYYY-02 .Y-01{ margin-left:15px}
+.Hor-R.Hor-XYYY-02 .Y-03{ float: left; margin-left:15px}
+
+
+/*====================XYYY-03模板====================*/
+/*XYYY-03-Left*/
+.Hor-XYYY-03 .con { width: 697px; height: 400px; margin: 0 auto;}
+.Hor-XYYY-03 .col-left{margin-left:67px; }
+.Hor-XYYY-03 .top{height: 180px}
+.Hor-XYYY-03 .X-01,.Hor-XYYY-03 .Y-02,.Hor-XYYY-03 .Y-03{float: right;}
+.Hor-XYYY-03 .X-01{ width: 245px; height: 165px; margin-left:15px;}
+.Hor-XYYY-03 .Y-01{width: 245px; height: 365px; float: left;}
+.Hor-XYYY-03 .Y-02{width: 110px; height: 165px;}
+.Hor-XYYY-03 .Y-03{width: 125px; height: 185px;}
+
+/*XYYY-03-Right*/
+.Hor-R.Hor-XYYY-03 .col-left{margin-right:67px; margin-left:0 }
+.Hor-R.Hor-XYYY-03 .X-01,.Hor-R.Hor-XYYY-03 .Y-02,.Hor-R.Hor-XYYY-03 .Y-03{float: left;}
+.Hor-R.Hor-XYYY-03 .X-01{ margin-right:15px; margin-left: 0}
+.Hor-R.Hor-XYYY-03 .Y-01{ margin-right: 15px; margin-left: 0}
+.Hor-R.Hor-XYYY-03 .Y-02{ float: right;}
+.Hor-R.Hor-XYYY-03 .col-txt-item ul{ margin-left: 15px;}
+
+/*====================XXYY-01模板====================*/
+/*XXYY-01-Left*/
+.Hor-XXYY-01 .con { width: 595px; height: 400px; margin: 0 auto;}
+.Hor-XXYY-01 .col-left{width: 350px;}
+.Hor-XXYY-01 .col-right{ width: 230px;}
+.Hor-XXYY-01 .X-01,.Hor-XXYY-01 .Y-02{ margin-bottom: 15px;}
+.Hor-XXYY-01 .X-01,.Hor-XXYY-01 .X-02{ width: 230px; height: 155px;}
+.Hor-XXYY-01 .Y-01,.Hor-XXYY-01 .Y-02{ width: 135px; height: 200px;}
+.Hor-XXYY-01 .X-01,.Hor-XXYY-01 .Y-01 { float: right;}
+.Hor-XXYY-01 .X-02,.Hor-XXYY-01 .Y-02{ float: left;}
+
+/*XXYY-01-Right*/
+.Hor-R.Hor-XXYY-01 .X-01,.Hor-R.Hor-XXYY-01 .Y-01 { float: left;}
+.Hor-R.Hor-XXYY-01 .X-02,.Hor-R.Hor-XXYY-01 .Y-02{ float: right;}
+.Hor-R.Hor-XXYY-01 .col-txt-item ul{ margin-left: 15px;}
+/*====================XXYY-02模板====================*/
+/*XXYY-02-Left*/
+.Hor-XXYY-02 .con { width: 610px; height: 400px; margin: 0 auto;}
+.Hor-XXYY-02 .top{ height: 185px;}
+.Hor-XXYY-02 .X-01,.Hor-XXYY-02 .X-02{ width: 255px; height: 170px;}
+.Hor-XXYY-02 .Y-01,.Hor-XXYY-02 .Y-02{ width: 115px; height: 170px;}
+.Hor-XXYY-02 .X-02,.Hor-XXYY-02 .Y-01 { margin-right: 15px;}
+.Hor-XXYY-02 .X-01,.Hor-XXYY-02 .Y-01, .Hor-XXYY-02 .X-02,.Hor-XXYY-02 .Y-02 { float: right;}
+
+/*XXYY-02-Right*/
+
+
+.Hor-R.Hor-XXYY-02 .left{float: right; margin-right:0;margin-left:15px;}
+.Hor-R.Hor-XXYY-02 .right{ float: left;}
+.Hor-R.Hor-XXYY-02 .X-02,.Hor-R.Hor-XXYY-02 .Y-01 { margin-right:0;margin-left: 15px;}
+.Hor-R.Hor-XXYY-02 .X-01,.Hor-R.Hor-XXYY-02 .Y-01, .Hor-R.Hor-XXYY-02 .X-02,.Hor-R.Hor-XXYY-02 .Y-02 { float: left;}
+.Hor-R.Hor-XXYY-02 .col-txt-item ul{ margin-left: 15px;}
+
+/*====================XXYY-03模板====================*/
+/*XXYY-03-Left*/
+.Hor-XXYY-03 .con { width: 640px; height: 400px; margin: 0 auto; padding-left: 35px}
+.Hor-XXYY-03 .top { width: 405px; height: 140px;}
+.Hor-XXYY-03 .X-01{ width: 190px; height: 125px;}
+.Hor-XXYY-03 .X-02{ width: 250px; height: 165px;margin-left: 15px}
+.Hor-XXYY-03 .Y-01{ width: 125px; height: 165px;}
+.Hor-XXYY-03 .Y-02{ width: 220px; height: 305px;}
+.Hor-XXYY-03 .X-01,.Hor-XXYY-03 .Y-01{ float: right;}
+.Hor-XXYY-03 .X-02,.Hor-XXYY-03 .font{float: left;}
+.Hor-XXYY-03 .X-02 { margin-right: 15px;}
+
+/*XXYY-03-Right*/
+
+
+.Hor-R.Hor-XXYY-03 .con {padding-left:0; padding-right: 35px}
+.Hor-R.Hor-XXYY-03 .X-01,.Hor-R.Hor-XXYY-03 .Y-01{ float: left;}
+.Hor-R.Hor-XXYY-03 .X-02,.Hor-R.Hor-XXYY-03 .font{float: right;}
+.Hor-R.Hor-XXYY-03 .X-02 { margin-right:0; margin-left: 15px;}
+.Hor-R.Hor-XXYY-03 .X-01,.Hor-R.Hor-XXYY-03 .Y-01, .Hor-R.Hor-XXYY-03 .X-02, .Hor-R.Hor-XXYY-03 .Y-02 { float: left;}
+.Hor-R.Hor-XXYY-03 .col-txt-item ul{ margin-left: 15px;}
+
+/*====================XXXY-01模板====================*/
+/*XXXY-01-Left*/
+
+.Hor-XXXY-01 .con { width: 697px; height: 400px; margin: 0 auto;}
+.Hor-XXXY-01 .col-left{ width: 395px;padding-left: 42px;}
+.Hor-XXXY-01 .left-R{ float: right; width: 170px;}
+.Hor-XXXY-01 .X-01,.Hor-XXXY-01 .X-02,.Hor-XXXY-01 .X-03{ width: 170px; height: 115px; margin-bottom: 15px;}
+.Hor-XXXY-01 .Y-01{ width: 245px; height: 375px;}
+
+/*XXXY-01-Right*/
+.Hor-R.Hor-XXXY-01 .left-R{ float: left;}
+.Hor-R.Hor-XXXY-01 .col-left{padding-left:0;padding-right: 42px;}
+.Hor-R.Hor-XXXY-01 .col-txt-item ul{ margin-left: 15px;}
+
+/*====================XXXY-02模板====================*/
+/*XXXY-02-Left*/
+.Hor-XXXY-02 .con { width: 585px; height: 400px; margin: 0 auto; padding-left: 30px;}
+.Hor-XXXY-02 .col-right{width: 160px;}
+.Hor-XXXY-02 .X-01,.Hor-XXXY-02 .X-02{ width: 160px; height: 125px;}
+.Hor-XXXY-02 .Y-01{ width: 160px; height: 235px;}
+.Hor-XXXY-02 .X-03{ width: 410px; height: 235px; float: left;}
+.Hor-XXXY-02 .X-01,.Hor-XXXY-02 .X-02, .Hor-XXXY-02 .X-03,.Hor-XXXY-02 .Y-01 { float: right; margin-bottom: 15px;}
+
+/*XXXY-02-Right*/
+.Hor-R.Hor-XXXY-02 .con { padding-right: 30px;  padding-left:0}
+.Hor-R.Hor-XXXY-02 { padding-right: 30px; padding-left: 0}
+.Hor-R.Hor-XXXY-02 .X-03{ float: right;}
+.Hor-R.Hor-XXXY-02 .X-01,.Hor-R.Hor-XXXY-02 .X-02, .Hor-R.Hor-XXXY-02 .X-03,.Hor-R.Hor-XXXY-02 .Y-01 { float: left; }
+.Hor-R.Hor-XXXY-02 .col-txt-item ul{ margin-left: 15px;}
+
+/*====================XXXY-03模板====================*/
+/*XXXY-03-Left*/
+
+.Hor-XXXY-03 .con { width: 500px; height: 400px; margin: 0 auto;}
+.Hor-XXXY-03 .col-right{ width: 305px;}
+.Hor-XXXY-03 .X-01,.Hor-XXXY-03 .X-02{ width: 145px; height: 90px; margin-bottom: 15px;}
+.Hor-XXXY-03 .Y-01{ width: 180px; height: 260px;}
+.Hor-XXXY-03 .X-03{ width: 305px; height: 155px; float: left;}
+.Hor-XXXY-03 .X-01, .Hor-XXXY-03 .X-02, .Hor-XXXY-03 .X-03 { float: left;}
+.Hor-XXXY-03 .X-01{margin-right: 15px;}
+ .Hor-XXXY-03 .X-03{ margin-bottom: 15px;}
+
+/*XXXY-03-Right*/
+.Hor-R.Hor-XXXY-03 .X-01{ margin-right:0; margin-left: 15px;}
+.Hor-R.Hor-XXXY-03 .X-01, .Hor-R.Hor-XXXY-03 .X-02, .Hor-R.Hor-XXXY-03 .X-03 { float: right;}
+
+/*====================XXXY-04模板====================*/
+/*XXXY-04-Left*/
+.Hor-XXXY-04 .con { width: 560px; height: 400px; margin: 0 auto;}
+.Hor-XXXY-04 .col-left{width: 305px; }
+.Hor-XXXY-04 .X-01{margin-right: 15px;}
+.Hor-XXXY-04 .X-01,.Hor-XXXY-04 .X-02{ width: 145px; height: 90px; margin-bottom: 15px;}
+.Hor-XXXY-04 .Y-01{ width: 240px; height: 380px;float: left; }
+.Hor-XXXY-04 .X-03{ width: 305px; height: 145px;}
+.Hor-XXXY-04 .X-01, .Hor-XXXY-04 .X-02, .Hor-XXXY-04 .X-03{ float: left; margin-bottom: 15px;}
+
+/*XXXY-04-Right*/
+.Hor-R.Hor-XXXY-04 .X-01, .Hor-R.Hor-XXXY-04 .X-02, .Hor-R.Hor-XXXY-04 .X-03{ float: right;}
+.Hor-R.Hor-XXXY-04 .X-01{margin-right:0;margin-left: 15px;}
+
+/*====================XXXY-05模板====================*/
+/*XXXY-05-Left*/
+.Hor-XXXY-05 .con { width:610px; height: 400px; margin: 0 auto;}
+.Hor-XXXY-05 .top{width: 405px;}
+.Hor-XXXY-05 .col-right{width: 190px;}
+.Hor-XXXY-05 .X-01,.Hor-XXXY-05 .X-02{ width: 190px; height: 130px;margin-bottom: 15px;}
+.Hor-XXXY-05 .Y-01{ width: 190px; height: 240px;}
+.Hor-XXXY-05 .X-03{ width: 270px; height: 175px;}
+.Hor-XXXY-05 .X-01, .Hor-XXXY-05 .X-02,.Hor-XXXY-05 .Y-01{ float: left;}
+.Hor-XXXY-05 .X-01,.Hor-XXXY-05 .X-03{ float: right;}
+
+/*XXXY-05-Right*/
+.Hor-R.Hor-XXXY-05 .X-01, .Hor-R.Hor-XXXY-05 .X-02,.Hor-R.Hor-XXXY-05 .Y-01{ float: right;}
+.Hor-R.Hor-XXXY-05 .X-01, .Hor-R.Hor-XXXY-05 .X-03{ float: left;}
+.Hor-R.Hor-XXXY-05 .col-txt-item ul{ margin-left: 15px;}
+
+/*====================XXXX-01模板====================*/
+/*XXXX-01-Left*/
+.Hor-XXXX-01 .con { width: 630px; height: 400px; margin: 0 auto;}
+.Hor-XXXX-01 .col-left{width: 415px;}
+.Hor-XXXX-01 .col-right{width: 200px;}
+.Hor-XXXX-01 .top{width: 415px; height: 160px;}
+.Hor-XXXX-01 .X-01,.Hor-XXXX-01 .X-02{ float: right}
+.Hor-XXXX-01 .X-03,.Hor-XXXX-01 .X-04{float: left;}
+.Hor-XXXX-01 .X-01,.Hor-XXXX-01 .X-02,.Hor-XXXX-01 .X-03,.Hor-XXXX-01 .X-04{ width: 200px; height: 145px; margin-bottom: 15px;}
+.Hor-XXXX-01 .col-txt-item{ padding-top:28px;}
+
+/*XXXX-01-Right*/
+.Hor-R.Hor-XXXX-01 .X-03,.Hor-R.Hor-XXXX-01 .X-04{ float: right;}
+.Hor-R.Hor-XXXX-01 .X-01,.Hor-R.Hor-XXXX-01 .X-02{float: left;}
+.Hor-R.Hor-XXXX-01 .col-txt-item ul{ margin-left: 15px;}
+
+/*====================XXXX-02模板====================*/
+/*XXXX-02-Left*/
+.Hor-XXXX-02 .con { width: 590px; height: 400px; margin: 0 auto; padding-left: 40px;}
+.Hor-XXXX-02 .top{ height: 135px; }
+.Hor-XXXX-02 .col-left{width: 395px}
+.Hor-XXXX-02 .X-01{float: right;}
+.Hor-XXXX-02 .X-02,.Hor-XXXX-02 .X-03,.Hor-XXXX-02 .X-04{float: left;}
+.Hor-XXXX-02 .X-01,.Hor-XXXX-02 .X-02{ width: 180px; height: 120px;}
+.Hor-XXXX-02 .X-03,.Hor-XXXX-02 .X-04{ width: 280px; height: 190px; margin-left: 15px; }
+
+/*XXXX-02-Right*/
+.Hor-R.Hor-XXXX-02 { padding-left:0; padding-right: 40px;}
+.Hor-R.Hor-XXXX-02 .col-left{margin-left: 0}
+.Hor-R.Hor-XXXX-02 .X-01{float: left;}
+.Hor-R.Hor-XXXX-02 .X-02,.Hor-R.Hor-XXXX-02 .X-03,.Hor-R.Hor-XXXX-02 .X-04{float: right;}
+.Hor-R.Hor-XXXX-02 .X-02,.Hor-R.Hor-XXXX-02 .X-03,.Hor-R.Hor-XXXX-02 .X-04{margin-left:0;margin-right:15px; }
+.Hor-R.Hor-XXXX-02 .col-txt-item ul{ margin-left: 15px;}
+
+/*====================XXXX-03模板====================*/
+/*XXXX-03-Left*/
+
+.Hor-XXXX-03 .con { width: 570px; height: 400px; margin: 0 auto; padding-left: 30px;}
+.Hor-XXXX-03 .X-01,.Hor-XXXX-03 .X-02,.Hor-XXXX-03 .X-04{ width: 200px; height: 120px;  margin-bottom: 15px; }
+.Hor-XXXX-03 .X-03{ width: 355px; height: 250px; margin-bottom: 15px; }
+
+/*XXXX-03-Right*/
+.Hor-R.Hor-XXXX-03 { padding-left: 0; padding-right: 30px;}
+.Hor-R.Hor-XXXX-03 .X-04 {float: right; }
+
+/*====================XXXX-04模板====================*/
+/*XXXX-04-Left*/
+
+.Hor-XXXX-04 .con { width: 645px; height: 400px; margin: 0 auto;}
+.Hor-XXXX-04 .bottom,.Hor-XXXX-04 .top{width: 430px;height: 160px;}
+.Hor-XXXX-04 .col-right{width: 200px;}
+.Hor-XXXX-04 .X-03{margin-bottom: 15px;}
+.Hor-XXXX-04 .X-01,.Hor-XXXX-04 .X-02,.Hor-XXXX-04 .X-03,.Hor-XXXX-04 .X-04{ width: 200px; height: 145px; }
+.Hor-XXXX-04 .X-01,.Hor-XXXX-04 .X-02{float: right;}
+.Hor-XXXX-04 .col-txt-item ul{ margin-left: 20px;}
+/*XXXX-04-Right*/
+.Hor-R.Hor-XXXX-04 .X-01,.Hor-R.Hor-XXXX-04 .X-02{float: left;}
+.Hor-R.Hor-XXXX-04 .col-txt-item ul{ margin-left: 15px;}
+/*====================XXXX-05模板====================*/
+/*XXXX-05-Left*/
+
+.Hor-XXXX-05 .con { width: 545px; height: 400px; margin: 0 auto;}
+.Hor-XXXX-05 .col-left{ width: 200px;}
+.Hor-XXXX-05 .X-01,.Hor-XXXX-05 .X-02{ width: 155px; height: 110px; margin-bottom: 15px; float: right;}
+.Hor-XXXX-05 .X-03{width: 330px; height: 235px; margin-bottom: 15px;}
+.Hor-XXXX-05 .X-04{ width: 155px; height: 110px;}
+
+/*XXXX-05-Right*/
+.Hor-R.Hor-XXXX-05 .X-01,.Hor-R.Hor-XXXX-05 .X-02{ float: left;}
+.Hor-R.Hor-XXXX-05 .X-04{ float: right;}
+
+/*for pdf*/
+.huace-pdf{position: relative;}
+.huace-pdf .huace-page .com-clipimg{width: 100%; height: 100%; margin: 0; overflow: hidden; position: relative; z-index: -1;}
+.huace-pdf .huace-page .com-clipimg img{position: absolute; left: 0; top: 0;}
+.huace-pdf .col-txt-item ul li span{ margin-left: 30px;}
+.huace-pdf .Hor-chapter .chapter-Hor-img{width: 360px;}
+.huace-pdf .huace-bg-300dpi{position: absolute; left: 0; top: 0;}
+.huace-pdf .huace-page, .huace-pdf .huace-page.Hor-R{background: none;}

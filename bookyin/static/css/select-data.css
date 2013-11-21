@@ -8,7 +8,10 @@ body.select-data{background: url(../img/main_bg.jpg) no-repeat center top fixed;
 #ui-monthpicker-div .ui-datepicker-prev span,
 #ui-monthpicker-div .ui-datepicker-next span,
 .uploadify .uploadify-button span,
-.login .con .info .btn-list li a{
+.login .con .info .btn-list li a,
+#J_checkbtn,
+#J_myFriendTab .selected .arrow
+{
 	background: url(../img/main_sprite.png) no-repeat;
 }
 /*component*/
@@ -288,9 +291,9 @@ overflow: hidden;
 .search span{ float:right; color:#7da408; font-weight:bold}
 .search input{ border:0; width:320px; float:left}
 .search span{ border-left:#7da408 1px solid; padding:0px 5px}
-#J_checkbtn{ background:url(../img/editcustom_sprites.png) no-repeat -31px -24px ; height:16px; width:30px; cursor:pointer}
+#J_checkbtn{ background-position: -155px -70px; height:16px; width:30px; cursor:pointer}
 #J_img{ padding-top:150px; padding-left:365px}
 .loading-search{ text-align:center; padding-top:100px;width:800px;}
 .emptyInfo{ float:left; color:#F00;  margin-top:24px; padding-left:10px;}
-#J_myFriendTab .selected .arrow{ background:url(../img/editcustom_sprites.png) no-repeat -65px -20px;position: absolute; top:25px; left:92px; height:12px; width:15px; display:block}
+#J_myFriendTab .selected .arrow{ background-position: -190px -70px;position: absolute; top:29px; left:92px; height:10px; width:16px; display:block}
 .span-center{ display:block; text-align:center; width:800px; padding-top:20px;}

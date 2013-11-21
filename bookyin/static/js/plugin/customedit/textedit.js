@@ -64,25 +64,44 @@ var _renderHtml = function(){
                 inputStr+
             '</div>';
     //
-    $this.html(str);
+    $this.html(str);	
     $this.css({
         width: settings.width,
-        height: settings.height,
-        fontSize: settings.fontSize,
-        lineHeight: settings.lineHeight,
-        textAlign: settings.fontAlign,
-        color: settings.fontColor
+        height: settings.height
     });
     $this.find('.com-edit-text-input').children().css({
         width: settings.width,
         minWidth: settings.width,
         height: settings.height,
-        minHeight: settings.height,        
-        fontSize: settings.fontSize,
-        lineHeight: settings.lineHeight,
-        textAlign: settings.fontAlign,
-        color: settings.fontColor
+        minHeight: settings.height
     });
+    if(settings.customEdit){
+        $this.css({
+            fontSize: settings.fontSize,
+            lineHeight: settings.lineHeight,
+            textAlign: settings.fontAlign,
+            color: settings.fontColor
+        });
+        $this.find('.com-edit-text-input').children().css({
+            height: settings.height,
+            minHeight: settings.height,        
+            fontSize: settings.fontSize,
+            lineHeight: settings.lineHeight,
+            textAlign: settings.fontAlign,
+            color: settings.fontColor
+        });
+        //fontFamily
+        var url=settings.webFontURL;
+        if(url){
+            var urlObj=_getWebFontPath(url);
+            $this.fontface({
+                fontName : settings.simpFontName,
+                fontFamily : [settings.simpFontName],
+                filePath : urlObj.filePath+'/',
+                fileName : urlObj.fileName
+            });
+        }
+    }
 };
 var _bindHandler = function(){
     var $this = this;
@@ -113,7 +132,6 @@ var _bindHandler = function(){
     });
     $this.find('.com-edit-text-input').children().blur(function(e){
         var txt = $this.find('.com-edit-text-txt');
-        // $this.removeClass('selected');
         $this.find('.com-edit-text-input').css('display','none');
         txt.css('display','block');
         //data 转义&#160;=空格
@@ -124,8 +142,25 @@ var _bindHandler = function(){
             $(this).val(str);
         }
         txt.html(str);
+		settings.oldText = settings.text;
         settings.text = str;
         _setSettings.call($this);
+		 //str去重
+         var oldStr = _filterRepeatChar(settings.oldText);
+         var newStr = _filterRepeatChar(str);
+         //reload font
+        if(oldStr != newStr && settings.customEdit){
+            var fontName = settings.fontName;
+            methods.setWebFont.call($this, fontName);
+        }
+        //onBlur fun
+        if(settings.onBlur && !settings.customEdit){
+            var obj = {
+                reload: oldStr != newStr,
+                text: str
+            }
+            settings.onBlur(obj);
+        }
     });
     //
     var settings = _getSettings.call($this);
@@ -148,12 +183,79 @@ var _saveTextValue = function(){
     if(str == settings.defaults){
         str = '';
     }
+	settings.oldText = settings.text;
     settings.text = str;
     _setSettings.call($this);
-}
-
-
-
+};
+var _getWebFont = function(){
+    var $this = this;
+    var settings = _getSettings.call($this);
+    // settings.webFontDataOK = false;
+    var loading = $(settings.opt.webFontLoading);
+        loading.trigger('show');
+    setTimeout(function(){
+        loading.trigger('close');
+    },500);
+    //load
+    var config = settings.webFontLoad;
+    var method = 'POST';
+    var url = config.url;
+	var fontContent = this.text();
+	var fontName = settings.fontName;
+	var bookId = $('#J_customTitle').attr('data-id');
+    var param = {
+        fontContent: fontContent,
+        fontName: fontName
+    };
+    param = $.extend({},param, config.param);
+    var successFun = function(data){
+        // settings.webFontDataOK = true;
+        //setfont
+        var urlObj = _getWebFontPath(data.eotFontsPath);
+		if(data.status=='success'){
+            var s=urlObj.fileName;
+            var fontNames = settings.fontName+s.substr(0,15);
+            $this.fontface({
+                fontName : fontNames,
+                fontFamily : [fontNames],
+                filePath : urlObj.filePath+'/',
+                fileName : urlObj.fileName
+            });
+		    $this.find('input').css('fontFamily',fontNames);
+            //data
+		    settings.fontName = fontName;
+		    settings.simpFontName = fontNames;
+		    settings.webFontURL = urlObj.filePath+'/'+ urlObj.fileName;
+		}else{
+			$this.css('font-family', fontName);
+            settings.fontName = fontName;
+		    settings.simpFontName = fontName;
+            settings.webFontURL = '';
+		}
+        _setSettings.call($this, settings);
+    };
+    YS.ajaxData(method, url, param, successFun);
+};
+var _getWebFontPath = function(url){
+    var obj = {};
+    var tempArr = url.split('/');
+    var fileName = tempArr[tempArr.length-1].split('.')[0];
+    tempArr.pop();
+    var filePath = tempArr.join('/');
+    obj.filePath = filePath;
+    obj.fileName = fileName;
+    return obj;
+};
+var _filterRepeatChar = function(str){
+    // 去除所有的重复
+    var _tmp = {arr:[]}, chr;
+    for (var i=0,l=str.length; i<l; i++) {
+        chr = str.charAt(i);
+        _tmp[chr] || (_tmp[chr]=1, _tmp.arr.push(chr));
+    }
+    var newStr = _tmp.arr.join("");
+    return newStr;
+};
 //public fun
 var methods = {
     init: function(options) {
@@ -219,6 +321,18 @@ var methods = {
         settings.fontColor = color;
         _setSettings.call($this, settings);  
     },
+	
+    setWebFont: function(name){
+        var $this = $(this);
+        var input = $this.find('.com-edit-text-input').children();
+        var settings = _getSettings.call($this);
+        var fontFamily = name+','+settings.fontNameDefault;
+        //data		
+        settings.fontName = name;
+        _setSettings.call($this, settings);
+        //getWebFont
+        _getWebFont.call($this);
+    },
     cancel: function(){
         return $(this).each(function() {
             var $this = $(this);
@@ -234,7 +348,11 @@ var methods = {
             var $this = $(this);
             _saveTextValue.call($this);
             var settings = _getSettings.call($this);
+            if(!settings.customEdit){
+                settings = {text: settings.text};
+            }
             data[$this.attr('data-name')] = settings;
+			data.textsign = data.textsign && settings.webFontDataOK;
         });
         return data;
     }
@@ -260,6 +378,7 @@ $.fn.textedit = function() {
 // defaults
 $.fn.textedit.defaults = {
     type: 'single', //single|multi
+    customEdit: true,
     width: 200,
     height: 50,
     maxLen : 120,
@@ -268,8 +387,19 @@ $.fn.textedit.defaults = {
     lineHeight: '16px',
     fontAlign: 'left',
     fontColor: '#757575',
+    fontName: 'Microsoft YaHei',
+    fontNameDefault: 'Microsoft YaHei',
+    webFontURL:'',
+	simpFontName:'',
+    webFontDataOK: true,
+    opt:{
+        webFontLoad: '',
+        webFontLoading: '#J_webFontLoading'
+    },
     onSelect: null,
-    onCancel: null
+    onCancel: null,
+    onDataOK: null,
+    conBlur: null
 }
 
 })(jQuery);

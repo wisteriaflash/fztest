@@ -15,9 +15,6 @@ var utils = {
 			decimalStr = '0'+decimalStr;
 		}
 		str = intStr+'.'+decimalStr;
-		// if(price == 0){
-		// 	str = '0.00';
-		// }
 		if(price == 0){
 			str = '0.00';
 		}
@@ -130,29 +127,41 @@ var bookList = {
 		me.bookTotalPrice = totalPrice;
 	},
 	addBook: function(item){
+		
 		var me = this;
 		var id = item.attr('data-id');
+		var dataType = item.attr('data-type');
 		var title = item.find('.title').text();
 		var page = item.find('.page').text();
 		var coverImg = item.find('.cover-img').attr('src');
 		var firstPage = item.find('.page').attr('data-first');
 		var totalPage = item.find('.page').attr('data-total');
+		var fontNum = item.find('.page').attr('data-font');
 		var price = item.attr('data-price');
 		price = utils.getFormatPrice(price);
 		price = price.split('.');
-		var firstStr = '';
-		if(firstPage>0){
-			firstStr = '<div class="addinfo">(其中包含：扉页¥'+firstPage+'.00)</div>';
+		var addItemStr = '';
+		if(firstPage>0 || fontNum>0){
+			addItemStr = '<div class="addinfo">(其中包含：';
+			if(firstPage>0){
+				addItemStr += '扉页¥'+firstPage+'.00';
+				if(fontNum>0){
+					addItemStr += ',';
+				}
+			}
+			if(fontNum>0){
+				addItemStr += '字体¥'+fontNum+'.00';
+			}
 		}
-		//
-		var str = '<div class="abook" data-id="'+id+'">'+
+		if(dataType=='weibo'){
+			var str = '<div class="abook" data-id="'+id+'"  data-type="'+dataType+'">'+
 					'<div class="img"><img src="'+coverImg+'" alt="'+title+'" width="94" height="133" /></div>'+
 					'<div class="bookinfo">'+
 						'<h3>'+title+'</h3>'+
-						'<p class="page" data-first="'+firstPage+'" data-total="'+totalPage+'">'+page+'</p>'+
+						'<p class="page" data-first="'+firstPage+'" data-total="'+totalPage+'" data-font="'+fontNum+'">'+page+'</p>'+
 						'<div class="del" title="删除" data-id="'+id+'"></div>'+
 						'<div class="sprice">单册价格：<em>¥'+price[0]+'</em>.'+price[1]+'</div>'+
-						firstStr+
+						addItemStr+
 						'<div class="opt">'+
 							'<div class="book-num-con cf">'+
 								'<a class="num-left" href="#"><span>-</span></a>'+
@@ -163,6 +172,28 @@ var bookList = {
 						'</div>'+
 					'</div>'+
 				  '</div>';
+				}if(dataType=='picture'){
+			var str = '<div class="abook picture" data-id="'+id+'" data-type="'+dataType+'">'+
+					'<div class="img"><img src="'+coverImg+'" alt="'+title+'" width="125" height="89" /></div>'+
+					'<div class="bookinfo">'+
+						'<h3>'+title+'</h3>'+
+						'<p class="page" data-first="'+firstPage+'" data-total="'+totalPage+'" data-font="'+fontNum+'">'+page+'</p>'+
+						'<div class="del" title="删除" data-id="'+id+'"></div>'+
+						'<div class="sprice">单册价格：<em>¥'+price[0]+'</em>.'+price[1]+'</div>'+
+						addItemStr+
+						'<div class="opt">'+
+							'<div class="book-num-con cf">'+
+								'<a class="num-left" href="#"><span>-</span></a>'+
+								'<input class="book-num" name="pictureNum" type="text" value="1" maxlength="3" />'+
+								'<a class="num-right" href="#"><span>+</span></a>'+
+								'<input type="hidden" name="pictureId" value="'+id+'">'+
+							'</div>'+
+						'</div>'+
+					'</div>'+
+				  '</div>';
+		}
+		
+		
 		$(str).insertBefore('#J_addBookBtn');
 		me.setBookListHeight();
 	},
@@ -201,6 +232,7 @@ var bookList = {
 		curNum: 0,
 		maxNum: 0,
 		itemWidth: 153,
+		pwidth: 0,				
 		perLen: 3,
 		isPlaying: false,
 		isGetingData: false,
@@ -229,9 +261,11 @@ var bookList = {
 			if(!me.isInit){
 				me.init();
 				me.initData();
+				me.initPictureData();
 				me.bindHandler();
 			}
-			me.selecteBook();
+			//debugger;
+			//me.selecteBook();
 			me.dialogItem.dialog('open');
 		},
 		close: function(){
@@ -242,28 +276,39 @@ var bookList = {
 			var me = this;
 			var imgLength = me.mainContent.find('.plist li').length,
 				tprev = me.mainContent.find('.pprev'),
-				tnext = me.mainContent.find('.pnext'),
-				_plist = me.mainContent.find('.plist');
-			var pwidth = me.itemWidth*me.perLen;
-			var rollNum = Math.ceil(imgLength/me.perLen);
-			me.setListWidth();
+				tnext = me.mainContent.find('.pnext');
+			//weibo
+			$('#weiboList').click(function(e){
+				$('#pictureList').removeClass('selected');
+				$(this).addClass('selected');
+				$('#picture-pslider').css('display','none');
+				$('#weibo-pslider').css('display','block')
+			});
+			//picture
+			$('#pictureList').click(function(e){
+				$('#weiboList').removeClass('selected');
+				$(this).addClass('selected');
+				$('#weibo-pslider').css('display','none');
+				$('#picture-pslider').css('display','block');
+			});
 
 			//prev
 			tprev.click(function(e){
 				e.preventDefault();
 				if(me.isPlaying){
 					return;
-				}
+				}				
+				var thisDiv=$(this).parent().parent();
+				me.setPwidth(thisDiv);				
+				_plist = thisDiv.find('.plist');
 				if(me.curNum+1 >1){
 					me.curNum--;
-					me.curNum = me.curNum;
 					var backValue = -(me.curNum)*pwidth;
 					me.isPlaying = true;
 					_plist.animate({left: backValue+'px'}, "fast", function(){
 						me.isPlaying = false;
 					});
-					me.checkPageBtn();
-					me.setPageNum();
+					me.checkPageBtn(thisDiv);
 				}else{
 					return false;
 				}
@@ -274,23 +319,23 @@ var bookList = {
 				if(me.isPlaying){
 					return;
 				}
-				var imgLength = me.mainContent.find('.plist li').length;
-				var rollNum = Math.ceil(imgLength/me.perLen);
-				//
-				if(me.curNum+1<rollNum){
+				var thisDiv=$(this).parent().parent();
+				me.setPwidth(thisDiv);				
+				_plist = thisDiv.find('.plist');
+					//debugger;
+				if(me.curNum<maxNum){
 					me.curNum++;
-					me.curNum = me.curNum;
 					var leftValue = -me.curNum*pwidth;
 					me.isPlaying = true;
 					_plist.animate({left: leftValue+'px'}, "fast", function(){
 						me.isPlaying = false;
 					});
-					me.checkPageBtn();
-					me.setPageNum();
-					//getData
-					if((rollNum+1) <= me.maxNum){
-						me.getData(rollNum+1, false);
-					}
+					if(thisDiv.attr('id')=='weibo-pslider'){
+						me.getData(me.curNum, false);
+					}if(thisDiv.attr('id')=='picture-pslider'){
+						me.getPictureData(me.curNum, false);
+					}	
+					me.checkPageBtn(thisDiv);
 				}else{
 					return false;
 				}
@@ -306,23 +351,37 @@ var bookList = {
 				me.close();
 			});
 		},
-		setPageNum: function(){
+		setPageNum: function(item){
 			var me = this;
-			me.mainContent.find('.cur-page').text(me.curNum+1);
-			me.mainContent.find('.total-page').text(me.maxNum);
+			item.find('.cur-page').text(me.curNum+1);
+			item.find('.total-page').text(maxNum);
 		},
-		setListWidth: function(){
-			var me = this;
-			var imgLength = me.mainContent.find('.plist li').length;
-			var plist = me.mainContent.find('.plist');
-			//
-			var twid = imgLength*me.itemWidth;
-			plist.width(twid);
+		setPwidth:function(item){
+			var idName=item.attr('id');
+			var imgLength = item.find('.plist li').length;
+			var plist = item.find('.plist');
+			var twid=0;
+			var me=this;
+			if(idName=='picture-pslider'){
+				var Num=parseInt($('#pictureList i').text());
+				maxNum=Math.ceil(Num/2)//画册一共多少页
+				pwidth=490;
+				twid=Num*243;
+				plist.width(twid);
+				me.setPageNum(item);
+			}if(idName=='weibo-pslider'){
+				var Num=parseInt($('#weiboList i').text());
+				maxNum=Math.ceil(Num/3)//微博书一共多少页
+				pwidth=486;
+				twid=Num*163;
+				plist.width(twid);
+				me.setPageNum(item);
+			}
 		},
-		checkPageBtn: function(){
+		checkPageBtn: function(item){
 			var me = this;
-			var tprev = me.mainContent.find('.pprev'),
-				tnext = me.mainContent.find('.pnext');
+			var tprev = item.find('.pprev'),
+				tnext = item.find('.pnext');
 			tprev.removeClass('disabled');
 			tnext.removeClass('disabled');
 			if(me.curNum == 0){
@@ -337,6 +396,12 @@ var bookList = {
 			var page = me.curNum + 1;
 			me.getData(page,true);
 		},
+		initPictureData: function(){
+			var me = this;
+			var page = me.curNum + 1;
+			me.getPictureData(page,true);
+		},
+		//微博书获取数据
 		getData: function(page,getNext){
 			var me = this;
 			var method = 'POST';
@@ -347,21 +412,23 @@ var bookList = {
 				if(!data){
 					return;
 				}
-				me.maxNum = Math.ceil(data[0].count/me.perLen);
+				//me.maxNum = Math.ceil(data[0].count/me.perLen);
+				//debugger;
 				me.renderHtml(data);
-				me.setListWidth();
-				me.setPageNum();
-				me.selecteBook();
-				if(getNext){
-					me.getData(page+1, false);
-				}
-				me.checkPageBtn();
+				var thisDiv=me.mainContent.find('#weibo-pslider')
+				me.setPwidth(thisDiv);
+				me.selecteBook(thisDiv);
+				 if(getNext){
+				 	me.getData(page+1, false);
+				 }
+				me.checkPageBtn(thisDiv);
 			};
 			var errorFun = function(){
 				alert('数据出错');
 			};
 			YS.ajaxData(method,url,param,successFun,errorFun);
 		},
+		//微博书渲染数据
 		renderHtml: function(data){
 			var me = this;
 			var str = '';
@@ -369,25 +436,77 @@ var bookList = {
 				var item = data[i];
 				var bookInfo = item.statusBookInfo;
 				var pages = bookInfo.totalPages + bookInfo.firstPages;
-				var price = item.price + item.firstPrice;
-				var itemStr='<li data-id="'+item.id+'" data-price="'+price+'">'+
+				var price = item.sellprice;
+				var itemStr='<li data-id="'+item.id+'" data-type="weibo" data-price="'+item.sellPrice+'">'+
 								'<a>'+
 									'<div class="detail">'+
 										'<span class="title">'+bookInfo.bookName+'</span>'+
-										'<span class="page" data-first="'+bookInfo.firstPages+'" data-total="'+bookInfo.totalPages+'">'+pages+'页</span>'+
+										'<span class="page" data-first="'+bookInfo.firstPages+'" data-total="'+bookInfo.totalPages+'" data-font="'+bookInfo.fontNum+'">'+pages+'页</span>'+
 										'<span class="last-time">最后编辑：<em>'+item.updateTimeBys+'</em></span>'+
 									'</div>'+
 									'<span class="icon-selected"></span>'+
-									'<img class="cover-img" src="'+item.bookCoverUrl+'" width="118" height="167" />'+
+									'<img class="cover-img" src="'+item.bookCoverUrl+'" />'+
 								'</a>'+
 							'</li>';
 				str += itemStr;
 				
 			}
-			var plist = me.mainContent.find('.plist');
+			var plist = me.mainContent.find('#weibo-pslider .plist');
 			plist.append(str);
 		},
-		selecteBook: function(){
+		//画册获取数据
+		getPictureData: function(page,getNext){
+			var me = this;
+			var method = 'POST';
+			var url = '/order!findUserPictureByPage.htm';
+			var param = {currPage: page};
+			var successFun = function(data){
+				data = data.pictureInfoList;
+				if(!data){
+					return;
+				}
+				//debugger;
+				//me.maxNum = Math.ceil(data[0].count/me.perLen);
+				me.renderPictureHtml(data);
+				var thisDiv=me.mainContent.find('#picture-pslider')
+				me.setPwidth(thisDiv);
+				me.selecteBook(thisDiv);
+				 if(getNext){
+				 	me.getPictureData(page+1, false);
+				 }
+				me.checkPageBtn(thisDiv);
+			};
+			var errorFun = function(){
+				alert('数据出错');
+			};
+			YS.ajaxData(method,url,param,successFun,errorFun);
+		},
+		//画册渲染数据
+		renderPictureHtml: function(data){
+			var me = this;
+			var str = '';
+			for(var i=0, len=data.length; i<len; i++){
+				var item = data[i];
+				var itemStr='<li data-id="'+item.id+'" data-type="picture" data-price="'+item.cost+'">'+
+								'<a>'+
+									'<div class="detail">'+
+										'<span class="title">'+item.pictureName+'</span>'+
+										'<span class="page" data-total="'+item.pageCount+'" data-font="'+item.fontNum+'">'+item.pageCount+'页</span>'+
+										'<span class="last-time">最后编辑：<em>'+item.lastUpdateTimeStr+'</em></span>'+
+									'</div>'+
+									'<span class="icon-selected"></span>'+
+									'<img class="cover-img" src="'+item.coverUrl+'" />'+
+								'</a>'+
+							'</li>';
+				str += itemStr;
+				
+			}
+			var plist = me.mainContent.find('#picture-pslider .plist');
+			plist.append(str);
+		},
+
+
+		selecteBook: function(item){
 			var me = this;
 			var arr = bookList.getSelectBook();
 			var list = me.mainContent.find('.plist');
@@ -1209,6 +1328,7 @@ var otherOpt = {
 		fromAddressStore: false,
 		founderStaff: false
 	},
+	formPosted: false,
 	init: function(){
 		var me = this;
 		me.bindHandler();
@@ -1276,11 +1396,12 @@ var otherOpt = {
 			if(!me.orderFormCheck()){
 				return false;
 			}
-			//
+			
 			var method = 'POST';
 			var url = '/order!addOrder.htm';
 			var param = $(this).serialize()
 			var successFun = function(data){
+				
 				if(data.error){
 					alert(data.error);
 					return;
@@ -1317,6 +1438,10 @@ var otherOpt = {
 		});
 		$('#J_submitOrder').click(function(e){
 			e.preventDefault();
+			if(me.formPosted){
+				return false;
+			}
+			me.formPosted = true;
 			$('#J_orderForm').submit();
 		});
 	},
@@ -1373,15 +1498,23 @@ var otherOpt = {
 		var bookArr = $('#J_bookOrderList .abook');
 		for(var i=0, len=bookArr.length; i<len; i++){
 			var item = $(bookArr[i]);
-			var num = item.find('.book-num').val();
-			// var page = item.find('.page').text();
-			// page = page.replace('页','');
-			var firstPage = item.find('.page').attr('data-first');
-			var totalPage = item.find('.page').attr('data-total');
-			
-			//
-			var bookStr = '&num='+num + '&bookTotalPage='+totalPage+ '&bookFirstPage='+firstPage;
-			str += bookStr;
+		var type=item.attr('data-type');
+			if(type=='weibo'){
+				var num = item.find('.book-num').val();
+				var firstPage = item.find('.page').attr('data-first');
+				var totalPage = item.find('.page').attr('data-total');
+				var fontNum = item.find('.page').attr('data-font');
+				//
+				var bookStr = '&bookNum='+num + '&bookTotalPage='+totalPage+ '&bookFirstPage='+firstPage+ '&bookFontNum='+fontNum;
+				str += bookStr;				
+			}if(type=='picture'){
+				var pictureNum = item.find('.book-num').val();
+				var pictureTotalPage = item.find('.page').attr('data-total');
+				var pictureFontNum = item.find('.page').attr('data-font');
+				//
+				var bookStr = '&pictureNum='+pictureNum + '&pictureTotalPage='+pictureTotalPage+ '&pictureFontNum='+pictureFontNum;
+				str += bookStr;	
+			}
 		}
 		//address
 		var list = address.getCurList();

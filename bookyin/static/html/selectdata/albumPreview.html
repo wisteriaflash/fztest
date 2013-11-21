@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧 - 横向模板</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/album-hor.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/edit-custom.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/album-preview.css" type="text/css" />
+</head>
+<body>
+	<div class="header-con">
+	    <div class="header">
+			<div class="logo">
+				<a href="http://www.chushuba.com" title="出书吧"></a>
+			</div>
+			<div class="custom-title">
+				<div class="btns">
+				    <a class="save" href="#">保存到我的书架</a>
+				    <a class="close" href="/initPage.htm#self">返回</a>
+				</div>	
+			</div>
+	    </div> 
+	</div>
+	<div class='wrapper cf'>
+		<div id="J_leftBar" class="left-bar">
+			<div class='opt-btns'>
+				<ul>
+					<li class='edit-directory'><a href="#"><i></i>编辑目录</a></li>
+					<li class='self-sort'><a href="#"><i></i>手动排序</a></li>
+					<li class='auto-sort'><a href="#"><i></i>一键重排</a></li>
+					<li class='make-book'><a href="#"><i></i>制作纸质书</a></li>
+					<li class="info">
+						<p>共25页</p>
+						<p>纸质书价格：40元</p>
+					</li>
+				</ul>
+			</div>
+			<div class='switch-skin'>
+				<h4>切换皮肤</h4>
+				<ul>
+					<li class="selected"><i></i>时尚纯净</li>
+					<li><i></i>纯真年代</li>
+				</ul>
+			</div>	
+    	</div>
+	    <div class='content'>
+			<div id="J_pageItem" class="item-page left-page">
+	            <span class="bg"></span>
+                <span class="bg-shadow"></span>
+	            <div id="J_pageInfo" class="info"></div>
+	            <div class="fliper">
+	        		<a class="prev" title="上一页"><i></i><span>上一页</span></a>
+	        		<a class="next" title="下一页"><i></i><span>下一页</span></a>
+	        	</div>
+	        </div>
+        	<div id="J_menuBar" class="menu-bar-con">
+        		<div class="menu-bar">
+        			<a class="front-cover selected">封面</a>
+	        		<div class="chapter-list cf">
+	        			<dt>章1</dt>
+	        			<dd class="selected">
+	        				<a class="selected"></a>
+                            <a></a>
+                            <a></a>
+                            <a></a>
+	        			</dd>
+	        			<dt>章2</dt>
+	        			<dd class="selected">
+	        				<a></a>
+                            <a></a>
+                            <a></a>
+                            <a></a>
+	        			</dd>
+	        		</div>
+	        		<a class="back-cover">封底</a>	
+        		</div>
+        	</div>
+		</div>
+
+		<div id="J_rightBar" class="right-bar">
+            <div class="item-bd photo-bd">
+            	<h4>设置封面图片</h4>
+                <ul id="J_photoList">
+                    <li class="photo-add" title="添加图片"><i></i><span>添加图片</span></li>
+                    <li><span class="del" title="删除"></span>
+                        <div class="imgbox"><img src="../../img/default/test.jpg" data-width="200" data-height="370" width="144" height="101" /></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="item-bd template-bd">
+            	<h4>版式选择 </h4>
+                <ul id="J_templateList">
+                    <li class="selected"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="item-bd font-bd">
+                 <div class="font-size">
+                     <span>文字大小：</span>
+                     <select id="J_fontSize">
+                         <option value="12px">12px</option>
+                         <option value="14px">14px</option>
+                         <option value="16px">16px</option>
+                         <option value="18px">18px</option>
+                         <option value="20px">20px</option>
+                         <option value="22px">22px</option>
+                         <option value="24px">24px</option>
+                     </select>
+                 </div>
+                 <div class="font-line">
+                     <span>行<em>高</em>：</span>
+                     <select id="J_fontLine">
+                         <option value="12px">12px</option>
+                         <option value="14px">14px</option>
+                         <option value="16px">16px</option>
+                         <option value="18px">18px</option>
+                         <option value="20px">20px</option>
+                         <option value="22px">22px</option>
+                         <option value="24px">24px</option>
+                         <option value="26px">26px</option>
+                         <option value="28px">28px</option>
+                         <option value="30px">30px</option>
+                     </select>
+                 </div>
+                 <div class="font-align cf">
+                     <span>对齐方式：</span>
+                     <ul id="J_fontAlign">
+                         <li class="left selected" title="左对齐"><i></i></li>
+                         <li class="center" title="居中"><i></i></li>
+                         <li class="right" title="右对齐"><i></i></li>
+                     </ul>
+                 </div>
+                 <div id="J_fontColor" class="font-color">
+                     <ul class="cf">
+                         <li class="c1_1 selected" data="#E60013"><em></em></li>
+                         <li class="c1_2" data="#EB6101"><em></em></li>
+                         <li class="c1_3" data="#F39800"><em></em></li>
+                         <li class="c1_4" data="#FFF100"><em></em></li>
+                         <li class="c1_5" data="#8FC41F"><em></em></li>
+                         <li class="c1_6" data="#24AC39"><em></em></li>
+                         <li class="c1_7" data="#009944"><em></em></li>
+                         <li class="c1_8" data="#009E97"><em></em></li>
+                         <li class="c2_1" data="#E50050"><em></em></li>
+                         <li class="c2_2" data="#E4007F"><em></em></li>
+                         <li class="c2_3" data="#930883"><em></em></li>
+                         <li class="c2_4" data="#601986"><em></em></li>
+                         <li class="c2_5" data="#1E2188"><em></em></li>
+                         <li class="c2_6" data="#00479D"><em></em></li>
+                         <li class="c2_7" data="#0069B7"><em></em></li>
+                         <li class="c2_8" data="#00A1E9"><em></em></li>
+                         <li class="c3_1" data="#000000"><em></em></li>
+                         <li class="c3_2" data="#434343"><em></em></li>
+                         <li class="c3_3" data="#757575"><em></em></li>
+                         <li class="c3_4" data="#959595"><em></em></li>
+                         <li class="c3_5" data="#B5B5B5"><em></em></li>
+                         <li class="c3_6" data="#A6937C"><em></em></li>
+                         <li class="c3_7" data="#6A3A07"><em></em></li>
+                         <li class="c3_8" data="#5A493F"><em></em></li>
+                     </ul>
+                 </div>
+                 <div id="J_webFont" class="webfont-bd">
+                    <h2>选择字体<em title="如果您选择方正字体制作，您选用的每种字体需要付费￥1.00元">?</em></h2>
+                    <ul>
+                        <li class="font-default selected" data-name="Microsoft YaHei"><em class="icon"></em><span>微软雅黑<em>(默认)</em></span></li>
+                        <li class="font1" data-name="FONTS_XIYUAN"><em class="icon"></em><i></i><span>方正细圆简体</span></li>
+                        <li class="font2" data-name="FONTS_JINGLEI"><em class="icon"></em><i></i><span>方正静蕾简体</span></li>
+                        <li class="font3" data-name="FONTS_LVJIANDE"><em class="icon"></em><i></i><span>方正吕建德体</span></li>
+                        <li class="font4" data-name="FONTS_ZHIYI"><em class="icon"></em><i></i><span>方正雅艺简体</span></li>
+                        <li class="font5" data-name="FONTS_MIAOWU"><em class="icon"></em><i></i><span>方正喵呜体</span></li>
+                        <li class="font6" data-name="FONTS_QITI"><em class="icon"></em><i></i><span>方正启体简体</span></li>
+						<li class="font7" data-name="FONTS_XINGKAI"><em class="icon"></em><i></i><span>方正行楷简体</span></li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+	</div>
+<script type="text/javascript" src="../../js/plugin/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/plugin/jquery/jquery-ui-1.10.3.custom.min.js"></script>
+
+<script type="text/javascript" src="../../js/YS.js"></script>
+<script type="text/javascript" src="../../js/plugin/customedit/textedit.js"></script>
+<script type="text/javascript" src="../../js/plugin/customedit/clipimg.js"></script>
+<script type="text/javascript" src="../../js/albumPreview.js"></script>
+</body>
+</html>

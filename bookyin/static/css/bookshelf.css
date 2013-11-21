@@ -1,6 +1,11 @@
 /* 书架 */
 .bstitle {padding:10px 0; float: right;}
-.bstitle h1 {float:left; width:770px; padding:0 30px 0 0; text-align:right; font-weight:normal; font-size: 24px; color:#666;}
+.bstitle h1 {float:left;  padding:0 30px 0 0;font-weight:normal; font-size: 24px; color:#666;}
+.bstitle .switch-eye {float:left; width:845px;}
+.bstitle .switch-eye div{ float:left; font-size:14px; line-height:30px; cursor:pointer; color:#3f3d3b}
+.bstitle .switch-eye .selected{ color:#4c8e0c}
+.bstitle .switch-eye i,.bstitle .switch-eye em{font-style:normal; padding:0 5px;}
+.bstitle .switch-eye em{ padding:0 20px;}
 .bstitle .eye {float:left; width:97px;}
 .bstitle .eye .onemore{background-color: #ea6333;}
 .floor{
@@ -8,15 +13,18 @@
 }
 .bsimg {float:left;padding:0 0 0 40px;}
 .bsimg a{ display:block; background:transparent url(../img/demo/book-pd-bjs.png) no-repeat -8px -307px; width:138px; height:173px;padding-left: 10px;
-padding-bottom: 27px;}
-.floor dl {float:left; width:580px; height: 170px; font-size:12px; margin:0 0 0 20px; color:#666; position: relative;}
+}
+.picture-item .bsimg a{ display:block; background:transparent url(../img/demo/book-pd-bjs.png) no-repeat -2px -480px; width:230px; height:190px;padding-left: 10px;
+}
+.picture-item .bsimg a img{ position:absolute; top:28px; left:67px;}
+.floor dl {float:left; width:400px; height: 170px; font-size:12px; margin:0 0 0 20px; color:#666; position: relative;}
 .floor dt {font-size:18px; letter-spacing:2px;}
 .floor dt span {color:#423D3A; font-size:25px;}
 .floor dd{position: absolute; left: 0; bottom: 13px;}
 .floor dd p{margin-bottom: 5px;}
 .floor dd .loading img{float: left; margin-top: -5px;}
 .floor .subtime {color:#ea5520;  letter-spacing:2px;}
-.book-item{position: relative;}
+.book-item,.picture-item{position: relative;}
 .floor .action {position:absolute; padding-top: 50px; right: 20px; bottom: 100px;}
 .action a {float:left; margin-left: 10px;}
 .action a:hover {text-decoration:none;}

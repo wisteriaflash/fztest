@@ -48,8 +48,7 @@ var selectUI = {
 		// me.initPostion();
 		me.bundleHandler();
 		me.checkType();
-		me.weiboInit();
-		me.selfInit();
+		
 		YS.sreenLoading.init();
 	},
 	initPostion: function(){
@@ -63,11 +62,17 @@ var selectUI = {
 		}
 	},
 	checkType: function(){
+		var me = this;
 		var type = YS.hash();
-		if(type == 'self'){
-			$('#J_typeList .self').click();
+		var url = window.location.href;
+		if(url.match('jumpSelectData')){
+			me.switchType('self');
+			me.selfInit();
+			// $('#J_typeList .self').click();
 		}else{
-			$('#J_typeList .weibo').click();
+			me.switchType('weibo');
+			me.weiboInit();
+			// $('#J_typeList .weibo').click();
 		}
 	},
 	stepNumAnimate: function(){
@@ -112,11 +117,14 @@ var selectUI = {
 		weiboBtn.click(function(ev){
 			if($(this).hasClass('selected')){
 				return;
+			}else{
+				window.location.href = $(this).attr('data');
+				return;
 			}
 			typeList.find('li').removeClass('selected');
 			$(this).addClass('selected');
 			stepList.removeClass('step-self').addClass('step-weibo');
-			YS.hash('weibo');
+			// YS.hash('weibo');
 			me.curType = 'weibo';
 			//anim
 			me.stepNumAnimate();
@@ -127,11 +135,14 @@ var selectUI = {
 		selfBtn.click(function(ev){
 			if($(this).hasClass('selected')){
 				return;
+			}else{
+				window.location.href = $(this).attr('data');
+				return;
 			}
 			typeList.find('li').removeClass('selected');
 			$(this).addClass('selected');
 			stepList.removeClass('step-weibo').addClass('step-self');
-			YS.hash('self');
+			// YS.hash('self');
 			me.curType = 'self';
 			//anim
 			me.stepNumAnimate();
@@ -188,6 +199,19 @@ var selectUI = {
 				form.submit();
 			}
 		});
+	},
+	switchType: function(type){
+		var me = this;
+		var typeList = $('#J_typeList');
+		var stepList = $('#J_stepList');
+		//
+		typeList.find('li').removeClass('selected');
+		typeList.find('li.'+type).addClass('selected');
+		stepList.removeClass('step-self').addClass('step-'+type);
+		// YS.hash(type);
+		me.curType = type;
+		//anim
+		me.stepNumAnimate();
 	},
 	selecteNum: function(index){
 		var stepNum = $('#J_stepNum');

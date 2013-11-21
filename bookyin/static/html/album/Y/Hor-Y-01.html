@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧 - 横向模板</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../../../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../../../css/album-hor.css" type="text/css" />
+</head>
+<body>
+<!--begin-->
+<div class='${isRight!} huace-page Hor-Y-01 ${skin!}'>
+	<div class='title'>${picConfig.pictureName}</div>
+	<div class='con'>
+		<div class='col-txt-item'>
+			<ul>
+				<li><i>1</i><span class="com-textedit" data-name="clipimg1_txt">${picConfig.vertList[0].desc}</span></li>				
+			</ul>
+		</div>	
+		<div class='Y-01'>
+			<div class="com-clipimg" data-name="clipimg1" data-conf="{'width':215, 'height':320,'image':{'source':'${picConfig.vertList[0].webpath}','width':${picConfig.vertList[0].width?string("0") },'height':${picConfig.vertList[0].height?string("0")},'wdpi':${picConfig.vertList[0].widthDpi},'hdpi':${picConfig.vertList[0].heightDpi}}}">
+				<img src="${picConfig.vertList[0].webpath}" style="left: ${picConfig.vertList[0].x}px; top: ${picConfig.vertList[0].y}px; width: ${picConfig.vertList[0].width?string("0") }px; height: ${picConfig.vertList[0].height?string("0")}px;" />
+			</div>
+			<em>1</em>
+		</div>
+	</div>	
+	<div class='page'>${picConfig.pageNum}</div>	
+</div>
+<!--end-->
+
+<div class=' huace-page Hor-R Hor-Y-01'>
+	<div class='title'>玩转上海夏令营</div>
+	<div class='con'>
+		<div class='col-txt-item'>
+			<ul>
+				<li><i>1</i><span>同学们欢乐的体验泥塑的乐趣</span></li>				
+			</ul>
+		</div>	
+		<div class='Y-01'><img src="../../../img/bg-big.jpg" width="215px" height="320px"><em>1</em></div>
+	</div>	
+	<div class='page'>01</div>	
+</div>
+</body>
+</html>

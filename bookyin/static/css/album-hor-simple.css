@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+.simple{width: 435px; float:left}
+.simple i{ float: left; margin-right: 15px; border: 1px solid #A5A5A5;}
+.simple div{clear: both;}
+.simple-X-01,.simple-X-02,.simple-Y-01,.simple-Y-02,.simple-Y-03,.simple-XY-01,.simple-XY-02,.simple-XY-03,.simple-YYY-01,.simple-YYY-02,.simple-YYY-03,.simple-XYY-01,.simple-XYY-02,.simple-XYY-03,.simple-XXY-01,.simple-XXY-02,.simple-XXY-03,.simple-XXX-01,.simple-XXX-02,.simple-XXX-03,.simple-YYYY-01,.simple-YYYY-02,.simple-YYYY-03,.simple-XYYY-01,.simple-XYYY-02,.simple-XYYY-03,.simple-XXYY-01,.simple-XXYY-02,.simple-XXYY-03,.simple-XXXY-01,.simple-XXXY-02,.simple-XXXY-03,.simple-XXXY-04,.simple-XXXY-05,.simple-XXXX-01,.simple-XXXX-02,.simple-XXXX-03,.simple-XXXX-04,.simple-XXXX-05{background: url('../img/huace/simple-L.png') no-repeat ; width: 70px; height:47px;  display: block; margin-bottom: 15px;}
+
+.Hor-R .simple-X-01,.Hor-R .simple-X-02,.Hor-R .simple-Y-01,.Hor-R .simple-Y-02,.Hor-R .simple-Y-03,.Hor-R .simple-XY-01,.Hor-R .simple-XY-02,.Hor-R .simple-XY-03,.Hor-R .simple-YYY-01,.Hor-R .simple-YYY-02,.Hor-R .simple-YYY-03,.Hor-R .simple-XYY-01,.Hor-R .simple-XYY-02,.Hor-R .simple-XYY-03,.Hor-R .simple-XXY-01,.Hor-R .simple-XXY-02,.Hor-R .simple-XXY-03,.Hor-R .simple-XXX-01,.Hor-R .simple-XXX-02,.Hor-R .simple-XXX-03,.Hor-R .simple-YYYY-01,.Hor-R .simple-YYYY-02,.Hor-R .simple-YYYY-03,.Hor-R .simple-XYYY-01,.Hor-R .simple-XYYY-02,.Hor-R .simple-XYYY-03,.Hor-R .simple-XXYY-01,.Hor-R .simple-XXYY-02,.Hor-R .simple-XXYY-03,.Hor-R .simple-XXXY-01,.Hor-R .simple-XXXY-02,.Hor-R .simple-XXXY-03,.Hor-R .simple-XXXY-04,.Hor-R .simple-XXXY-05,.Hor-R .simple-XXXX-01,.Hor-R .simple-XXXX-02,.Hor-R .simple-XXXX-03,.Hor-R .simple-XXXX-04,.Hor-R .simple-XXXX-05{background: url('../img/huace/simple-R.png') no-repeat ; width: 70px; height:47px;  display: block; margin-bottom: 15px;}
+
+.simple-X-01,.Hor-R .simple-X-01{background-position: 0 0;}
+.simple-X-02,.Hor-R .simple-X-02{background-position: -90px 0}
+
+.simple-Y-01,.Hor-R .simple-Y-01{background-position: 0 -70px}
+.simple-Y-02,.Hor-R .simple-Y-02{background-position: -90px -70px}
+.simple-Y-03,.Hor-R .simple-Y-03{background-position: -180px -70px}
+
+.simple-XY-01,.Hor-R .simple-XY-01{background-position: 0 -140px}
+.simple-XY-02,.Hor-R .simple-XY-02{background-position: -90px -140px}
+.simple-XY-03,.Hor-R .simple-XY-03{background-position: -180px -140px}
+
+
+.simple-YYY-01,.Hor-R .simple-YYY-01{background-position: 0 -210px}
+.simple-YYY-02,.Hor-R .simple-YYY-02{background-position: -90px -210px}
+.simple-YYY-03,.Hor-R .simple-YYY-03{background-position: -180px -210px}
+
+
+.simple-XYY-01,.Hor-R .simple-XYY-01{background-position: 0 -280px}
+.simple-XYY-02,.Hor-R .simple-XYY-02{background-position: -90px -280px}
+.simple-XYY-03,.Hor-R .simple-XYY-03{background-position: -180px -280px}
+
+.simple-XXY-01,.Hor-R .simple-XXY-01{background-position: 0 -350px}
+.simple-XXY-02,.Hor-R .simple-XXY-02{background-position: -90px -350px}
+.simple-XXY-03,.Hor-R .simple-XXY-03{background-position: -180px -350px}
+
+.simple-XXX-01,.Hor-R .simple-XXX-01{background-position: 0 -420px}
+.simple-XXX-02,.Hor-R .simple-XXX-02{background-position: -90px -420px}
+.simple-XXX-03,.Hor-R .simple-XXX-03{background-position: -180px -420px}
+
+.simple-YYYY-01,.Hor-R .simple-YYYY-01{background-position: 0 -490px}
+.simple-YYYY-02,.Hor-R .simple-YYYY-02{background-position: -90px -490px}
+.simple-YYYY-03,.Hor-R .simple-YYYY-03{background-position: -180px -490px}
+
+
+.simple-XYYY-01,.Hor-R .simple-XYYY-01{background-position: 0 -560px}
+.simple-XYYY-02,.Hor-R .simple-XYYY-02{background-position: -90px -560px}
+.simple-XYYY-03,.Hor-R .simple-XYYY-03{background-position: -180px -560px}
+
+
+.simple-XXYY-01,.Hor-R .simple-XXYY-01{background-position: 0 -630px}
+.simple-XXYY-02,.Hor-R .simple-XXYY-02{background-position: -90px -630px}
+.simple-XXYY-03,.Hor-R .simple-XXYY-03{background-position: -180px -630px}
+
+
+.simple-XXXY-01,.Hor-R .simple-XXXY-01{background-position: 0 -700px}
+.simple-XXXY-02,.Hor-R .simple-XXXY-02{background-position: -90px -700px}
+.simple-XXXY-03,.Hor-R .simple-XXXY-03{background-position: -180px -700px}
+.simple-XXXY-04,.Hor-R .simple-XXXY-04{background-position: -270px -700px}
+.simple-XXXY-05,.Hor-R .simple-XXXY-05{background-position: -360px -700px}
+
+
+.simple-XXXX-01,.Hor-R .simple-XXXX-01{background-position: 0 -770px}
+.simple-XXXX-02,.Hor-R .simple-XXXX-02{background-position: -90px -770px}
+.simple-XXXX-03,.Hor-R .simple-XXXX-03{background-position: -180px -770px}
+.simple-XXXX-04,.Hor-R .simple-XXXX-04{background-position: -270px -770px}
+.simple-XXXX-05,.Hor-R .simple-XXXX-05{background-position: -360px -770px}

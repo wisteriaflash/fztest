@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧 - 横向模板</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../../../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../../../css/album-hor.css" type="text/css" />
+</head>
+<body>
+<!--begin-->
+<div class='${isRight!} huace-page Hor-XXYY-03 ${skin!}'>
+	<div class='title'>${picConfig.pictureName}</div>
+	<div class='con'>
+		<div class='col-left'>
+			<div class='top'>
+				<div class='X-01'>
+					<div class="com-clipimg" data-name="clipimg1" data-conf="{'width':190, 'height':125,'image':{'source':'${picConfig.horiList[0].webpath}','width':${picConfig.horiList[0].width?string("0") },'height':${picConfig.horiList[0].height?string("0")},'wdpi':${picConfig.horiList[0].widthDpi},'hdpi':${picConfig.horiList[0].heightDpi}}}">
+						<img src="${picConfig.horiList[0].webpath}" style="left: ${picConfig.horiList[0].x}px; top: ${picConfig.horiList[0].y}px; width: ${picConfig.horiList[0].width?string("0") }px; height: ${picConfig.horiList[0].height?string("0")}px;" />
+					</div>
+					<em>1</em>
+				</div>
+				<div class='col-txt-item'>
+					<ul>
+						<li><i>1</i><span class="com-textedit" data-name="clipimg1_txt">${picConfig.horiList[0].desc}</span></li>
+						<li><i>2</i><span class="com-textedit" data-name="clipimg2_txt">${picConfig.horiList[1].desc}</span></li>
+						<li><i>3</i><span class="com-textedit" data-name="clipimg3_txt">${picConfig.vertList[0].desc}</span></li>
+						<li><i>4</i><span class="com-textedit" data-name="clipimg4_txt">${picConfig.vertList[1].desc}</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class='bottom'>
+				<div class='Y-01'>
+					<div class="com-clipimg" data-name="clipimg2" data-conf="{'width':125, 'height':165,'image':{'source':'${picConfig.vertList[0].webpath}','width':${picConfig.vertList[0].width?string("0") },'height':${picConfig.vertList[0].height?string("0")},'wdpi':${picConfig.vertList[0].widthDpi},'hdpi':${picConfig.vertList[0].heightDpi}}}">
+						<img src="${picConfig.vertList[0].webpath}"  style="left: ${picConfig.vertList[0].x}px; top: ${picConfig.vertList[0].y}px; width: ${picConfig.vertList[0].width?string("0") }px; height: ${picConfig.vertList[0].height?string("0")}px;"/>
+					</div>
+					<em>3</em>
+				</div>
+				<div class='X-02'>
+					<div class="com-clipimg" data-name="clipimg3" data-conf="{'width':250, 'height':165,'image':{'source':'${picConfig.horiList[1].webpath}','width':${picConfig.horiList[1].width?string("0") },'height':${picConfig.horiList[1].height?string("0")},'wdpi':${picConfig.horiList[1].widthDpi},'hdpi':${picConfig.horiList[1].heightDpi}}}">
+						<img src="${picConfig.horiList[1].webpath}"  style="left: ${picConfig.horiList[1].x}px; top: ${picConfig.horiList[1].y}px; width: ${picConfig.horiList[1].width?string("0") }px; height: ${picConfig.horiList[1].height?string("0")}px;" />
+					</div>
+					<em>2</em>
+				</div>		
+			</div>
+		</div>	
+		<div class='col-right'>
+			<div class='Y-02'>
+				<div class="com-clipimg" data-name="clipimg4" data-conf="{'width':220, 'height':305,'image':{'source':'${picConfig.vertList[1].webpath}','width':${picConfig.vertList[1].width?string("0") },'height':${picConfig.vertList[1].height?string("0")},'wdpi':${picConfig.vertList[1].widthDpi},'hdpi':${picConfig.vertList[1].heightDpi}}}">
+					<img src="${picConfig.vertList[1].webpath}"  style="left: ${picConfig.vertList[1].x}px; top: ${picConfig.vertList[1].y}px; width: ${picConfig.vertList[1].width?string("0") }px; height: ${picConfig.vertList[1].height?string("0")}px;"/>
+				</div>
+				<em>4</em>
+			</div>			
+		</div>
+	</div>	
+	<div class='page'>${picConfig.pageNum}</div>	
+</div>
+<!--end-->
+
+
+<div class=' huace-page Hor-R Hor-XXYY-03'>
+	<div class='title'>玩转上海夏令营</div>
+	<div class='con'>
+		<div class='col-left'>
+			<div class='top'>
+				<div class='X-01'><img src="../../../img/bg-big.jpg" width="190px" height="125px"><em>1</em></div>
+				<div class='col-txt-item'>
+					<ul>
+						<li><i>1</i><span>同学们欢乐的体验泥塑的乐趣</span></li>
+						<li><i>2</i><span>在上海欢乐谷嬉戏玩耍</span></li>
+						<li><i>3</i><span>在上海欢乐谷</span></li>
+						<li><i>4</i><span>认真的体验泥塑制作</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class='bottom'>
+				<div class='Y-01'><img src="../../../img/bg-big.jpg" width="125px" height="165px"><em>2</em></div>
+				<div class='X-02'><img src="../../../img/bg-big.jpg" width="250px" height="165px"><em>4</em></div>		
+			</div>
+		</div>	
+		<div class='col-right'>
+			<div class='Y-02'><img src="../../../img/bg-big.jpg" width="220px" height="305px"><em>3</em></div>			
+		</div>
+	</div>	
+	<div class='page'>01</div>	
+</div>
+</body>
+</html>

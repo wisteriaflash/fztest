@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>出书吧 - 横向模板</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="http://static.chushuba.com/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="http://static.chushuba.com/css/album-hor.css" type="text/css" />
+</head>
+<body>
+<!--begin-->
+<div class='Hor-front-cover huace-page'>
+  <div class="cover-bg com-clipimg" data-name="cover_bg" data-conf="{'width':697, 'height':498,'image':{'source':'${picConfig.picture.webpath}','width':${picConfig.picture.width?string("0") },'height':${picConfig.picture.height?string("0")},'wdpi':${picConfig.picture.widthDpi},'hdpi':${picConfig.picture.heightDpi}}}">
+      <img src="${picConfig.picture.webpath}" style="left: ${picConfig.picture.x}px; top: ${picConfig.picture.y}px; width: ${picConfig.picture.width?string("0") }px; height: ${picConfig.picture.height?string("0")}px;" />
+  </div>
+  <ul>
+  <span class='green-square'></span>
+      <li class='cover-title com-textedit' data-name="cover_title" data-conf="{'customEdit': true, 'text':'${picConfig.coverFont.text}','width':280,'height':28,'lineHeight':'28px','fontSize':'18px','fontColor':'#7fa94f','maxLen':16}"  style="<#if picConfig.textLine1.webFontURL?exists && picConfig.textLine1.webFontURL != ''>font-family: '${picConfig.textLine1.simpFontName}';<#else>font-family:'Microsoft YaHei',arial,'SimSun',helvetica,clean,sans-serif;</#if> font-size: ${picConfig.textLine1.fontSize}; line-height: ${picConfig.textLine1.lineHeight}; text-align: ${picConfig.textLine1.fontAlign}; color: ${picConfig.textLine1.fontColor};">
+        ${picConfig.coverFont.text}
+      </li>
+      <li class='cover-time com-textedit' data-name="cover_time" data-conf="{'customEdit': true, 'text':'${ picConfig.dateFont.text}','width':150,'height':20,'lineHeight':'20px','fontSize':'12px','fontColor':'#7fa94f','maxLen':16}"
+	  style="<#if picConfig.textLine2.webFontURL?exists && picConfig.textLine2.webFontURL != ''>font-family: '${picConfig.textLine2.simpFontName}';<#else>font-family:'Microsoft YaHei',arial,'SimSun',helvetica,clean,sans-serif;</#if> font-size: ${picConfig.textLine2.fontSize}; line-height: ${picConfig.textLine2.lineHeight}; text-align: ${picConfig.textLine2.fontAlign}; color: ${picConfig.textLine2.fontColor};">
+        ${picConfig.dateFont.text}
+      </li>
+  </ul>
+</div>
+<!--end-->
+</body>
+</html>

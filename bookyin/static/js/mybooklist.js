@@ -7,9 +7,41 @@ var myBookList = {
 		var me = this;
 		me.bindHandler();
 		me.getLoading();
+		//me.getPictureLoading();
 	},
+	
 	bindHandler: function(){
 		var me = this;
+		$('.switch-eye div').click(function(){
+			var idText=this.id;
+			$('.switch-eye div').removeClass('selected');
+			$(this).addClass('selected')
+			if(idText=='weibo'){
+				$('.book-item').css('display','block');
+				$('.picture-item').css('display','none');
+				$('#J_weimore').css('display','block');
+				$('#J_picmore').css('display','none');
+			}
+			if(idText=='picture'){			
+				$('.book-item').css('display','none');
+				$('.picture-item').css('display','block');
+				$('#J_weimore').css('display','none');
+				$('#J_picmore').css('display','block');
+			}
+		});
+		//画册删除
+		$('#J_myBookList .picture-item').find('.del').click(function(e){
+			e.preventDefault();
+			var id = $(this).attr('data-id');
+			var config = {
+				onsubmit: function(){
+					me.delPictureData(id);
+				},
+				txt : {title:'从书架上删除画册', tips:'您对该画册进行过的编辑一并被删除。'}
+			}
+			YS.tipConfirmDialog.show(config);
+		});
+		//微博书删除
 		$('#J_myBookList .book-item').find('.del').click(function(e){
 			e.preventDefault();
 			var id = $(this).attr('data-id');
@@ -19,7 +51,6 @@ var myBookList = {
 				},
 				txt : {title:'从书架上删除书籍', tips:'您对该书籍进行过的编辑一并被删除。'}
 			}
-			var textObj = 
 			YS.tipConfirmDialog.show(config);
 		});
 		$('#J_myBookList .action .btn-normal').click(function(e){
@@ -32,9 +63,12 @@ var myBookList = {
 			if($(this).hasClass('make-book')){
 				tipTxt = '制作纸质书';
 			}
-			var id = $(this).attr('href').match(/bookId=\d*/)[0];
-			id = id.replace('bookId=','');
-			me.refreshTipDialog.show(id,tipTxt);
+			if($(this).hasClass('book-item')){
+				var id = $(this).attr('href').match(/bookId=\d*/)[0];
+				id = id.replace('bookId=','');
+				me.refreshTipDialog.show(id,tipTxt);
+			}
+			
 		});
 		// $('#J_myBookList .book-item').find('.make-book').click(function(e){
 		// 	var status = $(this).attr('data-status');
@@ -47,6 +81,38 @@ var myBookList = {
 		// 	me.refreshTipDialog.show(id);
 		// });
 	},
+	//删除画册
+	delPictureData: function(id){
+		var me = this;
+		var method = 'GET';
+		var url = '/delPictureInfo.htm';
+		var param = {pictureId: id};
+		var successFun = function(data){
+			if(data.response == 'success'){
+				me.delPictureItem(id);
+			}else{
+				alert('删除失败');
+			}
+		};
+		YS.ajaxData(method,url,param,successFun);
+	},
+	delPictureItem: function(id){
+		var item = $('#J_myBookList .picture-item').find('a[data-id="'+id+'"]');
+		item = item.parents('.picture-item');
+		item.slideUp();
+		var num=parseInt($('#picture').find('i').text());
+		$('#picture').find('i').text(num-1);
+	},
+
+	
+	makePictureDisable: function(item){
+		item.click(function(e){
+			if($(this).hasClass('disable')){
+				return false;
+			}
+		});
+	},
+	//删除微博书
 	delBookData: function(id){
 		var me = this;
 		var method = 'GET';
@@ -65,6 +131,8 @@ var myBookList = {
 		var item = $('#J_myBookList .book-item').find('a[data-id="'+id+'"]');
 		item = item.parents('.book-item');
 		item.slideUp();
+		var num=parseInt($('#weibo').find('i').text());
+		$('#weibo').find('i').text(num-1);
 	},
 	getLoading: function(){
 		var me = this;
@@ -72,6 +140,7 @@ var myBookList = {
 		for(var i=0, l=arr.length; i<l; i++){
 			var item = $(arr[i]);
 			var id = item.attr('data-id');
+			//debugger;
 			me.loadingId[id] = setInterval(me.getBookProgress, me.delayTime, id);
 			var btn = item.parents('.book-item').find('.make-book');
 			me.makeBookDisable(btn);
@@ -81,7 +150,8 @@ var myBookList = {
 		var me = myBookList;
 		var method = 'POST';
 		var url = '/makeUpFinshedRate.htm';
-		var param = {bookId: id};
+		var param = {bookId: id};		
+		//debugger;
 		var successFun = function(data){
 			var item = $('#J_myBookList .book-item .loading[data-id="'+id+'"]');
 			if(data.isFinshed == 'yes'){

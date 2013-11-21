@@ -15,7 +15,7 @@ var login = {
 		var me = this;
 		$('#J_listBtn .navBtnlink').click(function(ev){
 			var cls = $(this).parent().attr('class');
-			me.redirectURL = '#'+cls;
+			// me.redirectURL = '#'+cls;
 			me.checkLogin();
 			return false;
 		});

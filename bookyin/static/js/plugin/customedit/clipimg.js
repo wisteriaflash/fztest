@@ -25,7 +25,7 @@ var _renderHtml = function(){
     var imgurl = '', imgw = 0, imgh = 0;
     //
     if(image.type == 'normal'){
-        imgurl = image.source;
+        imgurl = image.source+settings.thumbSuffix;
         if(typeof(image.initWidth) == 'undefined'){
             var fixObj = _getImgAdjustSize(image.width, image.height, settings.width, settings.height);
             image.initWidth = parseInt(image.width);
@@ -118,6 +118,9 @@ var _bindHandler = function(){
               'left': left,
               'top': top
             });
+            $this.css({
+                'z-index': 103
+            })
         },
         stop: function(event, ui) {
             //data
@@ -132,6 +135,9 @@ var _bindHandler = function(){
             //
             $this.removeClass('clipimg-draging');
             // $this.removeClass('nocursor');
+            $this.css({
+                'z-index': ''
+            })
         }
     });
     //refresh opthion
@@ -357,6 +363,11 @@ var methods = {
             if(settings.image.source){
                 settings.image.type = 'normal';
             }
+            //clean
+            if(settings.image.source){
+                var cleanReg = new RegExp(settings.thumbSuffix,'g');
+                settings.image.source = settings.image.source.replace(cleanReg,'');
+            }
             //
             _setSettings.call($this, settings);
             _renderHtml.call($this);
@@ -387,7 +398,7 @@ var methods = {
         var imgUrl = '', imgw = 0, imgh = 0;
         $this.removeClass('clipimg-'+image.type);
         if(obj.url){
-            imgUrl = obj.url;
+            imgUrl = obj.url+settings.thumbSuffix;
             image.type = 'normal';
             image.source = imgUrl;
             var fixObj = _getImgAdjustSize(obj.width, obj.height, settings.width, settings.height);
@@ -467,6 +478,7 @@ $.fn.clipimg = function() {
 $.fn.clipimg.defaults = {
     width: 200,
     height: 200,
+    thumbSuffix: '',
     image: {
         type: 'default',
         defaults: YS.staticDomainbyJs+'/img/default/img_default.jpg',

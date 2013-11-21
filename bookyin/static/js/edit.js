@@ -135,7 +135,7 @@ var book = {
 	//init
 	bookInit: function(){
 		var me = this;
-		YS.sreenLoading.show('正在读取数据...');
+		//YS.sreenLoading.show('正在读取数据...');
 		var initPage = YS.hash();
         var arr = initPage.split('!');
         var index = 0;
@@ -356,6 +356,21 @@ var book = {
         me.dateObj.type = nextType;
         me.turnPage(index);
 	},
+	webFontUrl:function(webFontURL){
+		
+		var dataArray=webFontURL.split('/');
+		dataArray.pop();
+		var Url=dataArray.join('/');
+		var newUrl=Url+'/';
+		return(newUrl)
+	},
+	webFontName:function(webFontURL){
+		var filename=webFontURL.split('/').pop();
+		var filenameArray= filename.split('.');
+		var filenames=filenameArray[0];
+		return(filenames)
+	},
+	
 	turnPage: function(index){
 		var me = this;
 		if(me.isTurning){
@@ -369,7 +384,6 @@ var book = {
         };
         param.index = index;
 		var successFun = function(data){
-            //clean
             clearTimeout(me.turningId);
             screenload.close();
             me.isTurning = false;
@@ -393,6 +407,14 @@ var book = {
                 hashURL = type+'!'+me.dateObj.index;
             }
             YS.hash(hashURL);
+			//扉页被编辑后
+			
+			//当非微软雅黑字体时内容页字体缩小字间距
+			var bodyDefaultFont="'Microsoft YaHei', SimSun, arial, helvetica, clean, sans-serif";
+			var bodyFont=$('body').css('font-family');
+			if(bodyFont!=bodyDefaultFont){
+				$('.con-item p').css('letter-spacing','-1px');
+			}
 		}
 		me.isTurning = true;
         me.turningId = setTimeout(function(){
@@ -515,6 +537,8 @@ var book = {
         return me.dateType[dirIndex];
     }
 };
+
+//目录
 var menuBar = {
 	triggerBtn: $('#J_catalog'),
 	mainContent: $(".catbar"),
@@ -544,6 +568,14 @@ var menuBar = {
 				clearInterval(me.intervalID);
 				me.isDataOk = true;
 				me.refresh(data);	//init data
+				if(data.fontName&&data.eotFontsPath){
+					fontName=data.fontName;
+					eotFontsPath=data.eotFontsPath;
+				    changeFont.fontFamily(fontName,eotFontsPath);
+				}else{
+					fontName='FONTS_YaHei';
+				}
+				changeFont.setFontNav(fontName);
 			}
 			// me.triggerBtnDisable();
 		};
@@ -589,7 +621,7 @@ var menuBar = {
             me.move();
             return false;
         });
-        me.triggerBtn.click(function() {
+        me.triggerBtn.click(function() {			
             if (me.isShowed) {
                 me.close();
             } else {
@@ -721,6 +753,7 @@ var menuBar = {
         me.mainContent.css('display', 'block');
         me.triggerBtn.addClass('cur');
         changeColor.close();
+		changeFont.close();
         me.isShowed = true;
         fun && fun();
         $('.book-opt-right-bd').show();
@@ -853,6 +886,7 @@ var menuBar = {
         }
     }
 };
+//颜色
 var changeColor = {
 	triggerBtn: $('#J_setColor'),
 	listCon: $('.color-list'),
@@ -906,6 +940,7 @@ var changeColor = {
 	show: function(colorCls){
 		var me = this;
         menuBar.close();
+		changeFont.close();
 		me.isShowed = true;
 		me.listCon.css('display','block');
 		me.triggerBtn.addClass('cur');
@@ -935,12 +970,120 @@ var changeColor = {
     	YS.ajaxPost(url, param, successFun);
 	}
 };
-
+//字体
+var changeFont = {
+	triggerBtn: $('#J_setFont'),
+	Font:$('.font'),
+	listFont:$('.font li'),
+	isShowed: false,
+	curColor: '',
+	init: function(){
+		var me = this;
+		me.bindHandler();	
+		$('.font0').addClass('fontFocus');
+	},
+	
+	bindHandler: function(){
+		var me = this;
+		me.triggerBtn.click(function() {			
+            if (me.isShowed) {
+                me.close();
+            } else {
+                me.show();
+            }
+            return false;
+        });
+		$('body').click(function(ev) {
+        	
+                me.close();
+        });
+		me.listFont.click(function(ev){	
+			var fontCls=$(this).find('i');
+		    var fontName=fontCls.attr('data-name');
+		    me.setFontNav(fontName);
+			me.dataBind(fontName);	
+		}); 
+		    
+	},
+	setFontNav: function(fontCls){	
+		var fontArr =$('.font-list li');
+		fontArr.removeClass('selected');		
+		var fontLi;
+		for(var i=0;i<fontArr.length;i++){
+			var font=(fontArr.find('i')).eq(i).attr('data-name');
+			if(font==fontCls){
+				fontLi=$((fontArr.find('i')).eq(i)).parent('li');
+			}
+		}
+		fontArr.filter(fontLi).addClass('selected');	
+	},
+	 //ajax
+	dataBind: function(FontNames){
+	 	
+		var url = '/changeFontStyle.htm';
+		var param = {bookId:bookId, fontName: FontNames};
+		var me=this;
+		var successFun = function(data){
+			if(data.status='success'){			
+			 me.fontFamily(FontNames,data.woffFontsPath);
+			 window.location.href = '/statusBook.htm?bookId='+bookId;	
+			// YS.sreenLoading.close();		
+			}else{
+				 console.log('setColor fail')
+			}
+			YS.sreenLoading.close();
+		};
+		YS.sreenLoading.show('正在切换字体...');
+		YS.ajaxPost(url, param, successFun);
+	} ,	
+		
+	fontFamily: function(fontNames,dataPath){
+		var me=this;	
+		//filePath
+		if(fontNames!='FONTS_YaHei'){
+			var dataArray=dataPath.split('/');
+				dataArray.pop();
+			var Url=dataArray.join('/');
+			var newUrl=Url+'/';
+			 //fileName
+			// 
+			var filename=dataPath.split('/').pop();
+			var filenameArray= filename.split('.');
+			$('body').fontface({
+				fontName : fontNames,
+				fontFamily : [ fontNames, "Microsoft YaHei, SimSun, helvetica, clean, sans-serif"],
+				filePath : newUrl,
+				fileName : filenameArray[0]
+			});				
+		}else{
+			$('body').css('font-family','Microsoft YaHei, SimSun, helvetica, clean, sans-serif');
+		}
+	},
+	show: function(fontCls){
+		var me = this;
+        menuBar.close();
+		changeColor.close();
+		me.isShowed = true;
+		me.Font.css('display','block');
+		me.triggerBtn.addClass('cur');
+        $('.book-opt-right-bd').show();
+	},
+	close: function(){
+		var me = this;
+		if(!me.isShowed){
+			return;
+		}
+		me.isShowed = false;
+		me.Font.css('display','none');
+		me.triggerBtn.removeClass('cur');
+        $('.book-opt-right-bd').hide();		
+	}
+};
 //init
 book.bookInit();
 menuBar.init();
 changeColor.init();
-
+changeFont.init();
 //bind in html
 imageShow = function(el){
 	var curEl = $(el);
