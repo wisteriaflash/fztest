@@ -5,7 +5,6 @@
 //edit
 var editPage = {
     pictureId: null,
-    pictureStatus: '',
     infoNode: $('#J_pageInfo'),
     rightBarNode: $('#J_rightBar'),
     curPage: -1,
@@ -21,10 +20,9 @@ var editPage = {
         me.initData();
         me.bindHandler();
     },
-    initData: function(){
+    initData: function(){		
         var me = this;
         me.pictureId = $('#J_mainEdit').attr('data-id');
-        me.pictureStatus = $('#J_mainEdit').attr('data-status');
         //
         var page = YS.hash();
         me.curPage = page.length>0 ? page : me.curPage;
@@ -165,9 +163,6 @@ var editPage = {
         });
         //template
         $('#J_templateList').delegate('li', 'click', function(e){
-            if($(this).hasClass('selected')){
-                return;
-            }
             var data = me.getCurPageData();
             data = JSON.stringify(data);
             var method = 'POST';
@@ -219,7 +214,7 @@ var editPage = {
     },
     initPage: function(){
         var me = this;
-        //data
+        //data		
         var method = 'GET';
         var url = '/initPlate.htm';
         var param = {pictureId: me.pictureId, page: me.curPage};
@@ -253,19 +248,11 @@ var editPage = {
         me.curPageType = data.curPage.pageType;
         YS.hash(me.curPage);
         me.renderPage(data.curPage);
-        me.renderTitle(data.pictureName);
         if(me.curPageType == 'normal'){
             me.renderTemplateList(data.plateList,data.curPage.plateid);
         }
         me.rightBarPageSwitch();
         menuBar.selecteMenu();
-    },
-    renderTitle: function(title){
-        var me = this;
-        var node = $('#J_pageInfo .huace-page .title');
-        if(node.length>0){
-            node.html(title);
-        }
     },
     renderPage: function(data){
         var me = this;
@@ -329,7 +316,6 @@ var editPage = {
                 customData = customData ? customData : {};
             }
             conf = me.getConfigData(type, item, customData);
-            conf.curStatus = me.pictureStatus;
             conf.onSelect = function(data){
                 me.cleanSelect();
                 me.rightBarShow(type,data);
@@ -554,11 +540,11 @@ var editPage = {
         var hideArr = list.find('li.hide');
         var arr = list.find('li');
         var len = arr.length - hideArr.length;
-        if(len==3){
+        if(len==5){
             list.perfectScrollbar({
                 wheelSpeed: 100
             });
-        }else if(len>3){
+        }else if(len>5){
             list.perfectScrollbar('update');
         }else{
             list.perfectScrollbar('destroy');

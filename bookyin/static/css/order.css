@@ -193,14 +193,16 @@ select,input,label,th,td {font-size:14px; color:#7c7c7c;}
 
 
 /* bookdetails */
-.bookdetails .ming {float:left; width:310px; margin-right:40px; margin-bottom:30px; background: transparent url(../img/demo/book-pd-bjs.png) no-repeat 3px 13px;padding-top: 23px; padding-left: 16px;}
+#J_pictureDetails .ming{float:left;  width: 402px; height: 251px;  background: transparent url(../img/demo/book-pd-bjs.png) no-repeat 0 -682px; margin-right:0; padding-top: 6px;padding-left: 12px;}
+.bookdetails .ming{float:left; width:310px; margin-right:40px; margin-bottom:30px;padding-top: 23px; padding-left: 16px;background: transparent url(../img/demo/book-pd-bjs.png) no-repeat 3px 13px }
 .bookdetails .minfo {float:left; width:340px; font-size:14px; color:#666; padding-top:10px; padding-right: 40px;}
 .bookdetails .minfo dt {font-size:40px; padding:0 0 10px; color:#000; word-wrap: break-word; word-break:break-all; width: 340px; max-height: 104px; overflow: hidden;}
 .bookdetails .minfo .pstyle {font-size:35px; color:#5a5650;}
 .bookdetails .minfo .price {font-size:25px; color:#ea5520; line-height:40px; font-weight:bold;position: absolute; top: 280px;}
 .bookdetails .minfo .pages{position: absolute; top: 345px;}
 .bookdetails .minfo .standard{position: absolute; top: 322px;}
-.bookdetails .action {float:left; width:210px; padding:90px 0 0;}
+.bookdetails .action {float:left; margin-left: 35px;padding:90px 0 0;}
+#J_pictureDetails.bookdetails .action {margin-left: 0}
 .pdsubmit {font-size:30px; background-color:#ea5520; padding:30px 35px; *padding:30px 10px; color:#fff; filter:alpha(opacity=80); opacity:0.8; -moz-opacity:0.8; cursor:pointer; }
 .pdsubmit:hover {filter:alpha(opacity=100); opacity:1; -moz-opacity:1;}
 .pimglist {clear:both; width:990px;}

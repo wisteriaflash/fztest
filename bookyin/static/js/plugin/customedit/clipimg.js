@@ -371,8 +371,13 @@ var methods = {
             //
             _setSettings.call($this, settings);
             _renderHtml.call($this);
-            _bindHandler.call($this);
             _checkImgBlur.call($this);
+            //check
+            if(settings.curStatus == 'preview'){
+                $this.find('.clipimg-opt').css('display','none');
+                return
+            }
+            _bindHandler.call($this);
         });
     },
     destroy: function(options) {
@@ -479,6 +484,7 @@ $.fn.clipimg.defaults = {
     width: 200,
     height: 200,
     thumbSuffix: '',
+    curStatus: '', //preview
     image: {
         type: 'default',
         defaults: YS.staticDomainbyJs+'/img/default/img_default.jpg',

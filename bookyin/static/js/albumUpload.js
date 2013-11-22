@@ -49,6 +49,7 @@ var upload = {
             'fileDataName': 'pictureFile',
             'fileDesc': 'Image Files',//对话框的文件类型描述
             'fileExt': '*.jpg;*.jpeg;*.gif;*.png',//可上传的文件类型
+            'cancelImg': '',
             'auto': true,
             // 'auto': false,
             'multi': true,
@@ -76,9 +77,8 @@ var upload = {
             onProgress: function(event, id, file, data){
                 // console.log(data);
             },
-            onError: function(event, file){
-                // console.log(event,file);
-                alert('err');
+            onError: function(event, ID, fileObj, errorObj){
+                alert(errorObj.type,errorObj.info);
             },
             onComplete: function(event,id, file, response, data){
                 var speed = data.speed*1024;
@@ -86,6 +86,7 @@ var upload = {
                 me.setUploadNum(false, obj);
             },
             onAllComplete: function(event,file){
+                console.log('onComplete');
                 chapter.getPicData();
                 //
                 setTimeout(function(){
@@ -105,6 +106,7 @@ var upload = {
             'fileDataName': 'pictureFile',
             'fileDesc': 'Image Files',
             'fileExt': '*.zip;*.rar',
+            'cancelImg': '',
             'auto': true,
             'width': 190,
             'height': 57,
@@ -139,7 +141,10 @@ var upload = {
                     me.cleanUploadTypeQueue();
                     me.cleanUploadNum();
                 }, me.stepDelay);
-                
+            },
+            onError: function(event, ID, fileObj, errorObj){
+                alert(errorObj.type,errorObj.info);
+                // console.log(fileObj,errorObj);
             }
         });
     },
@@ -165,6 +170,7 @@ var upload = {
         var me = this;
         var style = disable ? '-9999px' : '0';
         $('#J_addPicUploader').css('left', style);
+        $('#J_addZipUploader').css('left', style);
     },
     setUploadNum: function(totalNumSign,obj){
         var me = this;
@@ -340,6 +346,8 @@ var chapter = {
         // upload-ok
         $('#J_picListCon ul').selectable({
             cancel: ".hd-item,i,.ui-selecting,.ui-selected",
+            start: function(){
+            },
             selected: function( event, ui ) {
             },
             selecting: function(event, ui) {

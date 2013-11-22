@@ -271,6 +271,9 @@ var methods = {
             //
             _setSettings.call($this, settings);
             _renderHtml.call($this);
+            if(settings.curStatus == 'preview'){
+                return;
+            }
             _bindHandler.call($this);
         });
     },
@@ -379,6 +382,7 @@ $.fn.textedit = function() {
 $.fn.textedit.defaults = {
     type: 'single', //single|multi
     customEdit: true,
+    curStatus: '', //preview
     width: 200,
     height: 50,
     maxLen : 120,

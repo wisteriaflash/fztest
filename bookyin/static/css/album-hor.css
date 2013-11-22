@@ -2,13 +2,12 @@
 /* CSS Document */
 .huace-page{ width:697px; height:498px; position:relative; color: #757575;border: 1px #ffo solid}
 
-.huace-page em,.huace-page i{ background:#7fa94f; padding:1px 6px; color:#FFF; font-style:normal}
+.huace-page em,.huace-page i{ background:#7fa94f; padding:1px 6px; color:#FFF; font-style:normal;font-family: "Microsoft YaHei","SimSun",arial,helvetica,clean,sans-serif;}
 .huace-page em{margin-top: -19px; float:left; width: 7px; height: 17px; line-height: 19px;}
 .huace-page a{text-decoration: none;}
-.huace-page .title,.huace-page .page{font-family: "Microsoft YaHei","SimSun",arial,helvetica,clean,sans-serif;}
-.huace-page .title{ padding-left: 40px;  padding-top:15px; padding-bottom: 25px; color: #757575;}
-.huace-page .page{ margin-left: 9px; padding-top:15px; color: #7fa94f;width: 15px;
-text-align: center;}
+.huace-page .title,.huace-page .page{font-family: "Microsoft YaHei","SimSun",arial,helvetica,clean,sans-serif;text-align: center;}
+.huace-page .title{ padding-left:30px; width: 170px; height: 20px; padding-top:15px; margin-bottom: 25px; color: #757575;overflow: hidden;}
+.huace-page .page{ margin-left: 9px; padding-top:15px; color: #7fa94f;width: 15px;}
 .huace-page img{ float: left;}
 .huace-page .green-square{width: 4px; height:45px;background:#7fa94f;display: block;float: left; }
 .huace-page a{text-decoration: none;}
@@ -19,8 +18,8 @@ text-align: center;}
 
 .col-left{ float: left;margin-right: 15px;}
 .col-right{ float: right;}
-.Hor-R.huace-page .title{ padding-left:  572px;}
-.Hor-R.huace-page .page{  padding-left: 674px;}
+.Hor-R.huace-page .title{ padding-left:  498px;}
+.Hor-R.huace-page .page{  padding-left: 665px;}
 .Hor-R .col-left{ float: right;margin-right:0;margin-left: 15px;}
 .Hor-R .col-right{ float: left;}
 .Hor-R.huace-page em{float: right;}
@@ -50,7 +49,7 @@ text-align: center;}
 
 
 /* 版权页 */
-.Hor-copyright,.Hor-R.Hor-copyright{position: relative; background:none ;}
+.Hor-copyright,.Hor-R.Hor-copyright,.Hor-R.Skin-00.Hor-copyright{position: relative; background:none ;}
 .Hor-copyright .copyright-img,.Hor-copyright .copyright-logo,.Hor-copyright .copyright-code,.Hor-copyright .copyright{position: absolute;}
 .Hor-copyright .copyright-img{top:160px;left: 250px;}
 .Hor-copyright .copyright-logo{top:320px;left: 80px;width: 165px;overflow: hidden;height: 38px;}

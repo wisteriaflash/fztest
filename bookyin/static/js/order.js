@@ -144,13 +144,13 @@ var bookList = {
 		if(firstPage>0 || fontNum>0){
 			addItemStr = '<div class="addinfo">(其中包含：';
 			if(firstPage>0){
-				addItemStr += '扉页¥'+firstPage+'.00';
+				addItemStr += '扉页¥'+firstPage+'.00)';
 				if(fontNum>0){
 					addItemStr += ',';
 				}
 			}
 			if(fontNum>0){
-				addItemStr += '字体¥'+fontNum+'.00';
+				addItemStr += '字体¥'+fontNum+'.00)';
 			}
 		}
 		if(dataType=='weibo'){
@@ -229,8 +229,10 @@ var bookList = {
 		isInit: false,
 		dialogItem: null,
 		mainContent: $('#J_addBook'),
-		curNum: 0,
+		weiboCurNum: 0,
+		pictureCurNum: 0,
 		maxNum: 0,
+		curNum: 0,
 		itemWidth: 153,
 		pwidth: 0,				
 		perLen: 3,
@@ -265,7 +267,7 @@ var bookList = {
 				me.bindHandler();
 			}
 			//debugger;
-			//me.selecteBook();
+			me.selecteBook();
 			me.dialogItem.dialog('open');
 		},
 		close: function(){
@@ -301,6 +303,12 @@ var bookList = {
 				var thisDiv=$(this).parent().parent();
 				me.setPwidth(thisDiv);				
 				_plist = thisDiv.find('.plist');
+				//debugger;
+				if (thisDiv.attr('id')=='picture-pslider') {
+					me.curNum=me.pictureCurNum
+				}else{
+					me.curNum=me.weiboCurNum
+				}
 				if(me.curNum+1 >1){
 					me.curNum--;
 					var backValue = -(me.curNum)*pwidth;
@@ -308,6 +316,13 @@ var bookList = {
 					_plist.animate({left: backValue+'px'}, "fast", function(){
 						me.isPlaying = false;
 					});
+					if(thisDiv.attr('id')=='weibo-pslider'){
+						me.weiboCurNum=me.curNum;
+						me.getData(me.weiboCurNum, false);
+					}if(thisDiv.attr('id')=='picture-pslider'){
+						me.pictureCurNum=me.curNum;
+						me.getPictureData(me.pictureCurNum, false);
+					}
 					me.checkPageBtn(thisDiv);
 				}else{
 					return false;
@@ -322,8 +337,13 @@ var bookList = {
 				var thisDiv=$(this).parent().parent();
 				me.setPwidth(thisDiv);				
 				_plist = thisDiv.find('.plist');
-					//debugger;
-				if(me.curNum<maxNum){
+				//debugger;
+				if (thisDiv.attr('id')=='picture-pslider') {
+					me.curNum=me.pictureCurNum
+				}else{
+					me.curNum=me.weiboCurNum
+				}
+				if(me.curNum+1<maxNum){
 					me.curNum++;
 					var leftValue = -me.curNum*pwidth;
 					me.isPlaying = true;
@@ -331,12 +351,14 @@ var bookList = {
 						me.isPlaying = false;
 					});
 					if(thisDiv.attr('id')=='weibo-pslider'){
-						me.getData(me.curNum, false);
+						me.weiboCurNum=me.curNum;
+						me.getData(me.weiboCurNum, false);
 					}if(thisDiv.attr('id')=='picture-pslider'){
-						me.getPictureData(me.curNum, false);
-					}	
-					me.checkPageBtn(thisDiv);
-				}else{
+						me.pictureCurNum=me.curNum;
+						me.getPictureData(me.pictureCurNum, false);
+					}
+					//me.checkPageBtn(thisDiv);
+				}else{					
 					return false;
 				}
 			});
@@ -351,8 +373,14 @@ var bookList = {
 				me.close();
 			});
 		},
+		
 		setPageNum: function(item){
 			var me = this;
+			if (item.attr('id')=='picture-pslider') {
+				me.curNum=me.pictureCurNum
+			}else{
+				me.curNum=me.weiboCurNum
+			}
 			item.find('.cur-page').text(me.curNum+1);
 			item.find('.total-page').text(maxNum);
 		},
@@ -380,25 +408,31 @@ var bookList = {
 		},
 		checkPageBtn: function(item){
 			var me = this;
+			var maxNum = parseInt(item.find('.total-page').text());
 			var tprev = item.find('.pprev'),
 				tnext = item.find('.pnext');
 			tprev.removeClass('disabled');
 			tnext.removeClass('disabled');
+			if (item.attr('id')=='picture-pslider') {
+				me.curNum=me.pictureCurNum
+			}else{
+				me.curNum=me.weiboCurNum
+			}
 			if(me.curNum == 0){
 				tprev.addClass('disabled');
 			}
-			if(me.curNum == me.maxNum-1){
+			if(me.curNum == maxNum-1){
 				tnext.addClass('disabled');
 			}
 		},
 		initData: function(){
 			var me = this;
-			var page = me.curNum + 1;
+			var page = me.weiboCurNum + 1;
 			me.getData(page,true);
 		},
 		initPictureData: function(){
 			var me = this;
-			var page = me.curNum + 1;
+			var page = me.pictureCurNum + 1;
 			me.getPictureData(page,true);
 		},
 		//微博书获取数据
@@ -487,7 +521,7 @@ var bookList = {
 			var str = '';
 			for(var i=0, len=data.length; i<len; i++){
 				var item = data[i];
-				var itemStr='<li data-id="'+item.id+'" data-type="picture" data-price="'+item.cost+'">'+
+				var itemStr='<li data-id="'+item.id+'" data-type="picture" data-price="'+item.sellPrice+'">'+
 								'<a>'+
 									'<div class="detail">'+
 										'<span class="title">'+item.pictureName+'</span>'+
@@ -508,6 +542,7 @@ var bookList = {
 
 		selecteBook: function(item){
 			var me = this;
+			//debugger
 			var arr = bookList.getSelectBook();
 			var list = me.mainContent.find('.plist');
 			list.find('li').removeClass('selected');
